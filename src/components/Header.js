@@ -7,8 +7,15 @@ import { Link } from 'gatsby';
 const Section = styled.section`
   padding: 1rem 1.5rem;
   font-family: ${props => props.theme.primaryFontFamily};
+  .icon {
+    margin: 0rem 0.5rem;
+  }
   .navbar {
     background-color: transparent;
+  }
+  .logo {
+    max-height: 5.5rem !important;
+    height: auto;
   }
   .navbar-brand {
     margin-right: 20px;
@@ -25,7 +32,7 @@ const Section = styled.section`
   }
   .navbar-item {
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     :hover {
       color: ${props => props.theme.darkAccent};
     }
@@ -61,14 +68,42 @@ export default class Header extends React.Component {
     return (
       <Section className="section">
         <div className="container">
+          <div className="columns">
+            <div className="column">
+              <span className="icon has-text-grey-light">
+                <i className="fab fa-facebook-f" />
+              </span>
+              <span className="icon has-text-grey-light">
+                <i className="fab fa-twitter" />
+              </span>
+              <span className="icon has-text-grey-light">
+                <i className="fab fa-instagram" />
+              </span>
+              <span className="icon has-text-grey-light">
+                <i className="fab fa-linkedin-in" />
+              </span>
+              <span className="icon has-text-grey-light">
+                <i className="fab fa-pinterest-square" />
+              </span>
+            </div>
+            <div className="column has-text-right">
+              <p className="has-text-weight-semibold">
+                {' '}
+                01675 463 555 | enquiries@commbus.com
+              </p>
+            </div>
+          </div>
           <nav
             className="navbar"
             role="navigation"
-            aria-label="main navigation"
-          >
+            aria-label="main navigation">
             <div className="navbar-brand">
               <Link className="navbar-item" to="/">
-                <img src="/images/logo-1024.png" alt="site logo" />
+                <img
+                  className="logo"
+                  src="/images/Commbus-Logo.png"
+                  alt="site logo"
+                />
               </Link>
               <a
                 href="#"
@@ -81,26 +116,39 @@ export default class Header extends React.Component {
                 aria-label="menu"
                 aria-expanded="false"
                 data-target="navbarBasicExample"
-                onClick={() => this.handleMobileMenu()}
-              >
+                onClick={() => this.handleMobileMenu()}>
                 <span aria-hidden="true" />
                 <span aria-hidden="true" />
                 <span aria-hidden="true" />
               </a>
             </div>
             <div className={isActive ? 'navbar-menu is-active' : 'navbar-menu'}>
-              <div className="navbar-start">
+              <div className="navbar-end">
                 <Link to="/" className="navbar-item">
-                  Home
+                  Promotional Buses
                 </Link>
-                <Link to="/about" className="navbar-item">
-                  About
+                <Link to="/" className="navbar-item">
+                  Event Support
                 </Link>
-                <Link to="/news" className="navbar-item">
+                <Link to="/" className="navbar-item">
+                  Bus Branding
+                </Link>
+                <Link to="/" className="navbar-item">
+                  Projects
+                </Link>
+                <Link to="/" className="navbar-item">
+                  Meet the Team
+                </Link>
+                <Link to="/" className="navbar-item">
                   News
                 </Link>
-                <Link to="/contact" className="navbar-item">
-                  Contact
+                <Link to="/" className="navbar-item">
+                  Contact Us
+                </Link>
+                <Link to="/" className="navbar-item">
+                  <span className="icon">
+                    <i className="fas fa-shopping-cart" />
+                  </span>
                 </Link>
               </div>
             </div>
