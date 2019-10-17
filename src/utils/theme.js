@@ -3,7 +3,7 @@ import reset from 'styled-reset-advanced';
 import { darken, lighten } from 'polished';
 
 const mainBrandColor = '#00D1B2';
-const lightShades = '#F5F5F5';
+const lightShades = '#487C93';
 const darkAccent = '#3173DC';
 const darkShades = '#0A0A0A';
 
@@ -38,8 +38,8 @@ export const theme = {
   textColorInverse: lightShades,
   textColorLite: '#8B8989',
   menuTintColor: darkAccent,
-  primaryFontFamily: "'Open Sans', sans-serif",
-  secondaryFontFamily: "'Open Sans', sans-serif",
+  primaryFontFamily: "'PT Sans', sans-serif",
+  secondaryFontFamily: "'BebasNeueRegular', sans-serif",
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',
 };
 
@@ -47,16 +47,16 @@ const GlobalStyle = createGlobalStyle`
   ${reset};
 
   body {
-    font-family: ${theme.secondaryFontFamily};
+    font-family: ${theme.secondaryFontFamily} !important;
     color: ${theme.textColor};
     letter-spacing: 0.03rem !important;
     font-size: 17px;
   }
   .title {
-    font-family: ${theme.primaryFontFamily};
+    font-family: ${theme.secondaryFontFamily};
   }
   .button {
-    font-family: ${theme.primaryFontFamily};
+    font-family: ${theme.secondaryFontFamily}
   }
   p {
     line-height: 1.5rem;
@@ -83,7 +83,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   .button.is-link {
-    background-color: ${theme.darkAccent};
+    background-color: ${theme.backgroundInputColor};
     transition: background-color 0.2s ease;
     :hover {
       background-color: ${darken(0.06, theme.darkAccent)};
@@ -94,6 +94,9 @@ const GlobalStyle = createGlobalStyle`
   }
   .has-text-warning {
     color: ${theme.lightAccent} !important;
+  }
+  .has-text-info{
+    color:${theme.backgroundInputColor} !important;
   }
 `;
 

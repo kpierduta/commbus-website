@@ -25,8 +25,14 @@ export default class HTML extends React.Component {
             src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap"
+            href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap"
             rel="stylesheet"
+          />
+          <link
+            rel="stylesheet"
+            media="screen"
+            href="https://fontlibrary.org/face/bebas"
+            type="text/css"
           />
           <script src="/js/scripts.js" />
           {/* Add custom css or scripts here */}

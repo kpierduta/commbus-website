@@ -16,23 +16,13 @@ const Section = styled.section`
   .logo {
     max-height: 5.5rem !important;
     height: auto;
-  }
-  .navbar-brand {
-    margin-right: 20px;
-    .navbar-item img {
-      max-height: 3.75rem;
-    }
-  }
-  .navbar-menu {
     @media screen and (max-width: 600px) {
-      position: absolute;
-      width: 100%;
-      transition: 0.6s;
+      max-height: 4rem !important;
     }
   }
   .navbar-item {
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 1rem;
     :hover {
       color: ${props => props.theme.darkAccent};
     }
@@ -109,9 +99,7 @@ export default class Header extends React.Component {
                 href="#"
                 role="button"
                 className={
-                  isActive
-                    ? 'navbar-burger burger mobile is-active'
-                    : 'navbar-burger burger mobile'
+                  isActive ? 'navbar-burger is-active' : 'navbar-burger'
                 }
                 aria-label="menu"
                 aria-expanded="false"
