@@ -35,9 +35,7 @@ const HomeHero = () => (
                   Clare Macleod, Marketing Director
                 </span>
               </p>
-              <a className="button is-medium is-link has-text-weight-semibold">
-                VIEW PROJECTS
-              </a>
+              <a className="button is-medium is-link">VIEW PROJECTS</a>
             </div>
           </section>
         </div>

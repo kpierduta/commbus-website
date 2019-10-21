@@ -55,6 +55,9 @@ const GlobalStyle = createGlobalStyle`
   .title {
     font-family: ${theme.secondaryFontFamily};
   }
+  .title.is-1 {
+    letter-spacing: 0.3rem !important;
+  }
   .button {
     font-family: ${theme.secondaryFontFamily}
   }
@@ -62,9 +65,10 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5rem;
   }
   p, .title, .box {
-    color: ${theme.textColor} !important;
+    color: ${theme.textColor};
   }
   .subtitle {
+    font-family: ${theme.primaryFontFamily};
     color: ${lighten(0.06, theme.textColor)} !important;
   }
   .button.is-primary {
@@ -85,6 +89,7 @@ const GlobalStyle = createGlobalStyle`
   .button.is-link {
     background-color: ${theme.backgroundInputColor};
     transition: background-color 0.2s ease;
+    letter-spacing: 0.1rem !important;
     :hover {
       background-color: ${darken(0.06, theme.darkAccent)};
     }
