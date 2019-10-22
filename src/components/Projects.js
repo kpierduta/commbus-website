@@ -13,7 +13,7 @@ const Projects = () => (
     <div className="columns is-multiline">
       <ProjectsCards
         class="column is-6"
-        image="http://staging.commbus.com/wp-content/uploads/2019/04/featured-staffordshire-university.png">
+        image="/images/projects/featured-staffordshire-university.png">
         <p className="has-text-white is-italic is-uppercase">
           Sector: eduction
         </p>
@@ -24,7 +24,7 @@ const Projects = () => (
       </ProjectsCards>
       <ProjectsCards
         class="column is-6"
-        image="http://staging.commbus.com/wp-content/uploads/2019/04/space-ape-featured-v2.png">
+        image="/images/projects/space-ape-featured-v2.png">
         <p className="has-text-white is-italic has-text-warning">
           sector: Entertainment
         </p>
@@ -35,7 +35,7 @@ const Projects = () => (
       </ProjectsCards>
       <ProjectsCards
         class="column is-4"
-        image="http://staging.commbus.com/wp-content/uploads/2019/04/pannini-featured-2.png">
+        image="/images/projects/pannini-featured-2.png">
         <p className="has-text-white is-italic has-text-warning">
           sector: retail
         </p>
@@ -46,7 +46,7 @@ const Projects = () => (
       </ProjectsCards>
       <ProjectsCards
         class="column is-4"
-        image="http://staging.commbus.com/wp-content/uploads/2019/04/gemalto-featured.png">
+        image="/images/projects/gemalto-featured.png">
         <p className="has-text-white is-italic">sector: commercial</p>
         <h2 className="title is-2 has-text-white">awareness campaign</h2>
         <a className="button is-medium is-inverted has-text-black-bis">

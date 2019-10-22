@@ -2,12 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
+  overflow: hidden;
   .background {
-    padding-bottom: 4rem;
     background-image: url(${props => props.image});
-    background-position: left top;
-    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
+    transition: all 0.5s ease;
+    :hover {
+      transform: scale(1.2);
+    }
   }
 `;
 
