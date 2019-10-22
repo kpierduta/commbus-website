@@ -55,7 +55,7 @@ const Projects = () => (
       </ProjectsCards>
       <ProjectsCards
         class="column is-4"
-        image="http://staging.commbus.com/wp-content/uploads/2019/04/breast-cancer-care-featured.png">
+        image="/images/projects/breast-cancer-care-featured.png">
         <p className="has-text-white is-italic">sector: charity</p>
         <h2 className="title is-2 has-text-white">awareness campaign</h2>
         <a className="button is-medium is-inverted has-text-black-bis">
