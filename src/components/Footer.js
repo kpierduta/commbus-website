@@ -19,13 +19,9 @@ const Footer = () => (
   <Container className="section">
     <div className="container">
       <div className="columns is-multiline">
-        <div className="column">
+        <div className="column is-3">
           <Link className="navbar-item" to="/">
-            <img
-              className="logo"
-              src="/images/Commbus-Logo.png"
-              alt="site logo"
-            />
+            <img className="logo" src="/images/com-logo.png" alt="site logo" />
           </Link>
         </div>
         <div className="column">

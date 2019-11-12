@@ -101,7 +101,7 @@ export default class Header extends React.Component {
               <Link className="navbar-item" to="/">
                 <img
                   className="logo"
-                  src="/images/Commbus-Logo.png"
+                  src="/images/com-logo.png"
                   alt="site logo"
                 />
               </Link>
