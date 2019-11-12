@@ -14,7 +14,6 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-
           {/* Add custom css or scripts here */}
           <link
             rel="stylesheet"
@@ -29,6 +28,10 @@ export default class HTML extends React.Component {
             rel="stylesheet"
           />
           <link
+            href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+            rel="stylesheet"
+          />
+          <link
             rel="stylesheet"
             media="screen"
             href="https://fontlibrary.org/face/bebas"
@@ -36,7 +39,6 @@ export default class HTML extends React.Component {
           />
           <script src="/js/scripts.js" />
           {/* Add custom css or scripts here */}
-
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>

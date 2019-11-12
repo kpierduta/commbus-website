@@ -6,6 +6,7 @@ import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 
 const Section = styled.div`
+  background: #487c92;
   .container {
     margin-top: 4rem;
   }
