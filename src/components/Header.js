@@ -3,6 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import Icon from './elements/Icon';
 
 const Section = styled.section`
   padding: 1rem 1.5rem;
@@ -33,7 +34,19 @@ const Section = styled.section`
     opacity: 0.6;
     border-radius: 4px;
   }
+  .is-flex {
+    justify-content: flex-end;
+  }
+  .email {
+    margin: 0 0 0 1.5rem;
+  }
 `;
+
+const firstIcon = <i className="fab fa-linkedin-in" />;
+const secondIcon = <i className="fab fa-facebook-f" />;
+const thirdIcon = <i className="fab fa-instagram" />;
+const fourthIcon = <i className="fab fa-pinterest-p" />;
+const fifthIcon = <i className="fab fa-twitter" />;
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -60,27 +73,23 @@ export default class Header extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column">
-              <span className="icon has-text-grey-light">
-                <i className="fab fa-facebook-f" />
-              </span>
-              <span className="icon has-text-grey-light">
-                <i className="fab fa-twitter" />
-              </span>
-              <span className="icon has-text-grey-light">
-                <i className="fab fa-instagram" />
-              </span>
-              <span className="icon has-text-grey-light">
-                <i className="fab fa-linkedin-in" />
-              </span>
-              <span className="icon has-text-grey-light">
-                <i className="fab fa-pinterest-square" />
-              </span>
+              <Icon icon={firstIcon} />
+              <Icon icon={secondIcon} />
+              <Icon icon={thirdIcon} />
+              <Icon icon={fourthIcon} />
+              <Icon icon={fifthIcon} />
             </div>
-            <div className="column has-text-right">
-              <p className="has-text-weight-semibold">
-                {' '}
-                01675 463 555 | enquiries@commbus.com
-              </p>
+          </div>
+          <div className="columns">
+            <div className="column is-flex">
+              <a href="tel:" className="has-text-weight-semibold">
+                01675 463 555
+              </a>
+              <a
+                href="mailto:"
+                className="has-text-weight-semibold is-uppercase email">
+                enquiries@commbus.com
+              </a>
             </div>
           </div>
           <nav
@@ -119,25 +128,25 @@ export default class Header extends React.Component {
                   Event Support
                 </Link>
                 <Link to="/" className="navbar-item">
-                  Bus Branding
+                  Vehicle Branding
+                </Link>
+                <Link to="/" className="navbar-item">
+                  About
                 </Link>
                 <Link to="/" className="navbar-item">
                   Projects
                 </Link>
                 <Link to="/" className="navbar-item">
-                  Meet the Team
-                </Link>
-                <Link to="/" className="navbar-item">
                   News
                 </Link>
                 <Link to="/" className="navbar-item">
-                  Contact Us
+                  Contact
                 </Link>
-                <Link to="/" className="navbar-item">
+                {/* <Link to="/" className="navbar-item">
                   <span className="icon">
                     <i className="fas fa-shopping-cart" />
                   </span>
-                </Link>
+              </Link> */}
               </div>
             </div>
           </nav>
