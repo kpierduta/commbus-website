@@ -16,7 +16,7 @@ const Section = styled.section`
     background-color: transparent;
   }
   .logo {
-    max-height: 5.5rem !important;
+    max-height: 7.5rem !important;
     height: auto;
     @media screen and (max-width: 600px) {
       max-height: 4rem !important;
@@ -25,8 +25,14 @@ const Section = styled.section`
   .navbar-item {
     font-weight: 700;
     font-size: 1rem;
+    height: 3rem;
+    color: ${props => props.theme.textColorLite};
     :hover {
       color: ${props => props.theme.darkAccent};
+      background: transparent;
+    }
+    :focus {
+      background: transparent;
     }
   }
   .navbar-burger {
@@ -41,6 +47,13 @@ const Section = styled.section`
   .email {
     margin: 0 0 0 1.5rem;
   }
+`;
+
+const ContactWrapper = styled.div`
+  margin-bottom: -0.2rem !important;
+  margin-top: 1rem;
+  font-family: ${props => props.theme.secondaryFontFamily};
+  color: ${props => props.theme.textColorLite};
 `;
 
 const firstIcon = <i className="fab fa-linkedin-in" />;
@@ -81,18 +94,18 @@ export default class Header extends React.Component {
               <Icon icon={fifthIcon} />
             </div>
           </div>
-          <div className="columns">
+          <ContactWrapper className="columns">
             <div className="column is-flex">
-              <a href="tel:" className="has-text-weight-semibold">
+              <a href="tel:" className="has-text-weight-semibold is-size-4">
                 01675 463 555
               </a>
               <a
                 href="mailto:"
-                className="has-text-weight-semibold is-uppercase email">
+                className="has-text-weight-semibold is-uppercase is-size-4 email">
                 enquiries@commbus.com
               </a>
             </div>
-          </div>
+          </ContactWrapper>
           <nav
             className="navbar"
             role="navigation"

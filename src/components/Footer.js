@@ -7,7 +7,7 @@ import FooterOptions from './FooterOptions';
 const Container = styled.section`
   position: relative;
   .logo {
-    max-height: 5.5rem !important;
+    max-height: 7.5rem !important;
     height: auto;
     @media screen and (max-width: 600px) {
       max-height: 4rem !important;

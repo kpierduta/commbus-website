@@ -36,7 +36,7 @@ export const theme = {
   fontSizeLarge: 22,
   textColor: darkShades, // '#0A0B11',
   textColorInverse: lightShades,
-  textColorLite: '#8B8989',
+  textColorLite: '#3b3b3b',
   menuTintColor: darkAccent,
   primaryFontFamily: "'PT Sans', sans-serif",
   secondaryFontFamily: "'BebasNeueRegular', sans-serif",
@@ -47,7 +47,6 @@ const GlobalStyle = createGlobalStyle`
   ${reset};
 
   body {
-    font-family: ${theme.primaryFontFamily} !important;
     color: ${theme.textColor};
     letter-spacing: 0.03rem !important;
     font-size: 17px;
