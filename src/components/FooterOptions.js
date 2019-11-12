@@ -2,7 +2,7 @@ import React from 'react';
 
 const FooterOptions = ({ option }) => (
   <li>
-    <a className="is-size-4">{option}</a>
+    <a className="is-size-6">{option}</a>
   </li>
 );
 

@@ -13,13 +13,16 @@ const Container = styled.section`
       max-height: 4rem !important;
     }
   }
+  .column {
+    align-self: center;
+  }
 `;
 
 const Footer = () => (
   <Container className="section">
     <div className="container">
       <div className="columns is-multiline">
-        <div className="column is-3">
+        <div className="column is-4">
           <Link className="navbar-item" to="/">
             <img className="logo" src="/images/com-logo.png" alt="site logo" />
           </Link>
