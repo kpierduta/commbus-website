@@ -3,6 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+
 import Icon from './elements/Icon';
 
 const Section = styled.section`
