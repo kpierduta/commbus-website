@@ -21,7 +21,7 @@ export default class IndexPage extends React.Component {
         <Projects />
         <Campaign />
         <Testimonials />
-        <Contact />
+        <OurClient />
       </Layout>
     );
   }

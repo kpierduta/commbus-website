@@ -6,6 +6,7 @@ import GlobalStyle, { theme } from '../utils/theme';
 import config from '../utils/config';
 import Header from './Header';
 import Footer from './Footer';
+import Contact from './Contact';
 
 const Container = styled.div`
   min-height: 70vh;
@@ -23,6 +24,7 @@ const IndexLayout = ({ children, hideHeader }) => (
       <GlobalStyle />
       {!hideHeader && <Header />}
       <Container>{children}</Container>
+      <Contact />
       <Footer />
     </>
   </ThemeProvider>
