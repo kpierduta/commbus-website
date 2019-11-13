@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Section = styled.section`
   background: url(/images/herobackground.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   @media screen and (max-width: 768px) {
     background-size: auto;
