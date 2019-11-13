@@ -10,6 +10,7 @@ const Section = styled.div`
     transition: all 0.5s ease;
     :hover {
       transform: scale(1.2);
+      overflow: hidden;
     }
   }
 `;
