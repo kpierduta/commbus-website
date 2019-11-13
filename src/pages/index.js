@@ -5,7 +5,6 @@ import Layout from '../components/Layout';
 import HomeHero from '../components/HomeHero';
 import OurClient from '../components/OurClient';
 import Projects from '../components/Projects';
-import Contact from '../components/Contact';
 import Features from '../components/Features';
 import Campaign from '../components/Campaign';
 import Testimonials from '../components/Testimonials';
