@@ -7,6 +7,8 @@ import OurClient from '../components/OurClient';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import Features from '../components/Features';
+import Campaign from '../components/Campaign';
+import Testimonials from '../components/Testimonials';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -17,6 +19,8 @@ export default class IndexPage extends React.Component {
         <OurClient />
         <Features />
         <Projects />
+        <Campaign />
+        <Testimonials />
         <Contact />
       </Layout>
     );

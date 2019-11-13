@@ -4,6 +4,7 @@ import { darken, lighten } from 'polished';
 
 const mainBrandColor = '#00D1B2';
 const lightShades = '#487C93';
+const secLightShades = '#487C93';
 const darkAccent = '#3173DC';
 const darkShades = '#0A0A0A';
 
@@ -16,6 +17,7 @@ export const theme = {
   // Use this color as the background for your dark-on-light designs,
   // or the text color of an inverted design.
   lightShades,
+  secLightShades,
   // Another accent color to consider. Not all colors have to be used -
   // sometimes a simple color scheme works best.
   darkAccent,
@@ -27,6 +29,7 @@ export const theme = {
   primaryColor: mainBrandColor,
   borderColor: '#e0e6ef',
   backgroundColor: '#FFFFFF',
+  secondryBackgroundColor: secLightShades,
   backgroundInputColor: lightShades,
   backgroundInputColorDark: darkShades,
   fontSize: 16,
