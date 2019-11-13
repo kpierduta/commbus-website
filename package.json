@@ -1,8 +1,8 @@
 {
-  "name": "kickoff-gatsbyjs",
+  "name": "commbus",
   "description": "A react starting point using GatsbyJS",
   "version": "2.0.1",
-  "author": "Parminder Klair",
+  "author": "Zeiq",
   "license": "MIT",
   "repository": {
     "type": "git",

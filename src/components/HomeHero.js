@@ -11,10 +11,9 @@ const Section = styled.section`
   }
   p {
     margin-top: 1rem;
-    margin-bottom: 3rem;
     font-family: ${props => props.theme.primaryFontFamily};
     font-weight: 700;
-    font-size: 1rem;
+    font-size: ${props => props.theme.fontSizeSmall};
     color: ${props => props.theme.textColorLite};
   }
   h2 {
