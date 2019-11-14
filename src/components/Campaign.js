@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import CampaignItem from './CampaignItem';
 import Button from './elements/Button';
+import Heading from './elements/Heading';
 
 const Section = styled.section`
   background-color: #eef3f6;
@@ -20,9 +21,7 @@ const ButtonWrapper = styled.div`
 const Campaign = () => (
   <Section className="section">
     <div className="container">
-      <h1 className="title has-text-centered">
-        our recentcampaigns & insights
-      </h1>
+      <Heading title="our recentcampaigns & insights" />
       <div className="columns">
         <CampaignItem />
         <CampaignItem />

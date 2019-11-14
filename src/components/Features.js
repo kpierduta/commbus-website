@@ -6,11 +6,11 @@ import firstImage from '../../static/images/icon/bus.svg';
 import secondImage from '../../static/images/icon/eye.svg';
 import thirdImage from '../../static/images/icon/shopping-cart.svg';
 import fourthImage from '../../static/images/icon/review.svg';
+import Heading from './elements/Heading';
 
 const Section = styled.div`
   background: #487c92;
   h1 {
-    font-family: ${props => props.theme.primaryFontFamily};
     margin-top: 2rem;
   }
 `;
@@ -18,9 +18,10 @@ const Section = styled.div`
 const Features = () => (
   <Section className="section">
     <div className="container">
-      <h1 className="title is-3 has-text-weight-bold has-text-white has-text-centered">
-        DEDICATED EVENTS TEAM | RANGE OF FLEET & EQUIPMENT
-      </h1>
+      <Heading
+        title="DEDICATED EVENTS TEAM | RANGE OF FLEET & EQUIPMENT"
+        color="#fff"
+      />
       <div className="columns">
         <FeatureItem
           img={firstImage}

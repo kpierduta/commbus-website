@@ -5,13 +5,13 @@ import imageDummy from '../../static/images/projects/dummy.png';
 
 const Container = styled.div`
   p {
-    color: ${props => props.theme.secondryBackgroundColor} !important;
+    color: ${props => props.theme.secondryColor} !important;
   }
 `;
 
 const Button = styled.button`
   color: #fff;
-  background: ${props => props.theme.secondryBackgroundColor};
+  background: ${props => props.theme.secondryColor};
   :hover {
     color: #fff;
   }

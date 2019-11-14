@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import ProjectsCards from './ProjectCards';
 import Button from './elements/Button';
+import Heading from './elements/Heading';
 
 const Section = styled.section`
   .button.is-medium {
     margin-top: 11rem;
   }
   h1 {
-    color: #487c92;
     margin: 6rem 0 3rem 0;
   }
 `;
@@ -21,9 +21,7 @@ const ButtonContainer = styled.div`
 
 const Projects = () => (
   <Section>
-    <h1 className="title has-text-centered">
-      OUR RECENT PRODUCT LAUNCH CAMPAIGNS
-    </h1>
+    <Heading title="OUR RECENT PRODUCT LAUNCH CAMPAIGNS" />
     <div className="columns is-multiline">
       <ProjectsCards
         class="column is-6"
