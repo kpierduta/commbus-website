@@ -8,7 +8,6 @@ import Heading from './elements/Heading';
 const Section = styled.section`
   background-color: #eef3f6;
   h1 {
-    color: #487c92;
     margin: 3rem 0 3rem 0;
   }
 `;
@@ -21,14 +20,14 @@ const ButtonWrapper = styled.div`
 const Campaign = () => (
   <Section className="section">
     <div className="container">
-      <Heading title="our recentcampaigns & insights" />
+      <Heading title="our recent campaigns & insights" />
       <div className="columns">
         <CampaignItem />
         <CampaignItem />
         <CampaignItem />
       </div>
       <ButtonWrapper className="is-flex">
-        <Button title="VIEW ALL ARTICLES" background="transparent" />
+        <Button background="transparent">VIEW ALL ARTICLES</Button>
       </ButtonWrapper>
     </div>
   </Section>

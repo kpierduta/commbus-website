@@ -78,8 +78,12 @@ const Projects = () => (
     <ButtonContainer className="colums">
       <div className="column">
         <div className="buttons">
-          <Button title="SEE PROJECTS" width="14rem" />
-          <Button title="CONTACT US" width="14rem" />
+          <Button width="14rem" background="transparent">
+            SEE PROJECTS
+          </Button>
+          <Button width="14rem" background="transparent">
+            CONTACT US
+          </Button>
         </div>
       </div>
     </ButtonContainer>

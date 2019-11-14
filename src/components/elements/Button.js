@@ -3,23 +3,26 @@ import styled from 'styled-components';
 
 const Wrapper = styled.button`
   width: ${props => (props.width ? props.width : '')};
-  color: ${props => props.theme.secLightShades};
-  border: 1px solid ${props => props.theme.secLightShades};
+  color: ${props => (props.color ? props.color : props.theme.secondryColor)};
+  border: 1px solid
+    ${props => (props.border ? props.border : props.theme.secondryColor)};
   :hover {
-    color: ${props => props.theme.secLightShades};
-    border: 1px solid ${props => props.theme.secLightShades};
+    color: ${props => (props.color ? props.color : props.theme.secondryColor)};
+    border: 1px solid
+      ${props => (props.border ? props.border : props.theme.secondryColor)};
   }
-  background-color: ${props => props.background};
+  background-color: ${props =>
+    props.background ? props.background : props.theme.secondryColor};
 `;
 
-const Button = ({ title, width, background, ...otherProps }) => (
+const Button = ({ className, children, fullWidth, ...otherProps }) => (
   <Wrapper
-    className="button is-radiusless is-large"
+    className={`button is-radiusless is-large ${
+      fullWidth ? 'is-fullwidth' : ''
+    }`}
     type="button"
-    width={width}
-    background={background}
     {...otherProps}>
-    {title}
+    {children}
   </Wrapper>
 );
 
