@@ -16,8 +16,8 @@ const Testimonials = () => (
     <div className="container">
       <Heading title="TESTIMONIALS" color="#000" />
       <div className="columns">
-        <TestimonialItem />
-        <TestimonialItem />
+        <TestimonialItem Icon="/images/icon/itv.jpg" />
+        <TestimonialItem Icon="/images/icon/heinz.jpg" />
       </div>
     </div>
   </Section>

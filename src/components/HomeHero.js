@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  background-image: url(/images/herobackground.png);
+  background-image: url(${props => props.bgImage});
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -21,16 +21,16 @@ const Section = styled.section`
   }
 `;
 
-const HomeHero = ({ title, heading, subtitle, text }) => (
-  <Section className="section">
+const HomeHero = ({ title, heading, subtitle, text, bgImage }) => (
+  <Section className="section" bgImage={bgImage}>
     <div className="container">
       <div className="columns">
         <div className="column is-4">
           <section className="hero">
             <div className="hero-body">
-              <h2 className="title is-size-3-mobile has-text-weight-semibold is-uppercase">
+              <h1 className="title is-size-3-mobile has-text-weight-light is-uppercase">
                 {title}
-              </h2>
+              </h1>
               <h2 className="has-text-weight-semibold">{heading}</h2>
               <p className="has-text-weight-light is-size-6">{subtitle}</p>
               <p className="has-text-info">{text}</p>
