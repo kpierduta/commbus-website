@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  background: url(/images/herobackground.png);
+  background-image: url(/images/herobackground.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -21,7 +21,7 @@ const Section = styled.section`
   }
 `;
 
-const HomeHero = () => (
+const HomeHero = ({ title, heading, subtitle, text }) => (
   <Section className="section">
     <div className="container">
       <div className="columns">
@@ -29,16 +29,11 @@ const HomeHero = () => (
           <section className="hero">
             <div className="hero-body">
               <h2 className="title is-size-3-mobile has-text-weight-semibold is-uppercase">
-                We design, build & manage successful promotional bus campaigns
+                {title}
               </h2>
-              <p className="has-text-weight-light is-size-6">
-                “Our promotional buses give meaning to experiential marketing,
-                taking your marketing campaigns on the road directly to who
-                matters – your target audience”
-              </p>
-              <p className="has-text-info">
-                “ Clare Macleod, Marketing Director”
-              </p>
+              <h2 className="has-text-weight-semibold">{heading}</h2>
+              <p className="has-text-weight-light is-size-6">{subtitle}</p>
+              <p className="has-text-info">{text}</p>
             </div>
           </section>
         </div>
