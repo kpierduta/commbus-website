@@ -6,7 +6,7 @@ const Section = styled.section`
     background: #487c92;
   }
   .column:first-child {
-    padding: 3rem 18rem 3rem 3rem;
+    padding: 3rem 12rem 3rem 3rem;
   }
   button {
     height: 100%;
@@ -32,7 +32,7 @@ const MessageInfo = () => (
             professional.
           </p>
         </div>
-        <div className="column is-4">
+        <div className="column is-5">
           <button className="button is-fullwidth is-large" type="button">
             <span className="icon has-text-white">
               <i className="far fa-envelope" />

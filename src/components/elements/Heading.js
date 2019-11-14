@@ -5,9 +5,9 @@ const Wrapper = styled.h1`
   color: ${props => (props.color ? props.color : props.theme.secondryColor)};
 `;
 
-const Heading = ({ title, color }) => (
+const Heading = ({ title, size, color }) => (
   <Wrapper
-    className="title is-3 has-text-weight-bold has-text-centered"
+    className={`title has-text-weight-bold has-text-centered ${size || 'is-3'}`}
     color={color}>
     {title}
   </Wrapper>

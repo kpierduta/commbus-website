@@ -6,6 +6,7 @@ import HomeHero from '../components/HomeHero';
 import FeaturesSubPage from '../components/FeaturesSubPage';
 import Projects from '../components/Projects';
 import MessageInfo from '../components/MessageInfo';
+import Branding from '../components/Branding';
 
 const SubPage = () => (
   <Layout>
@@ -22,6 +23,7 @@ const SubPage = () => (
       </div>
     </section>
     <MessageInfo />
+    <Branding />
   </Layout>
 );
 
