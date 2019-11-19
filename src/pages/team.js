@@ -3,6 +3,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
+import TeamContent from '../components/TeamContent';
 
 const Team = () => (
   <Layout>
@@ -13,6 +14,7 @@ const Team = () => (
       subtitle="Our experienced team have worked on events accross the UK, working on projects from concept right through to on the road. We have dedicated team who give 24/7 support to our customers."
       bgImage="/images/projects/herobackground.png"
     />
+    <TeamContent />
   </Layout>
 );
 

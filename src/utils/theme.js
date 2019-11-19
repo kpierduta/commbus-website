@@ -3,6 +3,7 @@ import reset from 'styled-reset-advanced';
 import { darken, lighten } from 'polished';
 
 const mainBrandColor = '#00D1B2';
+
 const lightShades = '#487C93';
 const darkAccent = '#3173DC';
 const darkShades = '#0A0A0A';
@@ -27,7 +28,7 @@ export const theme = {
   primaryColor: mainBrandColor,
   secondryColor: lightShades,
   borderColor: '#e0e6ef',
-  backgroundColor: '#FFFFFF',
+  backgroundColor: '#eef3f6;',
   backgroundInputColor: lightShades,
   backgroundInputColorDark: darkShades,
   fontSize: 16,

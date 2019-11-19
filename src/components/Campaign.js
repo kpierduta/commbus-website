@@ -6,7 +6,7 @@ import Button from './elements/Button';
 import Heading from './elements/Heading';
 
 const Section = styled.section`
-  background-color: #eef3f6;
+  background-color: ${props => props.theme.backgroundColor};
   h1 {
     margin: 3rem 0 3rem 0;
   }
