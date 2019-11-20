@@ -12,58 +12,72 @@ const TeamContent = () => (
       <div className="columns is-multiline">
         <div className="column is-one-quarter">
           <TeamData
-            avatar="https://colorlib.com/activello/wp-content/uploads/sites/10/2015/11/oIpwxeeSPy1cnwYpqJ1w_Dufer-Collateral-test-330x220.jpg"
+            avatar="./images/teamimages/mark-clarke@2x.jpg"
             name="Mark Clark"
             position="Managing Director"
           />
         </div>
         <div className="column is-one-quarter">
           <TeamData
-            avatar="https://colorlib.com/activello/wp-content/uploads/sites/10/2015/11/oIpwxeeSPy1cnwYpqJ1w_Dufer-Collateral-test-330x220.jpg"
-            name="Mark Clark"
-            position="Managing Director"
+            avatar="./images/teamimages/gordon-hunt@2x.jpg"
+            name="Gordon Hunt"
+            position="Director"
           />
         </div>
         <div className="column is-one-quarter">
           <TeamData
-            avatar="https://colorlib.com/activello/wp-content/uploads/sites/10/2015/11/oIpwxeeSPy1cnwYpqJ1w_Dufer-Collateral-test-330x220.jpg"
-            name="Mark Clark"
-            position="Managing Director"
+            avatar="./images/teamimages/clare-macleod@2x.png"
+            name="Clare Macleod"
+            position="Sales & Marketing Director"
           />
         </div>
         <div className="column is-one-quarter">
           <TeamData
-            avatar="https://colorlib.com/activello/wp-content/uploads/sites/10/2015/11/oIpwxeeSPy1cnwYpqJ1w_Dufer-Collateral-test-330x220.jpg"
-            name="Mark Clark"
-            position="Managing Director"
+            avatar="./images/teamimages/richard-charnley@2x.jpg"
+            name="Richard Charnley"
+            position="Transport Consultant"
           />
         </div>
         <div className="column is-one-quarter">
           <TeamData
-            avatar="https://colorlib.com/activello/wp-content/uploads/sites/10/2015/11/oIpwxeeSPy1cnwYpqJ1w_Dufer-Collateral-test-330x220.jpg"
-            name="Mark Clark"
-            position="Managing Director"
+            avatar="./images/teamimages/brodie-staro@2x.jpg"
+            name="Brodie Setaro"
+            position="Transport & Project Manager"
           />
         </div>
         <div className="column is-one-quarter">
           <TeamData
-            avatar="https://colorlib.com/activello/wp-content/uploads/sites/10/2015/11/oIpwxeeSPy1cnwYpqJ1w_Dufer-Collateral-test-330x220.jpg"
-            name="Mark Clark"
-            position="Managing Director"
+            avatar="./images/teamimages/mark-clarke@2x.jpg"
+            name="Holly Hitchinson"
+            position="Project Manager"
           />
         </div>
         <div className="column is-one-quarter">
           <TeamData
-            avatar="https://colorlib.com/activello/wp-content/uploads/sites/10/2015/11/oIpwxeeSPy1cnwYpqJ1w_Dufer-Collateral-test-330x220.jpg"
-            name="Mark Clark"
-            position="Managing Director"
+            avatar="./images/teamimages/elizabeth-mee@2x.jpg"
+            name="Elizabeth Mee"
+            position="Business Development "
           />
         </div>
         <div className="column is-one-quarter">
           <TeamData
-            avatar="https://colorlib.com/activello/wp-content/uploads/sites/10/2015/11/oIpwxeeSPy1cnwYpqJ1w_Dufer-Collateral-test-330x220.jpg"
-            name="Mark Clark"
-            position="Managing Director"
+            avatar="https://bulma.io/images/placeholders/256x256.png"
+            name="Ross Thompson"
+            position="Logistics & Fleet CoOrdinator"
+          />
+        </div>
+        <div className="column is-one-quarter">
+          <TeamData
+            avatar="https://bulma.io/images/placeholders/256x256.png"
+            name="Beth Clarke"
+            position="Events Assistant"
+          />
+        </div>
+        <div className="column is-one-quarter">
+          <TeamData
+            avatar="./images/teamimages/steve-butler@2x.jpg"
+            name="Steve Butler"
+            position="Mechanic"
           />
         </div>
       </div>
