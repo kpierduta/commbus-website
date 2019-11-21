@@ -10,7 +10,7 @@ const Wrapper = styled.div`
     margin: 0.8rem 0.3rem;
   }
   .card-content {
-    padding: 0.7rem !important;
+    padding: 0.75rem !important;
   }
   .is-2 {
     background-color: ${props => props.theme.lightShades} !important;
@@ -30,10 +30,10 @@ const TeamData = ({ avatar, name, position }) => {
           <div className="columns is-multiline is-mobile">
             <div className="column">
               <p className="title is-5 text">{name}</p>
-              <p className="subtitle is-6 text">{position}</p>
+              <p className="subtitle is-6 text is-size-5-mobile">{position}</p>
             </div>
             <div className="column is-2">
-              <span className=" has-text-white">
+              <span className="has-text-white">
                 <i className="fas fa-plus-circle icon" />
               </span>
             </div>

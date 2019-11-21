@@ -19,7 +19,7 @@ const FeatureItem = ({ img, alt, title, subtitle }) => (
   <Wrapper className="column has-text-centered">
     <img src={img} alt={alt} />
     <h1 className="is-5 has-text-weight-semibold has-text-white">{title}</h1>
-    <p className=" has-text-white">{subtitle}</p>
+    <p className="has-text-white">{subtitle}</p>
   </Wrapper>
 );
 
