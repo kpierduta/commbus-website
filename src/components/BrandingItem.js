@@ -7,6 +7,7 @@ import BrandingItemList from './BrandingItemList';
 const Wrapper = styled.div`
   h2 {
     color: ${props => props.theme.secondryColor};
+    margin-bottom: 0.5rem;
   }
 `;
 

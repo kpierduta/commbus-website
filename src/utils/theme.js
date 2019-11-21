@@ -42,6 +42,7 @@ export const theme = {
   menuTintColor: darkAccent,
   primaryFontFamily: "'PT Sans', sans-serif",
   secondaryFontFamily: "'BebasNeueRegular', sans-serif",
+  tertiaryFontFamily: '',
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',
 };
 
