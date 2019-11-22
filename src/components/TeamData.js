@@ -15,6 +15,9 @@ const Wrapper = styled.div`
   .is-2 {
     background-color: ${props => props.theme.lightShades} !important;
   }
+  .subtitle {
+    font-size: 0.9rem !important;
+  }
 `;
 
 const TeamData = ({ avatar, name, position }) => {
