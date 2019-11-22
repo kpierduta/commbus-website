@@ -2,10 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import FeatureItem from './FeatureItem';
-import firstImage from '../../static/images/icon/bus.svg';
-import secondImage from '../../static/images/icon/eye.svg';
-import thirdImage from '../../static/images/icon/shopping-cart.svg';
-import fourthImage from '../../static/images/icon/review.svg';
 import Heading from './elements/Heading';
 
 const Section = styled.div`
@@ -19,33 +15,31 @@ const FeaturesSubPage = () => (
   <Section className="section">
     <div className="container">
       <Heading
-        title="OVER 16 YEARS OF EXPERIENCE | DEDICATED QUALIFIED TEAM"
+        title="OVER 100 YEARS COMBINED EXPERIENCE | DEDICATED QUALIFIED TEAM"
         color="#fff"
       />
       <div className="columns">
         <FeatureItem
-          img={firstImage}
-          title="Difference vehicle options"
-          subtitle="Single deck, double deck, vintage routemaster or open top bus.Our event support vehicles give you a mobile,
-        flexible office style solution."
+          img="./images/projecticons/icons@2x.jpg"
+          title="Your dedicated project"
+          subtitle="
+          Your dedicated project manager works alongside from initial planning planning to launching your campaign on the road."
         />
         <FeatureItem
-          img={secondImage}
+          img="./images/projecticons/vehicle-icon@2x.jpg"
           title="Vehicle branding"
-          subtitle="Our fully wrap, overlay and banner graphics provide you with a branded produc toffice that stands out in
-        the crowd."
+          subtitle="
+          Scaled templates for both externally and internally designing and branding the fleet of vehicles."
         />
         <FeatureItem
-          img={thirdImage}
-          title="Hire shop"
-          subtitle="We can supply you with a range of event equipment, from crowd barriers, cones to sound systems. See our
-        hire shop."
+          img="./images/projecticons/qualified-icon@2x.jpg"
+          title="Qualified"
+          subtitle="We are licensed internal and national operators, ensuing you are legal with government DVSA requirements. Our drivers a trained, uniformed and hold legal drivers CPC qualifications."
         />
         <FeatureItem
-          img={fourthImage}
-          title="Experienced & hard working team"
-          subtitle="We work 24/7 and not just 9 am - 5 pm to provide the round the clock support for all of
-          our events."
+          img="./images/projecticons/experienced-icon@2x.jpg"
+          title="Experienced & hard working"
+          subtitle="We have the knowledge and experience of providing promotional buses for over 20 years. All costs are provided upfront during the planning stage and there are no hidden fees."
         />
       </div>
     </div>

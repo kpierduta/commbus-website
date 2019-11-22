@@ -13,13 +13,18 @@ const Wrapper = styled.div`
   p {
     line-height: 18px;
   }
+  .alltext {
+    font-family: ${props => props.theme.primaryFontFamily};
+  }
 `;
 
 const FeatureItem = ({ img, alt, title, subtitle }) => (
-  <Wrapper className="column has-text-centered">
+  <Wrapper className="column has-text-centered alltext">
     <img src={img} alt={alt} />
-    <h1 className="is-5 has-text-weight-semibold has-text-white">{title}</h1>
-    <p className="has-text-white">{subtitle}</p>
+    <h1 className="is-5 has-text-weight-semibold has-text-white alltext">
+      {title}
+    </h1>
+    <p className="has-text-white alltext">{subtitle}</p>
   </Wrapper>
 );
 

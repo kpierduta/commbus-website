@@ -40,7 +40,7 @@ export const theme = {
   textColorInverse: lightShades,
   textColorLite: '#3b3b3b',
   menuTintColor: darkAccent,
-  primaryFontFamily: "'PT Sans', sans-serif",
+  primaryFontFamily: "'Arial Narrow,Arial',sans-serif",
   secondaryFontFamily: "'BebasNeueRegular', sans-serif",
   tertiaryFontFamily: '',
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',

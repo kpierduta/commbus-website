@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import FeaturesSubPage from '../components/FeaturesSubPage';
-import Projects from '../components/Projects';
+
 import MessageInfo from '../components/MessageInfo';
 import Branding from '../components/Branding';
 
@@ -18,11 +18,6 @@ const SubPage = () => (
       bgImage="/images/projects/herobackground.png"
     />
     <FeaturesSubPage />
-    <section className="section">
-      <div className="container">
-        <Projects />
-      </div>
-    </section>
     <MessageInfo />
     <Branding />
   </Layout>
