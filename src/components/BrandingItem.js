@@ -9,6 +9,9 @@ const Wrapper = styled.div`
     color: ${props => props.theme.secondryColor};
     margin-bottom: 0.5rem;
   }
+  .all-text {
+    font-family: ${props => props.theme.primaryFontFamily};
+  }
 `;
 
 const BrandingItem = () => (
@@ -19,7 +22,7 @@ const BrandingItem = () => (
       </figure>
     </div>
     <div className="card-content">
-      <h2 className="has-text-weight-semibold">Space Ape Games</h2>
+      <h2 className="has-text-weight-semibold all-text">Space Ape Games</h2>
       <BrandingItemList />
       <BrandingItemList />
       <BrandingItemList />

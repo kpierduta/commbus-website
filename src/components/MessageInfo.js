@@ -15,6 +15,9 @@ const Section = styled.section`
   .icon {
     font-size: 5rem;
   }
+  .all-text {
+    font-family: ${props => props.theme.primaryFontFamily};
+  }
 `;
 
 const MessageInfo = () => (
@@ -22,10 +25,10 @@ const MessageInfo = () => (
     <div className="container">
       <div className="columns">
         <div className="column">
-          <h1 className="has-text-weight-semibold has-text-white">
+          <h1 className="has-text-weight-semibold has-text-white all-text">
             Experienced event professional on hand 24/7 for your event
           </h1>
-          <p className="has-text-white">
+          <p className="has-text-white all-text">
             Commbus are responsive and helpful event experts. Weather you are
             looking for a vehicle or equipment for your event we focus on
             exceeding your expectations, being reliable, open, honest and
@@ -37,7 +40,7 @@ const MessageInfo = () => (
             <span className="icon has-text-white">
               <i className="far fa-envelope" />
             </span>
-            <span className="is-uppercase is-size-3 has-text-white">
+            <span className="is-uppercase is-size-3 has-text-white all-text">
               Find out more
             </span>
           </button>
