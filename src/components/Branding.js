@@ -10,7 +10,7 @@ const Section = styled.section`
 `;
 
 const ButtonContainer = styled.div`
-  margin: 1rem 0rem 6rem 0rem;
+  margin: 1rem 0rem 4rem 0rem;
   justify-content: center;
   display: grid;
 `;
