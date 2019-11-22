@@ -12,49 +12,49 @@ const TeamContent = () => (
       <div className="columns is-multiline">
         <div className="column is-one-quarter">
           <TeamData
-            avatar="./images/teamimages/mark-clarke@2x.jpg"
+            avatar="/images/teamimages/mark-clarke@2x.jpg"
             name="Mark Clark"
             position="Managing Director"
           />
         </div>
         <div className="column is-one-quarter">
           <TeamData
-            avatar="./images/teamimages/gordon-hunt@2x.jpg"
+            avatar="/images/teamimages/gordon-hunt@2x.jpg"
             name="Gordon Hunt"
             position="Director"
           />
         </div>
         <div className="column is-one-quarter">
           <TeamData
-            avatar="./images/teamimages/clare-macleod@2x.png"
+            avatar="/images/teamimages/clare-macleod@2x.png"
             name="Clare Macleod"
             position="Sales & Marketing Director"
           />
         </div>
         <div className="column is-one-quarter">
           <TeamData
-            avatar="./images/teamimages/richard-charnley@2x.jpg"
+            avatar="/images/teamimages/richard-charnley@2x.jpg"
             name="Richard Charnley"
             position="Transport Consultant"
           />
         </div>
         <div className="column is-one-quarter">
           <TeamData
-            avatar="./images/teamimages/brodie-staro@2x.jpg"
+            avatar="/images/teamimages/brodie-staro@2x.jpg"
             name="Brodie Setaro"
             position="Transport & Project Manager"
           />
         </div>
         <div className="column is-one-quarter">
           <TeamData
-            avatar="./images/teamimages/mark-clarke@2x.jpg"
+            avatar="/images/teamimages/mark-clarke@2x.jpg"
             name="Holly Hitchinson"
             position="Project Manager"
           />
         </div>
         <div className="column is-one-quarter">
           <TeamData
-            avatar="./images/teamimages/elizabeth-mee@2x.jpg"
+            avatar="/images/teamimages/elizabeth-mee@2x.jpg"
             name="Elizabeth Mee"
             position="Business Development "
           />
@@ -75,7 +75,7 @@ const TeamContent = () => (
         </div>
         <div className="column is-one-quarter">
           <TeamData
-            avatar="./images/teamimages/steve-butler@2x.jpg"
+            avatar="/images/teamimages/steve-butler@2x.jpg"
             name="Steve Butler"
             position="Mechanic"
           />
