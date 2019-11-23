@@ -3,10 +3,9 @@ import reset from 'styled-reset-advanced';
 import { darken, lighten } from 'polished';
 
 const mainBrandColor = '#00D1B2';
-
 const lightShades = '#487C93';
 const darkAccent = '#3173DC';
-const darkShades = '#0A0A0A';
+const darkShades = '#274550';
 
 export const theme = {
   // It can be liberally applied to your layout as its main identity.
