@@ -9,6 +9,9 @@ const Section = styled.div`
   }
   h1 {
     padding: 0rem 17rem 0rem 0rem;
+    @media screen and (max-width: 768px) {
+      padding: 0rem 0rem 0rem 0rem;
+    }
   }
   p {
     margin-bottom: 1rem;

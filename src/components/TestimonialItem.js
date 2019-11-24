@@ -6,6 +6,9 @@ const Container = styled.div`
   margin: 1.5rem 1rem;
   p {
     margin: -3rem 7rem 1rem 7rem;
+    @media screen and (max-width: 768px) {
+      margin: 0rem 0rem 0rem 0rem;
+    }
   }
   .image.is-128x128 {
     height: 200px;

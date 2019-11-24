@@ -10,7 +10,7 @@ const Section = styled.section`
 const OurClient = () => (
   <Section className="section">
     <div className="container">
-      <h2 className="subtitle is-5 has-text-weight-bold is-uppercase">
+      <h2 className="subtitle is-5 has-text-weight-bold is-uppercase has-text-centered-mobile">
         Trusted by
       </h2>
       <div className="columns is-multiline">
