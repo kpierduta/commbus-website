@@ -18,8 +18,8 @@ const ButtonContainer = styled.div`
 const Branding = () => (
   <Section className="section">
     <div className="container">
-      <Heading title="Internal & external branding" />
-      <Heading title="Client Examples" size="is-6" />
+      <Heading title="INTERNAL & EXTERNAL BRANDING AND DESIGN" />
+      <Heading title="CLIENT EXAMPLES" size="is-6" />
       <div className="columns">
         <div className="column">
           <BrandingItem />
