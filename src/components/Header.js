@@ -12,6 +12,9 @@ const Section = styled.section`
   .icon {
     font-size: 1.25rem !important;
   }
+  a {
+    color: ${props => props.theme.lightShades};
+  }
   .navbar {
     background-color: transparent;
   }

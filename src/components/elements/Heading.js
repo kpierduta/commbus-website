@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.h1`
   color: ${props => (props.color ? props.color : props.theme.secondryColor)};
+  letter-spacing: 0.2rem;
 `;
 
 const Heading = ({ title, size, color }) => (
