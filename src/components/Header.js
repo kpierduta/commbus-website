@@ -49,6 +49,9 @@ const Section = styled.section`
   }
   .email {
     margin: 0 0 0 1.5rem;
+    @media screen and (max-width: 768px) {
+      margin: 0 0 0 1.4rem;
+    }
   }
 `;
 

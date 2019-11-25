@@ -8,6 +8,7 @@ const Section = styled.section`
   background-position: center;
   @media screen and (max-width: 768px) {
     background-size: auto;
+    background-image: none;
   }
   p {
     margin-top: 1rem;

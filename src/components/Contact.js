@@ -18,6 +18,9 @@ const Section = styled.div`
     margin: 2rem 0rem 2rem 0rem;
     font-family: ${props => props.theme.primaryFontFamily};
     padding: 0rem 6rem 0rem 0rem;
+    @media screen and (max-width: 768px) {
+      padding: 0rem 0rem 0rem 0rem;
+    }
   }
   .image {
     width: 500px;
