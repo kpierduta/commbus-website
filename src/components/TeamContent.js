@@ -62,13 +62,6 @@ const TeamContent = () => (
         <div className="column is-one-quarter">
           <TeamData
             avatar="https://bulma.io/images/placeholders/256x256.png"
-            name="Ross Thompson"
-            position="Logistics & Fleet CoOrdinator"
-          />
-        </div>
-        <div className="column is-one-quarter">
-          <TeamData
-            avatar="https://bulma.io/images/placeholders/256x256.png"
             name="Beth Clarke"
             position="Events Assistant"
           />

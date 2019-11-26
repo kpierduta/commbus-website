@@ -9,10 +9,7 @@ import fourthImage from '../../static/images/icon/review.svg';
 import Heading from './elements/Heading';
 
 const Section = styled.div`
-  background: #487c92;
-  h1 {
-    margin-top: 2rem;
-  }
+  background: ${props => props.theme.lightShades};
 `;
 
 const Features = () => (

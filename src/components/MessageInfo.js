@@ -37,7 +37,7 @@ const MessageInfo = () => (
             <div className="column">
               <button className="button is-large is-fullwidth" type="button">
                 <span className="icon is-medium has-text-white">
-                  <i className="far fa-envelope" />
+                  <img src="/images/messegelogo/chaticon.png" alt="" />
                 </span>
                 <span className="is-uppercase is-size-4 has-text-white all-text">
                   Find out more

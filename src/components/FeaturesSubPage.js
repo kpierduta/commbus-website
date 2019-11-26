@@ -6,9 +6,6 @@ import Heading from './elements/Heading';
 
 const Section = styled.div`
   background: #3c3c3a;
-  h1 {
-    margin-top: 2rem;
-  }
 `;
 
 const FeaturesSubPage = () => (
