@@ -16,6 +16,9 @@ const Container = styled.section`
   .column {
     align-self: center;
   }
+  ul {
+    font-family: ${props => props.theme.primaryFontFamily};
+  }
 `;
 
 const Footer = () => (
