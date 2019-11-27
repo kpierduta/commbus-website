@@ -1,9 +1,7 @@
 import React from 'react';
 
 const FooterOptions = ({ option }) => (
-  <li>
-    <a className="is-size-6">{option}</a>
-  </li>
+  <a className="is-size-6 is-block">{option}</a>
 );
 
 export default FooterOptions;

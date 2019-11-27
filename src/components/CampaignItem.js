@@ -3,8 +3,6 @@ import styled from 'styled-components';
 
 import Button from './elements/Button';
 
-import imageDummy from '../../static/images/projects/dummy.png';
-
 const Container = styled.div`
   p {
     color: ${props => props.theme.secondryColor} !important;
@@ -12,12 +10,12 @@ const Container = styled.div`
   }
 `;
 
-const CampaignItem = () => (
+const CampaignItem = ({ image }) => (
   <Container className="column">
     <div className="card">
       <div className="card-image">
         <figure className="image is-3by2">
-          <img src={imageDummy} alt="Placeholder" />
+          <img src={image} alt="Placeholder" />
         </figure>
       </div>
       <div className="card-content">

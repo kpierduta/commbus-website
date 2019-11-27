@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 import FeatureItem from './FeatureItem';
-import firstImage from '../../static/images/icon/bus.svg';
-import secondImage from '../../static/images/icon/eye.svg';
-import thirdImage from '../../static/images/icon/shopping-cart.svg';
-import fourthImage from '../../static/images/icon/review.svg';
+import firstImage from '../../static/images/icon/bus-icon@2x.png';
+import secondImage from '../../static/images/icon/eye-icon@2x.png';
+import thirdImage from '../../static/images/icon/shopping-icon@2x.png';
+import fourthImage from '../../static/images/icon/thumbs-up-icon@2x.png';
 import Heading from './elements/Heading';
 
 const Section = styled.div`

@@ -19,7 +19,7 @@ export default class IndexPage extends React.Component {
         taking your marketing campaigns on the road directly to who
         matters – your target audience”"
           text="- Clare Macleod, Marketing Director"
-          bgImage="/images/projects/herobackground.png"
+          bgImage="/images/projects/homepage-header-image@2x.png"
         />
         <OurClient />
         <Features />

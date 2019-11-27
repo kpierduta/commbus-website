@@ -14,7 +14,7 @@ const Section = styled.section`
 
 const ButtonWrapper = styled.div`
   justify-content: center;
-  padding: 3rem 0 3rem;
+  xpadding: 3rem 0 3rem;
 `;
 
 const Campaign = () => (
@@ -22,9 +22,9 @@ const Campaign = () => (
     <div className="container">
       <Heading title="our recent campaigns & insights" />
       <div className="columns">
-        <CampaignItem />
-        <CampaignItem />
-        <CampaignItem />
+        <CampaignItem image="/images/campain/blog-image-1@2x.jpg" />
+        <CampaignItem image="/images/campain/blog-image-2@3x.jpg" />
+        <CampaignItem image="/images/campain/blog-image-3@2x.jpg" />
       </div>
       <ButtonWrapper className="is-flex">
         <Button background="transparent">VIEW ALL ARTICLES</Button>
