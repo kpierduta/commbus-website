@@ -87,7 +87,7 @@ const ContactForm = props => {
             id="message"
             name="message"
             className="textarea is-medium is-radiusless"
-            placeholder="Enter your Message"
+            placeholder="Your message"
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.message}

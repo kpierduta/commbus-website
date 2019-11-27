@@ -21,25 +21,43 @@ const Branding = () => (
       <Heading title="INTERNAL & EXTERNAL BRANDING AND DESIGN" />
       <Heading title="CLIENT EXAMPLES" size="is-6" />
       <div className="columns">
-        <div className="column">
-          <BrandingItem />
+        <div className="column is-4">
+          <BrandingItem
+            Image="/images/brandingdesign/space-ape.png"
+            title="Space Ape Games"
+          />
         </div>
-        <div className="column">
-          <BrandingItem />
+        <div className="column is-4">
+          <BrandingItem
+            Image="/images/brandingdesign/producta.png"
+            title="Scholar"
+          />
         </div>
-        <div className="column">
-          <BrandingItem />
+        <div className="column is-4">
+          <BrandingItem
+            Image="/images/brandingdesign/heinz2x.png"
+            title="Heinz 50 Year Anniversary"
+          />
         </div>
       </div>
       <div className="columns">
-        <div className="column">
-          <BrandingItem />
+        <div className="column is-4">
+          <BrandingItem
+            Image="/images/brandingdesign/producta.png"
+            title="Space Ape Games"
+          />
         </div>
-        <div className="column">
-          <BrandingItem />
+        <div className="column is-4">
+          <BrandingItem
+            Image="/images/brandingdesign/producta.png"
+            title="Scholar"
+          />
         </div>
-        <div className="column">
-          <BrandingItem />
+        <div className="column is-4">
+          <BrandingItem
+            Image="/images/brandingdesign/heinz.png"
+            title="Heinz 50 Year Anniversary"
+          />
         </div>
       </div>
 

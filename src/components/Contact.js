@@ -8,7 +8,7 @@ const Section = styled.div`
     margin-top: 4rem;
   }
   h1 {
-    padding: 0rem 17rem 0rem 0rem;
+    padding: 0rem 13rem 0rem 0rem;
     @media screen and (max-width: 768px) {
       padding: 0rem 0rem 0rem 0rem;
     }
@@ -51,25 +51,20 @@ const Contact = () => (
       <div className="columns is-centered">
         <div className="column">
           <h1 className="title is-2 has-text-weight-bold has-text-white">
-            Event Support Vehicles, equipment and event support staff
+            promotional buses, event support vehicles, event equipment and crew
           </h1>
           <p className="has-text-white is-size-6 has-text-weight-bold has-text-weight-light">
-            We are your reliable team of event experts with experience of
-            supporting events accross the country. We promise to deliver and
-            meet exact requirements with a friendly, honest and professional
-            approach.
+            With a wealth of experience across the events sector we can provide
+            you with many solutions for your event.
           </p>
           <p className="has-text-white has-text-weight-bold is-size-6">
-            Weather you need a vehicle for your event, equipment and team
-            members our solution take the hassle out of your event and provide
-            you with all the crucial elements to make it a success.
+            From promotional buses, event support vehicles, event equipment and
+            crew we can tailor packages to suit your exact requirements to make
+            your event a success.
           </p>
           <p className="has-text-white has-text-weight-bold is-size-6">
-            Please contact us for a friendly conversation on how we can help
-            you.
-          </p>
-          <p className="has-text-white has-text-weight-bold is-size-6">
-            We aim to reply to your enquiry within 2 working days.
+            Contact us now for more information, we aim to come back to you with
+            1 working day.
           </p>
         </div>
         <div className="column">
