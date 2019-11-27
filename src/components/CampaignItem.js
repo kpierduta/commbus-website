@@ -8,6 +8,7 @@ import imageDummy from '../../static/images/projects/dummy.png';
 const Container = styled.div`
   p {
     color: ${props => props.theme.secondryColor} !important;
+    font-family: ${props => props.theme.primaryFontFamily} !important;
   }
 `;
 
@@ -20,7 +21,7 @@ const CampaignItem = () => (
         </figure>
       </div>
       <div className="card-content">
-        <p className="has-text-weight-semibold">
+        <p className="has-text-weight-semibold has-text-centered">
           The 7 principles of engagement marketing
         </p>
       </div>
