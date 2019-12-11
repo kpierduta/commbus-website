@@ -63,6 +63,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${theme.secondaryFontFamily}
   }
   p {
+    font-family: ${theme.primaryFontFamily};
     line-height: 1.5rem;
   }
   p, .title, .box {

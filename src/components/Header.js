@@ -7,7 +7,7 @@ import { Link } from 'gatsby';
 import Icon from './elements/Icon';
 
 const Section = styled.section`
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.5rem 3rem 1.5rem;
   font-family: ${props => props.theme.primaryFontFamily};
   .icon {
     font-size: 1.25rem !important;
@@ -150,7 +150,7 @@ export default class Header extends React.Component {
                 <Link to="/" className="navbar-item">
                   Event Support
                 </Link>
-                <Link to="/" className="navbar-item">
+                <Link to="/vehicle" className="navbar-item">
                   Vehicle Branding
                 </Link>
                 {/**************only for test *************/}
