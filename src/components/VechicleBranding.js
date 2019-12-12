@@ -19,7 +19,7 @@ const Section = styled.section`
 `;
 
 const VechicleBranding = ({ title, subtitle, bgImage }) => (
-  <Section className="section" bgImage={bgImage}>
+  <Section bgImage={bgImage}>
     <div className="container">
       <div className="columns">
         <div className="column is-4">

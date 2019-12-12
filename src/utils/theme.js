@@ -27,7 +27,7 @@ export const theme = {
   primaryColor: mainBrandColor,
   secondryColor: lightShades,
   borderColor: '#e0e6ef',
-  backgroundColor: '#eef3f6;',
+  backgroundColor: '#eef3f6',
   backgroundInputColor: lightShades,
   backgroundInputColorDark: darkShades,
   fontSize: 16,
