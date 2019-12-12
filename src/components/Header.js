@@ -107,8 +107,7 @@ export default class Header extends React.Component {
               </a>
               <a
                 href="mailto:"
-                className="has-text-weight-light is-uppercase is-size-4 email"
-              >
+                className="has-text-weight-light is-uppercase is-size-4 email">
                 enquiries@commbus.com
               </a>
             </div>
@@ -116,8 +115,7 @@ export default class Header extends React.Component {
           <nav
             className="navbar"
             role="navigation"
-            aria-label="main navigation"
-          >
+            aria-label="main navigation">
             <div className="navbar-brand">
               <Link className="navbar-item" to="/">
                 <img
@@ -135,8 +133,7 @@ export default class Header extends React.Component {
                 aria-label="menu"
                 aria-expanded="false"
                 data-target="navbarBasicExample"
-                onClick={() => this.handleMobileMenu()}
-              >
+                onClick={() => this.handleMobileMenu()}>
                 <span aria-hidden="true" />
                 <span aria-hidden="true" />
                 <span aria-hidden="true" />
@@ -153,16 +150,16 @@ export default class Header extends React.Component {
                 <Link to="/vehicle" className="navbar-item">
                   Vehicle Branding
                 </Link>
-                {/**************only for test *************/}
+                {/** ************only for test ************ */}
                 <Link to="/team" className="navbar-item">
                   About
                 </Link>
-                {/**************only for test *************/}
+                {/** ************only for test ************ */}
                 <Link to="/subPage" className="navbar-item">
                   Projects
                 </Link>
-                {/**************only for test *************/}
-                <Link to="/" className="navbar-item">
+                {/** ************only for test ************ */}
+                <Link to="/news" className="navbar-item">
                   News
                 </Link>
                 <Link to="/" className="navbar-item">
