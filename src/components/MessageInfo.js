@@ -2,23 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  margin: 0rem 0rem 3rem;
   .is-vcentered {
+    padding: 1rem 0.5rem;
     background-color: ${props => props.theme.backgroundInputColor};
   }
-
   button {
     font-size: 2.5rem !important;
     background: ${props => props.theme.darkShades};
   }
-
   .all-text {
     font-family: ${props => props.theme.primaryFontFamily};
   }
 `;
 
 const MessageInfo = () => (
-  <Section className="hero section is-block is-relative">
+  <Section className="section">
     <div className="container">
       <div className="columns is-centered">
         <div className="column is-12 is-10-fullhd">

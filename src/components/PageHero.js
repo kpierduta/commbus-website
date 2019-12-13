@@ -6,7 +6,7 @@ const Section = styled.section`
   background: #3b3b3a;
 `;
 
-const HomeHero = ({ title, heading }) => (
+const PageHero = ({ title, heading }) => (
   <Section className="section">
     <div className="container">
       <div className="columns">
@@ -25,4 +25,4 @@ const HomeHero = ({ title, heading }) => (
   </Section>
 );
 
-export default HomeHero;
+export default PageHero;

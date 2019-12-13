@@ -144,10 +144,10 @@ export default class Header extends React.Component {
             </div>
             <div className={isActive ? 'navbar-menu is-active' : 'navbar-menu'}>
               <div className="navbar-end">
-                <Link to="/" className="navbar-item">
+                <Link to="/promotional" className="navbar-item">
                   Promotional Buses
                 </Link>
-                <Link to="/" className="navbar-item">
+                <Link to="/newsblog" className="navbar-item">
                   Event Support
                 </Link>
                 <Link to="/vehicle" className="navbar-item">
@@ -158,7 +158,7 @@ export default class Header extends React.Component {
                   About
                 </Link>
                 {/**************only for test *************/}
-                <Link to="/subPage" className="navbar-item">
+                <Link to="/project" className="navbar-item">
                   Projects
                 </Link>
                 {/**************only for test *************/}

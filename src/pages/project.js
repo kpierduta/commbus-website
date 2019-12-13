@@ -9,7 +9,7 @@ import ProductsData from '../components/ProductsData';
 import MessageInfo from '../components/MessageInfo';
 import Branding from '../components/Branding';
 
-const SubPage = () => (
+const Project = () => (
   <Layout>
     <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
     <HomeHero
@@ -25,4 +25,4 @@ const SubPage = () => (
   </Layout>
 );
 
-export default SubPage;
+export default Project;

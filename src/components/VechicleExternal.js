@@ -32,16 +32,15 @@ const VechicleExternal = () => (
       <VechicleBranding
         title="OVERLAY 
           GRAPHICS"
-        subtitle="You are not constrained to sticking to traditional T-bar banners or pushed into a full wrap.
-          Get creative and make your graphics and message make an impact with your audience.
-          "
+        subtitle="You are not constrained to sticking to traditional T-bar banners or pushed into a full wrap."
+        para="Get creative and make your graphics and message make an impact with your audience."
         bgImage="/images/vehcilebarding/overlay-image@3x.png"
       />
       <VechicleBranding
         title="full
           wrap"
-        subtitle="Our fully wrapped buses are the largest moving advertising fomat available and are the ultimate branding statement.
-          Get creative with over 40m2 of mobile advertising space.
+        subtitle="Our fully wrapped buses are the largest moving advertising fomat available and are the ultimate branding statement."
+        para="Get creative with over 40m2 of mobile advertising space.
           "
         bgImage="/images/vehcilebarding/full-wrap-image@3x.png"
       />
