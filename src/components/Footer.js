@@ -69,7 +69,7 @@ const Footer = () => (
         </div>
         <div className="column is-1">
           <LinkStyled class="icon">
-            <i class="fas fa-home"></i>
+            <i className="fas fa-home" />
           </LinkStyled>
         </div>
       </div>
