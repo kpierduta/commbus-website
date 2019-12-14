@@ -8,37 +8,30 @@ const ShopItems = () => (
       <div className="columns is-multiline">
         <Shop
           title="4 foot round tables to hire"
-          subtitle="understard"
           avatar="https://bulma.io/images/placeholders/1280x960.png"
         />
         <Shop
-          title="understard"
-          subtitle="understard"
+          title="6 foot trestles top table to hire"
           avatar="https://bulma.io/images/placeholders/1280x960.png"
         />
         <Shop
-          title="understard"
-          subtitle="understard"
+          title="Banquet charis with covers to hire"
           avatar="https://bulma.io/images/placeholders/1280x960.png"
         />
         <Shop
-          title="understard"
-          subtitle="understard"
+          title="Gold banqueting chairs  to hire"
           avatar="https://bulma.io/images/placeholders/1280x960.png"
         />
         <Shop
-          title="understard"
-          subtitle="understard"
+          title="Bistro chairs and tables to hire"
           avatar="https://bulma.io/images/placeholders/1280x960.png"
         />
         <Shop
-          title="understard"
-          subtitle="understard"
+          title="Cake stands to hire"
           avatar="https://bulma.io/images/placeholders/1280x960.png"
         />
         <Shop
-          title="understard"
-          subtitle="understard"
+          title="Crowd barrier for hire"
           avatar="https://bulma.io/images/placeholders/1280x960.png"
         />
       </div>

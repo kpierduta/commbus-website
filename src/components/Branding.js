@@ -53,14 +53,14 @@ const Branding = props => (
               width="14rem"
               background="transparent"
               link={props.fistlink}
-            >
+              >
               {props.fistbutton}
             </Button>
             <Button
               width="14rem"
               background="transparent"
               link={props.secondlink}
-            >
+              >
               {props.secondbutton}
             </Button>
           </div>
