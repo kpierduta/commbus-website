@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
-const Wrapper = styled.button`
+const Wrapper = styled(Link)`
   width: ${props => (props.width ? props.width : '')};
   color: ${props => (props.color ? props.color : props.theme.secondryColor)};
   border: 1px solid
@@ -15,13 +16,15 @@ const Wrapper = styled.button`
     props.background ? props.background : props.theme.secondryColor};
 `;
 
-const Button = ({ className, children, fullWidth, ...otherProps }) => (
+const Button = ({ className, children, fullWidth, link, ...otherProps }) => (
   <Wrapper
     className={`button is-radiusless is-large ${
       fullWidth ? 'is-fullwidth' : ''
     }`}
     type="button"
-    {...otherProps}>
+    to={link}
+    {...otherProps}
+  >
     {children}
   </Wrapper>
 );

@@ -21,7 +21,14 @@ const Project = () => (
     <FeaturesSubPage />
     <ProductsData />
     <MessageInfo />
-    <Branding />
+    <Branding
+      title="INTERNAL & EXTERNAL BRANDING AND DESIGN"
+      subtitle="CLIENT EXAMPLES"
+      fistbutton="Internal Branding"
+      fistlink="/"
+      secondbutton="EXternal Branding"
+      secondlink="/"
+    />
   </Layout>
 );
 

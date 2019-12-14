@@ -8,6 +8,33 @@ import Features from '../components/Features';
 import Projects from '../components/Projects';
 import Campaign from '../components/Campaign';
 
+const Feature = [
+  {
+    img: '/images/icon/bus-icon@2x.png',
+    title: 'Different vehicle options',
+    subtitle:
+      'For all of your marketing campaign needs, we have double-deck buses, vintage buses, open top bus and supporting vehicles.',
+  },
+  {
+    img: '/images/icon/eye-icon@2x.png',
+    title: 'Vehicle branding',
+    subtitle:
+      'All our fleet can be branded. From simple graphics to fully wrapped.',
+  },
+  {
+    img: '/images/icon/shopping-icon@2x.png',
+    title: 'Hire shop',
+    subtitle:
+      'We have a wide range of equipment to support event. Find our more in our hire shop.',
+  },
+  {
+    img: '/images/icon/thumbs-up-icon@2x.png',
+    title: 'Experienced & hard working',
+    subtitle:
+      'We work 24/7 and not just 9 am - 5 pm to provide the round the clock support for all of our events.',
+  },
+];
+
 export default class IndexPage extends React.Component {
   render() {
     return (
@@ -22,7 +49,7 @@ export default class IndexPage extends React.Component {
           bgImage="/images/projects/homepage-header-image@2x.png"
         />
         <OurClient />
-        <Features />
+        <Features Feature={Feature} />
         <Projects />
         <Campaign />
       </Layout>

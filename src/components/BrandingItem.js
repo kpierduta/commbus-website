@@ -17,17 +17,19 @@ const Wrapper = styled.div`
 
 const BrandingItem = ({ Image, title }) => {
   return (
-    <Wrapper className="card">
-      <div className="card-image">
-        <figure className="image">
-          <img src={Image} alt="Placeholder" />
-        </figure>
-      </div>
-      <div className="card-content">
-        <h2 className="has-text-weight-semibold all-text">{title}</h2>
-        <BrandingItemList smalltext="Promotional open top bus" />
-        <BrandingItemList smalltext="Full external bus wrap" />
-        <BrandingItemList smalltext="Project manager on tour with the client team" />
+    <Wrapper className="column is-4">
+      <div className="card">
+        <div className="card-image">
+          <figure className="image">
+            <img src={Image} alt="Placeholder" />
+          </figure>
+        </div>
+        <div className="card-content">
+          <h2 className="has-text-weight-semibold all-text">{title}</h2>
+          <BrandingItemList smalltext="Promotional open top bus" />
+          <BrandingItemList smalltext="Full external bus wrap" />
+          <BrandingItemList smalltext="Project manager on tour with the client team" />
+        </div>
       </div>
     </Wrapper>
   );
