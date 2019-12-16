@@ -4,7 +4,6 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import FeaturesSubPage from '../components/FeaturesSubPage';
-
 import ProductsData from '../components/ProductsData';
 import MessageInfo from '../components/MessageInfo';
 import Branding from '../components/Branding';

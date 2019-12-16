@@ -28,13 +28,13 @@ const MarketingCard = props => (
     <div className="card">
       <Section className="section">
         <div className="card-content">
-          <div class="columns">
-            <div class="column is-4 has-text-centered">
+          <div className="columns">
+            <div className="column is-4 has-text-centered">
               <figure className="image">
-                <img src={props.url} alt="Placeholder image" />
+                <img src={props.url} alt="images" />
               </figure>
             </div>
-            <div class="column">
+            <div className="column">
               <h2 className="title is-4 has-text-info has-text-weight-medium">
                 {props.heading}
               </h2>

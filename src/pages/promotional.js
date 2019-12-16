@@ -10,7 +10,7 @@ import Branding from '../components/Branding';
 
 const NavItems = [
   {
-    heading: 'BUSINESS TO BUSINESS',
+    heading: 'test',
     url: '/images/promotanal/product-showcase-icon@2x.png',
     description:
       'Looking for a direct way to reach your customers, potential customers and resellers? Taking your products and campaign direct to the doorstep of those organisations can give you a great advantage point for selling your products and services directly. Either as a single activity or supporting activity at other trade events with an exhibition bus.',

@@ -4,14 +4,15 @@ import styled from 'styled-components';
 import BrandingItemList from './BrandingItemList';
 
 const Wrapper = styled.div`
+  .card {
+    height: 30rem;
+  }
   h2 {
     color: ${props => props.theme.secondryColor};
     margin-bottom: 0.5rem;
   }
   .all-text {
     font-family: ${props => props.theme.primaryFontFamily};
-  }
-   {
   }
 `;
 

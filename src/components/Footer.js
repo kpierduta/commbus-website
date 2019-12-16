@@ -57,7 +57,9 @@ const Footer = () => (
             <FooterOptions option="Hire shop" />
           </Link>
           <FooterOptions option="Office on location" />
-          <FooterOptions option="Landstage" />
+          <Link to="/landstage">
+            <FooterOptions option="Landstage" />
+          </Link>
         </div>
         <div className="column">
           <FooterHeading title="Vehicle branding" />
