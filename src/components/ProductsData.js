@@ -7,24 +7,12 @@ const ProductsData = () => (
     <div className="container">
       <Heading title="SOME OF OUR PRODUCT LAUNCH CAMPAIGNS" />
       <div className="columns is-multiline">
-        <div className="column is-4">
-          <Products avatar="/images/projects/dummy.png" />
-        </div>
-        <div className="column is-4">
-          <Products avatar="/images/projects/dummy.png" />
-        </div>
-        <div className="column is-4">
-          <Products avatar="/images/projects/dummy.png" />
-        </div>
-        <div className="column is-4">
-          <Products avatar="/images/projects/dummy.png" />
-        </div>
-        <div className="column is-4">
-          <Products avatar="/images/projects/dummy.png" />
-        </div>
-        <div className="column is-4">
-          <Products avatar="/images/projects/dummy.png" />
-        </div>
+        <Products avatar="/images/projects/dummy.png" />
+        <Products avatar="/images/projects/dummy.png" />
+        <Products avatar="/images/projects/dummy.png" />
+        <Products avatar="/images/projects/dummy.png" />
+        <Products avatar="/images/projects/dummy.png" />
+        <Products avatar="/images/projects/dummy.png" />
       </div>
     </div>
   </section>
