@@ -53,10 +53,10 @@ const Feature = [
       'All our fleet can be branded. From simple graphics to fully wrapped.',
   },
   {
-    img: '/images/icon/social-icon@2x.png',
-    title: 'Engagement marketing',
+    img: '/images/icon/shopping-icon@2x.png',
+    title: 'Hire shop',
     subtitle:
-      'An engagement marketing solution that works seamlessly with your other channels of marketing such as social media.',
+      'We have a wide range of equipment to support event. Find our more in our hire shop.',
   },
   {
     img: '/images/icon/thumbs-up-icon@2x.png',
@@ -72,16 +72,14 @@ export default class PromotionalBuses extends React.Component {
       <Layout>
         <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
         <HomeHero
-          title="PROMOTIONAL 
-          BRANDED BUSES"
-          heading="Double deck buses, open top and single deck coaches. "
-          subtitle="Commbus has a fleet of promotional buses for hire and buy (for longer term projects) so if you are looking for a creative solution that will give you 
-          great impact - a branded bus is very hard to miss."
-          bgImage="/images/promotanal/promo-bus-hero-image@2x.png"
+          title="EVENT SUPPORT BUSES & BESPOKE VEHICLES"
+          heading="Vehicles, equipment & experienced staff."
+          subtitle="Commbus are an experienced event company, creating, supporting and delivering events across the UK. From vehicles, hireable event equipment and our experienced staff."
+          bgImage="/images/event/event-support-hero-image@2x.png"
         />
         <Features Feature={Feature} />
         <Marketing
-          title="HOW OUR FLEET CAN SUPPORT YOUR MARKETING CAMPAIGN"
+          title="HOW OUR FLEET CAN SUPPORT YOUR EVENT"
           NavItems={NavItems}
         />
         <MessageInfo />

@@ -30,5 +30,5 @@ const FeatureItem = ({ img, alt, title, subtitle }) => (
     <p className="has-text-white all-text">{subtitle}</p>
   </Wrapper>
 );
-
+``;
 export default FeatureItem;

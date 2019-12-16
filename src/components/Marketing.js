@@ -6,10 +6,10 @@ import MarketingCard from './MarketingCard';
 
 const Section = styled.section``;
 
-const Marketing = ({ NavItems }) => (
+const Marketing = ({ NavItems, title }) => (
   <Section className="section">
     <div className="container">
-      <Heading title="HOW OUR FLEET CAN SUPPORT YOUR MARKETING CAMPAIGN" />
+      <Heading title={title} />
       <section className="section">
         <div className="container">
           <div className="columns is-multiline">
