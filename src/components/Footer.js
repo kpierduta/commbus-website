@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import FooterHeading from './FooterHeading';
 
 const Container = styled.section`
   font-family: ${props => props.theme.primaryFontFamily};
