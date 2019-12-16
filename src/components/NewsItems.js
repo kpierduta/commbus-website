@@ -29,8 +29,7 @@ const NewsItems = ({ title, bgImage, link }) => {
             <h1 className="title is-size-5 is-pulled-right">{title}</h1>
             <Link
               className="button is-medium is-link is-pulled-right"
-              to={link}
-            >
+              to={link}>
               READ MORE
             </Link>
           </div>

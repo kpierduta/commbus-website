@@ -53,7 +53,9 @@ const Footer = () => (
         </div>
         <div className="column">
           <FooterHeading title="Event support" />
-          <FooterOptions option="Hire shop" />
+          <Link to="/hireshop">
+            <FooterOptions option="Hire shop" />
+          </Link>
           <FooterOptions option="Office on location" />
           <FooterOptions option="Landstage" />
         </div>
@@ -69,7 +71,7 @@ const Footer = () => (
         </div>
         <div className="column is-1">
           <LinkStyled class="icon">
-            <i class="fas fa-home"></i>
+            <i className="fas fa-home" />
           </LinkStyled>
         </div>
       </div>
