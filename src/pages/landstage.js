@@ -43,8 +43,8 @@ const LandStage = () => {
         title="LANDSTAGE - 
         BESPOKE EVENT 
         SUPPORT VEHICLE"
-        subtitle="Commbus has a fleet of promotional buses for hire and buy (for longer term projects) so if you are looking for a creative solution that will give you great impact - a branded bus is very hard to miss."
-        bgImage="/images/promotanal/promo-bus-hero-image@2x.png"
+        subtitle="Our Landstage was a concept designed to solve a problem for a client where they needed a safe platform working at height that could be mobile."
+        bgImage="/images/landstage/landimage@2x.jpg"
       />
       <Features Feature={Feature} />
       <ProductsData />
