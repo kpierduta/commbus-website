@@ -8,17 +8,19 @@ import ProductsData from '../components/ProductsData';
 import MessageInfo from '../components/MessageInfo';
 import Branding from '../components/Branding';
 
-const LandStage = () => {
+const Location = () => {
   return (
     <Layout>
       <Seo title="News & Updates" />
       <HomeHero
-        title="LANDSTAGE - BESPOKE EVENT SUPPORT VEHICLE"
+        title="LANDSTAGE - 
+        BESPOKE EVENT 
+        SUPPORT VEHICLE"
         subtitle="Our Landstage was a concept designed to solve a problem for a client where they needed a safe platform working at height that could be mobile."
         bgImage="/images/landstage/landimage@2x.jpg"
       />
       <FeaturesSubPage />
-      <ProductsData title="SOME OF OUR PRODUCT LAUNCH CAMPAIGNS" />
+      <ProductsData />
       <MessageInfo />
       <Branding
         title="INTERNAL & EXTERNAL BRANDING AND DESIGN"
@@ -32,4 +34,4 @@ const LandStage = () => {
   );
 };
 
-export default LandStage;
+export default Location;
