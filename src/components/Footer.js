@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import FooterHeading from './FooterHeading';
-import FooterOptions from './FooterOptions';
 
 const Container = styled.section`
   font-family: ${props => props.theme.primaryFontFamily};
@@ -19,8 +18,8 @@ const Container = styled.section`
   .is-block {
     padding-bottom: 0.5rem;
   }
-  .column is-3 {
-    width: 21%;
+  .column.is-3 {
+    width: 20%;
   }
 `;
 
@@ -46,30 +45,52 @@ const Footer = () => (
           </Link>
         </div>
         <div className="column is-3">
-          <FooterHeading title="Marketing campaigns" />
-          <FooterOptions option="Awareness Campaign" />
-          <FooterOptions option="Product launch" />
-          <FooterOptions option="Public consultation" />
-        </div>
-        <div className="column">
-          <FooterHeading title="Event support" />
-          <Link to="/hireshop">
-            <FooterOptions option="Hire shop" />
+          <h1 className="is-size-6 has-text-weight-bold is-spaced">
+            Marketing campaigns
+          </h1>
+          <Link to="/landstage" className="is-size-6 is-block">
+            Awareness Campaign
           </Link>
-          <FooterOptions option="Office on location" />
-          <Link to="/landstage">
-            <FooterOptions option="Landstage" />
+          <Link to="/landstage" className="is-size-6 is-block">
+            Product launch
+          </Link>
+          <Link to="/landstage" className="is-size-6 is-block">
+            Public consultation
           </Link>
         </div>
         <div className="column">
-          <FooterHeading title="Vehicle branding" />
-          <FooterOptions option="Internal branding" />
-          <FooterOptions option="External branding" />
+          <h1 className="is-size-6 has-text-weight-bold is-spaced">
+            Event support
+          </h1>
+          <Link to="/landstage" className="is-size-6 is-block">
+            Hire shop
+          </Link>
+          <Link to="/landstage" className="is-size-6 is-block">
+            Office on location
+          </Link>
+          <Link to="/landstage" className="is-size-6 is-block">
+            landstage
+          </Link>
         </div>
         <div className="column">
-          <FooterHeading title="Terms" />
-          <FooterOptions option="Privacy policy" />
-          <FooterOptions option="Terms and conditions" />
+          <h1 className="is-size-6 has-text-weight-bold is-spaced">
+            Vehicle branding
+          </h1>
+          <Link to="/landstage" className="is-size-6 is-block">
+            Internal branding
+          </Link>
+          <Link to="/landstage" className="is-size-6 is-block">
+            External branding
+          </Link>
+        </div>
+        <div className="column">
+          <h1 className="is-size-6 has-text-weight-bold is-spaced">Terms</h1>
+          <Link to="/landstage" className="is-size-6 is-block">
+            Privacy policy
+          </Link>
+          <Link to="/landstage" className="is-size-6 is-block">
+            Terms and conditions
+          </Link>
         </div>
         <div className="column is-1">
           <LinkStyled class="icon">
