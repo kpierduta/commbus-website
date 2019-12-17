@@ -7,6 +7,7 @@ import Marketing from '../components/Marketing';
 import Features from '../components/Features';
 import MessageInfo from '../components/MessageInfo';
 import Branding from '../components/Branding';
+import Testimonials from '../components/Testimonials';
 
 const NavItems = [
   {
@@ -91,6 +92,7 @@ export default class PromotionalBuses extends React.Component {
           secondbutton="ABOUT"
           secondlink="/team"
         />
+        <Testimonials />
       </Layout>
     );
   }

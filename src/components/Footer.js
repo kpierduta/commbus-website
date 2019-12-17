@@ -76,7 +76,7 @@ const Footer = () => (
           <Link to="/landstage" className="is-size-6 is-block">
             Parades
           </Link>
-          <Link to="/landstage" className="is-size-6 is-block">
+          <Link to="/hireshop" className="is-size-6 is-block">
             Hire shop
           </Link>
         </div>

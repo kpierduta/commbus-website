@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import TeamContent from '../components/TeamContent';
+import Testimonials from '../components/Testimonials';
 
 const Team = () => (
   <Layout>
@@ -15,6 +16,7 @@ const Team = () => (
       bgImage="/images/teamimages/main-hero-image@3x.jpg"
     />
     <TeamContent />
+    <Testimonials />
   </Layout>
 );
 
