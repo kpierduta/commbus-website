@@ -61,10 +61,10 @@ const Footer = () => (
           <h1 className="is-size-6 has-text-weight-bold is-spaced">
             Event support
           </h1>
-          <Link to="/landstage" className="is-size-6 is-block">
+          <Link to="/hireshop" className="is-size-6 is-block">
             Hire shop
           </Link>
-          <Link to="/landstage" className="is-size-6 is-block">
+          <Link to="/location" className="is-size-6 is-block">
             Office on location
           </Link>
           <Link to="/landstage" className="is-size-6 is-block">
@@ -84,7 +84,7 @@ const Footer = () => (
         </div>
         <div className="column">
           <h1 className="is-size-6 has-text-weight-bold is-spaced">Terms</h1>
-          <Link to="/landstage" className="is-size-6 is-block">
+          <Link to="/privacy-policy" className="is-size-6 is-block">
             Privacy policy
           </Link>
           <Link to="/landstage" className="is-size-6 is-block">
