@@ -50,9 +50,9 @@ const PolicyContent = () => (
         how effective it is. However, there are ways that can help you get data
         from your printed marketing investments. Giving your printed material a
         QR code that sends customers to a specific URL allows you to track and
-        measure how many people followed the link. You can then work out a
-        percentage of people that got onto the next part of the sales funnel
-        from how many leaflets you gave out during the roadshow campaign.
+        measure how many people followed work out a percentage of people that
+        got onto the next part of the sales funnel from how many leaflets you
+        gave out during the roadshow campaign.
       </p>
       <Link
         className="subtitle is-6 has-text-weight-light is-uppercase has-text-info"

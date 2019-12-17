@@ -7,6 +7,7 @@ import OurClient from '../components/OurClient';
 import Features from '../components/Features';
 import Projects from '../components/Projects';
 import Campaign from '../components/Campaign';
+import Testimonials from '../components/Testimonials';
 
 const Feature = [
   {
@@ -52,6 +53,7 @@ export default class IndexPage extends React.Component {
         <Features Feature={Feature} />
         <Projects />
         <Campaign />
+        <Testimonials />
       </Layout>
     );
   }
