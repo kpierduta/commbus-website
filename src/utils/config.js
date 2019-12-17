@@ -1,6 +1,5 @@
 module.exports = {
   DEBUG: process.env.NODE_ENV === 'development',
-
   siteName: 'Commbus',
   author: 'Parminder Klair',
   description: 'A starting point using ReactJs, bundled with awesome GatsbyJs.',

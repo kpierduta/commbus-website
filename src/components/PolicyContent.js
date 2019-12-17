@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const Section = styled.section`
   h1 {
@@ -21,7 +22,7 @@ const PolicyContent = () => (
         collect your personal inforation, how we use it, the limited conditions
         under which we may disclose it to others and how we keep it secure.
       </p>
-      <h1 className="title is-4 has-text-weight-light is-uppercase">
+      <h1 cl assName="title is-4 has-text-weight-light is-uppercase">
         HoW we use your data
       </h1>
       <p className="has-text-weight-light is-size-6">
@@ -53,16 +54,17 @@ const PolicyContent = () => (
         percentage of people that got onto the next part of the sales funnel
         from how many leaflets you gave out during the roadshow campaign.
       </p>
-      <a href="/">
+      <Link
+        className="subtitle is-6 has-text-weight-light is-uppercase has-text-info"
+        to="/"
+      >
+        Creating campaign
+      </Link>
+      <Link>
         <h1 className="has-text-weight-light is-uppercase has-text-info">
           Creating campaign
         </h1>
-      </a>
-      <a href="/">
-        <h1 className="has-text-weight-light is-uppercase has-text-info">
-          Creating campaign
-        </h1>
-      </a>
+      </Link>
 
       <h1 className="title is-4 has-text-weight-light is-uppercase">
         Creating campaign specific URLs & QR codes to track interaction

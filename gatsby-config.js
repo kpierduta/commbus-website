@@ -8,30 +8,6 @@ module.exports = {
     siteUrl: config.siteUrl,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        defaultLayouts: {
-          default: require.resolve('./src/components/PageLayout.js'),
-        },
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1035,
-              sizeByPixelDensity: true,
-            },
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `posts`,
-        path: `${__dirname}/src/content/posts/`,
-      },
-    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
@@ -39,6 +15,15 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: config.googleAnalytics,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `xq16dzvupfgc`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: 'w697TCeTuWxvzkAlOXoTVhDe5jUn0qS-GO6slrG8uLc',
+        host: `preview.contentful.com`,
       },
     },
     {

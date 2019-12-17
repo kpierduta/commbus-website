@@ -13,7 +13,7 @@ export default class ContactPage extends React.Component {
         <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
         <PageHero
           title="Contact us"
-          // heading="Whether you need a one day hire or a longer term hire, we can help. Enquire today."
+          heading="We aim to reply to your enquiry within 2 working days."
         />
         <Address />
       </Layout>

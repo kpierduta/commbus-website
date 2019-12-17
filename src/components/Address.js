@@ -17,39 +17,39 @@ const Address = () => (
     <div className="container">
       <div className="columns">
         <div className="column">
-          <h1 class="title is-2">Contact Details</h1>
+          <h1 className="title is-2">Contact Details</h1>
           <div>
-            <h1 class="title is-4 has-text-weight-medium is-inline-block">
+            <h1 className="title is-4 has-text-weight-medium is-inline-block">
               Email:{' '}
             </h1>
-            <h1 class="subtitle is-5 is-inline-block">sales@commbus.com</h1>
+            <h1 className="subtitle is-5 is-inline-block">sales@commbus.com</h1>
           </div>
           <div>
-            <h1 class="title is-4 has-text-weight-medium is-inline-block">
+            <h1 className="title is-4 has-text-weight-medium is-inline-block">
               Phone number:{' '}
             </h1>
-            <h1 class="subtitle is-5 is-inline-block">01675 463555</h1>
+            <h1 className="subtitle is-5 is-inline-block">01675 463555</h1>
           </div>
           <div>
-            <h1 class="title is-4 has-text-weight-medium is-inline-block">
+            <h1 className="title is-4 has-text-weight-medium is-inline-block">
               Fax:{' '}
             </h1>
-            <h1 class="subtitle is-5 is-inline-block">01675 462111</h1>
+            <h1 className="subtitle is-5 is-inline-block">01675 462111</h1>
           </div>
           <div>
-            <h1 class="title is-4 has-text-weight-medium is-spaced">
+            <h1 className="title is-4 has-text-weight-medium is-spaced">
               Postal Address:{' '}
             </h1>
-            <h1 class="subtitle is-5">
+            <h1 className="subtitle is-5">
               Combus Blyth Hall Farm, Blyth Road, Coleshill, Birmingham, B46
               2AF,
             </h1>
           </div>
           <div>
-            <h1 class="title is-4 has-text-weight-medium is-spaced text">
+            <h1 className="title is-4 has-text-weight-medium is-spaced text">
               Operation Base & Deliveries:
             </h1>
-            <h1 class="subtitle is-5">
+            <h1 className="subtitle is-5">
               Blyth Hall Farm, Blyth Road, Coleshill,Blyth Hall Farm, Blyth
               Road, Coleshill,
             </h1>
