@@ -77,7 +77,7 @@ const Footer = () => (
             Parades
           </Link>
           <Link to="/landstage" className="is-size-6 is-block">
-            Parades
+            Hire shop
           </Link>
         </div>
 
