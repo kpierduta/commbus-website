@@ -48,13 +48,16 @@ const Footer = () => (
             Marketing campaigns
           </h1>
           <Link to="/landstage" className="is-size-6 is-block">
-            Awareness Campaign
+            Business to business
           </Link>
           <Link to="/landstage" className="is-size-6 is-block">
-            Product launch
+            Business to consumer
           </Link>
           <Link to="/landstage" className="is-size-6 is-block">
-            Public consultation
+            Charity, public sector organisations
+          </Link>
+          <Link to="/landstage" className="is-size-6 is-block">
+            Education
           </Link>
         </div>
         <div className="column">
@@ -62,24 +65,40 @@ const Footer = () => (
             Event support
           </h1>
           <Link to="/hireshop" className="is-size-6 is-block">
-            Hire shop
+            Office on location
           </Link>
           <Link to="/location" className="is-size-6 is-block">
-            Office on location
+            Public address
           </Link>
           <Link to="/landstage" className="is-size-6 is-block">
             landstage
           </Link>
+          <Link to="/landstage" className="is-size-6 is-block">
+            Parades
+          </Link>
+          <Link to="/landstage" className="is-size-6 is-block">
+            Parades
+          </Link>
         </div>
+
         <div className="column">
           <h1 className="is-size-6 has-text-weight-bold is-spaced">
             Vehicle branding
           </h1>
           <Link to="/landstage" className="is-size-6 is-block">
-            Internal branding
+            Branding options
           </Link>
           <Link to="/landstage" className="is-size-6 is-block">
-            External branding
+            Simple internal
+          </Link>
+          <Link to="/landstage" className="is-size-6 is-block">
+            Bespoke internal
+          </Link>
+          <Link to="/landstage" className="is-size-6 is-block">
+            Banner graphics
+          </Link>
+          <Link to="/landstage" className="is-size-6 is-block">
+            Full wrap
           </Link>
         </div>
         <div className="column">
