@@ -47,16 +47,16 @@ const Footer = () => (
           <h1 className="is-size-6 has-text-weight-bold is-spaced">
             Marketing campaigns
           </h1>
-          <Link to="/landstage" className="is-size-6 is-block">
+          <Link to="/" className="is-size-6 is-block">
             Business to business
           </Link>
-          <Link to="/landstage" className="is-size-6 is-block">
+          <Link to="/" className="is-size-6 is-block">
             Business to consumer
           </Link>
-          <Link to="/landstage" className="is-size-6 is-block">
+          <Link to="/" className="is-size-6 is-block">
             Charity, public sector organisations
           </Link>
-          <Link to="/landstage" className="is-size-6 is-block">
+          <Link to="/" className="is-size-6 is-block">
             Education
           </Link>
         </div>
@@ -64,7 +64,7 @@ const Footer = () => (
           <h1 className="is-size-6 has-text-weight-bold is-spaced">
             Event support
           </h1>
-          <Link to="/hireshop" className="is-size-6 is-block">
+          <Link to="/Office-on-location" className="is-size-6 is-block">
             Office on location
           </Link>
           <Link to="/location" className="is-size-6 is-block">
@@ -73,14 +73,13 @@ const Footer = () => (
           <Link to="/landstage" className="is-size-6 is-block">
             landstage
           </Link>
-          <Link to="/landstage" className="is-size-6 is-block">
+          <Link to="/" className="is-size-6 is-block">
             Parades
           </Link>
           <Link to="/hireshop" className="is-size-6 is-block">
             Hire shop
           </Link>
         </div>
-
         <div className="column">
           <h1 className="is-size-6 has-text-weight-bold is-spaced">
             Vehicle branding
