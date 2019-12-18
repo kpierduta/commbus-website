@@ -25,7 +25,6 @@ export default class Charity extends React.Component {
         <FeaturesSubPage />
         <Branding
           title="INTERNAL & EXTERNAL BRANDING AND DESIGN"
-          subtitle="CLIENT EXAMPLES"
           fistbutton="CONTACT US"
           fistlink="/contact"
           secondbutton="ABOUT"
