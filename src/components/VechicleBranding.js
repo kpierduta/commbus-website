@@ -18,7 +18,7 @@ const Section = styled.section`
   }
 `;
 
-const VechicleBranding = ({ title, subtitle, para, bgImage }) => (
+const VechicleBranding = ({ title, subtitle, para, bgImage, to }) => (
   <Section bgImage={bgImage}>
     <div className="container">
       <div className="columns">
@@ -30,7 +30,7 @@ const VechicleBranding = ({ title, subtitle, para, bgImage }) => (
               </h1>
               <p>{subtitle}</p>
               <p>{para}</p>
-              <Button width="14rem" background="transparent">
+              <Button width="14rem" background="transparent" to={to}>
                 Learn More
               </Button>
             </div>
