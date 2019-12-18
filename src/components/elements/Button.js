@@ -16,13 +16,13 @@ const Wrapper = styled(Link)`
     props.background ? props.background : props.theme.secondryColor};
 `;
 
-const Button = ({ className, children, fullWidth, link, ...otherProps }) => (
+const Button = ({ className, children, fullWidth, to, ...otherProps }) => (
   <Wrapper
     className={`button is-radiusless is-large ${
       fullWidth ? 'is-fullwidth' : ''
     }`}
     type="button"
-    to={link}
+    to={to}
     {...otherProps}>
     {children}
   </Wrapper>
