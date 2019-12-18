@@ -53,7 +53,7 @@ const Footer = () => (
           <Link to="/" className="is-size-6 is-block">
             Business to consumer
           </Link>
-          <Link to="/" className="is-size-6 is-block">
+          <Link to="/charity" className="is-size-6 is-block">
             Charity, public sector organisations
           </Link>
           <Link to="/" className="is-size-6 is-block">
@@ -67,7 +67,7 @@ const Footer = () => (
           <Link to="/Office-on-location" className="is-size-6 is-block">
             Office on location
           </Link>
-          <Link to="/location" className="is-size-6 is-block">
+          <Link to="/public-address" className="is-size-6 is-block">
             Public address
           </Link>
           <Link to="/landstage" className="is-size-6 is-block">
