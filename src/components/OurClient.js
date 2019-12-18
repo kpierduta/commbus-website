@@ -2,8 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  img {
-    filter: grayscale(100%);
+  .swap-on-hover {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .swap-on-hover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  .swap-on-hover .swap-on-hover__front-image {
+    z-index: 9999;
+    transition: opacity 0.5s linear;
+    cursor: pointer;
+  }
+  .swap-on-hover:hover > .swap-on-hover__front-image {
+    opacity: 0;
   }
 `;
 
@@ -15,7 +31,17 @@ const OurClient = () => (
       </h2>
       <div className="columns is-multiline">
         <div className="column has-text-centered">
-          <img src="/images/brands/heinz.jpg" alt="our-clients" />
+          <figure class="swap-on-hover">
+            <img
+              class="swap-on-hover__front-image"
+              src="/images/brands/heinz.jpg"
+              alt="our-clients"
+            />
+            <img
+              class="swap-on-hover__back-image"
+              src="/images/brands/heinz-color.jpg"
+            />
+          </figure>
         </div>
         <div className="column has-text-centered">
           {' '}

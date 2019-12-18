@@ -11,6 +11,7 @@ const NewsBlog = () => (
     <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
     <HomeHero
       title="UNDERSTAND WHY BRAND ENGAGEMENT IS AMPLIFIED WITH A BRANDED BUS"
+      heading="    "
       subtitle=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.By Clare Macleod"
       bgImage="/images/projects/herobackground.png"
     />
