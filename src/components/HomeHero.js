@@ -23,25 +23,41 @@ const Section = styled.section`
   }
 `;
 
-const HomeHero = ({ title, heading, subtitle, text, bgImage }) => (
-  <Section className="section" bgImage={bgImage}>
-    <div className="container">
-      <div className="columns">
-        <div className="column is-4">
-          <section className="hero">
-            <div className="hero-body">
-              <h1 className="title is-size-3-mobile has-text-weight-light is-uppercase">
-                {title}
-              </h1>
-              <h2 className="has-text-weight-semibold">{heading}</h2>
-              <p className="has-text-weight-light is-size-6">{subtitle}</p>
-              <p className="has-text-info">{text}</p>
+class HomeHero extends React.Component {
+  render() {
+    const { page } = this.props;
+
+    console.log('page', page);
+    return (
+      <Section
+        className="section"
+        bgImage={this.props.bgImage ? this.props.bgImage : page.image.file.url}
+      >
+        <div className="container">
+          <div className="columns">
+            <div className="column is-4">
+              <section className="hero">
+                <div className="hero-body">
+                  <h1 className="title is-size-3-mobile has-text-weight-light is-uppercase">
+                    {this.props.title ? this.props.title : page.title}
+                  </h1>
+                  <h2 className="has-text-weight-semibold">
+                    {this.props.heading}
+                  </h2>
+                  <p className="has-text-weight-light is-size-6">
+                    {this.props.subtitle
+                      ? this.props.subtitle
+                      : page.details.details}
+                  </p>
+                  <p className="has-text-info">{this.props.text}</p>
+                </div>
+              </section>
             </div>
-          </section>
+          </div>
         </div>
-      </div>
-    </div>
-  </Section>
-);
+      </Section>
+    );
+  }
+}
 
 export default HomeHero;

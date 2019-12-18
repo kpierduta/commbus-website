@@ -7,8 +7,9 @@ const NewsData = () => (
     <div className="container">
       <div className="columns is-multiline">
         <NewsItems
-          title="understard"
-          bgImage="/images/news/engagement@2x.jpg"
+          title="UNDERSTAND WHY BRAND ENGAGEMENT IS 
+          AMPLIED WITH A BRANDED BUS"
+          bgImage="/images/news/blog-image@2x.png"
           link="/newsblog"
         />
         <NewsItems
