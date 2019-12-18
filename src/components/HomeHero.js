@@ -42,7 +42,7 @@ class HomeHero extends React.Component {
                     {this.props.title ? this.props.title : page.title}
                   </h1>
                   <h2 className="has-text-weight-semibold">
-                    {this.props.heading}
+                    {this.props.heading ? this.props.heading : page.subtitle}
                   </h2>
                   <p className="has-text-weight-light is-size-6">
                     {this.props.subtitle

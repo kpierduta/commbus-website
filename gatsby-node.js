@@ -9,6 +9,7 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             slug
             title
+            subtitle
             details {
               details
             }

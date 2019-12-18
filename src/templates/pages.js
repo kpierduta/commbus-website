@@ -14,6 +14,7 @@ export const pageQuery = graphql`
   query Page($slug: String) {
     contentfulPage(slug: { eq: $slug }) {
       title
+      subtitle
       details {
         details
       }

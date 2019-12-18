@@ -43,6 +43,7 @@ export default class IndexPage extends React.Component {
         <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
         <HomeHero
           title="We design, build & manage successful promotional bus campaigns"
+          heading="    "
           subtitle="“Our promotional buses give meaning to experiential marketing,
         taking your marketing campaigns on the road directly to who
         matters – your target audience”"
