@@ -2,22 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  background: #eef3f6;
+  .text {
+    margin-top: 2.75rem !important;
+  }
+
+  .title {
+    color: ${props => props.theme.secondryColor} !important;
+  }
 `;
 
-const Clients = ({ title, Subtitle, text, para }) => (
+const Clients = ({ title, subtitle, text, para, avatar }) => (
   <Section className="column is-half">
     <div className="columns">
       <div className="column">
         <figure className="image is-square">
-          <img src="https://bulma.io/images/placeholders/128x128.png" alt="" />
+          <img src={avatar} alt="" />
         </figure>
       </div>
       <div className="column">
-        <h1 className="title is-5">{title}</h1>
-        <p className="subtitle is-6">{Subtitle}</p>
-
-        <h1 className="title is-6">{text}</h1>
+        <h1 className="title is-3">{title}</h1>
+        <p className="subtitle is-6">{subtitle}</p>
+        <h1 className="title is-6 text">{text}</h1>
         <p className="subtitle is-6">{para}</p>
       </div>
     </div>

@@ -18,8 +18,8 @@ export default class Charity extends React.Component {
           title="We design, build & manage successful promotional bus campaigns"
           heading="    "
           subtitle="“Our promotional buses give meaning to experiential marketing,
-        taking your marketing campaigns on the road directly to who
-        matters – your target audience”"
+          taking your marketing campaigns on the road directly to who
+          matters – your target audience”"
           bgImage="/images/projects/homepage-header-image@2x.png"
         />
         <FeaturesSubPage />
@@ -32,7 +32,10 @@ export default class Charity extends React.Component {
           secondlink="/team"
         />
         <MessageInfo />
-        <ClientsData />
+        <ClientsData
+          title="INTERNAL & EXTERNAL BRANDING AND DESIGN"
+          subtitle="CLIENT EXAMPLES"
+        />
         <Testimonials />
       </Layout>
     );
