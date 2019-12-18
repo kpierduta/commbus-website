@@ -73,7 +73,7 @@ const Footer = () => (
           <Link to="/landstage" className="is-size-6 is-block">
             landstage
           </Link>
-          <Link to="/" className="is-size-6 is-block">
+          <Link to="/parades" className="is-size-6 is-block">
             Parades
           </Link>
           <Link to="/hireshop" className="is-size-6 is-block">
