@@ -23,7 +23,8 @@ const Button = ({ className, children, fullWidth, to, ...otherProps }) => (
     }`}
     type="button"
     to={to}
-    {...otherProps}>
+    {...otherProps}
+  >
     {children}
   </Wrapper>
 );

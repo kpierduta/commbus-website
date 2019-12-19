@@ -47,16 +47,16 @@ const Footer = () => (
           <h1 className="is-size-6 has-text-weight-bold is-spaced">
             Marketing campaigns
           </h1>
-          <Link to="/" className="is-size-6 is-block">
+          <Link to="/business-to-business" className="is-size-6 is-block">
             Business to business
           </Link>
-          <Link to="/" className="is-size-6 is-block">
+          <Link to="/business-to-consumer" className="is-size-6 is-block">
             Business to consumer
           </Link>
           <Link to="/charity" className="is-size-6 is-block">
             Charity, public sector organisations
           </Link>
-          <Link to="/" className="is-size-6 is-block">
+          <Link to="/education" className="is-size-6 is-block">
             Education
           </Link>
         </div>
