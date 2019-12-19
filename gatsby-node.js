@@ -29,8 +29,28 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allContentfulGraphic {
+        edges {
+          node {
+            slug
+            title
+          }
+        }
+      }
     }
   `);
+  result.data.allContentfulGraphic.edges.forEach(({ node }) => {
+    createPage({
+      path: node.slug,
+      component: path.resolve(`./src/templates/graphic.js`),
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        slug: node.slug,
+      },
+    });
+  });
+
   result.data.allContentfulCampaignPage.edges.forEach(({ node }) => {
     createPage({
       path: node.slug,
