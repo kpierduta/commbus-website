@@ -32,7 +32,6 @@ export default class page extends React.Component {
     const {
       data: { contentfulPage: page },
     } = this.props;
-    console.log('page', page);
     return (
       <Layout>
         <Seo title="News & Updates" />

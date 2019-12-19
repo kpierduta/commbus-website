@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
@@ -9,13 +10,25 @@ import MessageInfo from '../components/MessageInfo';
 import ClientsData from '../components/ClientsData';
 import Testimonials from '../components/Testimonials';
 
-export default class Charity extends React.Component {
+export const CampaignQuery = graphql`
+  query campaign($slug: String) {
+    contentfulCampaignPage(slug: { eq: $slug }) {
+      slug
+      title
+    }
+  }
+`;
+
+export default class Campaign extends React.Component {
   render() {
+    const {
+      data: { contentfulCampaignPage: campaign },
+    } = this.props;
     return (
       <Layout>
         <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
         <HomeHero
-          title="We design, build & manage successful promotional bus campaigns"
+          page={campaign}
           heading="    "
           subtitle="“Our promotional buses give meaning to experiential marketing,
           taking your marketing campaigns on the road directly to who
