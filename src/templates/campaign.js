@@ -15,6 +15,15 @@ export const CampaignQuery = graphql`
     contentfulCampaignPage(slug: { eq: $slug }) {
       slug
       title
+      subtitle
+      details {
+        details
+      }
+      image {
+        file {
+          url
+        }
+      }
     }
   }
 `;
@@ -27,14 +36,7 @@ export default class Campaign extends React.Component {
     return (
       <Layout>
         <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
-        <HomeHero
-          page={campaign}
-          heading="    "
-          subtitle="“Our promotional buses give meaning to experiential marketing,
-          taking your marketing campaigns on the road directly to who
-          matters – your target audience”"
-          bgImage="/images/projects/homepage-header-image@2x.png"
-        />
+        <HomeHero page={campaign} />
         <FeaturesSubPage />
         <Branding
           title="INTERNAL & EXTERNAL BRANDING AND DESIGN"

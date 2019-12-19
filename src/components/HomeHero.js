@@ -31,8 +31,7 @@ class HomeHero extends React.Component {
     return (
       <Section
         className="section"
-        bgImage={this.props.bgImage ? this.props.bgImage : page.image.file.url}
-      >
+        bgImage={this.props.bgImage ? this.props.bgImage : page.image.file.url}>
         <div className="container">
           <div className="columns">
             <div className="column is-4">
