@@ -32,7 +32,7 @@ const VechicleExternal = () => (
           GRAPHICS"
         subtitle="The light grey base colour of our fleet with tinted windows provides an ideal base for your external graphics."
         bgImage="/images/vehcilebarding/simple-internal-image@3x.png"
-        to="/banner"
+        to="/"
       />
       <VechicleBranding
         title="OVERLAY 
@@ -40,7 +40,7 @@ const VechicleExternal = () => (
         subtitle="You are not constrained to sticking to traditional T-bar banners or pushed into a full wrap.
           Get creative and make your graphics and message make an impact with your audience."
         bgImage="/images/vehcilebarding/bespoke-internal-image@3x.png"
-        to="/banner"
+        to="/"
       />
     </div>
   </Section>

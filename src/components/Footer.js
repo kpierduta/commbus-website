@@ -85,18 +85,18 @@ const Footer = () => (
             Vehicle branding
           </h1>
           <Link to="/landstage" className="is-size-6 is-block">
-            Branding options
+            overlay-graphics
           </Link>
-          <Link to="/landstage" className="is-size-6 is-block">
+          <Link to="/simple-internals" className="is-size-6 is-block">
             Simple internal
           </Link>
-          <Link to="/bespoke-internal" className="is-size-6 is-block">
+          <Link to="/bespoke-branding" className="is-size-6 is-block">
             Bespoke internal
           </Link>
-          <Link to="/landstage" className="is-size-6 is-block">
+          <Link to="/banner-graphics" className="is-size-6 is-block">
             Banner graphics
           </Link>
-          <Link to="/landstage" className="is-size-6 is-block">
+          <Link to="/full-wrap" className="is-size-6 is-block">
             Full wrap
           </Link>
         </div>

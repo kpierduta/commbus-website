@@ -28,7 +28,7 @@ const VechicleExternal = () => (
           GRAPHICS"
         subtitle="The light grey base colour of our fleet with tinted windows provides an ideal base for your external graphics."
         bgImage="/images/vehcilebarding/banner-image@2x.png"
-        to="/banner"
+        to="/"
       />
       <VechicleBranding
         title="OVERLAY 
@@ -36,7 +36,7 @@ const VechicleExternal = () => (
         subtitle="You are not constrained to sticking to traditional T-bar banners or pushed into a full wrap."
         para="Get creative and make your graphics and message make an impact with your audience."
         bgImage="/images/vehcilebarding/overlay-image@3x.png"
-        to="/banner"
+        to="/"
       />
       <VechicleBranding
         title="full
@@ -44,7 +44,7 @@ const VechicleExternal = () => (
         subtitle="Our fully wrapped buses are the largest moving advertising fomat available and are the ultimate branding statement."
         para="Get creative with over 40m2 of mobile advertising space."
         bgImage="/images/vehcilebarding/full-wrap-image@3x.png"
-        to="/banner"
+        to="/"
       />
     </div>
   </Section>
