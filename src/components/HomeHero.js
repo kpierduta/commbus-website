@@ -49,7 +49,7 @@ class HomeHero extends React.Component {
                       : page.details.details}
                   </p>
                   <p className="has-text-info">
-                    {this.props.text ? this.props.subtitle : page.text}
+                    {this.props.text ? this.props.text : page.text}
                   </p>
                 </div>
               </section>
