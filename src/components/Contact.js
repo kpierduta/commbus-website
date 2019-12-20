@@ -50,7 +50,7 @@ const Contact = () => (
     <div className="container">
       <div className="columns is-centered">
         <div className="column">
-          <h1 className="title is-2 has-text-weight-bold has-text-white">
+          <h1 className="title is-2 has-text-weight-light has-text-white">
             promotional buses, event support vehicles, event equipment and crew
           </h1>
           <p className="has-text-white is-size-6 has-text-weight-bold has-text-weight-light">
