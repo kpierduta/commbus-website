@@ -13,7 +13,7 @@ const Team = () => (
       title="Meet the team"
       heading="Mark is one of the founding Directors at Commbus and has been the driving force behind Commbus, working closely with the team over the years to develop Commbus into the business it is today."
       subtitle="Our experienced team have worked on events accross the UK, working on projects from concept right through to on the road. We have dedicated team who give 24/7 support to our customers."
-      bgImage="/images/teamimages/main-hero-image@3x.jpg"
+      bgImage="/images/teamimages/main-hero-image@2x.png"
       text=" "
     />
     <TeamContent />

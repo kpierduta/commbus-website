@@ -4,7 +4,6 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import PageHero from '../components/PageHero';
 import Address from '../components/Address';
-import MyMapComponent from '../components/GoogleMap';
 
 export default class ContactPage extends React.Component {
   render() {

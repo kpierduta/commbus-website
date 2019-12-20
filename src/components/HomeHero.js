@@ -5,7 +5,6 @@ const Section = styled.section`
   margin-bottom: 5rem;
   background-image: url(${props => props.bgImage});
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
   @media screen and (max-width: 768px) {
     background-size: auto;
