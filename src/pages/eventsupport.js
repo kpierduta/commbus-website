@@ -77,6 +77,7 @@ export default class PromotionalBuses extends React.Component {
           heading="Vehicles, equipment & experienced staff."
           subtitle="Commbus are an experienced event company, creating, supporting and delivering events across the UK. From vehicles, hireable event equipment and our experienced staff."
           bgImage="/images/event/event-support-hero-image@2x.png"
+          text="  "
         />
         <Features Feature={Feature} />
         <Marketing

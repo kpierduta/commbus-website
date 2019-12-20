@@ -31,7 +31,8 @@ class HomeHero extends React.Component {
     return (
       <Section
         className="section"
-        bgImage={this.props.bgImage ? this.props.bgImage : page.image.file.url}>
+        bgImage={this.props.bgImage ? this.props.bgImage : page.image.file.url}
+      >
         <div className="container">
           <div className="columns">
             <div className="column is-4">
@@ -48,7 +49,9 @@ class HomeHero extends React.Component {
                       ? this.props.subtitle
                       : page.details.details}
                   </p>
-                  <p className="has-text-info">{this.props.text}</p>
+                  <p className="has-text-info">
+                    {this.props.text ? this.props.subtitle : page.text}
+                  </p>
                 </div>
               </section>
             </div>

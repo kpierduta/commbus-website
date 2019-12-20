@@ -14,6 +14,7 @@ const NewsBlog = () => (
       heading="    "
       subtitle="We have been proud to work with Staffordshire University for 4 connective years.In year 1 we were commissioned for the Great Minds Bus Tour: Your Future where our bus travelled to schools across the Midlands to give year 12 students an immersive and interactive glimpse into their future."
       bgImage="/images/projects/blog-image@2x.png"
+      text=" "
     />
     <Share />
     <ProjectContent />

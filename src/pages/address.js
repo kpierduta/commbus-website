@@ -17,6 +17,7 @@ const Address = () => {
         heading="  "
         subtitle="Our Landstage was a concept designed to solve a problem for a client where they needed a safe platform working at height that could be mobile."
         bgImage="/images/landstage/landimage@2x.jpg"
+        text="  "
       />
       <FeaturesSubPage />
       <ProductsData title="SOME OF OUR PRODUCT LAUNCH CAMPAIGNS" />
