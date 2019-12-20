@@ -20,6 +20,10 @@ const Container = styled.section`
   .column.is-3 {
     width: 20%;
   }
+  .column.is-4 {
+    flex: none;
+    width: 25.33333%;
+  }
 `;
 
 const LinkStyled = styled(Link)`
@@ -43,7 +47,7 @@ const Footer = () => (
             <img className="logo" src="/images/com-logo.png" alt="site logo" />
           </Link>
         </div>
-        <div className="column is-3">
+        <div className="column is-4">
           <h1 className="is-size-6 has-text-weight-bold is-spaced">
             Marketing campaigns
           </h1>

@@ -13,37 +13,44 @@ const NewsData = () => (
           link="/newsblog"
         />
         <NewsItems
-          title="ncxjsjs"
+          title="UNDERSTAND WHY BRAND ENGAGEMENT IS 
+        AMPLIED WITH A BRANDED BUS"
           bgImage="/images/news/marketing@2x.jpg"
           link="/newsblog"
         />
         <NewsItems
-          title="axkjaxkja"
+          title="UNDERSTAND WHY BRAND ENGAGEMENT IS 
+        AMPLIED WITH A BRANDED BUS"
           bgImage="/images/news/mark@2x.png"
           link="/newsblog"
         />
         <NewsItems
-          title="kljdkiwdwkja"
+          title="UNDERSTAND WHY BRAND ENGAGEMENT IS 
+          AMPLIED WITH A BRANDED BUS"
           bgImage="/images/news/support@2x.jpg"
           link="/newsblog"
         />
         <NewsItems
-          title="kljdkiwdwkja"
+          title="UNDERSTAND WHY BRAND ENGAGEMENT IS 
+        AMPLIED WITH A BRANDED BUS"
           bgImage="/images/news/lordmayor@2x.jpg"
           link="/newsblog"
         />
         <NewsItems
-          title="kljdkiwdwkja"
+          title="UNDERSTAND WHY BRAND ENGAGEMENT IS 
+        AMPLIED WITH A BRANDED BUS"
           bgImage="/images/news/transport@2x.jpg"
           link="/newsblog"
         />
         <NewsItems
-          title="kljdkiwdwkja"
+          title="UNDERSTAND WHY BRAND ENGAGEMENT IS 
+        AMPLIED WITH A BRANDED BUS"
           bgImage="/images/news/slimming@2x.jpg"
           link="/newsblog"
         />
         <NewsItems
-          title="kljdkiwdwkja"
+          title="UNDERSTAND WHY BRAND ENGAGEMENT IS 
+        AMPLIED WITH A BRANDED BUS"
           bgImage="/images/news/castle@2x.jpg"
           link="/newsblog"
         />
