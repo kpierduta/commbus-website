@@ -10,51 +10,55 @@ const Section = styled.section`
   .text {
     margin-top: 1rem;
   }
+  .txt {
+    padding: 0rem 29rem 0rem 0rem;
+    @media screen and (max-width: 768px) {
+      padding: 0rem 0rem 0rem 0rem;
+    }
+  }
+  .mail {
+    color: ${props => props.theme.secondryColor} !important;
+  }
 `;
 
 const Address = () => (
   <Section className="section">
     <div className="container">
       <div className="columns">
-        <div className="column">
-          <h1 className="title is-2">Contact Details</h1>
-          <div>
-            <h1 className="title is-4 has-text-weight-medium is-inline-block">
-              Email:{' '}
-            </h1>
-            <h1 className="subtitle is-5 is-inline-block">sales@commbus.com</h1>
-          </div>
-          <div>
-            <h1 className="title is-4 has-text-weight-medium is-inline-block">
-              Phone number:{' '}
-            </h1>
-            <h1 className="subtitle is-5 is-inline-block">01675 463555</h1>
-          </div>
-          <div>
-            <h1 className="title is-4 has-text-weight-medium is-inline-block">
-              Fax:{' '}
-            </h1>
-            <h1 className="subtitle is-5 is-inline-block">01675 462111</h1>
-          </div>
-          <div>
-            <h1 className="title is-4 has-text-weight-medium is-spaced">
-              Postal Address:{' '}
-            </h1>
-            <h1 className="subtitle is-5">
-              Combus Blyth Hall Farm, Blyth Road, Coleshill, Birmingham, B46
-              2AF,
-            </h1>
-          </div>
-          <div>
-            <h1 className="title is-4 has-text-weight-medium is-spaced text">
-              Operation Base & Deliveries:
-            </h1>
-            <h1 className="subtitle is-5">
-              Blyth Hall Farm, Blyth Road, Coleshill,Blyth Hall Farm, Blyth
-              Road, Coleshill,
-            </h1>
-          </div>
+        <div className="column is-6">
+          <section className="section">
+            <div>
+              <h1 className="title is-4 has-text-weight-medium is-inline-block">
+                Email:{' '}
+              </h1>
+              <h1 className="subtitle is-5 is-inline-block mail">
+                sales@commbus.com
+              </h1>
+            </div>
+            <div>
+              <h1 className="title is-4 has-text-weight-medium is-inline-block">
+                Phone number:{' '}
+              </h1>
+              <h1 className="subtitle is-5 is-inline-block">01675 463555</h1>
+            </div>
+            <div>
+              <h1 className="title is-4 has-text-weight-medium is-inline-block">
+                Fax:{' '}
+              </h1>
+              <h1 className="subtitle is-5 is-inline-block">01675 462111</h1>
+            </div>
+            <div>
+              <h1 className="title is-4 has-text-weight-medium is-spaced">
+                Postal Address:{' '}
+              </h1>
+              <h1 className="subtitle is-5 txt">
+                Combus Blyth Hall Farm, Blyth Road, Coleshill, Birmingham, B46
+                2AF,
+              </h1>
+            </div>
+          </section>
         </div>
+
         <div className="column">
           {' '}
           <MyMapComponent isMarkerShown className="is-hidden-mobile" />
