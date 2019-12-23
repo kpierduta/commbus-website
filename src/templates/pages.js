@@ -37,7 +37,9 @@ export default class page extends React.Component {
         <Seo title="News & Updates" />
         <HomeHero page={page} />
         <FeaturesSubPage />
+        {/*
         <ProductsData title="SOME OF OUR PRODUCT LAUNCH CAMPAIGNS" />
+        */}
         <MessageInfo />
         <Branding
           title="CONFIGURATION"
