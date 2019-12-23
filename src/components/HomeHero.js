@@ -25,8 +25,6 @@ const Section = styled.section`
 class HomeHero extends React.Component {
   render() {
     const { page } = this.props;
-
-    console.log('page', page);
     return (
       <Section
         className="section"
