@@ -22,6 +22,15 @@ export const pageQuery = graphql`
         }
       }
     }
+    contentfulGraphic(slug: { eq: $slug }) {
+      banner {
+        images {
+          file {
+            url
+          }
+        }
+      }
+    }
   }
 `;
 
@@ -29,12 +38,14 @@ export default class Graphic extends React.Component {
   render() {
     const {
       data: { contentfulGraphic: page },
+      data: { contentfulGraphic: vehicle },
     } = this.props;
+
     return (
       <Layout>
         <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
         <HomeHero page={page} />
-        <ProductsData />
+        <ProductsData Banner={vehicle.banner} />
         <MessageInfo />
       </Layout>
     );
