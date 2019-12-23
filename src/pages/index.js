@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
@@ -8,6 +9,35 @@ import Features from '../components/Features';
 import Projects from '../components/Projects';
 import Campaign from '../components/Campaign';
 import Testimonials from '../components/Testimonials';
+
+export const projectQuery = graphql`
+  query projectindex {
+    allContentfulProject(sort: { fields: order }) {
+      edges {
+        node {
+          order
+          slug
+          projectSizeIsHalf
+          projectImage {
+            file {
+              url
+            }
+          }
+          icon {
+            file {
+              url
+            }
+          }
+          category
+          title
+          shortDiscription {
+            shortDiscription
+          }
+        }
+      }
+    }
+  }
+`;
 
 const Feature = [
   {
@@ -38,6 +68,9 @@ const Feature = [
 
 export default class IndexPage extends React.Component {
   render() {
+    const {
+      data: { allContentfulProject: project },
+    } = this.props;
     return (
       <Layout>
         <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
@@ -52,7 +85,7 @@ export default class IndexPage extends React.Component {
         />
         <OurClient />
         <Features Feature={Feature} />
-        <Projects />
+        <Projects project={project.edges} />
         <Campaign />
         <Testimonials />
       </Layout>
