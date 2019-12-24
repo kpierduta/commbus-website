@@ -10,29 +10,17 @@ import Projects from '../components/Projects';
 import Campaign from '../components/Campaign';
 import Testimonials from '../components/Testimonials';
 
-export const projectQuery = graphql`
-  query projectindex {
-    allContentfulProject(sort: { fields: order }) {
-      edges {
-        node {
-          order
-          slug
-          projectSizeIsHalf
-          projectImage {
-            file {
-              url
-            }
-          }
-          icon {
-            file {
-              url
-            }
-          }
-          category
-          title
-          shortDiscription {
-            shortDiscription
-          }
+export const homeheroQuery = graphql`
+  query {
+    contentfulHomeHero {
+      title
+      subtitle
+      details {
+        details
+      }
+      image {
+        file {
+          url
         }
       }
     }
@@ -69,23 +57,15 @@ const Feature = [
 export default class IndexPage extends React.Component {
   render() {
     const {
-      data: { allContentfulProject: project },
+      data: { contentfulIndexPage: page },
     } = this.props;
     return (
       <Layout>
         <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
-        <HomeHero
-          title="We design, build & manage successful promotional bus campaigns"
-          heading="    "
-          subtitle="“Our promotional buses give meaning to experiential marketing,
-        taking your marketing campaigns on the road directly to who
-        matters – your target audience”"
-          text="- Clare Macleod, Marketing Director"
-          bgImage="/images/projects/homepage-header-image@2x.png"
-        />
+        <HomeHero page={page} />
         <OurClient />
         <Features Feature={Feature} />
-        <Projects project={project.edges} />
+        <Projects />
         <Campaign />
         <Testimonials />
       </Layout>
