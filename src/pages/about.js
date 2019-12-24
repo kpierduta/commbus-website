@@ -38,7 +38,7 @@ export const teamQuery = graphql`
   }
 `;
 
-export default class Team extends React.Component {
+export default class About extends React.Component {
   render() {
     const {
       data: { contentfulAboutPage: page },

@@ -27,7 +27,9 @@ const Campaign = () => (
         <CampaignItem image="/images/campain/blog-image-3@2x.jpg" />
       </div>
       <ButtonWrapper className="is-flex">
-        <Button background="transparent">VIEW ALL ARTICLES</Button>
+        <Button background="transparent" to="/news">
+          VIEW ALL ARTICLES
+        </Button>
       </ButtonWrapper>
     </div>
   </Section>
