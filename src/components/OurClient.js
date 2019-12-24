@@ -10,7 +10,7 @@ const Section = styled.section`
 const Logo = styled.div`
   background: url(${props => props.logo});
   height: 8rem;
-  background-size: 200px 300px !important;
+  background-size: 190px 250px !important;
   background-repeat: no-repeat !important;
   transition-duration: 2s;
   :hover {
