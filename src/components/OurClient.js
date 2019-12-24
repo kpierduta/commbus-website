@@ -2,17 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  a {
-    display: block;
-    background: url(https://www.commbus.com/wp-content/uploads/2016/02/itv-logo.jpg);
-    height: 73px;
-    width: 154px;
-    transition-duration: 1s;
-    :hover {
-      background: rgba(0, 0, 0, 0)
-        url(https://www.commbus.com/wp-content/uploads/2016/02/itv-logo.jpg)
-        repeat scroll 0 bottom;
-    }
+  .column is-2 {
+    margin-top: 1rem;
+  }
+`;
+
+const Logo = styled.div`
+  background: url(${props => props.logo});
+  height: 8rem;
+  background-size: 200px 300px !important;
+  background-repeat: no-repeat !important;
+  transition-duration: 2s;
+  :hover {
+    background-repeat: no-repeat;
+    height: 7rem;
+    background: rgba(0, 0, 0, 0) url(${props => props.logo}) repeat scroll 0
+      bottom;
   }
 `;
 
@@ -23,50 +28,41 @@ const OurClient = () => (
         Trusted by
       </h2>
       <div className="columns is-multiline">
-        <div className="column has-text-centered">
-          <a>
-            <figure className="image is-128x128">
-              <img alt="" className="swap" />
-            </figure>
-          </a>
+        <div className="column is-2">
+          <Logo logo="/images/brands/heinz.jpg" />
         </div>
-        <div className="column has-text-centered">
-          {' '}
-          <img src="/images/brands/asda.jpg" alt="our-clients" />
+        <div className="column is-2">
+          <Logo logo="/images/brands/asda.jpg" />
         </div>
-        <div className="column has-text-centered">
-          {' '}
-          <img src="/images/brands/itv.jpg" alt="our-clients" />
+        <div className="column is-2">
+          <Logo logo="/images/brands/itv.jpg" />
         </div>
-        <div className="column has-text-centered">
-          {' '}
-          <img src="/images/brands/slimming-world.jpg" alt="our-clients" />
+        <div className="column is-2">
+          <Logo logo="/images/brands/sainsbury.jpg" />
         </div>
-        <div className="column has-text-centered">
-          {' '}
-          <img src="/images/brands/anglia.jpg" alt="our-clients" />
+        <div className="column is-2">
+          <Logo logo="/images/brands/anglia.jpg" />
         </div>
-      </div>
-      <div className=" columns">
-        <div className="column has-text-centered">
-          {' '}
-          <img src="/images/brands/fca.jpg" alt="our-clients" />
+        <div className="column is-2">
+          <Logo logo="/images/brands/fca.jpg" />
         </div>
-        <div className="column has-text-centered">
-          {' '}
-          <img src="/images/brands/staff.jpg" alt="our-clients" />
+        <div className="column is-2">
+          <Logo logo="/images/brands/staff.jpg" />
         </div>
-        <div className="column has-text-centered">
-          {' '}
-          <img src="/images/brands/bcc.jpg" alt="our-clients" />
+        <div className="column is-2">
+          <Logo logo="/images/brands/bcc.jpg" />
         </div>
-        <div className="column has-text-centered">
-          {' '}
-          <img src="/images/brands/gemalto.jpg" alt="our-clients" />
+        <div className="column is-2">
+          <Logo logo="/images/brands/gemalto.jpg" />
         </div>
-        <div className="column has-text-centered">
-          {' '}
-          <img src="/images/brands/ukfast.jpg" alt="our-clients" />
+        <div className="column is-2">
+          <Logo logo="/images/brands/ukfast.jpg" />
+        </div>
+        <div className="column is-2">
+          <Logo logo="/images/brands/appren.jpg" />
+        </div>
+        <div className="column is-2">
+          <Logo logo="/images/brands/slimming.jpg" />
         </div>
       </div>
     </div>
