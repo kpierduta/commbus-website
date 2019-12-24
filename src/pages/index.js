@@ -10,17 +10,42 @@ import Projects from '../components/Projects';
 import Campaign from '../components/Campaign';
 import Testimonials from '../components/Testimonials';
 
-export const homeheroQuery = graphql`
-  query {
-    contentfulHomeHero {
+export const homeQuery = graphql`
+  query homepage {
+    contentfulHomePage {
       title
       subtitle
+      text
       details {
         details
       }
       image {
         file {
           url
+        }
+      }
+    }
+    allContentfulProject(sort: { fields: order }) {
+      edges {
+        node {
+          order
+          slug
+          projectSizeIsHalf
+          projectImage {
+            file {
+              url
+            }
+          }
+          icon {
+            file {
+              url
+            }
+          }
+          category
+          title
+          shortDiscription {
+            shortDiscription
+          }
         }
       }
     }
@@ -57,7 +82,8 @@ const Feature = [
 export default class IndexPage extends React.Component {
   render() {
     const {
-      data: { contentfulIndexPage: page },
+      data: { allContentfulProject: project },
+      data: { contentfulHomePage: page },
     } = this.props;
     return (
       <Layout>
@@ -65,7 +91,7 @@ export default class IndexPage extends React.Component {
         <HomeHero page={page} />
         <OurClient />
         <Features Feature={Feature} />
-        <Projects />
+        <Projects project={project.edges} />
         <Campaign />
         <Testimonials />
       </Layout>
