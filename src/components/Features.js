@@ -9,24 +9,42 @@ const Section = styled.div`
   background: ${props => props.theme.lightShades};
 `;
 
-const Features = ({ Feature }) => (
-  <Section className="section">
-    <div className="container">
-      <Heading
-        title="DEDICATED EVENTS TEAM | RANGE OF FLEET & EQUIPMENT"
-        color="#fff"
-      />
-      <div className="columns">
-        {Feature.map(item => (
-          <FeatureItem
-            img={item.img}
-            title={item.title}
-            subtitle={item.subtitle}
+class Features extends React.Component {
+  render() {
+    const { Feature } = this.props;
+    return (
+      <Section className="section">
+        <div className="container">
+          <Heading
+            title="DEDICATED EVENTS TEAM | RANGE OF FLEET & EQUIPMENT"
+            color="#fff"
           />
-        ))}
-      </div>
-    </div>
-  </Section>
-);
+          <div className="columns">
+            <FeatureItem
+              img={Feature.iconOne.file.url}
+              title={Feature.featureOneTitle}
+              subtitle={Feature.featureOneSubtitle}
+            />
+            <FeatureItem
+              img={Feature.iconTwo.file.url}
+              title={Feature.featureTwoTitle}
+              subtitle={Feature.featureTwoSubtitle}
+            />
+            <FeatureItem
+              img={Feature.iconThird.file.url}
+              title={Feature.featureThirdTitle}
+              subtitle={Feature.featureThirdSubtitle}
+            />
+            <FeatureItem
+              img={Feature.iconFour.file.url}
+              title={Feature.featureFourTitle}
+              subtitle={Feature.featureFourSubtitle}
+            />
+          </div>
+        </div>
+      </Section>
+    );
+  }
+}
 
 export default Features;
