@@ -6,7 +6,7 @@ import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import OurClient from '../components/OurClient';
 import Features from '../components/Features';
-import Projects from '../components/Projects';
+import ProjectsRefernce from '../components/ProjectRefernce';
 import Campaign from '../components/Campaign';
 import Testimonials from '../components/Testimonials';
 
@@ -53,6 +53,26 @@ export const homeQuery = graphql`
       }
       featureFourTitle
       featureFourSubtitle
+      projectReference {
+        order
+        slug
+        projectSizeIsHalf
+        projectImage {
+          file {
+            url
+          }
+        }
+        icon {
+          file {
+            url
+          }
+        }
+        category
+        title
+        shortDiscription {
+          shortDiscription
+        }
+      }
     }
     allContentfulProject(sort: { fields: order }) {
       edges {
@@ -93,7 +113,7 @@ export default class IndexPage extends React.Component {
         <HomeHero page={page} />
         <OurClient />
         <Features Feature={page} />
-        <Projects project={project.edges} />
+        <ProjectsRefernce project={page.projectReference} />
         <Campaign />
         <Testimonials />
       </Layout>
