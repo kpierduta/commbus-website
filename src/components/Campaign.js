@@ -17,22 +17,32 @@ const ButtonWrapper = styled.div`
   xpadding: 3rem 0 3rem;
 `;
 
-const Campaign = () => (
-  <Section className="section">
-    <div className="container">
-      <Heading title="our recent campaigns & insights" />
-      <div className="columns">
-        <CampaignItem image="/images/campain/blog-image-1@2x.jpg" />
-        <CampaignItem image="/images/campain/blog-image-2@3x.jpg" />
-        <CampaignItem image="/images/campain/blog-image-3@2x.jpg" />
-      </div>
-      <ButtonWrapper className="is-flex">
-        <Button background="transparent" to="/news">
-          VIEW ALL ARTICLES
-        </Button>
-      </ButtonWrapper>
-    </div>
-  </Section>
-);
+class Campaign extends React.Component {
+  render() {
+    const { data } = this.props;
+    const { blog } = this.props;
+    return (
+      <Section className="section">
+        <div className="container">
+          <Heading title={data.sectionTitle} />
+          <div className="columns">
+            {blog.map(item => (
+              <CampaignItem
+                title={item.title}
+                image={item.smallImage.file.url}
+                to={`/news/${item.slug}`}
+              />
+            ))}
+          </div>
+          <ButtonWrapper className="is-flex">
+            <Button background="transparent" to="/news">
+              VIEW ALL ARTICLES
+            </Button>
+          </ButtonWrapper>
+        </div>
+      </Section>
+    );
+  }
+}
 
 export default Campaign;

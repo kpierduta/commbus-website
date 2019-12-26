@@ -73,27 +73,13 @@ export const homeQuery = graphql`
           shortDiscription
         }
       }
-    }
-    allContentfulProject(sort: { fields: order }) {
-      edges {
-        node {
-          order
-          slug
-          projectSizeIsHalf
-          projectImage {
-            file {
-              url
-            }
-          }
-          icon {
-            file {
-              url
-            }
-          }
-          category
-          title
-          shortDiscription {
-            shortDiscription
+      sectionTitle
+      blogRefernce {
+        slug
+        title
+        smallImage {
+          file {
+            url
           }
         }
       }
@@ -104,7 +90,6 @@ export const homeQuery = graphql`
 export default class IndexPage extends React.Component {
   render() {
     const {
-      data: { allContentfulProject: project },
       data: { contentfulHomePage: page },
     } = this.props;
     return (
@@ -114,7 +99,7 @@ export default class IndexPage extends React.Component {
         <OurClient />
         <Features Feature={page} />
         <ProjectsRefernce project={page.projectReference} />
-        <Campaign />
+        <Campaign data={page} blog={page.blogRefernce} />
         <Testimonials />
       </Layout>
     );
