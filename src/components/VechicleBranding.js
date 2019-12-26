@@ -6,7 +6,7 @@ import Button from './elements/Button';
 const Section = styled.section`
   background-image: url(${props => props.bgImage});
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   @media screen and (max-width: 768px) {
     background-size: auto;

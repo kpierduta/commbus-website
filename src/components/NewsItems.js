@@ -5,16 +5,17 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 const Section = styled.div`
-  padding:2rem 0rem;
+  padding: 2rem 0rem;
   .columns {
     height: 22rem;
     background-image: url(${props => props.bgImage});
     background-repeat: no-repeat;
+  }
   .section {
-      padding: 3rem 2.5rem;
+    padding: 3rem 2.5rem;
   }
   .button.is-medium {
-    margin-top:2rem;
+    margin-top: 2rem;
   }
 `;
 
