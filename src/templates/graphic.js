@@ -9,7 +9,7 @@ import MessageInfo from '../components/MessageInfo';
 
 export const pageQuery = graphql`
   query graphic($slug: String) {
-    contentfulGraphic(slug: { eq: $slug }) {
+    contentfulVehicleGraphicBlog(slug: { eq: $slug }) {
       slug
       title
       subtitle
@@ -22,7 +22,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    contentfulGraphic(slug: { eq: $slug }) {
+    contentfulVehicleGraphicBlog(slug: { eq: $slug }) {
       banner {
         images {
           file {
@@ -37,8 +37,8 @@ export const pageQuery = graphql`
 export default class Graphic extends React.Component {
   render() {
     const {
-      data: { contentfulGraphic: page },
-      data: { contentfulGraphic: vehicle },
+      data: { contentfulVehicleGraphicBlog: page },
+      data: { contentfulVehicleGraphicBlog: vehicle },
     } = this.props;
 
     return (

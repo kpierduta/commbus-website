@@ -5,14 +5,14 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import FeaturesSubPage from '../components/FeaturesSubPage';
-import ProductsData from '../components/ProductsData';
+// import ProductsData from '../components/ProductsData';
 import MessageInfo from '../components/MessageInfo';
 import Branding from '../components/Branding';
 import Testimonials from '../components/Testimonials';
 
 export const pageQuery = graphql`
   query Page($slug: String) {
-    contentfulPage(slug: { eq: $slug }) {
+    contentfulPages(slug: { eq: $slug }) {
       title
       subtitle
       details {
@@ -30,7 +30,7 @@ export const pageQuery = graphql`
 export default class page extends React.Component {
   render() {
     const {
-      data: { contentfulPage: page },
+      data: { contentfulPages: page },
     } = this.props;
     return (
       <Layout>
@@ -40,6 +40,7 @@ export default class page extends React.Component {
         {/*
         <ProductsData title="SOME OF OUR PRODUCT LAUNCH CAMPAIGNS" />
         */}
+        ``
         <MessageInfo />
         <Branding
           title="CONFIGURATION"

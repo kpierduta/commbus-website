@@ -4,7 +4,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const result = await graphql(`
     query {
-      allContentfulPage {
+      allContentfulPages {
         edges {
           node {
             slug
@@ -29,11 +29,10 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      allContentfulGraphic {
+      allContentfulVehicleGraphicBlog {
         edges {
           node {
             slug
-            title
           }
         }
       }
@@ -46,9 +45,10 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `);
-  result.data.allContentfulGraphic.edges.forEach(({ node }) => {
+  result.data.allContentfulVehicleGraphicBlog.edges.forEach(({ node }) => {
+    const pagePath = `vechicle-branding/${node.slug}`;
     createPage({
-      path: node.slug,
+      path: pagePath,
       component: path.resolve(`./src/templates/graphic.js`),
       context: {
         // Data passed to context is available
@@ -83,7 +83,7 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
-  result.data.allContentfulPage.edges.forEach(({ node }) => {
+  result.data.allContentfulPages.edges.forEach(({ node }) => {
     createPage({
       path: node.slug,
       component: path.resolve(`./src/templates/pages.js`),
