@@ -20,24 +20,26 @@ class Marketing extends React.Component {
                   img={data.campaignFirstIcon.file.url}
                   alt={data.campaignFirstIcon.title}
                   heading={data.campaignFirstTitle}
-                  description={data.campaigFirstSubtitle.campaigFirstSubtitle}
+                  description={data.campaignFirstSubtitle.campaignFirstSubtitle}
                 />
                 <MarketingCard
-                  img={data.campaigSecondIcon.file.url}
-                  alt={data.campaigSecondIcon.title}
-                  heading={data.campaigSecondTitle}
-                  description={data.campaigSecondSubtitle.campaigSecondSubtitle}
+                  img={data.campaignSecondIcon.file.url}
+                  alt={data.campaignSecondIcon.title}
+                  heading={data.campaignSecondTitle}
+                  description={
+                    data.campaignSecondSubtitle.campaignSecondSubtitle
+                  }
                 />
                 <MarketingCard
-                  img={data.campaigThirdIcon.file.url}
-                  alt={data.campaigThirdIcon.title}
-                  heading={data.campaigThirdTitle}
-                  description={data.campaigThirdSubtitle.campaigThirdSubtitle}
+                  img={data.campaignThirdIcon.file.url}
+                  alt={data.campaignThirdIcon.title}
+                  heading={data.campaignThirdTitle}
+                  description={data.campaignThirdSubtitle.campaignThirdSubtitle}
                 />
                 <MarketingCard
-                  img={data.campaigFourthIcon.file.url}
-                  alt={data.campaigFourthIcon.title}
-                  heading={data.campaigFourthTitle}
+                  img={data.campaignFourthIcon.file.url}
+                  alt={data.campaignFourthIcon.title}
+                  heading={data.campaignFourthTitle}
                   description={
                     data.campaignFourthSubtitle.campaignFourthSubtitle
                   }

@@ -61,36 +61,36 @@ export const parmotion = graphql`
         }
       }
       campaignFirstTitle
-      campaigFirstSubtitle {
-        campaigFirstSubtitle
+      campaignFirstSubtitle {
+        campaignFirstSubtitle
       }
-      campaigSecondIcon {
+      campaignSecondIcon {
         title
         file {
           url
         }
       }
-      campaigSecondTitle
-      campaigSecondSubtitle {
-        campaigSecondSubtitle
+      campaignSecondTitle
+      campaignSecondSubtitle {
+        campaignSecondSubtitle
       }
-      campaigThirdIcon {
+      campaignThirdIcon {
         title
         file {
           url
         }
       }
-      campaigThirdTitle
-      campaigThirdSubtitle {
-        campaigThirdSubtitle
+      campaignThirdTitle
+      campaignThirdSubtitle {
+        campaignThirdSubtitle
       }
-      campaigFourthIcon {
+      campaignFourthIcon {
         title
         file {
           url
         }
       }
-      campaigFourthTitle
+      campaignFourthTitle
       campaignFourthSubtitle {
         campaignFourthSubtitle
       }
