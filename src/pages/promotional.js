@@ -53,40 +53,50 @@ export const parmotion = graphql`
       }
       featureFourTitle
       featureFourSubtitle
+      campaignSectionTitle
+      campaignFirstIcon {
+        title
+        file {
+          url
+        }
+      }
+      campaignFirstTitle
+      campaigFirstSubtitle {
+        campaigFirstSubtitle
+      }
+      campaigSecondIcon {
+        title
+        file {
+          url
+        }
+      }
+      campaigSecondTitle
+      campaigSecondSubtitle {
+        campaigSecondSubtitle
+      }
+      campaigThirdIcon {
+        title
+        file {
+          url
+        }
+      }
+      campaigThirdTitle
+      campaigThirdSubtitle {
+        campaigThirdSubtitle
+      }
+      campaigFourthIcon {
+        title
+        file {
+          url
+        }
+      }
+      campaigFourthTitle
+      campaignFourthSubtitle {
+        campaignFourthSubtitle
+      }
     }
   }
 `;
-
-const NavItems = [
-  {
-    heading: 'test',
-    url: '/images/promotanal/product-showcase-icon@2x.png',
-    description:
-      'Looking for a direct way to reach your customers, potential customers and resellers? Taking your products and campaign direct to the doorstep of those organisations can give you a great advantage point for selling your products and services directly. Either as a single activity or supporting activity at other trade events with an exhibition bus.',
-    link: '/',
-  },
-  {
-    heading: 'BUSINESS TO CONSUMER',
-    url: '/images/promotanal/awareness-icon@2x.png',
-    description:
-      'Are you planning a promo campaign or a product launch where you need to need to reach the right people? No need to wait for your target audience to come to you, take your campaign on the road to them with one of our promotional buses throughout the UK and further afield visiting cities, towns and events.',
-    link: '/',
-  },
-  {
-    heading: 'CHARITY, ORGANISATIONS & PUBLIC SECTOR',
-    url: '/images/promotanal/microphone-icon@2x.png',
-    description:
-      'Raising awareness on your issue, campaigning on make changes and fundraising are key objectives for charities. With our cost effective solutions from our pre converted hire fleet of promotional buses we can offer solutions to suit different or your budget allowing to you reach your market more directly.',
-    link: '/',
-  },
-  {
-    heading: 'EDUCATION',
-    url: '/images/promotanal/be-different-icon@2x.png',
-    description:
-      'Reaching out to engage with your target audience or providing awareness in as way that is engaging and interactional with one of our promotional buses provides you with a unique tool in a safe environment allowing you reach further to existing and new audiences.',
-    link: '/',
-  },
-];
 
 export default class PromotionalBuses extends React.Component {
   render() {
@@ -105,10 +115,7 @@ export default class PromotionalBuses extends React.Component {
           text=" "
         />
         <Features Feature={promotion} />
-        <Marketing
-          title="HOW OUR FLEET CAN SUPPORT YOUR MARKETING CAMPAIGN"
-          NavItems={NavItems}
-        />
+        <Marketing data={promotion} />
         <MessageInfo />
         <Branding
           title="INTERNAL & EXTERNAL BRANDING AND DESIGN"

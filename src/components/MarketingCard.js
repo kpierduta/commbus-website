@@ -31,7 +31,7 @@ const MarketingCard = props => (
           <div className="columns">
             <div className="column is-4 has-text-centered">
               <figure className="image">
-                <img src={props.url} alt="images" />
+                <img src={props.img} alt={props.alt} />
               </figure>
             </div>
             <div className="column">
