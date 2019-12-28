@@ -43,6 +43,18 @@ export const PromotionQuery = graphql`
       featureFourTitle
       featureFourSubtitle
     }
+    contentfulPromotionalBuses {
+      title
+      subtitle
+      details {
+        details
+      }
+      image {
+        file {
+          url
+        }
+      }
+    }
   }
 `;
 
@@ -107,7 +119,7 @@ const NavItems = [
 export default class PromotionalBuses extends React.Component {
   render() {
     const {
-      data: { contentfulHomePage: page },
+      data: { contentfulPromotion: page },
     } = this.props;
     return (
       <Layout>
