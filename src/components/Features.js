@@ -15,10 +15,7 @@ class Features extends React.Component {
     return (
       <Section className="section">
         <div className="container">
-          <Heading
-            title="DEDICATED EVENTS TEAM | RANGE OF FLEET & EQUIPMENT"
-            color="#fff"
-          />
+          <Heading title={Feature.featureSectionTitle} color="#fff" />
           <div className="columns">
             <FeatureItem
               img={Feature.iconOne.file.url}

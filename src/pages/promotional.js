@@ -10,9 +10,20 @@ import MessageInfo from '../components/MessageInfo';
 import Branding from '../components/Branding';
 import Testimonials from '../components/Testimonials';
 
-export const PromotionQuery = graphql`
-  query Promotion {
-    contentfulHomePage {
+export const parmotion = graphql`
+  query parmotion {
+    contentfulPromotionalBuses {
+      title
+      subtitle
+      text
+      details {
+        details
+      }
+      image {
+        file {
+          url
+        }
+      }
       featureSectionTitle
       iconOne {
         file {
@@ -42,18 +53,6 @@ export const PromotionQuery = graphql`
       }
       featureFourTitle
       featureFourSubtitle
-    }
-    contentfulPromotionalBuses {
-      title
-      subtitle
-      details {
-        details
-      }
-      image {
-        file {
-          url
-        }
-      }
     }
   }
 `;
@@ -89,51 +88,23 @@ const NavItems = [
   },
 ];
 
-// const Feature = [
-//   {
-//     img: '/images/icon/bus-icon@2x.png',
-//     title: 'Different vehicle options',
-//     subtitle:
-//       'For all of your marketing campaign needs, we have double-deck buses, vintage buses, open top bus and supporting vehicles.',
-//   },
-//   {
-//     img: '/images/icon/eye-icon@2x.png',
-//     title: 'Vehicle branding',
-//     subtitle:
-//       'All our fleet can be branded. From simple graphics to fully wrapped.',
-//   },
-//   {
-//     img: '/images/icon/social-icon@2x.png',
-//     title: 'Engagement marketing',
-//     subtitle:
-//       'An engagement marketing solution that works seamlessly with your other channels of marketing such as social media.',
-//   },
-//   {
-//     img: '/images/icon/thumbs-up-icon@2x.png',
-//     title: 'Experienced & hard working',
-//     subtitle:
-//       'We work 24/7 and not just 9 am - 5 pm to provide the round the clock support for all of our events.',
-//   },
-// ];
-
 export default class PromotionalBuses extends React.Component {
   render() {
     const {
-      data: { contentfulPromotion: page },
+      data: { contentfulPromotionalBuses: promotion },
     } = this.props;
     return (
       <Layout>
         <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
         <HomeHero
-          title="PROMOTIONAL 
-          BRANDED BUSES"
+          title={promotion.title}
           heading="Double deck buses, open top and single deck coaches. "
           subtitle="Commbus has a fleet of promotional buses for hire and buy (for longer term projects) so if you are looking for a creative solution that will give you 
           great impact - a branded bus is very hard to miss."
           bgImage="/images/promotanal/promo-bus-hero-image@2x.png"
           text=" "
         />
-        <Features Feature={page} />
+        <Features Feature={promotion} />
         <Marketing
           title="HOW OUR FLEET CAN SUPPORT YOUR MARKETING CAMPAIGN"
           NavItems={NavItems}
