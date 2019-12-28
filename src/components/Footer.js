@@ -91,19 +91,34 @@ const Footer = () => (
           <h1 className="is-size-6 has-text-weight-bold is-spaced">
             Vehicle branding
           </h1>
-          <Link to="/overlay-graphics" className="is-size-6 is-block">
+          <Link
+            to="/vechicle-branding/overlay-graphics"
+            className="is-size-6 is-block"
+          >
             overlay-graphics
           </Link>
-          <Link to="/simple-internals" className="is-size-6 is-block">
+          <Link
+            to="/vechicle-branding/simple-internals"
+            className="is-size-6 is-block"
+          >
             Simple internal
           </Link>
-          <Link to="/bespoke-branding" className="is-size-6 is-block">
+          <Link
+            to="/vechicle-branding/bespoke-branding"
+            className="is-size-6 is-block"
+          >
             Bespoke internal
           </Link>
-          <Link to="/banner-graphics" className="is-size-6 is-block">
+          <Link
+            to="/vechicle-branding/banner-graphics"
+            className="is-size-6 is-block"
+          >
             Banner graphics
           </Link>
-          <Link to="/full-wrap" className="is-size-6 is-block">
+          <Link
+            to="/vechicle-branding/full-wrap"
+            className="is-size-6 is-block"
+          >
             Full wrap
           </Link>
         </div>
