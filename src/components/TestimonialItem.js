@@ -34,20 +34,14 @@ const Image = styled.figure`
   display: inline-grid;
 `;
 
-const TestimonialItem = ({ Icon }) => (
+const TestimonialItem = props => (
   <Container>
     <diV className="column has-text-centered">
       <Image className="image is-128x128">
-        <img src={Icon} alt="" />
+        <img src={props.Icon} alt={props.alt} />
       </Image>
-      <p>
-        “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ultrices gravida
-        dictum fusce ut placerat orci nulla pellentesque. Nunc id cursus metus
-        aliquam eleifend mi in nulla posuere. Vitae congue eu consequat ac
-        felis.”
-      </p>
-      <h2 className="has-text-weight-semibold">PERSON’S NAME</h2>
+      <p>{props.description}</p>
+      <h2 className="has-text-weight-semibold">{props.name}</h2>
     </diV>
     <div className="down-arrow has-text-right"></div>
   </Container>
