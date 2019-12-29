@@ -1,12 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
+import { StaticQuery, graphql } from 'gatsby';
 
-const Section = styled.section`
-  .column is-2 {
-    margin-top: 1rem;
+export const clientQuery = graphql`
+  query clientlogo {
+    allContentfulOurClients(sort: { fields: order }) {
+      edges {
+        node {
+          order
+          clientlogo {
+            file {
+              url
+            }
+          }
+        }
+      }
+    }
   }
 `;
 
+const Section = styled.section`
+  .column.is-2 {
+    width: 20%;
+    margin-top: 1rem;
+  }
+`;
 const Logo = styled.div`
   background: url(${props => props.logo});
   height: 8rem;
@@ -28,42 +46,21 @@ const OurClient = () => (
         Trusted by
       </h2>
       <div className="columns is-multiline">
-        <div className="column is-2">
-          <Logo logo="/images/brands/heinz.jpg" />
-        </div>
-        <div className="column is-2">
-          <Logo logo="/images/brands/asda.jpg" />
-        </div>
-        <div className="column is-2">
-          <Logo logo="/images/brands/itv.jpg" />
-        </div>
-        <div className="column is-2">
-          <Logo logo="/images/brands/sainsbury.jpg" />
-        </div>
-        <div className="column is-2">
-          <Logo logo="/images/brands/anglia.jpg" />
-        </div>
-        <div className="column is-2">
-          <Logo logo="/images/brands/fca.jpg" />
-        </div>
-        <div className="column is-2">
-          <Logo logo="/images/brands/staff.jpg" />
-        </div>
-        <div className="column is-2">
-          <Logo logo="/images/brands/bcc.jpg" />
-        </div>
-        <div className="column is-2">
-          <Logo logo="/images/brands/gemalto.jpg" />
-        </div>
-        <div className="column is-2">
-          <Logo logo="/images/brands/ukfast.jpg" />
-        </div>
-        <div className="column is-2">
-          <Logo logo="/images/brands/appren.jpg" />
-        </div>
-        <div className="column is-2">
-          <Logo logo="/images/brands/slimming.jpg" />
-        </div>
+        <StaticQuery
+          query={clientQuery}
+          render={data => {
+            const { allContentfulOurClients: logo } = data;
+            return (
+              <React.Fragment>
+                {logo.edges.map(item => (
+                  <div className="column is-2">
+                    <Logo logo={item.node.clientlogo.file.url} />
+                  </div>
+                ))}
+              </React.Fragment>
+            );
+          }}
+        />
       </div>
     </div>
   </Section>
