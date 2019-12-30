@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import FeaturesSubPage from '../components/FeaturesSubPage';
-// import ProductsData from '../components/ProductsData';
+import ProductsData from '../components/ProductsData';
 import MessageInfo from '../components/MessageInfo';
 import Branding from '../components/Branding';
 import Testimonials from '../components/Testimonials';
@@ -23,6 +23,29 @@ export const pageQuery = graphql`
           url
         }
       }
+      bannerSectionTitle
+      banner {
+        images {
+          title
+          file {
+            url
+          }
+        }
+      }
+      sectionTitle
+      sectionSubtitle
+      brandShowCase {
+        image {
+          title
+          file {
+            url
+          }
+        }
+        title
+        firstPoint
+        secondPoint
+        thirdPoint
+      }
     }
   }
 `;
@@ -37,18 +60,15 @@ export default class page extends React.Component {
         <Seo title="News & Updates" />
         <HomeHero page={page} />
         <FeaturesSubPage />
-        {/*
-        <ProductsData title="SOME OF OUR PRODUCT LAUNCH CAMPAIGNS" />
-        */}
-        ``
+        <ProductsData title={page.bannerSectionTitle} Banner={page.banner} />
         <MessageInfo />
         <Branding
-          title="CONFIGURATION"
-          subtitle=" FOR EVENTS ON TIGHT DEADLINES OUR LANDSTAGE CAN BE DRIVEN IN AND OUT WITHIN MINUTES"
+          data={page}
+          showcase={page.brandShowCase}
           fistbutton="Event support"
           fistlink="/eventsupport"
           secondbutton="contact us"
-          secondlink="/contact"
+          secondlink="/pages/teamt"
         />
         <Testimonials />
       </Layout>

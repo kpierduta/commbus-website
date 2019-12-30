@@ -21,10 +21,9 @@ export const pageQuery = graphql`
           url
         }
       }
-    }
-    contentfulVehicleGraphicBlog(slug: { eq: $slug }) {
       banner {
         images {
+          title
           file {
             url
           }
@@ -38,14 +37,13 @@ export default class Graphic extends React.Component {
   render() {
     const {
       data: { contentfulVehicleGraphicBlog: page },
-      data: { contentfulVehicleGraphicBlog: vehicle },
     } = this.props;
 
     return (
       <Layout>
         <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
         <HomeHero page={page} />
-        <ProductsData Banner={vehicle.banner} />
+        <ProductsData title="just a test" Banner={page.banner} />
         <MessageInfo />
       </Layout>
     );

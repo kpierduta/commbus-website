@@ -39,7 +39,7 @@ class ProjectsRefernce extends React.Component {
                 {item.shortDiscription.shortDiscription}
               </p>
               <Link
-                to="/projectblog"
+                to={`/project/${item.slug}`}
                 className="button is-medium is-inverted has-text-black-bis"
               >
                 VIEW PROJECTS

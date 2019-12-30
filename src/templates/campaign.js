@@ -107,7 +107,7 @@ export default class Campaign extends React.Component {
           fistbutton="CONTACT US"
           fistlink="/contact"
           secondbutton="ABOUT"
-          secondlink="/team"
+          secondlink="/"
         />
         <MessageInfo />
         <ClientsData

@@ -43,6 +43,13 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allContentfulProject {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
     }
   `);
   result.data.allContentfulVehicleGraphicBlog.edges.forEach(({ node }) => {
@@ -50,6 +57,19 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: pagePath,
       component: path.resolve(`./src/templates/graphic.js`),
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        slug: node.slug,
+      },
+    });
+  });
+
+  result.data.allContentfulProject.edges.forEach(({ node }) => {
+    const pagePath = `project/${node.slug}`;
+    createPage({
+      path: pagePath,
+      component: path.resolve(`./src/templates/projectblog.js`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
