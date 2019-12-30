@@ -12,38 +12,50 @@ import Testimonials from '../components/Testimonials';
 
 export const EventQuery = graphql`
   query event {
-    contentfulHomePage {
+    contentfulEventSupportPage {
+      title
+      subtitle
+      text
+      details {
+        details
+      }
+      image {
+        title
+        file {
+          url
+        }
+      }
+      featureSectionTitle
+      featureOneTitle
+      iconOne {
+        file {
+          url
+        }
+      }
+      featureTwoTitle
+      iconTwo {
+        file {
+          url
+        }
+      }
+      featureThirdTitle
+      iconThird {
+        file {
+          url
+        }
+      }
+      featureFourthTitle
+      iconFourth {
+        file {
+          url
+        }
+      }
       featureSectionTitle
       iconOne {
         file {
           url
         }
       }
-      featureOneTitle
-      featureOneSubtitle
-      iconTwo {
-        file {
-          url
-        }
-      }
-      featureTwoTitle
-      featureTwoSubtitle
-      iconThird {
-        file {
-          url
-        }
-      }
-      featureThirdTitle
-      featureThirdSubtitle
-      iconFour {
-        file {
-          url
-        }
-      }
-      featureFourTitle
-      featureFourSubtitle
-    }
-    contentfulEventSupportPage {
       camapignSectionTitle
       campaignFirstIcon {
         title
@@ -92,22 +104,13 @@ export const EventQuery = graphql`
 export default class EventSupport extends React.Component {
   render() {
     const {
-      data: { contentfulHomePage: page },
-    } = this.props;
-    const {
       data: { contentfulEventSupportPage: event },
     } = this.props;
     return (
       <Layout>
         <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
-        <HomeHero
-          title="EVENT SUPPORT BUSES & BESPOKE VEHICLES"
-          heading="Vehicles, equipment & experienced staff."
-          subtitle="Commbus are an experienced event company, creating, supporting and delivering events across the UK. From vehicles, hireable event equipment and our experienced staff."
-          bgImage="/images/event/event-support-hero-image@2x.png"
-          text="  "
-        />
-        <Features Feature={page} />
+        <HomeHero page={event} />
+        <Features Feature={event} />
         <Marketing data={event} />
         <MessageInfo />
         <Branding
