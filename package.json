@@ -20,6 +20,7 @@
     "lint": "eslint --ignore-path .gitignore \"src/**/*.{js,jsx}\""
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
     "@mdx-js/mdx": "^1.4.4",
     "@mdx-js/react": "^1.4.4",
     "dayjs": "^1.8.16",

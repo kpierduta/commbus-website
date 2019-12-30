@@ -20,12 +20,16 @@ export const newsQuery = graphql`
           url
         }
       }
+      blogContent {
+        json
+      }
     }
   }
 `;
 
 export default class NewsBlog extends React.Component {
   render() {
+    console.log('hello world');
     const {
       data: { contentfulNews: news },
     } = this.props;
@@ -34,7 +38,7 @@ export default class NewsBlog extends React.Component {
         <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
         <HomeHero page={news} />
         <Share />
-        <NewsContent />
+        <NewsContent data={news.blogContent.json} />
       </Layout>
     );
   }
