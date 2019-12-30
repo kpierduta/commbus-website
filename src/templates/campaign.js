@@ -63,6 +63,30 @@ export const CampaignQuery = graphql`
           externalDetails
         }
       }
+      brandingdesignSection {
+        title
+        subtitle {
+          subtitle
+        }
+        internalImage {
+          title
+          file {
+            url
+          }
+        }
+        internallyDetails {
+          internallyDetails
+        }
+        externalImage {
+          title
+          file {
+            url
+          }
+        }
+        externalDetails {
+          externalDetails
+        }
+      }
     }
   }
 `;
@@ -89,6 +113,7 @@ export default class Campaign extends React.Component {
         <ClientsData
           title="INTERNAL & EXTERNAL BRANDING AND DESIGN"
           subtitle="CLIENT EXAMPLES"
+          data={campaign.brandingdesignSection}
         />
         <Testimonials />
       </Layout>
