@@ -117,6 +117,7 @@ export default class PromotionalBuses extends React.Component {
         <Features Feature={promotion} />
         <Marketing data={promotion} />
         <MessageInfo />
+        {/*
         <Branding
           title="INTERNAL & EXTERNAL BRANDING AND DESIGN"
           subtitle="CLIENT EXAMPLES"
@@ -125,6 +126,7 @@ export default class PromotionalBuses extends React.Component {
           secondbutton="ABOUT"
           secondlink="/team"
         />
+        */}
         <Testimonials />
       </Layout>
     );

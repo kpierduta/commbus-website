@@ -44,13 +44,13 @@ export const EventQuery = graphql`
           url
         }
       }
-      featureFourthTitle
-      iconFourth {
+      iconFour {
         file {
           url
         }
       }
-      featureSectionTitle
+      featureFourTitle
+      featureFourSubtitle
       iconOne {
         file {
           url
@@ -97,6 +97,20 @@ export const EventQuery = graphql`
       campaignFourthSubtitle {
         campaignFourthSubtitle
       }
+      sectionTitle
+      sectionSubtitle
+      brandShowCase {
+        image {
+          title
+          file {
+            url
+          }
+        }
+        title
+        firstPoint
+        secondPoint
+        thirdPoint
+      }
     }
   }
 `;
@@ -114,8 +128,8 @@ export default class EventSupport extends React.Component {
         <Marketing data={event} />
         <MessageInfo />
         <Branding
-          title="INTERNAL & EXTERNAL BRANDING AND DESIGN"
-          subtitle="CLIENT EXAMPLES"
+          data={event}
+          showcase={event.brandShowCase}
           fistbutton="CONTACT US"
           fistlink="/contact"
           secondbutton="ABOUT"
