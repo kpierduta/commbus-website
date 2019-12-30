@@ -24,6 +24,45 @@ export const CampaignQuery = graphql`
           url
         }
       }
+      sectionTitle
+      sectionSubtitle
+      brandingShowCase {
+        image {
+          title
+          file {
+            url
+          }
+        }
+        title
+        firstPoint
+        secondPoint
+        thirdPoint
+        fourthPoint
+      }
+      brandingdesignSection {
+        title
+        subtitle {
+          subtitle
+        }
+        internalImage {
+          title
+          file {
+            url
+          }
+        }
+        internallyDetails {
+          internallyDetails
+        }
+        externalImage {
+          title
+          file {
+            url
+          }
+        }
+        externalDetails {
+          externalDetails
+        }
+      }
     }
   }
 `;
@@ -39,7 +78,8 @@ export default class Campaign extends React.Component {
         <HomeHero page={campaign} />
         <FeaturesSubPage />
         <Branding
-          title="INTERNAL & EXTERNAL BRANDING AND DESIGN"
+          data={campaign}
+          showcase={campaign.brandingShowCase}
           fistbutton="CONTACT US"
           fistlink="/contact"
           secondbutton="ABOUT"

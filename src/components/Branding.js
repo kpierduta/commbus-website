@@ -15,59 +15,51 @@ const ButtonContainer = styled.div`
   display: grid;
 `;
 
-const Branding = props => (
-  <Section className="section">
-    <div className="container">
-      <Heading title={props.title} />
-      <Heading title={props.subtitle} size="is-6" />
-      <div className="columns is-multiline">
-        <BrandingItem
-          Image="/images/brandingdesign/space-ape.png"
-          title="Space Ape Games"
-        />
-        <BrandingItem
-          Image="/images/brandingdesign/producta.png"
-          title="Scholar"
-        />
-        <BrandingItem
-          Image="/images/brandingdesign/heinz2x.png"
-          title="Heinz 50 Year Anniversary"
-        />
-        <BrandingItem
-          Image="/images/brandingdesign/producta.png"
-          title="Space Ape Games"
-        />
-        <BrandingItem
-          Image="/images/brandingdesign/producta.png"
-          title="Scholar"
-        />
-        <BrandingItem
-          Image="/images/brandingdesign/heinz.png"
-          title="Heinz 50 Year Anniversary"
-        />
-      </div>
-      <ButtonContainer className="colums">
-        <div className="column">
-          <div className="buttons">
-            <Button
-              width="14rem"
-              background="transparent"
-              link={props.fistlink}
-            >
-              {props.fistbutton}
-            </Button>
-            <Button
-              width="14rem"
-              background="transparent"
-              link={props.secondlink}
-            >
-              {props.secondbutton}
-            </Button>
+class Branding extends React.Component {
+  render() {
+    const { data } = this.props;
+    const { showcase } = this.props;
+    return (
+      <Section className="section">
+        <div className="container">
+          <Heading title={data.sectionTitle} />
+          <Heading title={data.sectionSubtitle} size="is-6" />
+          <div className="columns is-multiline">
+            {showcase.map(item => (
+              <BrandingItem
+                Image={item.image.file.url}
+                alt={item.image.title}
+                title={item.title}
+                first={item.firstPoint}
+                second={item.secondPoint}
+                third={item.thirdPoint}
+              />
+            ))}
           </div>
+          <ButtonContainer className="colums">
+            <div className="column">
+              <div className="buttons">
+                <Button
+                  width="14rem"
+                  background="transparent"
+                  link={this.props.fistlink}
+                >
+                  {this.props.fistbutton}
+                </Button>
+                <Button
+                  width="14rem"
+                  background="transparent"
+                  link={this.props.secondlink}
+                >
+                  {this.props.secondbutton}
+                </Button>
+              </div>
+            </div>
+          </ButtonContainer>
         </div>
-      </ButtonContainer>
-    </div>
-  </Section>
-);
+      </Section>
+    );
+  }
+}
 
 export default Branding;
