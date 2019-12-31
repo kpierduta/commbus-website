@@ -10,14 +10,12 @@ const Section = styled.section`
   .text {
     margin-top: 1rem;
   }
-  .txt {
-    padding: 0rem 26.5rem 0rem 0rem;
-    @media screen and (max-width: 768px) {
-      padding: 0rem 0rem 0rem 0rem;
-    }
-  }
+
   .mail {
     color: ${props => props.theme.secondryColor} !important;
+  }
+  .txt {
+    margin-bottom: 0.5rem !important;
   }
 `;
 
@@ -51,10 +49,11 @@ const Address = () => (
               <h1 className="title is-4 has-text-weight-medium is-spaced">
                 Postal Address:{' '}
               </h1>
-              <h1 className="subtitle is-5 txt">
-                Combus Blyth Hall Farm, Blyth Road, Coleshill, Birmingham, B46
-                2AF,
-              </h1>
+              <h1 className="subtitle is-5 txt">Combus Blyth Hall Farm,</h1>
+              <h1 className="subtitle is-5 txt">Blyth Road,</h1>
+              <h1 className="subtitle is-5 txt">Coleshill,</h1>
+              <h1 className="subtitle is-5 txt">Birmingham,</h1>
+              <h1 className="subtitle is-5 txt"> B46 2AF</h1>
             </div>
           </section>
         </div>
