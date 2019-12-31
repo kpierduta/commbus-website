@@ -10,8 +10,10 @@ const Section = styled.div`
     background-position: center;
     background-size: cover;
     transition: background-size 2s ease-in;
+    background-position: center;
+    transition: all 0.5s ease;
     :hover {
-      background-size: inherit;
+      transform: scale(1.05);
     }
   }
 `;
