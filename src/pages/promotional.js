@@ -94,6 +94,20 @@ export const parmotion = graphql`
       campaignFourthSubtitle {
         campaignFourthSubtitle
       }
+      sectionTitle
+      sectionSubtitle
+      showCase {
+        image {
+          title
+          file {
+            url
+          }
+        }
+        title
+        firstPoint
+        secondPoint
+        thirdPoint
+      }
     }
   }
 `;
@@ -105,7 +119,11 @@ export default class PromotionalBuses extends React.Component {
     } = this.props;
     return (
       <Layout>
-        <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
+        <Seo
+          title="Exhibitiob Bus Hire"
+          description="Exhibitiob Bus Hire"
+          url="test"
+        />
         <HomeHero
           title={promotion.title}
           heading="Double deck buses, open top and single deck coaches. "
@@ -117,16 +135,14 @@ export default class PromotionalBuses extends React.Component {
         <Features Feature={promotion} />
         <Marketing data={promotion} />
         <MessageInfo />
-        {/*
         <Branding
-          title="INTERNAL & EXTERNAL BRANDING AND DESIGN"
-          subtitle="CLIENT EXAMPLES"
+          data={promotion}
+          showcase={promotion.showCase}
           fistbutton="CONTACT US"
           fistlink="/contact"
           secondbutton="ABOUT"
           secondlink="/team"
         />
-        */}
         <Testimonials />
       </Layout>
     );

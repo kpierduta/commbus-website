@@ -94,7 +94,11 @@ export default class IndexPage extends React.Component {
     } = this.props;
     return (
       <Layout>
-        <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
+        <Seo
+          title="Exhibitiob Bus Hire"
+          description="Exhibitiob Bus Hire"
+          url="text"
+        />
         <HomeHero page={page} />
         <OurClient />
         <Features Feature={page} />
