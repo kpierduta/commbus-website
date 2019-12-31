@@ -66,9 +66,9 @@ export default class page extends React.Component {
           data={page}
           showcase={page.brandShowCase}
           fistbutton="Event support"
-          fistlink="/eventsupport"
+          fistlink="/eventSupport"
           secondbutton="contact us"
-          secondlink="/pages/teamt"
+          secondlink="/contact"
         />
         <Testimonials />
       </Layout>

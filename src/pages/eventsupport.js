@@ -136,7 +136,7 @@ export default class EventSupport extends React.Component {
           fistbutton="CONTACT US"
           fistlink="/contact"
           secondbutton="ABOUT"
-          secondlink="/team"
+          secondlink="/about"
         />
         <Testimonials />
       </Layout>

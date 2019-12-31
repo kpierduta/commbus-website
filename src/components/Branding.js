@@ -42,14 +42,14 @@ class Branding extends React.Component {
                 <Button
                   width="14rem"
                   background="transparent"
-                  link={this.props.fistlink}
+                  to={this.props.fistlink}
                 >
                   {this.props.fistbutton}
                 </Button>
                 <Button
                   width="14rem"
                   background="transparent"
-                  link={this.props.secondlink}
+                  to={this.props.secondlink}
                 >
                   {this.props.secondbutton}
                 </Button>
