@@ -27,18 +27,21 @@ export const EventQuery = graphql`
       }
       featureSectionTitle
       featureOneTitle
+      featureOneSubtitle
       iconOne {
         file {
           url
         }
       }
       featureTwoTitle
+      featureTwoSubtitle
       iconTwo {
         file {
           url
         }
       }
       featureThirdTitle
+      featureThirdSubtitle
       iconThird {
         file {
           url

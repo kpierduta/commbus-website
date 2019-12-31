@@ -11,7 +11,7 @@ const Section = styled.section`
     margin-top: 1rem;
   }
   .txt {
-    padding: 0rem 29rem 0rem 0rem;
+    padding: 0rem 26.5rem 0rem 0rem;
     @media screen and (max-width: 768px) {
       padding: 0rem 0rem 0rem 0rem;
     }

@@ -6,6 +6,7 @@ import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import TeamContent from '../components/TeamContent';
 import Testimonials from '../components/Testimonials';
+import OurClient from '../components/OurClient';
 
 export const teamQuery = graphql`
   query team {
@@ -50,6 +51,7 @@ export default class About extends React.Component {
         <HomeHero page={page} />
         <TeamContent team={team.edges} />
         <Testimonials />
+        <OurClient />
       </Layout>
     );
   }
