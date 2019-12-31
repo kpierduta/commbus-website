@@ -13,6 +13,8 @@ import Testimonials from '../components/Testimonials';
 export const homeQuery = graphql`
   query homepage {
     contentfulHomePage {
+      seoTitle
+      metaDescription
       title
       subtitle
       text
@@ -95,8 +97,8 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <Seo
-          title="Exhibitiob Bus Hire"
-          description="Exhibitiob Bus Hire"
+          title={page.seoTitle}
+          description={page.metaDescription}
           url="text"
         />
         <HomeHero page={page} />
