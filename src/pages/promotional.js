@@ -13,6 +13,9 @@ import Testimonials from '../components/Testimonials';
 export const parmotion = graphql`
   query parmotion {
     contentfulPromotionalBuses {
+      seoTitle
+      metaDescription
+      keywords
       title
       subtitle
       text
@@ -120,9 +123,9 @@ export default class PromotionalBuses extends React.Component {
     return (
       <Layout>
         <Seo
-          title="Exhibitiob Bus Hire"
-          description="Exhibitiob Bus Hire"
-          url="test"
+          title={promotion.seoTitle}
+          description={promotion.metaDescription}
+          keywords={promotion.keywords}
         />
         <HomeHero
           title={promotion.title}

@@ -13,6 +13,9 @@ import Testimonials from '../components/Testimonials';
 export const EventQuery = graphql`
   query event {
     contentfulEventSupportPage {
+      seoTitle
+      metaDescription
+      keywords
       title
       subtitle
       text
@@ -125,7 +128,11 @@ export default class EventSupport extends React.Component {
     } = this.props;
     return (
       <Layout>
-        <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
+        <Seo
+          title={event.seoTitle}
+          description={event.metaDescription}
+          keywords={event.keywords}
+        />
         <HomeHero page={event} />
         <Features Feature={event} />
         <Marketing data={event} />

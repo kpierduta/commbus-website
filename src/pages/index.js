@@ -15,6 +15,7 @@ export const homeQuery = graphql`
     contentfulHomePage {
       seoTitle
       metaDescription
+      keywords
       title
       subtitle
       text
@@ -99,7 +100,7 @@ export default class IndexPage extends React.Component {
         <Seo
           title={page.seoTitle}
           description={page.metaDescription}
-          url="text"
+          url={page.keywords}
         />
         <HomeHero page={page} />
         <OurClient />

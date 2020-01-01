@@ -11,6 +11,9 @@ import OurClient from '../components/OurClient';
 export const teamQuery = graphql`
   query team {
     contentfulAboutPage {
+      seoTitle
+      metaDescription
+      keywords
       title
       subtitle
       details {
@@ -47,7 +50,11 @@ export default class About extends React.Component {
     } = this.props;
     return (
       <Layout>
-        <Seo title="Commbus Team" description="Exhibitiob Bus Hire" />
+        <Seo
+          title={page.seoTitle}
+          description={page.metaDescription}
+          keywords={page.keywords}
+        />
         <HomeHero page={page} />
         <TeamContent team={team.edges} />
         <Testimonials />

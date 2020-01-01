@@ -10,6 +10,9 @@ import VechicleInternal from '../components/VechicleInternal';
 export const VechicleBrandingQuery = graphql`
   query Branding {
     contentfulVehicleBrandingPage {
+      seoTitle
+      metaDescription
+      keywords
       heroTitle
       heroSubtitle
       sectionOneTitle
@@ -55,7 +58,11 @@ export default class IndexPage extends React.Component {
     } = this.props;
     return (
       <Layout>
-        <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
+        <Seo
+          title={page.seoTitle}
+          description={page.metaDescription}
+          keywords={page.keywords}
+        />
         <PageHero title={page.heroTitle} heading={page.heroSubtitle} />
         <VechicleExternal brand={page} data={page.sectionOneRefernce} />
         <VechicleInternal brand={page} data={page.sectionTwoRefernce} />
