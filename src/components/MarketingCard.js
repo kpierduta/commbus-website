@@ -7,6 +7,9 @@ const Section = styled.div`
     height: 20rem;
     border: 2px solid ${props => props.theme.lightShades};
     box-shadow: none;
+    @media screen and (max-width: 768px) {
+      height: auto;
+    }
   }
   .section {
     padding: 0rem 0.5rem;
