@@ -42,7 +42,13 @@ export default class Graphic extends React.Component {
     return (
       <Layout>
         <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
-        <HomeHero page={page} />
+        <HomeHero
+          title={page.title}
+          heading={page.subtitle}
+          subtitle={page.details.details}
+          bgImage={page.image.file.url}
+          text="  "
+        />
         <ProductsData title="just a test" Banner={page.banner} />
         <MessageInfo />
       </Layout>

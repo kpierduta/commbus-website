@@ -30,7 +30,11 @@ class ProjectsRefernce extends React.Component {
               class={item.projectSizeIsHalf ? 'column is-6' : 'column is-4'}
               image={item.projectImage.file.url}
             >
-              <img className="image" src={item.icon.file.url} />
+              <img
+                className="image"
+                src={item.icon.file.url}
+                alt={item.icon.file.title}
+              />
               <p className="has-text-white is-italic is-uppercase">
                 Sector:{item.category}
               </p>

@@ -22,6 +22,7 @@ export const projectQuery = graphql`
           slug
           projectSizeIsHalf
           projectImage {
+            title
             file {
               url
             }

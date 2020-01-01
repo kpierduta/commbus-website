@@ -129,11 +129,10 @@ export default class PromotionalBuses extends React.Component {
         />
         <HomeHero
           title={promotion.title}
-          heading="Double deck buses, open top and single deck coaches. "
-          subtitle="Commbus has a fleet of promotional buses for hire and buy (for longer term projects) so if you are looking for a creative solution that will give you 
-          great impact - a branded bus is very hard to miss."
-          bgImage="/images/promotanal/promo-bus-hero-image@2x.png"
-          text=" "
+          heading={promotion.subtitle}
+          subtitle={promotion.details.details}
+          bgImage={promotion.image.file.url}
+          text={promotion.text}
         />
         <Features Feature={promotion} />
         <Marketing data={promotion} />

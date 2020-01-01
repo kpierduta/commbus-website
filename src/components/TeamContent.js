@@ -17,6 +17,7 @@ class TeamContent extends React.Component {
               <div className="column is-one-quarter">
                 <TeamData
                   avatar={item.node.image.file.url}
+                  alt={item.node.image.title}
                   name={item.node.name}
                   position={item.node.position}
                 />

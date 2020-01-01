@@ -58,7 +58,13 @@ export default class page extends React.Component {
     return (
       <Layout>
         <Seo title="News & Updates" />
-        <HomeHero page={page} />
+        <HomeHero
+          title={page.title}
+          heading={page.subtitle}
+          subtitle={page.details.details}
+          bgImage={page.image.file.url}
+          text=" "
+        />
         <FeaturesSubPage />
         <ProductsData title={page.bannerSectionTitle} Banner={page.banner} />
         <MessageInfo />

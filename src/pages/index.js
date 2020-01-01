@@ -61,6 +61,7 @@ export const homeQuery = graphql`
         slug
         projectSizeIsHalf
         projectImage {
+          title
           file {
             url
           }
@@ -102,7 +103,13 @@ export default class IndexPage extends React.Component {
           description={page.metaDescription}
           url={page.keywords}
         />
-        <HomeHero page={page} />
+        <HomeHero
+          title={page.title}
+          heading={page.subtitle}
+          subtitle={page.details.details}
+          bgImage={page.image.file.url}
+          text={page.text}
+        />
         <OurClient />
         <Features Feature={page} />
         <ProjectsRefernce project={page.projectReference} />

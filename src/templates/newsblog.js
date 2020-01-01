@@ -36,7 +36,13 @@ export default class NewsBlog extends React.Component {
     return (
       <Layout>
         <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
-        <HomeHero page={news} />
+        <HomeHero
+          title={news.title}
+          heading={news.subtitle}
+          subtitle={news.details.details}
+          bgImage={news.image.file.url}
+          text={news.text}
+        />
         <Share />
         <NewsContent data={news.blogContent.json} />
       </Layout>

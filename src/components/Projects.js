@@ -32,7 +32,11 @@ class Projects extends React.Component {
               }
               image={item.node.projectImage.file.url}
             >
-              <img className="image" src={item.node.icon.file.url} />
+              <img
+                className="image"
+                src={item.node.icon.file.url}
+                alt={item.node.icon.file.title}
+              />
               <p className="has-text-white is-italic is-uppercase">
                 Sector:{item.node.category}
               </p>

@@ -32,6 +32,7 @@ export const teamQuery = graphql`
           name
           position
           image {
+            title
             file {
               url
             }
@@ -55,7 +56,13 @@ export default class About extends React.Component {
           description={page.metaDescription}
           keywords={page.keywords}
         />
-        <HomeHero page={page} />
+        <HomeHero
+          title={page.title}
+          heading={page.subtitle}
+          subtitle={page.details.details}
+          bgImage={page.image.file.url}
+          text=" "
+        />
         <TeamContent team={team.edges} />
         <Testimonials />
         <OurClient />

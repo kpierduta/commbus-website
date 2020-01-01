@@ -45,10 +45,7 @@ export default class NewsPage extends React.Component {
           description={page.metaDescription}
           url={page.keywords}
         />
-        <PageHero
-          title="OUR INTERNAL & EXTERNAL BRANDING OPTIONS"
-          heading="Recent work, case studies. marketing insights and business news."
-        />
+        <PageHero title={page.heroTitle} heading={page.heroSubtitle} />
         <NewsData news={news.edges} />
       </Layout>
     );

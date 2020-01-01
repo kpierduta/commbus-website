@@ -99,7 +99,13 @@ export default class Campaign extends React.Component {
     return (
       <Layout>
         <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
-        <HomeHero page={campaign} />
+        <HomeHero
+          title={campaign.title}
+          heading={campaign.subtitle}
+          subtitle={campaign.details.details}
+          bgImage={campaign.image.file.url}
+          text="  "
+        />
         <FeaturesSubPage />
         <Branding
           data={campaign}

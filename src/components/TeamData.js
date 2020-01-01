@@ -20,13 +20,13 @@ const Wrapper = styled.div`
   }
 `;
 
-const TeamData = ({ avatar, name, position }) => {
+const TeamData = ({ avatar, name, position, alt }) => {
   return (
     <Wrapper>
       <div className="card">
         <div className="card-image">
           <figure className="image is-4by5">
-            <img src={avatar} alt="avatars " />
+            <img src={avatar} alt={alt} />
           </figure>
         </div>
         <div className="card-content">

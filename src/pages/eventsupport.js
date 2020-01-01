@@ -133,7 +133,13 @@ export default class EventSupport extends React.Component {
           description={event.metaDescription}
           keywords={event.keywords}
         />
-        <HomeHero page={event} />
+        <HomeHero
+          title={event.title}
+          heading={event.subtitle}
+          subtitle={event.details.details}
+          bgImage={event.image.file.url}
+          text={event.text}
+        />
         <Features Feature={event} />
         <Marketing data={event} />
         <MessageInfo />
