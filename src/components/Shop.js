@@ -14,13 +14,13 @@ const ButtonContainer = styled.div`
   display: grid;
 `;
 
-const Shop = ({ avatar, title }) => {
+const Shop = ({ avatar, title, alt }) => {
   return (
     <Section className="column is-4">
       <div className="card">
         <div className="card-image">
           <figure className="image is-4by3">
-            <img src={avatar} alt="" />
+            <img src={avatar} alt={alt} />
           </figure>
         </div>
         <div className="card-content ">

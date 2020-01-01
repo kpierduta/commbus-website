@@ -17,6 +17,7 @@ export const Hire = graphql`
         node {
           title
           image {
+            t
             file {
               url
             }

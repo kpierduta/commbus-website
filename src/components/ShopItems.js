@@ -10,7 +10,11 @@ class ShopItems extends React.Component {
         <div className="container">
           <div className="columns is-multiline">
             {data.map(item => (
-              <Shop title={item.node.title} avatar={item.node.image.file.url} />
+              <Shop
+                title={item.node.title}
+                avatar={item.node.image.file.url}
+                alt={item.node.image.title}
+              />
             ))}
           </div>
         </div>
