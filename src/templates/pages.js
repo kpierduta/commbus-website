@@ -16,6 +16,16 @@ export const pageQuery = graphql`
       seoTitle
       metaDescription
       keywords
+      title
+      subtitle
+      details {
+        details
+      }
+      image {
+        file {
+          url
+        }
+      }
       featureSectionTitle
       featureOneTitle
       featureOneSubtitle
@@ -41,16 +51,6 @@ export const pageQuery = graphql`
       featureFourTitle
       featureFourSubtitle
       iconFour {
-        file {
-          url
-        }
-      }
-      title
-      subtitle
-      details {
-        details
-      }
-      image {
         file {
           url
         }
@@ -89,7 +89,11 @@ export default class page extends React.Component {
     } = this.props;
     return (
       <Layout>
-        <Seo title="News & Updates" />
+        <Seo
+          title={page.seoTitle}
+          description={page.metaDescription}
+          url={page.keywords}
+        />
         <HomeHero
           title={page.title}
           heading={page.subtitle}
@@ -97,7 +101,7 @@ export default class page extends React.Component {
           bgImage={page.image.file.url}
           text=" "
         />
-        <FeaturesSubPage />
+        <FeaturesSubPage data={page} />
         <ProductsData title={page.bannerSectionTitle} Banner={page.banner} />
         <MessageInfo />
         <Branding
