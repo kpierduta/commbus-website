@@ -85,7 +85,7 @@ const Footer = () => (
           <Link to="/parades" className="is-size-6 is-block">
             Parades
           </Link>
-          <Link to="/hireshop" className="is-size-6 is-block">
+          <Link to="/hireShop" className="is-size-6 is-block">
             Hire shop
           </Link>
         </div>
@@ -95,27 +95,32 @@ const Footer = () => (
           </h1>
           <Link
             to="/vechicle-branding/overlay-graphics"
-            className="is-size-6 is-block">
+            className="is-size-6 is-block"
+          >
             overlay-graphics
           </Link>
           <Link
             to="/vechicle-branding/simple-internals"
-            className="is-size-6 is-block">
+            className="is-size-6 is-block"
+          >
             Simple internal
           </Link>
           <Link
             to="/vechicle-branding/bespoke-branding"
-            className="is-size-6 is-block">
+            className="is-size-6 is-block"
+          >
             Bespoke internal
           </Link>
           <Link
             to="/vechicle-branding/banner-graphics"
-            className="is-size-6 is-block">
+            className="is-size-6 is-block"
+          >
             Banner graphics
           </Link>
           <Link
             to="/vechicle-branding/full-wrap"
-            className="is-size-6 is-block">
+            className="is-size-6 is-block"
+          >
             Full wrap
           </Link>
         </div>
