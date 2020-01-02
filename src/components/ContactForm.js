@@ -1,10 +1,10 @@
 import React from 'react';
 
-function encode(data) {
+const encode = data => {
   return Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
-}
+};
 
 class ContactForm extends React.Component {
   constructor(props) {
@@ -12,13 +12,9 @@ class ContactForm extends React.Component {
     this.state = { name: '', email: '', phone: '', company: '', message: '' };
   }
 
-  handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
+  /* Here’s the juicy bit for posting the form submission */
 
   handleSubmit = e => {
-    e.preventDefault();
-
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -26,23 +22,19 @@ class ContactForm extends React.Component {
     })
       .then(() => alert('Success!'))
       .catch(error => alert(error));
+
+    e.preventDefault();
   };
+
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
     const { name, email, phone, company, message } = this.state;
     return (
-      <form
-        className="contact-form"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        onSubmit={this.handleSubmit}
-        data-netlify-recaptcha="true"
-      >
+      <form className="" onSubmit={this.handleSubmit}>
         <div className="field">
           <div className="control">
             <input
-              id="name"
               className="input is-medium is-radiusless"
               type="text"
               placeholder="Your name"
@@ -55,7 +47,6 @@ class ContactForm extends React.Component {
         <div className="field">
           <div className="control">
             <input
-              id="email"
               name="email"
               className="input is-medium is-radiusless"
               value={email}
@@ -68,7 +59,6 @@ class ContactForm extends React.Component {
         <div className="field">
           <div className="control">
             <input
-              id="phone"
               name="phone"
               className="input is-medium is-radiusless"
               type="tel"
@@ -81,7 +71,6 @@ class ContactForm extends React.Component {
         <div className="field">
           <div className="control">
             <input
-              id="company"
               name="company"
               className="input is-medium is-radiusless"
               type="text"
@@ -94,7 +83,6 @@ class ContactForm extends React.Component {
         <div className="field">
           <div className="control is-medium">
             <textarea
-              id="message"
               name="message"
               value={message}
               className="textarea is-medium is-radiusless"
@@ -109,7 +97,6 @@ class ContactForm extends React.Component {
             terms and conditions
           </span>
         </p>
-        <div data-netlify-recaptcha="true"></div>
         <button type="submit" className="button">
           <span className="is-size-4">Submit</span>
         </button>
