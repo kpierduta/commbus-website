@@ -14,7 +14,7 @@ const Section = styled.section`
 
 const ButtonWrapper = styled.div`
   justify-content: center;
-  xpadding: 3rem 0 3rem;
+  padding: 3rem 0 3rem;
 `;
 
 class Campaign extends React.Component {

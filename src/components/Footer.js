@@ -7,8 +7,10 @@ const Container = styled.section`
   .logo {
     max-height: 7.5rem !important;
     height: auto;
-    @media screen and (max-width: 600px) {
-      max-height: 4rem !important;
+  }
+  .navbar-item {
+    @media screen and (max-width: 768px) {
+      padding: 0rem 0rem;
     }
   }
   .is-spaced {
@@ -93,32 +95,27 @@ const Footer = () => (
           </h1>
           <Link
             to="/vechicle-branding/overlay-graphics"
-            className="is-size-6 is-block"
-          >
+            className="is-size-6 is-block">
             overlay-graphics
           </Link>
           <Link
             to="/vechicle-branding/simple-internals"
-            className="is-size-6 is-block"
-          >
+            className="is-size-6 is-block">
             Simple internal
           </Link>
           <Link
             to="/vechicle-branding/bespoke-branding"
-            className="is-size-6 is-block"
-          >
+            className="is-size-6 is-block">
             Bespoke internal
           </Link>
           <Link
             to="/vechicle-branding/banner-graphics"
-            className="is-size-6 is-block"
-          >
+            className="is-size-6 is-block">
             Banner graphics
           </Link>
           <Link
             to="/vechicle-branding/full-wrap"
-            className="is-size-6 is-block"
-          >
+            className="is-size-6 is-block">
             Full wrap
           </Link>
         </div>

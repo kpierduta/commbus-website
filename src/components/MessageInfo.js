@@ -13,6 +13,9 @@ const Section = styled.section`
   .all-text {
     font-family: ${props => props.theme.primaryFontFamily};
   }
+  .container {
+    padding: 0rem 1rem;
+  }
 `;
 
 const MessageInfo = () => (

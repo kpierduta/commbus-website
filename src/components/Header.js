@@ -102,12 +102,15 @@ export default class Header extends React.Component {
           </div>
           <ContactWrapper className="columns">
             <div className="column is-flex">
-              <a href="tel:" className="has-text-weight-light is-size-4">
+              <a
+                href="tel:"
+                className="has-text-weight-light is-size-4 is-size-5-touch"
+              >
                 01675 463 555
               </a>
               <a
                 href="mailto:"
-                className="has-text-weight-light is-uppercase is-size-4 email"
+                className="has-text-weight-light is-uppercase is-size-4 email is-size-5-touch"
               >
                 enquiries@commbus.com
               </a>
@@ -147,7 +150,7 @@ export default class Header extends React.Component {
                 <Link to="/promotional" className="navbar-item">
                   Promotional Buses
                 </Link>
-                <Link to="/eventSupport" className="navbar-item">
+                <Link to="/eventsupport" className="navbar-item">
                   Event Support
                 </Link>
                 <Link to="/vehicle" className="navbar-item">

@@ -23,12 +23,18 @@ const Section = styled.section`
   .column.is-2 {
     width: 20%;
     margin-top: 1rem;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
 `;
 const Logo = styled.div`
   background: url(${props => props.logo});
   height: 8rem;
   background-size: 190px 250px !important;
+  @media screen and (max-width: 768px) {
+    background-size: 312px 306px !important;
+  }
   background-repeat: no-repeat !important;
   transition-duration: 2s;
   :hover {
