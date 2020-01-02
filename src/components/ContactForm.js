@@ -9,7 +9,7 @@ function encode(data) {
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { name: '', email: '', phone: '', company: '', message: '' };
   }
 
   handleChange = e => {
@@ -29,6 +29,7 @@ class ContactForm extends React.Component {
   };
 
   render() {
+    const { name, email, phone, company, message } = this.state;
     return (
       <form
         className="contact-form"
@@ -45,7 +46,7 @@ class ContactForm extends React.Component {
               className="input is-medium is-radiusless"
               type="text"
               placeholder="Your name"
-              htmlFor="name"
+              value={name}
               name="name"
               onChange={this.handleChange}
             />
@@ -55,9 +56,9 @@ class ContactForm extends React.Component {
           <div className="control">
             <input
               id="email"
-              htmlFor="email"
               name="email"
               className="input is-medium is-radiusless"
+              value={email}
               type="email"
               placeholder="Your email"
               onChange={this.handleChange}
@@ -68,10 +69,10 @@ class ContactForm extends React.Component {
           <div className="control">
             <input
               id="phone"
-              htmlFor="phone"
               name="phone"
               className="input is-medium is-radiusless"
               type="tel"
+              value={phone}
               placeholder="Your phone number"
               onChange={this.handleChange}
             />
@@ -81,10 +82,10 @@ class ContactForm extends React.Component {
           <div className="control">
             <input
               id="company"
-              htmlFor="company"
               name="company"
               className="input is-medium is-radiusless"
               type="text"
+              value={company}
               placeholder="Your company name"
               onChange={this.handleChange}
             />
@@ -94,8 +95,8 @@ class ContactForm extends React.Component {
           <div className="control is-medium">
             <textarea
               id="message"
-              htmlFor="message"
               name="message"
+              value={message}
               className="textarea is-medium is-radiusless"
               placeholder="Your message"
               onChange={this.handleChange}
