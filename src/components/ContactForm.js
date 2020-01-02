@@ -102,6 +102,7 @@ class ContactForm extends React.Component {
             terms and conditions
           </span>
         </p>
+        <div data-netlify-recaptcha="true"></div>
         <button type="submit" className="button">
           <span className="is-size-4">Submit</span>
         </button>
