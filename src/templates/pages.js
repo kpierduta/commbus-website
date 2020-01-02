@@ -13,6 +13,38 @@ import Testimonials from '../components/Testimonials';
 export const pageQuery = graphql`
   query Page($slug: String) {
     contentfulPages(slug: { eq: $slug }) {
+      seoTitle
+      metaDescription
+      keywords
+      featureSectionTitle
+      featureOneTitle
+      featureOneSubtitle
+      iconOne {
+        file {
+          url
+        }
+      }
+      featureTwoTitle
+      featureTwoSubtitle
+      iconTwo {
+        file {
+          url
+        }
+      }
+      featureThirdTitle
+      featureThirdSubtitle
+      iconThird {
+        file {
+          url
+        }
+      }
+      featureFourTitle
+      featureFourSubtitle
+      iconFour {
+        file {
+          url
+        }
+      }
       title
       subtitle
       details {
