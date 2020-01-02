@@ -36,6 +36,7 @@ class ContactForm extends React.Component {
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={this.handleSubmit}
+        data-netlify-recaptcha="true"
       >
         <div className="field">
           <div className="control">
@@ -44,6 +45,7 @@ class ContactForm extends React.Component {
               className="input is-medium is-radiusless"
               type="text"
               placeholder="Your name"
+              htmlFor="name"
               name="name"
               onChange={this.handleChange}
             />
@@ -53,6 +55,7 @@ class ContactForm extends React.Component {
           <div className="control">
             <input
               id="email"
+              htmlFor="email"
               name="email"
               className="input is-medium is-radiusless"
               type="email"
@@ -65,6 +68,7 @@ class ContactForm extends React.Component {
           <div className="control">
             <input
               id="phone"
+              htmlFor="phone"
               name="phone"
               className="input is-medium is-radiusless"
               type="tel"
@@ -77,6 +81,7 @@ class ContactForm extends React.Component {
           <div className="control">
             <input
               id="company"
+              htmlFor="company"
               name="company"
               className="input is-medium is-radiusless"
               type="text"
@@ -89,6 +94,7 @@ class ContactForm extends React.Component {
           <div className="control is-medium">
             <textarea
               id="message"
+              htmlFor="message"
               name="message"
               className="textarea is-medium is-radiusless"
               placeholder="Your message"
