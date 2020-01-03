@@ -7,12 +7,8 @@ const Wrapper = styled.div`
   .card {
     height: 30rem;
   }
-  h2 {
-    color: ${props => props.theme.secondryColor};
-    margin-bottom: 0.5rem;
-  }
   .all-text {
-    font-family: ${props => props.theme.primaryFontFamily};
+    margin-bottom: 0.5rem;
   }
 `;
 
@@ -26,7 +22,9 @@ const BrandingItem = props => {
           </figure>
         </div>
         <div className="card-content">
-          <h2 className="has-text-weight-semibold all-text">{props.title}</h2>
+          <p className="has-text-weight-semibold all-text has-text-info">
+            {props.title}
+          </p>
           <BrandingItemList smalltext={props.first} />
           <BrandingItemList smalltext={props.second} />
           <BrandingItemList smalltext={props.third} />

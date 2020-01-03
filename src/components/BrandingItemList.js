@@ -2,10 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  span {
-    color: ${props => props.theme.secondryColor} !important;
-    font-family: ${props => props.theme.primaryFontFamily};
-  }
+  margin-top: 0.5rem;
   .text {
     margin: 0rem 0.3rem;
   }
@@ -14,12 +11,10 @@ const Wrapper = styled.div`
 const BrandingItemList = ({ smalltext }) => {
   return (
     <Wrapper className="is-flex">
-      <span className="icon">
+      <p className="icon">
         <i className="fas fa-check" />
-      </span>
-      <span className="subtitle is-6 text has-text-weight-semibold">
-        {smalltext}
-      </span>
+      </p>
+      <p className="subtitle is-6 has-text-info">{smalltext}</p>
     </Wrapper>
   );
 };

@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
-  height: 30rem;
+  height: 25rem;
+  margin-top: 2rem;
   overflow: hidden;
   .background {
     padding: 6rem 4.5rem 6rem 4rem;

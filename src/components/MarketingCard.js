@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 const Section = styled.div`
   .card {
-    height: 20rem;
+    height: 25rem;
     border: 2px solid ${props => props.theme.lightShades};
     box-shadow: none;
     @media screen and (max-width: 768px) {
@@ -15,15 +15,19 @@ const Section = styled.div`
     padding: 0rem 0.5rem;
   }
   .card-content {
-    padding: 1.25rem;
+    padding: 2rem 1.25rem 1.25rem 1.25rem;
+  }
+  .content {
+    height: 10rem;
   }
   h2 {
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
   }
 `;
 
 const LinkStyled = styled(Link)`
-  margin-top: 1rem;
+  font-family: ${props => props.theme.secondaryFontFamily};
+  margin-top: 1.5rem;
 `;
 
 const MarketingCard = props => (
@@ -43,11 +47,13 @@ const MarketingCard = props => (
               </h2>
             </div>
           </div>
-          <div className="content has-text-centered ">
+          <div className="content has-text-centered">
             <p className="has-text-info">{props.description}</p>
+          </div>
+          <div className="has-text-centered">
             <LinkStyled
               to={props.link}
-              className="is-block has-text-weight-semibold has-text-info"
+              className="title is-4 has-text-info has-text-weight-normal"
             >
               FIND OUT MORE
             </LinkStyled>
