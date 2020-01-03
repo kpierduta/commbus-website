@@ -43,11 +43,11 @@ const MarketingCard = props => (
               </h2>
             </div>
           </div>
-          <div className="content has-text-centered has-text-info">
-            {props.description}
+          <div className="content has-text-centered ">
+            <p className="has-text-info">{props.description}</p>
             <LinkStyled
               to={props.link}
-              className="is-block has-text-weight-semibold"
+              className="is-block has-text-weight-semibold has-text-info"
             >
               FIND OUT MORE
             </LinkStyled>

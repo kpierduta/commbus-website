@@ -16,18 +16,15 @@ const Wrapper = styled.div`
   .all-text {
     font-family: ${props => props.theme.primaryFontFamily};
   }
-  .title {
-    font-size: 0.9rem !important;
-  }
 `;
 
 const FeatureItem = ({ img, alt, title, subtitle }) => (
   <Wrapper className="column has-text-centered all-text">
     <img src={img} alt={alt} />
-    <h1 className="title is-size-6 has-text-weight-semibold has-text-white all-text">
+    <h1 className="title is-6 has-text-weight-semibold has-text-white all-text">
       {title}
     </h1>
-    <p className="has-text-white all-text">{subtitle}</p>
+    <p className="has-text-white">{subtitle}</p>
   </Wrapper>
 );
 export default FeatureItem;
