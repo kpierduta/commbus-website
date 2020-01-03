@@ -57,13 +57,13 @@ const OurClient = () => (
           render={data => {
             const { allContentfulOurClients: logo } = data;
             return (
-              <React.Fragment>
+              <>
                 {logo.edges.map(item => (
                   <div className="column is-2">
                     <Logo logo={item.node.clientlogo.file.url} />
                   </div>
                 ))}
-              </React.Fragment>
+              </>
             );
           }}
         />

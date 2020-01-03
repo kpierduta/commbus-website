@@ -14,6 +14,9 @@ const Section = styled.div`
     transition: all 0.5s ease;
     :hover {
       transform: scale(1.05);
+      @media screen and (max-width: 768px) {
+        transform: none;
+      }
     }
   }
 `;

@@ -17,6 +17,11 @@ const Section = styled.section`
   .logo {
     margin-bottom: 2rem;
   }
+  @media screen and (max-width: 768px) {
+    .column {
+      padding: 0 !important;
+    }
+  }
 `;
 
 class ProjectsRefernce extends React.Component {
@@ -28,8 +33,7 @@ class ProjectsRefernce extends React.Component {
           {project.map(item => (
             <ProjectsCards
               class={item.projectSizeIsHalf ? 'column is-6' : 'column is-4'}
-              image={item.projectImage.file.url}
-            >
+              image={item.projectImage.file.url}>
               <img
                 className="image"
                 src={item.icon.file.url}
@@ -44,8 +48,7 @@ class ProjectsRefernce extends React.Component {
               </p>
               <Link
                 to={`/project/${item.slug}`}
-                className="button is-medium is-inverted has-text-black-bis"
-              >
+                className="button is-medium is-inverted has-text-black-bis">
                 VIEW PROJECTS
               </Link>
             </ProjectsCards>

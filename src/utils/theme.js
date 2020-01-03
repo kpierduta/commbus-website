@@ -23,7 +23,6 @@ export const theme = {
   // or as the background for inverted designs.
   darkShades,
   dangerColor: '#f44336',
-
   primaryColor: mainBrandColor,
   secondryColor: lightShades,
   borderColor: '#e0e6ef',
@@ -52,6 +51,9 @@ const GlobalStyle = createGlobalStyle`
     color: ${theme.textColor};
     letter-spacing: 0.03rem !important;
     font-size: 17px;
+    .columns {
+      margin-right: 0 !important;
+    }
   }
   .title {
     font-family: ${theme.secondaryFontFamily};

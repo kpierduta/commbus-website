@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 const Section = styled.section`
   margin-bottom: 5rem;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 0rem;
+  }
   background-image: url(${props => props.bgImage});
   background-repeat: no-repeat;
   background-position: center;

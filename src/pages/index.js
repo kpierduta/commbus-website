@@ -103,6 +103,7 @@ export default class IndexPage extends React.Component {
           description={page.metaDescription}
           url={page.keywords}
         />
+
         <HomeHero
           title={page.title}
           heading={page.subtitle}

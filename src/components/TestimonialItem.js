@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
+  padding: 1.7rem 0rem;
   .column {
     border: 2px solid #393938;
     margin: 1.5rem 1rem 0rem 1rem;
