@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   padding: 1.7rem 0rem;
-  .column {
+  .border-box {
+    padding-top: 1rem;
+    height: 30rem;
     border: 2px solid #393938;
     margin: 1.5rem 1rem 0rem 1rem;
   }
@@ -36,8 +38,8 @@ const Image = styled.figure`
 `;
 
 const TestimonialItem = props => (
-  <Container>
-    <diV className="column has-text-centered">
+  <Container className="column has-text-centered">
+    <diV className="border-box">
       <Image className="image is-128x128">
         <img src={props.Icon} alt={props.alt} />
       </Image>
