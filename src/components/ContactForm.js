@@ -1,51 +1,53 @@
 import React from 'react';
 
-function encode(data) {
+const encode = data => {
   return Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
-}
+};
 
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { name: '', email: '', phone: '', company: '', message: '' };
   }
 
-  handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
+  /* Here’s the juicy bit for posting the form submission */
 
   handleSubmit = e => {
-    e.preventDefault();
-
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...this.state }),
     })
-      .then(() => alert('Success!'))
+      .then(() => {
+        this.setState({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          message: '',
+        });
+        alert('Success!');
+      })
       .catch(error => alert(error));
+
+    e.preventDefault();
   };
 
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+
   render() {
+    const { name, email, phone, company, message } = this.state;
     return (
-      <form
-        className="contact-form"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        onSubmit={this.handleSubmit}
-        data-netlify-recaptcha="true"
-      >
+      <form data-netlify="true" name="contact" onSubmit={this.handleSubmit}>
         <div className="field">
           <div className="control">
             <input
-              id="name"
               className="input is-medium is-radiusless"
               type="text"
               placeholder="Your name"
-              htmlFor="name"
+              value={name}
               name="name"
               onChange={this.handleChange}
             />
@@ -54,10 +56,9 @@ class ContactForm extends React.Component {
         <div className="field">
           <div className="control">
             <input
-              id="email"
-              htmlFor="email"
               name="email"
               className="input is-medium is-radiusless"
+              value={email}
               type="email"
               placeholder="Your email"
               onChange={this.handleChange}
@@ -67,11 +68,10 @@ class ContactForm extends React.Component {
         <div className="field">
           <div className="control">
             <input
-              id="phone"
-              htmlFor="phone"
               name="phone"
               className="input is-medium is-radiusless"
               type="tel"
+              value={phone}
               placeholder="Your phone number"
               onChange={this.handleChange}
             />
@@ -80,11 +80,10 @@ class ContactForm extends React.Component {
         <div className="field">
           <div className="control">
             <input
-              id="company"
-              htmlFor="company"
               name="company"
               className="input is-medium is-radiusless"
               type="text"
+              value={company}
               placeholder="Your company name"
               onChange={this.handleChange}
             />
@@ -93,9 +92,8 @@ class ContactForm extends React.Component {
         <div className="field">
           <div className="control is-medium">
             <textarea
-              id="message"
-              htmlFor="message"
               name="message"
+              value={message}
               className="textarea is-medium is-radiusless"
               placeholder="Your message"
               onChange={this.handleChange}
@@ -108,7 +106,6 @@ class ContactForm extends React.Component {
             terms and conditions
           </span>
         </p>
-        <div data-netlify-recaptcha="true"></div>
         <button type="submit" className="button">
           <span className="is-size-4">Submit</span>
         </button>

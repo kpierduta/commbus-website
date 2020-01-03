@@ -106,7 +106,9 @@ export default class Campaign extends React.Component {
           bgImage={campaign.image.file.url}
           text="  "
         />
+        {/*
         <FeaturesSubPage />
+        */}
         <Branding
           data={campaign}
           showcase={campaign.brandingShowCase}

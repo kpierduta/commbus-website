@@ -11,8 +11,13 @@ const Section = styled.section`
   background-position: center;
   background-size: cover;
   @media screen and (max-width: 768px) {
-    background-size: auto;
     background-image: none;
+  }
+  .test {
+    height: 19rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/images/photo_2020-01-02_14-58-43.jpg);
   }
   p {
     margin-top: 1rem;
@@ -32,6 +37,7 @@ class HomeHero extends React.Component {
       <Section className="section" bgImage={this.props.bgImage}>
         <div className="container">
           <div className="columns">
+            <div className="test is-hidden-widescreen-only"></div>
             <div className="column is-4">
               <section className="hero">
                 <div className="hero-body">
