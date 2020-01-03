@@ -68,7 +68,7 @@ const Contact = () => (
           </p>
         </div>
         <div className="column">
-          <h1 className="title is-2 has-text-weight-bold has-text-white">
+          <h1 className="title is-2 has-text-weight-light has-text-white">
             Contact Us
           </h1>
           <p className="has-text-white has-text-weight-bold is-size-6">
