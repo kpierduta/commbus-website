@@ -17,7 +17,7 @@ class ClientsData extends React.Component {
           <Heading title={this.props.subtitle} size="is-4" />
           <div className="columns is-multiline">
             {data.map(item => (
-              <React.Fragment>
+              <>
                 <Clients
                   avatar={item.internalImage.file.url}
                   alt={item.internalImage.title}
@@ -34,7 +34,7 @@ class ClientsData extends React.Component {
                   text="Externally:"
                   para={item.externalDetails.externalDetails}
                 />
-              </React.Fragment>
+              </>
             ))}
           </div>
         </div>

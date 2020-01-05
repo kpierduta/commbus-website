@@ -10,6 +10,9 @@ import MessageInfo from '../components/MessageInfo';
 export const pageQuery = graphql`
   query graphic($slug: String) {
     contentfulVehicleGraphicBlog(slug: { eq: $slug }) {
+      seoTitlle
+      metaDescription
+      keywords
       slug
       title
       subtitle
@@ -21,6 +24,7 @@ export const pageQuery = graphql`
           url
         }
       }
+      bannerTitle
       banner {
         images {
           title
@@ -41,7 +45,11 @@ export default class Graphic extends React.Component {
 
     return (
       <Layout>
-        <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
+        <Seo
+          title={page.seoTitle}
+          description={page.metaDescription}
+          keywords={page.keyword}
+        />
         <HomeHero
           title={page.title}
           heading={page.subtitle}
@@ -49,7 +57,7 @@ export default class Graphic extends React.Component {
           bgImage={page.image.file.url}
           text="  "
         />
-        <ProductsData title="just a test" Banner={page.banner} />
+        <ProductsData title={page.bannerTitle} Banner={page.banner} />
         <MessageInfo />
       </Layout>
     );

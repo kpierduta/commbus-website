@@ -13,6 +13,9 @@ import Testimonials from '../components/Testimonials';
 export const CampaignQuery = graphql`
   query campaign($slug: String) {
     contentfulCampaignPage(slug: { eq: $slug }) {
+      seoTitle
+      metaDescription
+      keywords
       slug
       title
       subtitle
@@ -98,7 +101,11 @@ export default class Campaign extends React.Component {
     } = this.props;
     return (
       <Layout>
-        <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
+        <Seo
+          title={campaign.seoTitle}
+          description={campaign.metaDescription}
+          keywords={campaign.keyword}
+        />
         <HomeHero
           title={campaign.title}
           heading={campaign.subtitle}

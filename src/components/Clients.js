@@ -6,11 +6,8 @@ const Section = styled.section`
   .background {
     background-color: white;
   }
-  .test {
-    padding: 0rem;
-  }
   .text {
-    margin-top: 2.75rem !important;
+    margin-bottom: 2.75rem !important;
   }
   .title {
     color: ${props => props.theme.secondryColor} !important;
@@ -27,8 +24,8 @@ const Clients = ({ title, subtitle, text, para, avatar, alt }) => (
       </div>
       <div className="column">
         <h1 className="title is-3">{title}</h1>
-        <p className="subtitle is-6">{subtitle}</p>
-        <h1 className="title is-6 text">{text}</h1>
+        <p className="subtitle is-6 text">{subtitle}</p>
+        <h1 className="title is-6">{text}</h1>
         <p className="subtitle is-6">{para}</p>
       </div>
     </div>

@@ -13,6 +13,9 @@ const ButtonContainer = styled.div`
   margin: 1rem 0rem 4rem 0rem;
   justify-content: center;
   display: grid;
+  .buttons {
+    justify-content: center;
+  }
 `;
 
 class Branding extends React.Component {
@@ -36,24 +39,22 @@ class Branding extends React.Component {
               />
             ))}
           </div>
-          <ButtonContainer className="colums">
-            <div className="column">
-              <div className="buttons">
-                <Button
-                  width="14rem"
-                  background="transparent"
-                  to={this.props.fistlink}
-                >
-                  {this.props.fistbutton}
-                </Button>
-                <Button
-                  width="14rem"
-                  background="transparent"
-                  to={this.props.secondlink}
-                >
-                  {this.props.secondbutton}
-                </Button>
-              </div>
+          <ButtonContainer>
+            <div className="buttons">
+              <Button
+                width="15rem"
+                background="transparent"
+                to={this.props.fistlink}
+              >
+                {this.props.fistbutton}
+              </Button>
+              <Button
+                width="15rem"
+                background="transparent"
+                to={this.props.secondlink}
+              >
+                {this.props.secondbutton}
+              </Button>
             </div>
           </ButtonContainer>
         </div>
