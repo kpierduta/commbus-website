@@ -27,6 +27,35 @@ export const CampaignQuery = graphql`
           url
         }
       }
+      featureSectionTitle
+      featureOneTitle
+      featureOneSubtitle
+      iconOne {
+        file {
+          url
+        }
+      }
+      featureTwoTitle
+      featureTwoSubtitle
+      iconTwo {
+        file {
+          url
+        }
+      }
+      featureThirdTitle
+      featureThirdSubtitle
+      iconThird {
+        file {
+          url
+        }
+      }
+      featureFourTitle
+      featureFourSubtitle
+      iconFour {
+        file {
+          url
+        }
+      }
       sectionTitle
       sectionSubtitle
       brandingShowCase {
@@ -113,9 +142,9 @@ export default class Campaign extends React.Component {
           bgImage={campaign.image.file.url}
           text="  "
         />
-        {/*
-        <FeaturesSubPage />
-        */}
+
+        <FeaturesSubPage data={campaign} />
+
         <Branding
           data={campaign}
           showcase={campaign.brandingShowCase}
