@@ -10,6 +10,9 @@ import NewsContent from '../components/NewsContent';
 export const newsQuery = graphql`
   query news($slug: String) {
     contentfulNews(slug: { eq: $slug }) {
+      seoTitle
+      metaDescription
+      keywords
       slug
       title
       subtitle
@@ -29,13 +32,16 @@ export const newsQuery = graphql`
 
 export default class NewsBlog extends React.Component {
   render() {
-    console.log('hello world');
     const {
       data: { contentfulNews: news },
     } = this.props;
     return (
       <Layout>
-        <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
+        <Seo
+          title={news.seoTitle}
+          description={news.metaDescription}
+          url={news.keywords}
+        />
         <HomeHero
           title={news.title}
           heading={news.subtitle}

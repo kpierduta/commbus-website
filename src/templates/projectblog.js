@@ -10,6 +10,9 @@ import ProjectContent from '../components/ProjectConetnt';
 export const projectQuery = graphql`
   query project($slug: String) {
     contentfulProject(slug: { eq: $slug }) {
+      seoTitle
+      metaDiscription
+      keywords
       text
       heroTitle
       heroSubtitle
@@ -35,7 +38,11 @@ export default class Projectblog extends React.Component {
     } = this.props;
     return (
       <Layout>
-        <Seo title="Exhibitiob Bus Hire" description="Exhibitiob Bus Hire" />
+        <Seo
+          title={project.seoTitle}
+          description={project.metaDescription}
+          url={project.keywords}
+        />
         <HomeHero
           bgImage={project.heroImage.file.url}
           title={project.heroTitle}

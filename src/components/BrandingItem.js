@@ -5,7 +5,10 @@ import BrandingItemList from './BrandingItemList';
 
 const Wrapper = styled.div`
   .card {
-    min-height: 30rem;
+    height: 31.5rem;
+    @media screen and (max-width: 768px) {
+      height: auto;
+    }
   }
   .all-text {
     margin-bottom: 0.5rem;

@@ -21,6 +21,9 @@ const Container = styled.section`
   }
   .column.is-3 {
     width: 20%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
   .column.is-4 {
     flex: none;

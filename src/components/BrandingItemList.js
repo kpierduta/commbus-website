@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   margin-top: 0.5rem;
-  .text {
-    margin: 0rem 0.3rem;
+  .icon {
+    margin-right: 0.3rem;
   }
 `;
 
