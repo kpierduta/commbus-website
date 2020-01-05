@@ -85,7 +85,7 @@ const Footer = () => (
           <Link to="/parades" className="is-size-6 is-block">
             Parades
           </Link>
-          <Link to="/hireShop" className="is-size-6 is-block">
+          <Link to="/hireshop" className="is-size-6 is-block">
             Hire shop
           </Link>
         </div>
