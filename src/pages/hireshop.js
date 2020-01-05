@@ -9,10 +9,13 @@ import ShopItems from '../components/ShopItems';
 export const Hire = graphql`
   query Hire {
     contentfulHireShopPage {
+      seoTitle
+      metaDescription
+      keyword
       title
       subtitle
     }
-    allContentfulHireVechicles {
+    allContentfulHireVehicles {
       edges {
         node {
           title
@@ -32,11 +35,15 @@ export default class HireShop extends React.Component {
   render() {
     const {
       data: { contentfulHireShopPage: Hire },
-      data: { allContentfulHireVechicles: data },
+      data: { allContentfulHireVehicles: data },
     } = this.props;
     return (
       <Layout>
-        <Seo title="Commbus Team" description="Exhibitiob Bus Hire" />
+        <Seo
+          title={Hire.seoTitle}
+          description={Hire.metaDescription}
+          keywords={Hire.keyword}
+        />
         <PageHero title={Hire.title} heading={Hire.subtitle} />
         <ShopItems data={data.edges} />
       </Layout>

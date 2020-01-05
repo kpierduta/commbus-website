@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import VechicleBranding from '../components/VechicleBranding';
+import VehicleBranding from './VehicleBranding';
 
 const Section = styled.section`
   p {
@@ -9,7 +9,7 @@ const Section = styled.section`
   }
 `;
 
-class VechicleExternal extends React.Component {
+class VehicleExternal extends React.Component {
   render() {
     const { brand } = this.props;
     const { data } = this.props;
@@ -25,11 +25,11 @@ class VechicleExternal extends React.Component {
             </div>
           </section>
           {data.map(item => (
-            <VechicleBranding
+            <VehicleBranding
               bgImage={item.thumbnailImage.file.url}
               title={item.blogTitle}
               subtitle={item.blogSubtitle.blogSubtitle}
-              to={`vechicle-branding/${item.slug}`}
+              to={`vehicle-branding/${item.slug}`}
             />
           ))}
         </div>
@@ -38,4 +38,4 @@ class VechicleExternal extends React.Component {
   }
 }
 
-export default VechicleExternal;
+export default VehicleExternal;

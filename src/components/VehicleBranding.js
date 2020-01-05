@@ -18,7 +18,7 @@ const Section = styled.section`
   }
 `;
 
-const VechicleBranding = ({ title, subtitle, para, bgImage, to }) => (
+const VehicleBranding = ({ title, subtitle, para, bgImage, to }) => (
   <Section bgImage={bgImage}>
     <div className="container">
       <div className="columns">
@@ -41,4 +41,4 @@ const VechicleBranding = ({ title, subtitle, para, bgImage, to }) => (
   </Section>
 );
 
-export default VechicleBranding;
+export default VehicleBranding;

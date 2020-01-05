@@ -5,7 +5,7 @@ import BrandingItemList from './BrandingItemList';
 
 const Wrapper = styled.div`
   .card {
-    height: 30rem;
+    min-height: 30rem;
   }
   .all-text {
     margin-bottom: 0.5rem;

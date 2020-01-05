@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 const Section = styled.div`
   .card {
-    height: 25rem;
+    min-height: 25rem;
     border: 2px solid ${props => props.theme.lightShades};
     box-shadow: none;
     @media screen and (max-width: 768px) {
@@ -18,7 +18,7 @@ const Section = styled.div`
     padding: 2rem 1.25rem 1.25rem 1.25rem;
   }
   .content {
-    height: 10rem;
+    min-height: 10rem;
   }
   h2 {
     margin-top: 1.5rem;
@@ -36,13 +36,13 @@ const MarketingCard = props => (
       <Section className="section">
         <div className="card-content">
           <div className="columns">
-            <div className="column is-4 has-text-centered">
+            <div className="column is-4">
               <figure className="image">
                 <img src={props.img} alt={props.alt} />
               </figure>
             </div>
             <div className="column">
-              <h2 className="title is-4 has-text-info has-text-weight-medium">
+              <h2 className="title is-4 has-text-info has-text-weight-medium has-text-centered-mobile">
                 {props.heading}
               </h2>
             </div>

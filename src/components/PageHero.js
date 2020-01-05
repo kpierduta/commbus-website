@@ -12,7 +12,7 @@ const PageHero = ({ title, heading }) => (
       <div className="columns">
         <div className="column is-4">
           <section className="hero">
-            <div className="hero-body">
+            <div className="hero-body has-text-centered-mobile">
               <h1 className="title is-size-3-mobile has-text-weight-light is-uppercase has-text-white">
                 {title}
               </h1>

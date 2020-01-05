@@ -9,8 +9,17 @@ const Section = styled.section`
   h1 {
     margin: 0rem 0 3rem 0;
   }
+  .column {
+    @media screen and (max-width: 768px) {
+      padding: 0rem 0rem 0rem 0rem;
+    }
+  }
   .image {
     position: absolute;
+    @media screen and (max-width: 768px) {
+      float: right;
+      position: relative;
+    }
     right: 0rem;
     top: -4rem;
   }

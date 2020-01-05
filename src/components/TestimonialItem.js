@@ -5,7 +5,7 @@ const Container = styled.div`
   padding: 1.7rem 0rem;
   .border-box {
     padding-top: 1rem;
-    height: 35rem;
+    min-height: 35rem;
     border: 2px solid #393938;
     margin: 1.5rem 1rem 0rem 1rem;
   }

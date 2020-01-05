@@ -2,9 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
-  height: 25rem;
   margin-top: 2rem;
+  height: 25rem;
   overflow: hidden;
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
   .background {
     padding: 6rem 4.5rem 6rem 4rem;
     background-image: url(${props => props.image});

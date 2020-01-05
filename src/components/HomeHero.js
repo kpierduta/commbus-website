@@ -14,7 +14,7 @@ const Section = styled.section`
     background-image: none;
   }
   .test {
-    height: 19rem;
+    min-height: 19rem;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(/images/photo_2020-01-02_14-58-43.jpg);

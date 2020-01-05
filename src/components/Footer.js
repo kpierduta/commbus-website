@@ -94,33 +94,30 @@ const Footer = () => (
             Vehicle branding
           </h1>
           <Link
-            to="/vechicle-branding/overlay-graphics"
+            to="/vehicle-branding/overlay-graphics"
             className="is-size-6 is-block"
           >
             overlay-graphics
           </Link>
           <Link
-            to="/vechicle-branding/simple-internals"
+            to="/vehicle-branding/simple-internals"
             className="is-size-6 is-block"
           >
             Simple internal
           </Link>
           <Link
-            to="/vechicle-branding/bespoke-branding"
+            to="/vehicle-branding/bespoke-branding"
             className="is-size-6 is-block"
           >
             Bespoke internal
           </Link>
           <Link
-            to="/vechicle-branding/banner-graphics"
+            to="/vehicle-branding/banner-graphics"
             className="is-size-6 is-block"
           >
             Banner graphics
           </Link>
-          <Link
-            to="/vechicle-branding/full-wrap"
-            className="is-size-6 is-block"
-          >
+          <Link to="/vehicle-branding/full-wrap" className="is-size-6 is-block">
             Full wrap
           </Link>
         </div>

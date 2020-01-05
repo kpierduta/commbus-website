@@ -7,7 +7,7 @@ import { Link } from 'gatsby';
 const Section = styled.div`
   padding: 2rem 0rem;
   .columns {
-    height: 22rem;
+    min-height: 22rem;
     background-image: url(${props => props.bgImage});
     background-repeat: no-repeat;
   }
@@ -26,8 +26,8 @@ const NewsItems = ({ title, bgImage, link }) => {
         <div className="column is-4"></div>
         <div className="column">
           <section className="section">
-            <div className="container">
-              <h1 className="title has-text-white is-3 has-text-weight-medium">
+            <div className="container has-text-centered-mobile">
+              <h1 className="title has-text-white is-3 has-text-weight-medium ">
                 {title}
               </h1>
               <Link className="button is-medium is-link" to={link}>

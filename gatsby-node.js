@@ -53,7 +53,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
   result.data.allContentfulVehicleGraphicBlog.edges.forEach(({ node }) => {
-    const pagePath = `vechicle-branding/${node.slug}`;
+    const pagePath = `vehicle-branding/${node.slug}`;
     createPage({
       path: pagePath,
       component: path.resolve(`./src/templates/graphic.js`),

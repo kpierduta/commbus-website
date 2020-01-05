@@ -4,10 +4,10 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import PageHero from '../components/PageHero';
-import VechicleExternal from '../components/VechicleExternal';
-import VechicleInternal from '../components/VechicleInternal';
+import VehicleExternal from '../components/VehicleExternal';
+import VehicleInternal from '../components/VehicleExternal';
 
-export const VechicleBrandingQuery = graphql`
+export const VehicleBrandingQuery = graphql`
   query Branding {
     contentfulVehicleBrandingPage {
       seoTitle
@@ -64,8 +64,8 @@ export default class IndexPage extends React.Component {
           keywords={page.keywords}
         />
         <PageHero title={page.heroTitle} heading={page.heroSubtitle} />
-        <VechicleExternal brand={page} data={page.sectionOneRefernce} />
-        <VechicleInternal brand={page} data={page.sectionTwoRefernce} />
+        <VehicleExternal brand={page} data={page.sectionOneRefernce} />
+        <VehicleInternal brand={page} data={page.sectionTwoRefernce} />
       </Layout>
     );
   }
