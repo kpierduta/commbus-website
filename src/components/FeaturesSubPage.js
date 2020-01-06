@@ -22,12 +22,12 @@ class FeaturesSubPage extends React.Component {
               subtitle={data.featureOneSubtitle}
             />
             <FeatureItem
-              img={data.iconThird.file.url}
+              img={data.iconTwo.file.url}
               title={data.featureTwoTitle}
               subtitle={data.featureTwoSubtitle}
             />
             <FeatureItem
-              img={data.iconOne.file.url}
+              img={data.iconThird.file.url}
               title={data.featureThirdTitle}
               subtitle={data.featureThirdSubtitle}
             />

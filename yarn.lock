@@ -803,6 +803,13 @@
     follow-redirects "^1.2.5"
     is-buffer "^1.1.5"
 
+"@contentful/rich-text-links@^13.4.0":
+  version "13.4.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-links/-/rich-text-links-13.4.0.tgz#02f51989d816590a2fc5684da423acb1d3110c5c"
+  integrity sha512-19rRsjRxaByAdd5A9+9O2xcPclu85+rCLAoOatdBKSXaXKtADx+SvMu4D1r6UtuiUtoCiJhhkpHE9Vme8Zbl5Q==
+  dependencies:
+    "@contentful/rich-text-types" "^13.4.0"
+
 "@contentful/rich-text-react-renderer@^13.4.0":
   version "13.4.0"
   resolved "https://registry.yarnpkg.com/@contentful/rich-text-react-renderer/-/rich-text-react-renderer-13.4.0.tgz#2efb556f58d608472c2dde692153c7b7b985fae7"
