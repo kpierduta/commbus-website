@@ -6,6 +6,7 @@ import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import Share from '../components/Share';
 import NewsContent from '../components/NewsContent';
+import NewsRefernce from '../components/NewsRefernce';
 
 export const newsQuery = graphql`
   query news($slug: String) {
@@ -25,6 +26,15 @@ export const newsQuery = graphql`
       }
       blogContent {
         json
+      }
+      blogReference {
+        slug
+        title
+        thumbnail {
+          file {
+            url
+          }
+        }
       }
     }
   }
@@ -51,6 +61,7 @@ export default class NewsBlog extends React.Component {
         />
         <Share />
         <NewsContent data={news.blogContent.json} />
+        <NewsRefernce news={news.blogReference} />
       </Layout>
     );
   }
