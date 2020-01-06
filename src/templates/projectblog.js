@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import Share from '../components/Share';
-import ProjectContent from '../components/ProjectConetnt';
+import Content from '../components/Content';
 
 export const projectQuery = graphql`
   query project($slug: String) {
@@ -51,7 +51,7 @@ export default class Projectblog extends React.Component {
           text={project.text}
         />
         <Share />
-        <ProjectContent data={project.blogContent.json} />
+        <Content data={project.blogContent.json} />
       </Layout>
     );
   }

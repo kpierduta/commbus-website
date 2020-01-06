@@ -4,9 +4,8 @@ import styled from 'styled-components';
 import Button from './elements/Button';
 
 const Container = styled.div`
-  p {
-    color: ${props => props.theme.secondryColor} !important;
-    font-family: ${props => props.theme.primaryFontFamily} !important;
+  .card-content {
+    min-height: 8rem;
   }
 `;
 
@@ -15,11 +14,11 @@ const CampaignItem = props => (
     <div className="card">
       <div className="card-image">
         <figure className="image is-3by2">
-          <img src={props.image} alt="Placeholder" />
+          <img src={props.image} alt={props.alt} />
         </figure>
       </div>
       <div className="card-content">
-        <p className="has-text-weight-semibold has-text-centered">
+        <p className="has-text-weight-semibold has-text-centered has-text-info">
           {props.title}
         </p>
       </div>

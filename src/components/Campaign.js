@@ -30,6 +30,7 @@ class Campaign extends React.Component {
               <CampaignItem
                 title={item.title}
                 image={item.smallImage.file.url}
+                alt={item.smallImage.title}
                 to={`/news/${item.slug}`}
               />
             ))}

@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import Share from '../components/Share';
-import NewsContent from '../components/NewsContent';
+import Content from '../components/Content';
 import NewsRefernce from '../components/NewsRefernce';
 
 export const newsQuery = graphql`
@@ -60,7 +60,7 @@ export default class NewsBlog extends React.Component {
           text={news.text}
         />
         <Share />
-        <NewsContent data={news.blogContent.json} />
+        <Content data={news.blogContent.json} />
         <NewsRefernce news={news.blogReference} />
       </Layout>
     );
