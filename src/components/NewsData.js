@@ -1,13 +1,15 @@
 import React from 'react';
-
+import styled from 'styled-components';
 import NewsItems from './NewsItems';
+
+const Section = styled.div``;
 
 class NewsData extends React.Component {
   render() {
     const { news } = this.props;
     return (
-      <section className="section">
-        <div className="container">
+      <Section className="section">
+        <div className="container has-text-centered-mobile">
           <div className="columns is-multiline">
             {news.map(item => (
               <NewsItems
@@ -18,7 +20,7 @@ class NewsData extends React.Component {
             ))}
           </div>
         </div>
-      </section>
+      </Section>
     );
   }
 }
