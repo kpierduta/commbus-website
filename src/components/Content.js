@@ -22,6 +22,9 @@ const Section = styled.section`
     margin-top: 1rem;
     color: ${props => props.theme.lightShades};
   }
+  ul {
+    list-style: initial;
+  }
 `;
 
 class Content extends React.Component {
@@ -29,25 +32,9 @@ class Content extends React.Component {
     const { data } = this.props;
 
     const document = data;
-
-    const List = ({ content }) => (
-      <ul>
-        <li>{content}</li>
-      </ul>
-    );
-
-    const options = {
-      renderMark: {
-        [BLOCKS.UL_LIST]: (node, next) => <List>{next(node.content)}</List>,
-      },
-      renderText: text => text.replace('!', '?'),
-    };
-
     return (
       <Section className="section">
-        <div className="container">
-          {documentToReactComponents(document, options)}
-        </div>
+        <div className="container">{documentToReactComponents(document)}</div>
       </Section>
     );
   }
