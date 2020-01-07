@@ -33,11 +33,12 @@ class ProjectsRefernce extends React.Component {
           {project.map(item => (
             <ProjectsCards
               class={item.projectSizeIsHalf ? 'column is-6' : 'column is-4'}
-              image={item.projectImage.file.url}>
+              image={item.projectImage.file.url}
+            >
               <img
                 className="image"
                 src={item.icon.file.url}
-                alt={item.icon.file.title}
+                alt={item.icon.title}
               />
               <p className="has-text-white is-italic is-uppercase">
                 Sector:{item.category}
@@ -48,7 +49,8 @@ class ProjectsRefernce extends React.Component {
               </p>
               <Link
                 to={`/project/${item.slug}`}
-                className="button is-medium is-inverted has-text-black-bis">
+                className="button is-medium is-inverted has-text-black-bis"
+              >
                 VIEW PROJECTS
               </Link>
             </ProjectsCards>
