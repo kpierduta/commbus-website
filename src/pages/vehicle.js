@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import PageHero from '../components/PageHero';
 import VehicleExternal from '../components/VehicleExternal';
-import VehicleInternal from '../components/VehicleExternal';
+import VehicleInternal from '../components/VechicleInternal';
 
 export const VehicleBrandingQuery = graphql`
   query Branding {

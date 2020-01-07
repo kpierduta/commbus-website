@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import VehicleBranding from '../components/VehicleBranding';
 
 const Section = styled.section`
-  background-color: #eef3f5;
+  background-color: ${props => props.theme.backgroundColor};
   p {
     margin: 2rem 0rem 2rem 0rem;
   }
