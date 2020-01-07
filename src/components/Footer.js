@@ -23,6 +23,15 @@ export const footerQuery = graphql`
         }
       }
     }
+    allContentfulVehicleGraphicBlog(sort: { fields: footerOrder }) {
+      edges {
+        node {
+          slug
+          footerOrder
+          footerTitle
+        }
+      }
+    }
   }
 `;
 
@@ -85,6 +94,7 @@ const Footer = () => (
             const {
               allContentfulCampaignPage: camapaign,
               allContentfulPages: page,
+              allContentfulVehicleGraphicBlog: vehicle,
             } = data;
             return (
               <>
@@ -115,36 +125,11 @@ const Footer = () => (
                   <h1 className="is-size-6 has-text-weight-bold is-spaced">
                     Vehicle branding
                   </h1>
-                  <Link
-                    to="/vehicle-branding/overlay-graphics"
-                    className="is-size-6 is-block"
-                  >
-                    overlay-graphics
-                  </Link>
-                  <Link
-                    to="/vehicle-branding/simple-internals"
-                    className="is-size-6 is-block"
-                  >
-                    Simple internal
-                  </Link>
-                  <Link
-                    to="/vehicle-branding/bespoke-branding"
-                    className="is-size-6 is-block"
-                  >
-                    Bespoke internal
-                  </Link>
-                  <Link
-                    to="/vehicle-branding/banner-graphics"
-                    className="is-size-6 is-block"
-                  >
-                    Banner graphics
-                  </Link>
-                  <Link
-                    to="/vehicle-branding/full-wrap"
-                    className="is-size-6 is-block"
-                  >
-                    Full wrap
-                  </Link>
+                  {vehicle.edges.map(item => (
+                    <Link to={item.node.slug} className="is-size-6 is-block">
+                      {item.node.footerTitle}
+                    </Link>
+                  ))}
                 </div>
                 <div className="column">
                   <h1 className="is-size-6 has-text-weight-bold is-spaced">

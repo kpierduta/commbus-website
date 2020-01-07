@@ -30,7 +30,7 @@ class VehicleInternal extends React.Component {
               bgImage={item.thumbnailImage.file.url}
               title={item.blogTitle}
               subtitle={item.blogSubtitle.blogSubtitle}
-              to={`vehicle-branding/${item.slug}`}
+              to={item.slug}
             />
           ))}
         </div>
