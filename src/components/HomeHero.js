@@ -37,7 +37,7 @@ class HomeHero extends React.Component {
       <Section className="section" bgImage={this.props.bgImage}>
         <div className="container">
           <div className="columns">
-            <div className="test is-hidden-widescreen-only"></div>
+            <div className="test is-hidden-widescreen-only" />
             <div className="column is-4">
               <section className="hero">
                 <div className="hero-body">
