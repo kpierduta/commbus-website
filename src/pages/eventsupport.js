@@ -103,6 +103,10 @@ export const EventQuery = graphql`
       campaignFourthSubtitle {
         campaignFourthSubtitle
       }
+      campaignFirstLink
+      campaignSecondLink
+      campaignThirdLink
+      campaignFourthLink
       sectionTitle
       sectionSubtitle
       brandShowCase {

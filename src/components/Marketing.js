@@ -21,6 +21,7 @@ class Marketing extends React.Component {
                   alt={data.campaignFirstIcon.title}
                   heading={data.campaignFirstTitle}
                   description={data.campaignFirstSubtitle.campaignFirstSubtitle}
+                  to={data.campaignFirstLink}
                 />
                 <MarketingCard
                   img={data.campaignSecondIcon.file.url}
@@ -29,12 +30,14 @@ class Marketing extends React.Component {
                   description={
                     data.campaignSecondSubtitle.campaignSecondSubtitle
                   }
+                  to={data.campaignSecondLink}
                 />
                 <MarketingCard
                   img={data.campaignThirdIcon.file.url}
                   alt={data.campaignThirdIcon.title}
                   heading={data.campaignThirdTitle}
                   description={data.campaignThirdSubtitle.campaignThirdSubtitle}
+                  to={data.campaignThirdLink}
                 />
                 <MarketingCard
                   img={data.campaignFourthIcon.file.url}
@@ -43,6 +46,7 @@ class Marketing extends React.Component {
                   description={
                     data.campaignFourthSubtitle.campaignFourthSubtitle
                   }
+                  to={data.campaignFourthLink}
                 />
               </div>
             </div>

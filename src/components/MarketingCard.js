@@ -52,7 +52,7 @@ const MarketingCard = props => (
           </div>
           <div className="has-text-centered">
             <LinkStyled
-              to={props.link}
+              to={props.to}
               className="title is-4 has-text-info has-text-weight-normal"
             >
               FIND OUT MORE
