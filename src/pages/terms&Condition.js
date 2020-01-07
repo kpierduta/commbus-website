@@ -6,25 +6,25 @@ import Seo from '../components/Seo';
 import PageHero from '../components/PageHero';
 import Content from '../components/Content';
 
-export const policyQuery = graphql`
-  query policy {
-    contentfulPrivacyPolicyPage {
+export const termsQuery = graphql`
+  query terms {
+    contentfulTermsAndConditionsPage {
       seoTitle
       metaDescription
       keywords
       heroTitle
       heroSubtitle
-      policyContent {
+      content {
         json
       }
     }
   }
 `;
 
-export default class Privacy extends React.Component {
+export default class Terms extends React.Component {
   render() {
     const {
-      data: { contentfulPrivacyPolicyPage: page },
+      data: { contentfulTermsAndConditionsPage: page },
     } = this.props;
     return (
       <Layout>
@@ -34,7 +34,7 @@ export default class Privacy extends React.Component {
           url={page.keywords}
         />
         <PageHero title={page.heroTitle} heading={page.heroSubtitle} />
-        <Content data={page.policyContent.json} />
+        <Content data={page.content.json} />
       </Layout>
     );
   }

@@ -14,7 +14,7 @@ class ProjectPictures extends React.Component {
     return (
       <Section className="section">
         <div className="container">
-          <div className="columns">
+          <div className="columns is-multiline">
             {data.map(item => (
               <div
                 className={item.imageSizeHalf ? 'column is-6' : 'column is-3'}

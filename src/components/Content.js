@@ -4,8 +4,23 @@ import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const Section = styled.section`
-  h1 {
-    margin-top: 1.25rem;
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-top: 1rem;
+    font-family: ${props => props.theme.secondaryFontFamily};
+    font-weight: 300;
+  }
+  p {
+    margin-top: 1rem;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  a {
+    margin-top: 1rem;
+    color: ${props => props.theme.lightShades};
   }
 `;
 
@@ -15,37 +30,15 @@ class Content extends React.Component {
 
     const document = data;
 
-    const Bold = ({ children }) => <p className="bold">{children}</p>;
-
-    const HEADINGONE = ({ children }) => (
-      <h1 className="title is-3 has-text-weight-light">{children}</h1>
-    );
-    const HEADINGTWO = ({ children }) => (
-      <h1 className="title is-4 has-text-weight-light">{children}</h1>
-    );
-    const HEADINGTHREE = ({ children }) => (
-      <h1 className="title is-5 has-text-weight-light">{children}</h1>
-    );
-
-    const TEXT = ({ children }) => (
-      <p className="has-text-weight-light is-size-6">{children}</p>
+    const List = ({ content }) => (
+      <ul>
+        <li>{content}</li>
+      </ul>
     );
 
     const options = {
       renderMark: {
-        [MARKS.BOLD]: text => <Bold>{text}</Bold>,
-      },
-      renderNode: {
-        [BLOCKS.HEADING_1]: (node, children) => (
-          <HEADINGONE>{children}</HEADINGONE>
-        ),
-        [BLOCKS.HEADING_2]: (node, children) => (
-          <HEADINGTWO>{children}</HEADINGTWO>
-        ),
-        [BLOCKS.HEADING_3]: (node, children) => (
-          <HEADINGTHREE>{children}</HEADINGTHREE>
-        ),
-        [BLOCKS.PARAGRAPH]: (node, children) => <TEXT>{children}</TEXT>,
+        [BLOCKS.UL_LIST]: (node, next) => <List>{next(node.content)}</List>,
       },
       renderText: text => text.replace('!', '?'),
     };
