@@ -13,7 +13,7 @@ const Section = styled.section`
   @media screen and (max-width: 768px) {
     background-image: none;
   }
-  .test {
+  .mobile {
     min-height: 19rem;
     background-repeat: no-repeat;
     background-position: center;
@@ -37,9 +37,9 @@ class HomeHero extends React.Component {
       <Section className="section" bgImage={this.props.bgImage}>
         <div className="container">
           <div className="columns">
-            <div className="test is-hidden-widescreen-only" />
+            <div className="mobile is-hidden-widescreen-only" />
             <div className="column is-4">
-              <section className="hero">
+              <section className="hero is-pulled-left-widescreen-only">
                 <div className="hero-body">
                   <h1 className="title is-size-3-mobile has-text-weight-light is-uppercase">
                     {this.props.title}

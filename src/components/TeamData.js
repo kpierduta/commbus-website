@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   //   margin: 0.8rem 0.3rem;
   // }
   .card-content {
-    padding: 0.75rem 0rem 0.75rem 0.75rem !important;
+    padding: 0.75rem !important;
   }
   .is-2 {
     padding: 1rem 0rem 0rem 0.2rem;
