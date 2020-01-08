@@ -7,6 +7,9 @@ const Section = styled.section`
   p {
     margin: 2rem 0rem 2rem 0rem;
   }
+  .hero-body {
+    padding: 3rem 0rem;
+  }
 `;
 
 class VehicleExternal extends React.Component {
