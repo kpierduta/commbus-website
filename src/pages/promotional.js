@@ -97,6 +97,10 @@ export const parmotion = graphql`
       campaignFourthSubtitle {
         campaignFourthSubtitle
       }
+      campaignFirstLink
+      campaignSecondLink
+      campaignThirdLink
+      campaignFourthLink
       sectionTitle
       sectionSubtitle
       showCase {
