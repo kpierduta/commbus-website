@@ -8,17 +8,13 @@ import ShopItems from '../components/ShopItems';
 
 export const Hire = graphql`
   query Hire {
-    allContentfulGenericPages(filter: { slug: { eq: "Hire Shop" } }) {
-      edges {
-        node {
-          slug
-          seoTitle
-          metaDescription
-          keywords
-          heroTitle
-          heroSubtitle
-        }
-      }
+    contentfulGenericPages(slug: { eq: "Hire Shop" }) {
+      slug
+      seoTitle
+      metaDescription
+      keywords
+      heroTitle
+      heroSubtitle
     }
     allContentfulHireVehicles {
       edges {
@@ -39,24 +35,17 @@ export const Hire = graphql`
 export default class HireShop extends React.Component {
   render() {
     const {
-      data: { allContentfulGenericPages: Hire },
+      data: { contentfulGenericPages: Hire },
       data: { allContentfulHireVehicles: data },
     } = this.props;
     return (
       <Layout>
-        {Hire.edges.map(value => (
-          <div>
-            <Seo
-              title={value.node.seoTitle}
-              description={value.node.metaDescription}
-              url={value.node.keywords}
-            />
-            <PageHero
-              title={value.node.heroTitle}
-              heading={value.node.heroSubtitle}
-            />
-          </div>
-        ))}
+        <Seo
+          title={Hire.seoTitle}
+          description={Hire.metaDescription}
+          url={Hire.keywords}
+        />
+        <PageHero title={Hire.heroTitle} heading={Hire.heroSubtitle} />
         <ShopItems data={data.edges} />
       </Layout>
     );

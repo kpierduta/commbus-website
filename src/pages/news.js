@@ -8,17 +8,13 @@ import NewsData from '../components/NewsData';
 
 export const newsdataQuery = graphql`
   query newsdata {
-    allContentfulGenericPages(filter: { slug: { eq: "News" } }) {
-      edges {
-        node {
-          slug
-          seoTitle
-          metaDescription
-          keywords
-          heroTitle
-          heroSubtitle
-        }
-      }
+    contentfulGenericPages(slug: { eq: "News" }) {
+      slug
+      seoTitle
+      metaDescription
+      keywords
+      heroTitle
+      heroSubtitle
     }
     allContentfulNews(sort: { fields: order }) {
       edges {
@@ -40,24 +36,17 @@ export const newsdataQuery = graphql`
 export default class NewsPage extends React.Component {
   render() {
     const {
-      data: { allContentfulGenericPages: page },
+      data: { contentfulGenericPages: page },
       data: { allContentfulNews: news },
     } = this.props;
     return (
       <Layout>
-        {page.edges.map(data => (
-          <div>
-            <Seo
-              title={data.node.seoTitle}
-              description={data.node.metaDescription}
-              url={data.node.keywords}
-            />
-            <PageHero
-              title={data.node.heroTitle}
-              heading={data.node.heroSubtitle}
-            />
-          </div>
-        ))}
+        <Seo
+          title={page.seoTitle}
+          description={page.metaDescription}
+          url={page.keywords}
+        />
+        <PageHero title={page.heroTitle} heading={page.heroSubtitle} />
         <NewsData news={news.edges} />
       </Layout>
     );

@@ -8,21 +8,15 @@ import Content from '../components/Content';
 
 export const termsQuery = graphql`
   query terms {
-    allContentfulTermsAndPolicyPage(
-      filter: { page: { eq: "Terms & Condition" } }
-    ) {
-      edges {
-        node {
-          page
-          seoTitle
-          metaDescription
-          keywords
-          heroTitle
-          heroSubtitle
-          content {
-            json
-          }
-        }
+    contentfulTermsAndPolicyPage(page: { eq: "Terms & Condition" }) {
+      page
+      seoTitle
+      metaDescription
+      keywords
+      heroTitle
+      heroSubtitle
+      content {
+        json
       }
     }
   }
@@ -31,24 +25,17 @@ export const termsQuery = graphql`
 export default class Terms extends React.Component {
   render() {
     const {
-      data: { allContentfulTermsAndPolicyPage: page },
+      data: { contentfulTermsAndPolicyPage: page },
     } = this.props;
     return (
       <Layout>
-        {page.edges.map(data => (
-          <>
-            <Seo
-              title={data.node.seoTitle}
-              description={data.node.metaDescription}
-              url={data.node.keywords}
-            />
-            <PageHero
-              title={data.node.heroTitle}
-              heading={data.node.heroSubtitle}
-            />
-            <Content data={data.node.content.json} />
-          </>
-        ))}
+        <Seo
+          title={page.seoTitle}
+          description={page.metaDescription}
+          url={page.keywords}
+        />
+        <PageHero title={page.heroTitle} heading={page.heroSubtitle} />
+        <Content data={page.content.json} />
       </Layout>
     );
   }

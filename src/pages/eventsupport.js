@@ -12,7 +12,8 @@ import Testimonials from '../components/Testimonials';
 
 export const EventQuery = graphql`
   query event {
-    contentfulEventSupportPage {
+    contentfulMainPage(slug: { eq: "Event Support" }) {
+      slug
       seoTitle
       metaDescription
       keywords
@@ -23,46 +24,44 @@ export const EventQuery = graphql`
         details
       }
       image {
-        title
         file {
           url
         }
       }
       featureSectionTitle
+      iconOne {
+        title
+        file {
+          url
+        }
+      }
       featureOneTitle
       featureOneSubtitle
-      iconOne {
+      iconTwo {
+        title
         file {
           url
         }
       }
       featureTwoTitle
       featureTwoSubtitle
-      iconTwo {
+      iconThird {
+        title
         file {
           url
         }
       }
       featureThirdTitle
-      featureThirdSubtitle
-      iconThird {
-        file {
-          url
-        }
-      }
+      featureFourSubtitle
       iconFour {
+        title
         file {
           url
         }
       }
       featureFourTitle
       featureFourSubtitle
-      iconOne {
-        file {
-          url
-        }
-      }
-      camapignSectionTitle
+      campaignSectionTitle
       campaignFirstIcon {
         title
         file {
@@ -109,7 +108,7 @@ export const EventQuery = graphql`
       campaignFourthLink
       sectionTitle
       sectionSubtitle
-      brandShowCase {
+      showCase {
         image {
           title
           file {
@@ -128,7 +127,7 @@ export const EventQuery = graphql`
 export default class EventSupport extends React.Component {
   render() {
     const {
-      data: { contentfulEventSupportPage: event },
+      data: { contentfulMainPage: event },
     } = this.props;
     return (
       <Layout>
@@ -149,7 +148,7 @@ export default class EventSupport extends React.Component {
         <MessageInfo />
         <Branding
           data={event}
-          showcase={event.brandShowCase}
+          showcase={event.showCase}
           fistbutton="CONTACT US"
           fistlink="/contact"
           secondbutton="ABOUT"

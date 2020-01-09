@@ -12,7 +12,8 @@ import Testimonials from '../components/Testimonials';
 
 export const parmotion = graphql`
   query parmotion {
-    contentfulPromotionalBuses {
+    contentfulMainPage(slug: { eq: "Promotional Buses" }) {
+      slug
       seoTitle
       metaDescription
       keywords
@@ -29,6 +30,7 @@ export const parmotion = graphql`
       }
       featureSectionTitle
       iconOne {
+        title
         file {
           url
         }
@@ -36,6 +38,7 @@ export const parmotion = graphql`
       featureOneTitle
       featureOneSubtitle
       iconTwo {
+        title
         file {
           url
         }
@@ -43,6 +46,7 @@ export const parmotion = graphql`
       featureTwoTitle
       featureTwoSubtitle
       iconThird {
+        title
         file {
           url
         }
@@ -50,6 +54,7 @@ export const parmotion = graphql`
       featureThirdTitle
       featureThirdSubtitle
       iconFour {
+        title
         file {
           url
         }
@@ -122,7 +127,7 @@ export const parmotion = graphql`
 export default class PromotionalBuses extends React.Component {
   render() {
     const {
-      data: { contentfulPromotionalBuses: promotion },
+      data: { contentfulMainPage: promotion },
     } = this.props;
     return (
       <Layout>
