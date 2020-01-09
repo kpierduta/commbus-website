@@ -123,9 +123,9 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allContentfulRedirect.edges.forEach(({ node }) => {
     createRedirect({
-      fromPath: node.oldUrl,
-      toPath: node.newUrl,
-      // isPermanent: true,
+      fromPath: node.newUrl,
+      toPath: node.oldUrl,
+      isPermanent: true,
       statusCode: 200,
     });
   });
