@@ -8,12 +8,17 @@ import Address from '../components/Address';
 
 export const contactQuery = graphql`
   query contactus {
-    contentfulContactPage {
-      seoTitle
-      metaDescription
-      keywords
-      heroTitle
-      heroSubtitle
+    allContentfulGenericPages(filter: { slug: { eq: "Contact" } }) {
+      edges {
+        node {
+          slug
+          seoTitle
+          metaDescription
+          keywords
+          heroTitle
+          heroSubtitle
+        }
+      }
     }
   }
 `;
@@ -21,16 +26,23 @@ export const contactQuery = graphql`
 export default class ContactPage extends React.Component {
   render() {
     const {
-      data: { contentfulContactPage: page },
+      data: { allContentfulGenericPages: page },
     } = this.props;
     return (
       <Layout>
-        <Seo
-          title={page.seoTitle}
-          description={page.metaDescription}
-          keywords={page.keywords}
-        />
-        <PageHero title={page.heroTitle} heading={page.heroSubtitle} />
+        {page.edges.map(data => (
+          <div>
+            <Seo
+              title={data.node.seoTitle}
+              description={data.node.metaDescription}
+              url={data.node.keywords}
+            />
+            <PageHero
+              title={data.node.heroTitle}
+              heading={data.node.heroSubtitle}
+            />
+          </div>
+        ))}
         <Address />
       </Layout>
     );

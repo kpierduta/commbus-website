@@ -8,12 +8,17 @@ import Projects from '../components/Projects';
 
 export const projectQuery = graphql`
   query projectdata {
-    contentfulProjectPage {
-      seoTitle
-      metaDescription
-      keywords
-      heroTitle
-      heroSubtitle
+    allContentfulGenericPages(filter: { slug: { eq: "Project" } }) {
+      edges {
+        node {
+          slug
+          seoTitle
+          metaDescription
+          keywords
+          heroTitle
+          heroSubtitle
+        }
+      }
     }
     allContentfulProject(sort: { fields: order }) {
       edges {
@@ -46,17 +51,24 @@ export const projectQuery = graphql`
 export default class Project extends React.Component {
   render() {
     const {
-      data: { contentfulProjectPage: page },
+      data: { allContentfulGenericPages: page },
       data: { allContentfulProject: project },
     } = this.props;
     return (
       <Layout>
-        <Seo
-          title={page.seoTitle}
-          description={page.metaDescription}
-          keywords={page.keywords}
-        />
-        <PageHero title={page.heroTitle} heading={page.heroSubtitle} />
+        {page.edges.map(data => (
+          <div>
+            <Seo
+              title={data.node.seoTitle}
+              description={data.node.metaDescription}
+              url={data.node.keywords}
+            />
+            <PageHero
+              title={data.node.heroTitle}
+              heading={data.node.heroSubtitle}
+            />
+          </div>
+        ))}
         <Projects project={project.edges} />
       </Layout>
     );
