@@ -61,7 +61,7 @@ const Address = () => (
               <h1 className="title is-spaced is-4 has-text-weight-medium is-spaced">
                 Postal Address:{' '}
               </h1>
-              <h1 className="subtitle is-5 txt">Combus Blyth Hall Farm,</h1>
+              <h1 className="subtitle is-5 txt">Commbus Blyth Hall Farm,</h1>
               <h1 className="subtitle is-5 txt">Blyth Road,</h1>
               <h1 className="subtitle is-5 txt">Coleshill,</h1>
               <h1 className="subtitle is-5 txt">Birmingham,</h1>
