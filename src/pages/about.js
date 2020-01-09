@@ -49,6 +49,7 @@ export default class About extends React.Component {
       data: { contentfulAboutPage: page },
       data: { allContentfulTeamMembers: team },
     } = this.props;
+
     return (
       <Layout>
         <Seo

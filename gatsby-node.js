@@ -1,7 +1,8 @@
 const path = require(`path`);
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
+
   const result = await graphql(`
     query {
       allContentfulPages {
@@ -47,6 +48,14 @@ exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             slug
+          }
+        }
+      }
+      allContentfulRedirect {
+        edges {
+          node {
+            oldUrl
+            newUrl
           }
         }
       }
@@ -109,6 +118,15 @@ exports.createPages = async ({ graphql, actions }) => {
         // in page queries as GraphQL variables.
         slug: node.slug,
       },
+    });
+  });
+
+  result.data.allContentfulRedirect.edges.forEach(({ node }) => {
+    createRedirect({
+      fromPath: node.oldUrl,
+      toPath: node.newUrl,
+      // isPermanent: true,
+      statusCode: 200,
     });
   });
 };

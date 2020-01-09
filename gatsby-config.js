@@ -39,5 +39,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    // `gatsby-plugin-client-side-redirect`,
+    `gatsby-plugin-netlify`,
   ],
 };

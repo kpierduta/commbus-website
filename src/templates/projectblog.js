@@ -28,27 +28,27 @@ export const projectQuery = graphql`
       blogContent {
         json
       }
-      imagesSectionOne {
-        imageSizeHalf
-        image {
-          title
-          file {
-            url
-          }
-        }
-      }
+      # imagesSectionOne {
+      #   imageSizeHalf
+      #   image {
+      #     title
+      #     file {
+      #       url
+      #     }
+      #   }
+      # }
       blogContentSecond {
         json
       }
-      imageSectionSecond {
-        imageSizeHalf
-        image {
-          title
-          file {
-            url
-          }
-        }
-      }
+      # imageSectionSecond {
+      #   imageSizeHalf
+      #   image {
+      #     title
+      #     file {
+      #       url
+      #     }
+      #   }
+      # }
     }
   }
 `;
@@ -74,9 +74,9 @@ export default class Projectblog extends React.Component {
         />
         <Share />
         <Content data={project.blogContent.json} />
-        <ProjectPictures data={project.imagesSectionOne} />
+        {/* <ProjectPictures data={project.imagesSectionOne} /> */}
         <Content data={project.blogContentSecond.json} />
-        <ProjectPictures data={project.imageSectionSecond} />
+        {/* <ProjectPictures data={project.imageSectionSecond} /> */}
       </Layout>
     );
   }
