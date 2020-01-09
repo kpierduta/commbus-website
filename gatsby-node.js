@@ -125,8 +125,8 @@ exports.createPages = async ({ graphql, actions }) => {
     createRedirect({
       fromPath: node.newUrl,
       toPath: node.oldUrl,
-      isPermanent: true,
-      statusCode: 200,
+      // isPermanent: true,
+      statusCode: 301,
     });
   });
 };
