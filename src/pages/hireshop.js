@@ -16,9 +16,10 @@ export const Hire = graphql`
       heroTitle
       heroSubtitle
     }
-    allContentfulHireVehicles {
+    allContentfulHireVehicles(sort: { fields: order }) {
       edges {
         node {
+          order
           title
           image {
             title
