@@ -15,22 +15,22 @@ const Wrapper = styled.div`
   }
 `;
 
-const BrandingItem = props => {
+const BrandingItem = ({ item }) => {
   return (
     <Wrapper className="column is-4">
       <div className="card">
         <div className="card-image">
           <figure className="image">
-            <img src={props.Image} alt={props.alt} />
+            <img src={item.image.file.url} alt={item.image.title} />
           </figure>
         </div>
         <div className="card-content">
           <p className="has-text-weight-semibold all-text has-text-info">
-            {props.title}
+            {item.title}
           </p>
-          <BrandingItemList smalltext={props.first} />
-          <BrandingItemList smalltext={props.second} />
-          <BrandingItemList smalltext={props.third} />
+          <BrandingItemList smalltext={item.firstPoint} />
+          <BrandingItemList smalltext={item.secondPoint} />
+          <BrandingItemList smalltext={item.thirdPoint} />
         </div>
       </div>
     </Wrapper>

@@ -14,19 +14,19 @@ const ButtonContainer = styled.div`
   display: grid;
 `;
 
-const Shop = ({ avatar, title, alt }) => {
+const Shop = ({ item }) => {
   return (
     <Section className="column is-4">
       <div className="card">
         <div className="card-image">
           <figure className="image is-4by3">
-            <img src={avatar} alt={alt} />
+            <img src={item.node.image.file.url} alt={item.node.image.title} />
           </figure>
         </div>
         <div className="card-content ">
           <div className="media-content">
             <p className="has-text-centered has-text-weight-semibold text">
-              {title}
+              {item.node.title}
             </p>
             <ButtonContainer className="colums">
               <div className="column">

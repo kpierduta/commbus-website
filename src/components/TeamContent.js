@@ -25,9 +25,9 @@ const TeamContent = ({ team }) => {
             <div className="column is-one-quarter">
               <TeamData
                 item={item.node}
-                handleOpenModal={aitem => {
+                handleOpenModal={data => {
                   setModalActive(true);
-                  setActiveItem(aitem);
+                  setActiveItem(data);
                 }}
               />
             </div>
