@@ -40,14 +40,25 @@ export const teamQuery = graphql`
         }
       }
     }
+    contentfulHomePage {
+      ourClients {
+        title
+        file {
+          url
+        }
+      }
+    }
   }
 `;
 
 export default class About extends React.Component {
   render() {
     const {
-      data: { contentfulAboutPage: page },
-      data: { allContentfulTeamMembers: team },
+      data: {
+        contentfulAboutPage: page,
+        allContentfulTeamMembers: team,
+        contentfulHomePage: client,
+      },
     } = this.props;
 
     return (
@@ -66,7 +77,7 @@ export default class About extends React.Component {
         />
         <TeamContent team={team.edges} />
         <Testimonials />
-        <OurClient />
+        <OurClient logo={client.ourClients} />
       </Layout>
     );
   }
