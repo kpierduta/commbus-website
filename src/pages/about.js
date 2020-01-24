@@ -31,11 +31,16 @@ export const teamQuery = graphql`
           order
           name
           position
+          linkedInIcon
+          linkedInUrl
           image {
             title
             file {
               url
             }
+          }
+          content {
+            content
           }
         }
       }

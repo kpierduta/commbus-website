@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const Container = styled.div`
   .modal-content {
@@ -14,13 +15,20 @@ const Container = styled.div`
   .text {
     padding: 1rem 0rem 0rem 0rem;
   }
+  .social{
+    padding: 0rem 1rem;
+  }
+  }
+  .icon {
+    font-size: 2rem;
+  }
 `;
 
 const TeamModalBox = ({ active, item, closeModal }) => {
   return (
     <Container className={active ? 'modal is-active' : 'modal'}>
       <div className="modal-background" />
-      <div className="modal-content is-clipped">
+      <div className="modal-content">
         <button
           type="button"
           className="button is-medium is-pulled-right"
@@ -44,20 +52,19 @@ const TeamModalBox = ({ active, item, closeModal }) => {
                   <p className="subtitle is-6  is-size-5-mobile">
                     {item.position}
                   </p>
+                  <div className={item.linkedInIcon ? 'social' : 'is-hidden'}>
+                    <p className="subtitle is-6  is-size-5-mobile">
+                      Connect with me on LinkedIn
+                    </p>
+                    <Link to={item.linkedInUrl}>
+                      <span className="icon">
+                        <i className="fab fa-linkedin" />
+                      </span>
+                    </Link>
+                  </div>
                 </div>
                 <div className="column">
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum
-                  </p>
+                  <p>{item.content.content}</p>
                 </div>
               </div>
             </div>
