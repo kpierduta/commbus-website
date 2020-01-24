@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import FeaturesSubPage from '../components/FeaturesSubPage';
-import ProductsData from '../components/ProductsData';
+import Banner from '../components/Banner';
 import MessageInfo from '../components/MessageInfo';
 import Branding from '../components/Branding';
 import Testimonials from '../components/Testimonials';
@@ -55,13 +55,10 @@ export const pageQuery = graphql`
           url
         }
       }
-      bannerSectionTitle
-      banner {
-        images {
-          title
-          file {
-            url
-          }
+      bannerTitle
+      bannerImages {
+        file {
+          url
         }
       }
       sectionTitle
@@ -102,7 +99,7 @@ export default class page extends React.Component {
           text=" "
         />
         <FeaturesSubPage data={page} />
-        <ProductsData title={page.bannerSectionTitle} Banner={page.banner} />
+        <Banner data={page} />
         <MessageInfo />
         <Branding
           data={page}

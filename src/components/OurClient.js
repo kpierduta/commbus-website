@@ -1,25 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
-
-export const clientQuery = graphql`
-  query clientlogo {
-    allContentfulOurClients(sort: { fields: order }) {
-      edges {
-        node {
-          order
-          clientlogo {
-            file {
-              url
-            }
-          }
-        }
-      }
-    }
-  }
-`;
 
 const Section = styled.section`
+  h2 {
+    padding-left: 1rem;
+  }
   .column.is-2 {
     width: 20%;
     margin-top: 1rem;
@@ -45,28 +30,18 @@ const Logo = styled.div`
   }
 `;
 
-const OurClient = () => (
+const OurClient = ({ logo }) => (
   <Section className="section">
     <div className="container">
       <h2 className="subtitle is-5 has-text-weight-bold is-uppercase has-text-centered-mobile">
         Trusted by
       </h2>
       <div className="columns is-multiline">
-        <StaticQuery
-          query={clientQuery}
-          render={data => {
-            const { allContentfulOurClients: logo } = data;
-            return (
-              <>
-                {logo.edges.map(item => (
-                  <div className="column is-2">
-                    <Logo logo={item.node.clientlogo.file.url} />
-                  </div>
-                ))}
-              </>
-            );
-          }}
-        />
+        {logo.map(item => (
+          <div className="column is-2">
+            <Logo logo={item.file.url} />
+          </div>
+        ))}
       </div>
     </div>
   </Section>

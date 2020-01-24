@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
-import ProductsData from '../components/ProductsData';
+import Banner from '../components/Banner';
 import MessageInfo from '../components/MessageInfo';
 
 export const pageQuery = graphql`
@@ -25,12 +25,9 @@ export const pageQuery = graphql`
         }
       }
       bannerTitle
-      banner {
-        images {
-          title
-          file {
-            url
-          }
+      bannerImages {
+        file {
+          url
         }
       }
     }
@@ -57,7 +54,7 @@ export default class Graphic extends React.Component {
           bgImage={page.image.file.url}
           text="  "
         />
-        <ProductsData title={page.bannerTitle} Banner={page.banner} />
+        <Banner data={page} />
         <MessageInfo />
       </Layout>
     );

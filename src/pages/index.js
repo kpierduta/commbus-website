@@ -27,6 +27,12 @@ export const homeQuery = graphql`
           url
         }
       }
+      ourClients {
+        title
+        file {
+          url
+        }
+      }
       featureSectionTitle
       iconOne {
         file {
@@ -111,7 +117,7 @@ export default class IndexPage extends React.Component {
           bgImage={page.image.file.url}
           text={page.text}
         />
-        <OurClient />
+        <OurClient logo={page.ourClients} />
         <Features Feature={page} />
         <ProjectsRefernce project={page.projectReference} />
         <Campaign data={page} blog={page.blogRefernce} />
