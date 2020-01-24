@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import PageHero from '../components/PageHero';
-import NewsData from '../components/NewsData';
+import NewsSection from '../components/NewsSection';
 
 export const newsdataQuery = graphql`
   query newsdata {
@@ -47,7 +47,7 @@ export default class NewsPage extends React.Component {
           url={page.keywords}
         />
         <PageHero title={page.heroTitle} heading={page.heroSubtitle} />
-        <NewsData news={news.edges} />
+        <NewsSection news={news.edges} />
       </Layout>
     );
   }

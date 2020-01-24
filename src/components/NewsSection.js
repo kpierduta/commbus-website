@@ -1,15 +1,22 @@
 import React from 'react';
-import styled from 'styled-components';
+
 import NewsItems from './NewsItems';
+import Dropdown from './elements/Dropdown';
 
-const Section = styled.div``;
-
-class NewsData extends React.Component {
+class NewsSection extends React.Component {
   render() {
     const { news } = this.props;
     return (
-      <Section className="section">
+      <div className="section">
         <div className="container has-text-centered-mobile">
+          <div className="columns">
+            <div className="column">
+              <Dropdown title="SECTOR" />
+            </div>
+            <div className="column">
+              <Dropdown title="Date" />
+            </div>
+          </div>
           <div className="columns is-multiline">
             {news.map(item => (
               <NewsItems
@@ -20,8 +27,8 @@ class NewsData extends React.Component {
             ))}
           </div>
         </div>
-      </Section>
+      </div>
     );
   }
 }
-export default NewsData;
+export default NewsSection;
