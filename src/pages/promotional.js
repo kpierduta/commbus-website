@@ -12,7 +12,7 @@ import Testimonials from '../components/Testimonials';
 
 export const parmotion = graphql`
   query parmotion {
-    contentfulMainPage(slug: { eq: "Promotional Buses" }) {
+    contentfulMainPages(slug: { eq: "Promotional Buses" }) {
       slug
       seoTitle
       metaDescription
@@ -127,7 +127,7 @@ export const parmotion = graphql`
 export default class PromotionalBuses extends React.Component {
   render() {
     const {
-      data: { contentfulMainPage: promotion },
+      data: { contentfulMainPages: promotion },
     } = this.props;
     return (
       <Layout>

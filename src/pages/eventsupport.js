@@ -12,7 +12,7 @@ import Testimonials from '../components/Testimonials';
 
 export const EventQuery = graphql`
   query event {
-    contentfulMainPage(slug: { eq: "Event Support" }) {
+    contentfulMainPages(slug: { eq: "Event Support" }) {
       slug
       seoTitle
       metaDescription
@@ -127,7 +127,7 @@ export const EventQuery = graphql`
 export default class EventSupport extends React.Component {
   render() {
     const {
-      data: { contentfulMainPage: event },
+      data: { contentfulMainPages: event },
     } = this.props;
     return (
       <Layout>
