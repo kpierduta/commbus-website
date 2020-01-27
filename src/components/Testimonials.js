@@ -23,6 +23,11 @@ export const testimonialQuery = graphql`
               url
             }
           }
+          image {
+            file {
+              url
+            }
+          }
           description {
             description
           }
@@ -43,16 +48,11 @@ const Testimonials = () => (
           render={data => {
             const { allContentfulTestimonials: content } = data;
             return (
-              <React.Fragment>
+              <>
                 {content.edges.map(item => (
-                  <TestimonialItem
-                    Icon={item.node.clientLogo.file.url}
-                    alt={item.node.clientLogo.title}
-                    description={item.node.description.description}
-                    name={item.node.name}
-                  />
+                  <TestimonialItem item={item.node} />
                 ))}
-              </React.Fragment>
+              </>
             );
           }}
         />

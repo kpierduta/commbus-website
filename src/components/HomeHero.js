@@ -9,13 +9,9 @@ const Section = styled.section`
   background-image: url(${props => props.bgImage});
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
-
+  background-size: cover;
   @media screen and (max-width: 768px) {
     background-image: none;
-  }
-  @media (min-width: 1023px) and (max-width: 1407px) {
-    background-size: cover;
   }
   .mobile {
     min-height: 19rem;

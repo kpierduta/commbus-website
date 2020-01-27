@@ -104,6 +104,9 @@ const GlobalStyle = createGlobalStyle`
   .has-text-info{
     color:${theme.backgroundInputColor} !important;
   }
+  .has-text-right{
+    font-weight: 100 !important;
+  }
 `;
 
 export default GlobalStyle;
