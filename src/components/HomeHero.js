@@ -13,6 +13,9 @@ const Section = styled.section`
   @media screen and (max-width: 768px) {
     background-image: none;
   }
+  @media (min-width: 1024px) and (max-width: 1408px) {
+    background-size: contain !important;
+  }
   .mobile {
     min-height: 19rem;
     background-repeat: no-repeat;

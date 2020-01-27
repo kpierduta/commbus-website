@@ -39,7 +39,7 @@ const TeamData = ({ item, handleOpenModal }) => {
         <div className="card-content">
           <div className="columns is-multiline is-mobile">
             <div className="column">
-              <p className="title is-5 text">{item.name}</p>
+              <h1 className="title is-5 text">{item.name}</h1>
               <p className="subtitle is-6 text is-size-5-mobile">
                 {item.position}
               </p>

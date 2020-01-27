@@ -48,7 +48,9 @@ const TeamModalBox = ({ active, item, closeModal }) => {
                       alt={item.image.title}
                     />
                   </figure>
-                  <p className="title is-5 text">{item.name}</p>
+                  <p className="title is-5 text has-text-weight-light">
+                    {item.name}
+                  </p>
                   <p className="subtitle is-6  is-size-5-mobile">
                     {item.position}
                   </p>

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Button from './elements/Button';
 
 const Section = styled.section`
-  margin: 2rem 0rem;
+  margin: 4rem 0rem;
   background-image: url(${props => props.bgImage});
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,6 +12,9 @@ const Section = styled.section`
   @media screen and (max-width: 768px) {
     background-size: auto;
     background-image: none;
+  }
+  @media (min-width: 992px) and (max-width: 1200px) {
+    background-size: auto;
   }
   p {
     margin: 1rem 0rem 5rem 0rem;
