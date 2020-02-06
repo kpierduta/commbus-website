@@ -19,11 +19,14 @@ const Section = styled.section`
     background-color: transparent;
   }
   .logo {
-    max-height: 7.5rem !important;
+    max-height: 9.5rem !important;
     height: auto;
     @media screen and (max-width: 600px) {
       max-height: 4rem !important;
     }
+  }
+  .navbar-end {
+    margin-top: 1rem;
   }
   .navbar-item {
     font-weight: 700;
