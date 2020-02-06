@@ -38,14 +38,28 @@ export const theme = {
   textColorInverse: lightShades,
   textColorLite: '#3b3b3b',
   menuTintColor: darkAccent,
-  primaryFontFamily: "'Arial Narrow,Arial',sans-serif",
+  primaryFontFamily: "'Avenir Next',sans-serif",
   secondaryFontFamily: "'BebasNeueRegular', sans-serif",
-  tertiaryFontFamily: '',
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',
 };
 
 const GlobalStyle = createGlobalStyle`
   ${reset};
+
+  @font-face {
+    font-family: Avenir Next ;
+    src: url("../fonts/AvenirNextLTPro-It.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Avenir Next ;
+  src: url("../fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Avenir Next ;
+  src: url("../fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+}
 
   body {
     color: ${theme.textColor};
