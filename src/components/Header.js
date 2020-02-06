@@ -34,7 +34,7 @@ const Section = styled.section`
     height: 3rem;
     color: ${props => props.theme.textColorLite};
     :hover {
-      color: ${props => props.theme.darkAccent};
+      color: ${props => props.theme.lightShades};
       background: transparent;
     }
     :focus {
