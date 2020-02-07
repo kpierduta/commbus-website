@@ -68,6 +68,7 @@ const GlobalStyle = createGlobalStyle`
   }
   .title {
     font-family: ${theme.secondaryFontFamily};
+    line-height: 2.25rem !important;
   }
   .title.is-1 {
     letter-spacing: 0.3rem !important;

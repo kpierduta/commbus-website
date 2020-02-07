@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import styled from 'styled-components';
 
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
@@ -9,6 +10,13 @@ import Features from '../components/Features';
 import ProjectsRefernce from '../components/ProjectRefernce';
 import Campaign from '../components/Campaign';
 import Testimonials from '../components/Testimonials';
+
+const Section = styled.div`
+  p {
+    font-family: ${props => props.theme.secondaryFontFamily} !important;
+    line-height: 1.5rem;
+  }
+`;
 
 export const homeQuery = graphql`
   query homepage {
@@ -109,19 +117,20 @@ export default class IndexPage extends React.Component {
           description={page.metaDescription}
           url={page.keywords}
         />
-
-        <HomeHero
-          title={page.title}
-          heading={page.subtitle}
-          subtitle={page.details.details}
-          bgImage={page.image.file.url}
-          text={page.text}
-        />
-        <OurClient logo={page.ourClients} />
-        <Features Feature={page} />
-        <ProjectsRefernce project={page.projectReference} />
-        <Campaign data={page} blog={page.blogRefernce} />
-        <Testimonials />
+        <Section>
+          <HomeHero
+            title={page.title}
+            heading={page.subtitle}
+            subtitle={page.details.details}
+            bgImage={page.image.file.url}
+            text={page.text}
+          />
+          <OurClient logo={page.ourClients} />
+          <Features Feature={page} />
+          <ProjectsRefernce project={page.projectReference} />
+          <Campaign data={page} blog={page.blogRefernce} />
+          <Testimonials />
+        </Section>
       </Layout>
     );
   }
