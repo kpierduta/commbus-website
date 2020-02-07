@@ -2,6 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link, StaticQuery, graphql } from 'gatsby';
 
+import Icon from './elements/Icon';
+
+const firstIcon = <i className="fab fa-linkedin-in" />;
+const secondIcon = <i className="fab fa-facebook-f" />;
+const thirdIcon = <i className="fab fa-instagram" />;
+const fourthIcon = <i className="fab fa-pinterest-p" />;
+const fifthIcon = <i className="fab fa-twitter" />;
+
 export const footerQuery = graphql`
   query footer {
     allContentfulCampaignPage(sort: { fields: footerOrder }) {
@@ -41,6 +49,7 @@ const Container = styled.section`
     height: auto;
   }
   .navbar-item {
+    margin-left: -2rem;
     @media screen and (max-width: 768px) {
       padding: 0rem 0rem;
     }
@@ -74,6 +83,11 @@ const Footer = () => (
           <Link className="navbar-item" to="/">
             <img className="logo" src="/images/com-logo.png" alt="site logo" />
           </Link>
+          <Icon icon={firstIcon} />
+          <Icon icon={secondIcon} />
+          <Icon icon={thirdIcon} />
+          <Icon icon={fourthIcon} />
+          <Icon icon={fifthIcon} />
         </div>
         <StaticQuery
           query={footerQuery}
