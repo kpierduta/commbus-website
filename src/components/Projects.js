@@ -74,7 +74,7 @@ class Projects extends React.Component {
                   <p className="has-text-white is-italic is-uppercase">
                     Sector:{item.node.category}
                   </p>
-                  <h2 className="title is-2 has-text-white">
+                  <h2 className="title is-2 has-text-weight-medium has-text-white">
                     {item.node.title}
                   </h2>
                   <p className="has-text-white content">

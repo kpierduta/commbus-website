@@ -27,6 +27,7 @@ const Section = styled.section`
     color: ${props => props.theme.textColorLite};
   }
   h2 {
+    line-height: 1.5rem !important;
     font-family: ${props => props.theme.primaryFontFamily};
   }
 `;
@@ -44,7 +45,7 @@ class HomeHero extends React.Component {
                   <h1 className="title is-size-3-mobile has-text-weight-light is-uppercase">
                     {this.props.title}
                   </h1>
-                  <h2 className="has-text-weight-semibold">
+                  <h2 className="title  is-6 has-text-weight-semibold">
                     {this.props.heading}
                   </h2>
                   <p className="has-text-weight-light is-size-6">

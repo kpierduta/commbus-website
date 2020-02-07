@@ -54,8 +54,11 @@ const Container = styled.section`
       padding: 0rem 0rem;
     }
   }
-  .is-spaced {
+  /* .is-spaced {
     padding-bottom: 0.75rem;
+  } */
+  .title {
+    margin-bottom: 0rem;
   }
   .is-block {
     padding-bottom: 0.5rem;
@@ -100,7 +103,7 @@ const Footer = () => (
             return (
               <>
                 <div className="column is-4">
-                  <h1 className="is-size-6 has-text-weight-bold is-spaced">
+                  <h1 className="title is-size-6 has-text-weight-light">
                     Marketing campaigns
                   </h1>
                   {camapaign.edges.map(item => (
@@ -110,7 +113,7 @@ const Footer = () => (
                   ))}
                 </div>
                 <div className="column">
-                  <h1 className="is-size-6 has-text-weight-bold is-spaced">
+                  <h1 className="title is-size-6 has-text-weight-light">
                     Event support
                   </h1>
                   {page.edges.map(item => (
@@ -123,7 +126,7 @@ const Footer = () => (
                   </Link>
                 </div>
                 <div className="column">
-                  <h1 className="is-size-6 has-text-weight-bold is-spaced">
+                  <h1 className="title is-size-6 has-text-weight-light">
                     Vehicle branding
                   </h1>
                   {vehicle.edges.map(item => (
@@ -133,7 +136,7 @@ const Footer = () => (
                   ))}
                 </div>
                 <div className="column">
-                  <h1 className="is-size-6 has-text-weight-bold is-spaced">
+                  <h1 className="title is-size-6 has-text-weight-light">
                     Terms
                   </h1>
                   <Link to="/privacy-policy" className="is-size-6 is-block">

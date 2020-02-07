@@ -12,11 +12,6 @@ import Campaign from '../components/Campaign';
 import Testimonials from '../components/Testimonials';
 
 const Section = styled.div`
-  .navbar-item {
-    font-family: 'BebasNeueRegular' !important;
-    font-weight: 100;
-    letter-spacing: 1px;
-  }
   h1,
   h2 {
     font-family: 'BebasNeueRegular' !important;

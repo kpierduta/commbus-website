@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   .card {
     padding-top: 1rem;
-    min-height: 35rem;
+    min-height: 41.75rem;
     border: 2px solid ${props => props.theme.lightShades};
     margin: 1.5rem 1rem 0rem 1rem;
   }

@@ -58,10 +58,13 @@ const Dropdown = props => {
       </div>
       <div className="dropdown-menu" id="dropdown-menu" role="menu">
         <div className="dropdown-content">
-          <a href="#" className="dropdown-item title is-5 has-text-white">
+          <a
+            href="#"
+            className="dropdown-item title is-5 has-text-white has-text-weight-medium"
+          >
             Dropdown item
           </a>
-          <a className="dropdown-item title is-5 has-text-white">
+          <a className="dropdown-item title is-5 has-text-white has-text-weight-medium">
             Other dropdown item
           </a>
         </div>
