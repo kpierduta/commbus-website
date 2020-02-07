@@ -15,6 +15,13 @@ const Section = styled.div`
   p {
     font-family: ${props => props.theme.secondaryFontFamily} !important;
     line-height: 1.5rem;
+    /* letter-spacing: 0.3rem; */
+  }
+  h1,
+  h2 {
+    font-family: ${props => props.theme.secondaryFontFamily} !important;
+    line-height: 0.5rem;
+    letter-spacing: 0.2rem;
   }
 `;
 

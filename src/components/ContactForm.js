@@ -2,7 +2,7 @@ import React from 'react';
 
 const encode = data => {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join('&');
 };
 
@@ -101,12 +101,12 @@ class ContactForm extends React.Component {
           </div>
         </div>
         <p className="has-text-white is-size-6">
-          In submitting you are agree to our{' '}
+          In submitting this form you are agreeing to our
           <span className="has-text-white has-text-weight-bold">
             terms and conditions
           </span>
         </p>
-        <button type="submit" className="button">
+        <button type="submit" className="button is-medium has-text-info">
           <span className="is-size-4">Submit</span>
         </button>
       </form>

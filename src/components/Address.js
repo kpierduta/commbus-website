@@ -38,7 +38,7 @@ const Address = () => (
                 Email:{' '}
               </h1>
               <h1 className="subtitle is-5 is-inline-block mail has-text-link">
-                sales@commbus.com
+                enquiries@commbus.com
               </h1>
             </div>
             <div>
@@ -50,19 +50,11 @@ const Address = () => (
               </h1>
             </div>
             <div>
-              <h1 className="title is-spaced is-4 has-text-weight-medium is-inline-block">
-                Fax:{' '}
-              </h1>
-              <h1 className="subtitle is-5 is-inline-block mail">
-                01675 462111
-              </h1>
-            </div>
-            <div>
               <h1 className="title is-spaced is-4 has-text-weight-medium is-spaced">
                 Postal Address:{' '}
               </h1>
-              <h1 className="subtitle is-5 txt">Commbus Blyth Hall Farm,</h1>
-              <h1 className="subtitle is-5 txt">Blyth Road,</h1>
+              <h1 className="subtitle is-5 txt">Commbus Blythe Hall Farm,</h1>
+              <h1 className="subtitle is-5 txt">Blythe Road,</h1>
               <h1 className="subtitle is-5 txt">Coleshill,</h1>
               <h1 className="subtitle is-5 txt">Birmingham,</h1>
               <h1 className="subtitle is-5 txt"> B46 2AF</h1>
