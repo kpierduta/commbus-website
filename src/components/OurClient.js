@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Section = styled.section`
   h2 {
-    padding-left: 1rem;
+    padding-left: 1.5rem;
   }
   .column.is-2 {
     width: 20%;

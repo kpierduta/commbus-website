@@ -12,22 +12,16 @@ import Campaign from '../components/Campaign';
 import Testimonials from '../components/Testimonials';
 
 const Section = styled.div`
-  letter-spacing: 2px;
-  p {
-    font-family: 'BebasNeueRegular' !important;
-    line-height: 1.5rem;
-    /* letter-spacing: 0.3rem; */
-  }
   .navbar-item {
     font-family: 'BebasNeueRegular' !important;
+    font-weight: 100;
+    letter-spacing: 1px;
   }
   h1,
   h2 {
     font-family: 'BebasNeueRegular' !important;
     line-height: 0.5rem;
-  }
-  a {
-    font-family: 'BebasNeueRegular' !important;
+    letter-spacing: 2px;
   }
 `;
 

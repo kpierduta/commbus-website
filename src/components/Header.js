@@ -29,7 +29,9 @@ const Section = styled.section`
     margin-top: 1rem;
   }
   .navbar-item {
-    font-weight: 700;
+    font-family: ${props => props.theme.secondaryFontFamily} !important;
+    font-weight: 100;
+    letter-spacing: 1px;
     font-size: 1rem;
     height: 3rem;
     color: ${props => props.theme.textColorLite};
