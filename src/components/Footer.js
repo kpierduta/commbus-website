@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
-import { StaticQuery, graphql } from 'gatsby';
+import { Link, StaticQuery, graphql } from 'gatsby';
 
 export const footerQuery = graphql`
   query footer {
@@ -64,18 +63,6 @@ const Container = styled.section`
     @media screen and (max-width: 768px) {
       width: 100%;
     }
-  }
-`;
-
-const LinkStyled = styled(Link)`
-  width: 60px;
-  height: 50px;
-  background: ${props => props.theme.secondryColor};
-  color: #ffff;
-  margin-top: 10rem;
-  font-size: 2rem;
-  :hover {
-    color: #ffff;
   }
 `;
 
@@ -143,9 +130,9 @@ const Footer = () => (
                   </Link>
                 </div>
                 <div className="column is-1">
-                  <LinkStyled class="icon">
-                    <i className="fas fa-home" />
-                  </LinkStyled>
+                  <Link to="/">
+                    <img src="/images/icon/home.jpg" alt="#" />
+                  </Link>
                 </div>
               </>
             );
