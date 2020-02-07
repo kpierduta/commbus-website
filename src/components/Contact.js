@@ -35,6 +35,9 @@ const Section = styled.div`
     color: #487c92;
     font-weight: bolder;
   }
+  .text {
+    margin-top: 1rem;
+  }
 `;
 
 const Contact = () => (
@@ -45,15 +48,15 @@ const Contact = () => (
           {/* <h1 className="title is-2 has-text-weight-light has-text-white">
             promotional buses, event support vehicles, event equipment and crew
           </h1> */}
-          <p className="subtitle has-text-white is-size-6 has-text-weight-bold has-text-weight-light">
+          <p className="subtitle has-text-white is-size-6  has-text-weight-light">
             With a wealth of experience across the events sector we can provide
             you with many services and solutions for your event or campaign.
           </p>
-          <p className="subtitle has-text-white has-text-weight-bold is-size-6">
+          <p className="subtitle has-text-white  is-size-6">
             From promotional buses, event support services commbus can tailer
             packages to suit your exact requirements
           </p>
-          <p className="subtitle has-text-white has-text-weight-bold is-size-6">
+          <p className="subtitle has-text-white  is-size-6">
             Contact us now for more information
           </p>
         </div>
@@ -61,7 +64,7 @@ const Contact = () => (
           <h1 className="title is-2 has-text-weight-light has-text-white is-pulled-right">
             Contact Us
           </h1>
-          <p className="subtitle has-text-white has-text-weight-bold is-size-6">
+          <p className="subtitle has-text-white has-text-weight-light is-size-6 text">
             We aim to reply to your enquiry within 1 working day.
           </p>
           <ContactForm />

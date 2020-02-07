@@ -53,11 +53,17 @@ const Address = () => (
               <h1 className="title is-spaced is-4 has-text-weight-medium is-spaced">
                 Postal Address:{' '}
               </h1>
-              <h1 className="subtitle is-5 txt">Commbus Blythe Hall Farm,</h1>
+              <h1 className="subtitle is-5 txt">Commbus</h1>
+              <h1 className="subtitle is-5 txt">Blythe Hall Farm,</h1>
               <h1 className="subtitle is-5 txt">Blythe Road,</h1>
               <h1 className="subtitle is-5 txt">Coleshill,</h1>
               <h1 className="subtitle is-5 txt">Birmingham,</h1>
               <h1 className="subtitle is-5 txt"> B46 2AF</h1>
+            </div>
+            <div>
+              <h1 className="title is-spaced is-4 has-text-weight-medium is-spaced ">
+                Visitors by appointment only.
+              </h1>
             </div>
           </section>
         </div>

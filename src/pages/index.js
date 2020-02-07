@@ -12,16 +12,22 @@ import Campaign from '../components/Campaign';
 import Testimonials from '../components/Testimonials';
 
 const Section = styled.div`
+  letter-spacing: 2px;
   p {
-    font-family: ${props => props.theme.secondaryFontFamily} !important;
+    font-family: 'BebasNeueRegular' !important;
     line-height: 1.5rem;
     /* letter-spacing: 0.3rem; */
   }
+  .navbar-item {
+    font-family: 'BebasNeueRegular' !important;
+  }
   h1,
   h2 {
-    font-family: ${props => props.theme.secondaryFontFamily} !important;
+    font-family: 'BebasNeueRegular' !important;
     line-height: 0.5rem;
-    letter-spacing: 0.2rem;
+  }
+  a {
+    font-family: 'BebasNeueRegular' !important;
   }
 `;
 
@@ -118,13 +124,13 @@ export default class IndexPage extends React.Component {
       data: { contentfulHomePage: page },
     } = this.props;
     return (
-      <Layout>
-        <Seo
-          title={page.seoTitle}
-          description={page.metaDescription}
-          url={page.keywords}
-        />
-        <Section>
+      <Section>
+        <Layout>
+          <Seo
+            title={page.seoTitle}
+            description={page.metaDescription}
+            url={page.keywords}
+          />
           <HomeHero
             title={page.title}
             heading={page.subtitle}
@@ -137,8 +143,8 @@ export default class IndexPage extends React.Component {
           <ProjectsRefernce project={page.projectReference} />
           <Campaign data={page} blog={page.blogRefernce} />
           <Testimonials />
-        </Section>
-      </Layout>
+        </Layout>
+      </Section>
     );
   }
 }
