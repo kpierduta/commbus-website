@@ -10,11 +10,12 @@ const Section = styled.div`
 class ClientsData extends React.Component {
   render() {
     const { data } = this.props;
+    const { title, subtitle } = this.props;
     return (
       <Section className="section">
         <div className="container">
-          <Heading title={this.props.title} />
-          <Heading title={this.props.subtitle} size="is-4" />
+          <Heading title={title} />
+          <Heading title={subtitle} size="is-4" />
           <div className="columns is-multiline">
             {data.map(item => (
               <>

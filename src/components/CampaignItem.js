@@ -9,20 +9,20 @@ const Container = styled.div`
   }
 `;
 
-const CampaignItem = props => (
+const CampaignItem = ({ data }) => (
   <Container className="column is-4">
     <div className="card">
       <div className="card-image">
         <figure className="image is-3by2">
-          <img src={props.image} alt={props.alt} />
+          <img src={data.smallImage.file.url} alt={data.smallImage.title} />
         </figure>
       </div>
       <div className="card-content">
         <p className="has-text-weight-semibold has-text-centered has-text-info">
-          {props.title}
+          {data.title}
         </p>
       </div>
-      <Button fullWidth color="#fff" to={props.to}>
+      <Button fullWidth color="#fff" to={`/news/${data.slug}`}>
         READ ARTICLE
       </Button>
     </div>

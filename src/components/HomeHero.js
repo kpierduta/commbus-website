@@ -10,6 +10,10 @@ const Section = styled.section`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media only screen and (min-width: 1407px) {
+    background-size: contain;
+  }
   @media screen and (max-width: 768px) {
     background-image: none;
   }
@@ -34,8 +38,9 @@ const Section = styled.section`
 
 class HomeHero extends React.Component {
   render() {
+    const { bgImage, title, heading, subtitle, text } = this.props;
     return (
-      <Section className="section" bgImage={this.props.bgImage}>
+      <Section className="section" bgImage={bgImage}>
         <div className="container">
           <div className="columns">
             <div className="mobile is-hidden-widescreen-only" />
@@ -43,15 +48,13 @@ class HomeHero extends React.Component {
               <section className="hero is-pulled-left-widescreen-only">
                 <div className="hero-body">
                   <h1 className="title is-size-3-mobile has-text-weight-light is-uppercase">
-                    {this.props.title}
+                    {title}
                   </h1>
                   <h2 className="title  is-6 has-text-weight-semibold">
-                    {this.props.heading}
+                    {heading}
                   </h2>
-                  <p className="has-text-weight-light is-size-6">
-                    {this.props.subtitle}
-                  </p>
-                  <p className="has-text-info">{this.props.text}</p>
+                  <p className="has-text-weight-light is-size-6">{subtitle}</p>
+                  <p className="has-text-info">{text}</p>
                 </div>
               </section>
             </div>

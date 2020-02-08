@@ -7,8 +7,8 @@ import Heading from './elements/Heading';
 
 const Section = styled.section`
   background-color: ${props => props.theme.backgroundColor};
-  h1 {
-    margin: 3rem 0 3rem 0;
+  .title {
+    margin-top: 3rem;
   }
 `;
 
@@ -26,13 +26,8 @@ class Campaign extends React.Component {
         <div className="container">
           <Heading title={data.sectionTitle} />
           <div className="columns">
-            {blog.map(item => (
-              <CampaignItem
-                title={item.title}
-                image={item.smallImage.file.url}
-                alt={item.smallImage.title}
-                to={`/news/${item.slug}`}
-              />
+            {blog.map(items => (
+              <CampaignItem data={items} />
             ))}
           </div>
           <ButtonWrapper className="is-flex">
