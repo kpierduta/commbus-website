@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import config from '../utils/config';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
@@ -10,6 +11,7 @@ import Content from '../components/Content';
 export const projectQuery = graphql`
   query project($slug: String) {
     contentfulProject(slug: { eq: $slug }) {
+      slug
       seoTitle
       metaDiscription
       keywords
@@ -53,7 +55,10 @@ export default class Projectblog extends React.Component {
           subtitle={project.details.details}
           text={project.text}
         />
-        <Share />
+        <Share
+          url={`${config.siteUrl}/news/${project.slug}`}
+          title={`Checkout ${project.heroTitle}`}
+        />
         <Content data={project.blogContent.json} />
         <Content data={project.blogContentSecond.json} />
       </Layout>
