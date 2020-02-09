@@ -6,7 +6,6 @@ import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import Share from '../components/Share';
 import Content from '../components/Content';
-import ProjectPictures from '../components/ProjectPictures';
 
 export const projectQuery = graphql`
   query project($slug: String) {
@@ -28,27 +27,9 @@ export const projectQuery = graphql`
       blogContent {
         json
       }
-      # imagesSectionOne {
-      #   imageSizeHalf
-      #   image {
-      #     title
-      #     file {
-      #       url
-      #     }
-      #   }
-      # }
       blogContentSecond {
         json
       }
-      # imageSectionSecond {
-      #   imageSizeHalf
-      #   image {
-      #     title
-      #     file {
-      #       url
-      #     }
-      #   }
-      # }
     }
   }
 `;
@@ -74,9 +55,7 @@ export default class Projectblog extends React.Component {
         />
         <Share />
         <Content data={project.blogContent.json} />
-        {/* <ProjectPictures data={project.imagesSectionOne} /> */}
         <Content data={project.blogContentSecond.json} />
-        {/* <ProjectPictures data={project.imageSectionSecond} /> */}
       </Layout>
     );
   }

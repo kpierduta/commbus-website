@@ -2,8 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset-advanced';
 import { darken, lighten } from 'polished';
 
-const mainBrandColor = '#00D1B2';
-const lightShades = '#487C93';
+const mainBrandColor = '#487C93';
 const darkAccent = '#3173DC';
 const darkShades = '#274550';
 
@@ -15,7 +14,6 @@ export const theme = {
   lightAccent: '#FFDC57',
   // Use this color as the background for your dark-on-light designs,
   // or the text color of an inverted design.
-  lightShades,
   // Another accent color to consider. Not all colors have to be used -
   // sometimes a simple color scheme works best.
   darkAccent,
@@ -24,10 +22,11 @@ export const theme = {
   darkShades,
   dangerColor: '#f44336',
   primaryColor: mainBrandColor,
-  secondryColor: lightShades,
+  secondryColor: mainBrandColor,
   borderColor: '#e0e6ef',
   backgroundColor: '#eef3f6',
-  backgroundInputColor: lightShades,
+  darkbackground: '#3c3c3a',
+  backgroundInputColor: mainBrandColor,
   backgroundInputColorDark: darkShades,
   fontSize: 16,
   fontSizeSmall: 14,
@@ -35,7 +34,7 @@ export const theme = {
   fontSizeMedium: 18,
   fontSizeLarge: 22,
   textColor: darkShades, // '#0A0B11',
-  textColorInverse: lightShades,
+  textColorInverse: mainBrandColor,
   textColorLite: '#3b3b3b',
   menuTintColor: darkAccent,
   primaryFontFamily: "'Avenir Next',sans-serif",
@@ -69,6 +68,7 @@ const GlobalStyle = createGlobalStyle`
   .title {
     font-family: ${theme.secondaryFontFamily};
     line-height: 2.25rem !important;
+    letter-spacing: 2px !important;
   }
   .title.is-1 {
     letter-spacing: 0.3rem !important;
@@ -85,7 +85,6 @@ const GlobalStyle = createGlobalStyle`
   }
   .subtitle {
     font-family: ${theme.primaryFontFamily};
-    color: ${lighten(0.06, theme.textColor)} !important;
   }
   .button.is-primary {
     background-color: ${theme.mainBrandColor};

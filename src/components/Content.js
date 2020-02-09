@@ -20,7 +20,7 @@ const Section = styled.section`
   }
   a {
     margin-top: 1rem;
-    color: ${props => props.theme.lightShades};
+    color: ${props => props.theme.mainBrandColor};
   }
   ul {
     list-style: initial;

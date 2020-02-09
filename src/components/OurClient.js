@@ -1,18 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Section = styled.section`
-  h2 {
-    padding-left: 1.5rem;
-  }
-  .column.is-2 {
-    width: 20%;
-    margin-top: 1rem;
-    @media screen and (max-width: 768px) {
-      width: 100%;
-    }
-  }
-`;
 const Logo = styled.div`
   background: url(${props => props.logo});
   height: 8rem;
@@ -31,20 +19,20 @@ const Logo = styled.div`
 `;
 
 const OurClient = ({ logo }) => (
-  <Section className="section">
+  <section className="section">
     <div className="container">
       <h2 className="subtitle is-5 has-text-weight-bold is-uppercase has-text-centered-mobile">
         Trusted by
       </h2>
       <div className="columns is-multiline">
         {logo.map(item => (
-          <div className="column is-2">
+          <div className="column is-one-fifth">
             <Logo logo={item.file.url} />
           </div>
         ))}
       </div>
     </div>
-  </Section>
+  </section>
 );
 
 export default OurClient;

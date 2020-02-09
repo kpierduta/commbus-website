@@ -5,7 +5,7 @@ import FeatureItem from './FeatureItem';
 import Heading from './elements/Heading';
 
 const Section = styled.div`
-  background: #3c3c3a;
+  background: ${props => props.theme.darkbackground};
 `;
 
 class FeaturesSubPage extends React.Component {

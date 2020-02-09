@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import config from '../utils/config';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
@@ -50,7 +51,7 @@ export default class NewsBlog extends React.Component {
         <Seo
           title={news.seoTitle}
           description={news.metaDescription}
-          url={news.keywords}
+          keywords={news.keywords}
         />
         <HomeHero
           title={news.title}
@@ -59,7 +60,10 @@ export default class NewsBlog extends React.Component {
           bgImage={news.image.file.url}
           text={news.text}
         />
-        <Share />
+        <Share
+          url={`${config.siteUrl}/news/${news.slug}`}
+          title={`Checkout ${news.title}`}
+        />
         <Content data={news.blogContent.json} />
         <NewsRefernce news={news.blogReference} />
       </Layout>

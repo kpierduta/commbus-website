@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 const Section = styled.div`
   .card {
     min-height: 25rem;
-    border: 2px solid ${props => props.theme.lightShades};
+    border: 2px solid ${props => props.theme.mainBrandColor};
     box-shadow: none;
     @media screen and (max-width: 768px) {
       height: auto;

@@ -7,7 +7,7 @@ import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import OurClient from '../components/OurClient';
 import Features from '../components/Features';
-import ProjectsRefernce from '../components/ProjectRefernce';
+import Projects from '../components/Projects';
 import Campaign from '../components/Campaign';
 import Testimonials from '../components/Testimonials';
 
@@ -128,8 +128,9 @@ export default class IndexPage extends React.Component {
             text={page.text}
           />
           <OurClient logo={page.ourClients} />
+          ``
           <Features Feature={page} />
-          <ProjectsRefernce project={page.projectReference} />
+          <Projects reference={page.projectReference} />
           <Campaign data={page} blog={page.blogRefernce} />
           <Testimonials />
         </Layout>

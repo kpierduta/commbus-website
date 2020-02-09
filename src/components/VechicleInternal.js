@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import VehicleBranding from '../components/VehicleBranding';
+import VehicleBranding from './VehicleBranding';
 
 const Section = styled.section`
   background-color: ${props => props.theme.backgroundColor};
@@ -29,12 +29,7 @@ class VehicleInternal extends React.Component {
             </div>
           </section>
           {data.map(item => (
-            <VehicleBranding
-              bgImage={item.thumbnailImage.file.url}
-              title={item.blogTitle}
-              subtitle={item.blogSubtitle.blogSubtitle}
-              to={item.slug}
-            />
+            <VehicleBranding data={item} />
           ))}
         </div>
       </Section>

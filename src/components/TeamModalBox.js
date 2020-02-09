@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 const Container = styled.div`
   .modal-content {
     background-color: #fff !important;
-    border: 7px solid ${props => props.theme.lightShades};
+    border: 7px solid ${props => props.theme.mainBrandColor};
   }
   .button {
     box-shadow: none;

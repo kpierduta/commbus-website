@@ -23,16 +23,11 @@ const Section = styled.section`
     background-position: center;
     background-image: url(/images/photo_2020-01-02_14-58-43.jpg);
   }
-  p {
-    margin-top: 1rem;
-    font-family: ${props => props.theme.primaryFontFamily};
-    font-weight: 700;
-    font-size: ${props => props.theme.fontSizeSmall};
-    color: ${props => props.theme.textColorLite};
+  .hero-body {
+    padding: 3rem 3rem 3rem 0rem !important;
   }
   h2 {
     line-height: 1.5rem !important;
-    font-family: ${props => props.theme.primaryFontFamily};
   }
 `;
 
@@ -47,10 +42,10 @@ class HomeHero extends React.Component {
             <div className="column is-4">
               <section className="hero is-pulled-left-widescreen-only">
                 <div className="hero-body">
-                  <h1 className="title is-size-3-mobile has-text-weight-light is-uppercase">
+                  <h1 className="title is-size-3-mobile has-text-weight-light is-uppercase is-spaced">
                     {title}
                   </h1>
-                  <h2 className="title  is-6 has-text-weight-semibold">
+                  <h2 className="subtitle  is-6 has-text-weight-semibold">
                     {heading}
                   </h2>
                   <p className="has-text-weight-light is-size-6">{subtitle}</p>

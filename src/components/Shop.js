@@ -5,13 +5,9 @@ import styled from 'styled-components';
 import Button from './elements/Button';
 
 const Section = styled.div`
-  .text {
-    color: ${props => props.theme.secondryColor} !important;
+  .has-text-info {
+    margin-bottom: 1rem;
   }
-`;
-const ButtonContainer = styled.div`
-  justify-content: center;
-  display: grid;
 `;
 
 const Shop = ({ item }) => {
@@ -24,17 +20,13 @@ const Shop = ({ item }) => {
           </figure>
         </div>
         <div className="card-content ">
-          <div className="media-content">
-            <p className="has-text-centered has-text-weight-semibold text">
+          <div className="media-content has-text-centered">
+            <p className="has-text-weight-semibold has-text-info">
               {item.node.title}
             </p>
-            <ButtonContainer className="colums">
-              <div className="column">
-                <Button width="14rem" background="transparent">
-                  ENQUIRE
-                </Button>
-              </div>
-            </ButtonContainer>
+            <Button width="14rem" background="transparent">
+              ENQUIRE
+            </Button>
           </div>
         </div>
       </div>

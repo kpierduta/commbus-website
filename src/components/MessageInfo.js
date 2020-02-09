@@ -2,45 +2,41 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  .is-vcentered {
-    padding: 1rem 0.5rem;
+  .container {
     background-color: ${props => props.theme.backgroundInputColor};
   }
   button {
-    font-size: 2.5rem !important;
+    element.style {
+      padding: 0rem 3rem;
+      height: 6rem;
+    }
     background: ${props => props.theme.darkShades};
-  }
-  .all-text {
-    font-family: ${props => props.theme.primaryFontFamily};
-  }
-  .container {
-    padding: 0rem 1rem;
   }
 `;
 
 const MessageInfo = () => (
   <Section className="section">
     <div className="container">
-      <div className="columns is-centered">
-        <div className="column is-12 is-10-fullhd">
-          <div className="columns is-vcentered">
-            <div className="column is-8">
-              <h1 className="has-text-weight-semibold has-text-white all-text has-text-centered-mobile">
+      <div className="hero is-small">
+        <div className="hero-body">
+          <div className="columns">
+            <div className="column is-8 has-text-centered-mobile">
+              <h1 className="title is-4 has-text-weight-normal has-text-white ">
                 Experienced event professional on hand 24/7 for your event
               </h1>
-              <p className="has-text-white all-text has-text-centered-mobile">
+              <p className="subtitle is-6 has-text-white all-text">
                 Commbus are responsive and helpful event experts. Weather you
                 are looking for a vehicle or equipment for your event we focus
                 on exceeding your expectations, being reliable, open, honest and
                 professional.
               </p>
             </div>
-            <div className="column">
-              <button className="button is-large is-fullwidth" type="button">
-                <span className="icon is-medium has-text-white">
-                  <img src="/images/messegelogo/chaticon.png" alt="" />
+            <div className="column has-text-centered">
+              <button className="button is-large" type="button">
+                <span className="icon is-medium">
+                  <img src="/images/icon/chaticon.png" alt="" />
                 </span>
-                <span className="is-uppercase is-size-4 has-text-white all-text">
+                <span className="subtitle is-4 has-text-white">
                   Find out more
                 </span>
               </button>

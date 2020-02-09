@@ -16,32 +16,30 @@ const Section = styled.section`
   @media (min-width: 992px) and (max-width: 1200px) {
     background-size: auto;
   }
-  p {
-    margin: 1rem 0rem 5rem 0rem;
-  }
 `;
 
-const VehicleBranding = ({ title, subtitle, para, bgImage, to }) => (
-  <Section bgImage={bgImage}>
-    <div className="container">
-      <div className="columns">
-        <div className="column is-4">
-          <section className="hero">
-            <div className="hero-body">
-              <h1 className="title is-size-3-mobile has-text-weight-light is-uppercase">
-                {title}
-              </h1>
-              <p>{subtitle}</p>
-              <p>{para}</p>
-              <Button width="14rem" background="transparent" to={to}>
-                Learn More
-              </Button>
-            </div>
-          </section>
+const VehicleBranding = ({ data }) => {
+  return (
+    <Section bgImage={data.thumbnailImage.file.url}>
+      <div className="container">
+        <div className="columns">
+          <div className="column is-4">
+            <section className="hero">
+              <div className="hero-body">
+                <h1 className="title is-size-3-mobile has-text-weight-light is-uppercase">
+                  {data.blogTitle}
+                </h1>
+                <p>{data.blogSubtitle.blogSubtitle}</p>
+                <Button width="14rem" background="transparent" to={data.slug}>
+                  Learn More
+                </Button>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
-    </div>
-  </Section>
-);
+    </Section>
+  );
+};
 
 export default VehicleBranding;

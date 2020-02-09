@@ -44,37 +44,18 @@ export const footerQuery = graphql`
 
 const Container = styled.section`
   font-family: ${props => props.theme.primaryFontFamily};
+
   .logo {
     max-height: 7.5rem !important;
     height: auto;
   }
-  .navbar-item {
-    margin-left: -2rem;
-    @media screen and (max-width: 768px) {
-      padding: 0rem 0rem;
-    }
-  }
-  /* .is-spaced {
-    padding-bottom: 0.75rem;
-  } */
+
   .title {
     margin-bottom: 0rem;
   }
+
   .is-block {
     padding-bottom: 0.5rem;
-  }
-  .column.is-3 {
-    width: 20%;
-    @media screen and (max-width: 768px) {
-      width: 100%;
-    }
-  }
-  .column.is-4 {
-    flex: none;
-    width: 25.33333%;
-    @media screen and (max-width: 768px) {
-      width: 100%;
-    }
   }
 `;
 
@@ -82,9 +63,9 @@ const Footer = () => (
   <Container className="section">
     <div className="container">
       <div className="columns is-multiline">
-        <div className="column is-3">
-          <Link className="navbar-item" to="/">
-            <img className="logo" src="/images/com-logo.png" alt="site logo" />
+        <div className="column is-one-fifth">
+          <Link className="logo" to="/">
+            <img src="/images/com-logo.png" alt="site logo" />
           </Link>
           <Icon icon={firstIcon} />
           <Icon icon={secondIcon} />
@@ -102,7 +83,7 @@ const Footer = () => (
             } = data;
             return (
               <>
-                <div className="column is-4">
+                <div className="column">
                   <h1 className="title is-size-6 has-text-weight-light">
                     Marketing campaigns
                   </h1>

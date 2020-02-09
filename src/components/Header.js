@@ -13,7 +13,7 @@ const Section = styled.section`
     font-size: 1.25rem !important;
   }
   a {
-    color: ${props => props.theme.lightShades};
+    color: ${props => props.theme.mainBrandColor};
   }
   .navbar {
     background-color: transparent;
@@ -21,6 +21,7 @@ const Section = styled.section`
   .logo {
     max-height: 9.5rem !important;
     height: auto;
+    margin-left: -1rem;
     @media screen and (max-width: 600px) {
       max-height: 4rem !important;
     }
@@ -36,7 +37,7 @@ const Section = styled.section`
     height: 3rem;
     color: ${props => props.theme.textColorLite};
     :hover {
-      color: ${props => props.theme.lightShades};
+      color: ${props => props.theme.mainBrandColor};
       background: transparent;
     }
     :focus {

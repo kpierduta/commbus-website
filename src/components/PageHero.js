@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Section = styled.section`
   padding: 1rem 1.5rem 0.25rem 1.5rem;
-  background: #3b3b3a;
+  background: ${props => props.theme.darkbackground};
   .hero-body {
     padding: 3rem 0rem;
   }
