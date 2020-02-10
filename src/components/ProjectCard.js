@@ -53,10 +53,10 @@ const ProjectCard = ({ data }) => (
             src={data.icon.file.url}
             alt={data.icon.file.title}
           />
-          <p className="has-text-white is-italic is-uppercase">
+          <p className="is-size-6 has-text-white is-italic is-uppercase">
             Sector:{data.category}
           </p>
-          <h2 className="title is-2 has-text-weight-medium has-text-white">
+          <h2 className="title is-3 has-text-weight-medium has-text-white">
             {data.title}
           </h2>
           <p className="has-text-white content">

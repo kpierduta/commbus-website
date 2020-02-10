@@ -4,10 +4,14 @@ import styled from 'styled-components';
 const Container = styled.div`
   .card {
     padding-top: 1rem;
-    min-height: 45rem;
     border: 2px solid ${props => props.theme.mainBrandColor};
     margin: 1.5rem 1rem 0rem 1rem;
   }
+
+  .content {
+    min-height: 21rem;
+  }
+
   .down-arrow {
     border-color: ${props => props.theme.mainBrandColor} transparent;
     border-style: solid;
@@ -15,10 +19,12 @@ const Container = styled.div`
     height: 0px;
     width: 0px;
   }
+
   .has-text-right {
     margin: 0rem 1rem 0rem 1rem;
     float: right;
   }
+
   .is-rounded {
     height: 128px;
     width: 128px;
@@ -52,9 +58,11 @@ const TestimonialItem = ({ item }) => (
         </Image>
       </div>
       <div className="card-content">
-        <p className="title is-5 has-text-weight-light">
-          {item.description.description}
-        </p>
+        <div className="content">
+          <p className="title is-5 has-text-weight-light">
+            {item.description.description}
+          </p>
+        </div>
         <h2 className="title is-4 has-text-weight-normal">{item.name}</h2>
       </div>
     </diV>
