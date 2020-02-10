@@ -19,7 +19,17 @@ export const pageQuery = graphql`
       details {
         details
       }
-      image {
+      mobileThumbnail {
+        file {
+          url
+        }
+      }
+      heroImage {
+        file {
+          url
+        }
+      }
+      mobileHeroImage {
         file {
           url
         }
@@ -51,7 +61,8 @@ export default class Graphic extends React.Component {
           title={page.title}
           heading={page.subtitle}
           subtitle={page.details.details}
-          bgImage={page.image.file.url}
+          bgImage={page.heroImage.file.url}
+          mobileImage={page.mobileHeroImage.file.url}
           text="  "
         />
         <Banner data={page} />

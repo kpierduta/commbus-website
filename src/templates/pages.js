@@ -21,7 +21,12 @@ export const pageQuery = graphql`
       details {
         details
       }
-      image {
+      heroImage {
+        file {
+          url
+        }
+      }
+      mobileHeroImage {
         file {
           url
         }
@@ -63,7 +68,7 @@ export const pageQuery = graphql`
       }
       sectionTitle
       sectionSubtitle
-      brandShowCase {
+      brandingShowCase {
         image {
           title
           file {
@@ -71,9 +76,7 @@ export const pageQuery = graphql`
           }
         }
         title
-        firstPoint
-        secondPoint
-        thirdPoint
+        points
       }
     }
   }
@@ -95,20 +98,14 @@ export default class pages extends React.Component {
           title={page.title}
           heading={page.subtitle}
           subtitle={page.details.details}
-          bgImage={page.image.file.url}
+          bgImage={page.heroImage.file.url}
+          mobileImage={page.mobileHeroImage.file.url}
           text=" "
         />
         <FeaturesSubPage data={page} />
         <Banner data={page} />
         <MessageInfo />
-        <Branding
-          data={page}
-          showcase={page.brandShowCase}
-          fistbutton="Event support"
-          fistlink="/eventSupport"
-          secondbutton="contact us"
-          secondlink="/contact"
-        />
+        <Branding data={page} />
         <Testimonials />
       </Layout>
     );

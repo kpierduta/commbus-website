@@ -26,6 +26,11 @@ export const projectQuery = graphql`
           url
         }
       }
+      mobileHeroImage {
+        file {
+          url
+        }
+      }
       blogContent {
         json
       }
@@ -50,6 +55,7 @@ export default class Projectblog extends React.Component {
         />
         <HomeHero
           bgImage={project.heroImage.file.url}
+          mobileImage={project.mobileHeroImage.file.url}
           title={project.heroTitle}
           heading={project.heroSubtitle}
           subtitle={project.details.details}

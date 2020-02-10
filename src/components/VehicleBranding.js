@@ -16,13 +16,23 @@ const Section = styled.section`
   @media (min-width: 992px) and (max-width: 1200px) {
     background-size: auto;
   }
+  .mobile {
+    min-height: 19rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${props => props.mobileImage});
+  }
 `;
 
 const VehicleBranding = ({ data }) => {
   return (
-    <Section bgImage={data.thumbnailImage.file.url}>
+    <Section
+      bgImage={data.thumbnailImage.file.url}
+      mobileImage={data.mobileThumbnail.file.url}
+    >
       <div className="container">
         <div className="columns">
+          <div className="mobile is-hidden-widescreen-only" />
           <div className="column is-4">
             <section className="hero">
               <div className="hero-body">

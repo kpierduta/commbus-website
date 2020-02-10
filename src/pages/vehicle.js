@@ -30,6 +30,11 @@ export const VehicleBrandingQuery = graphql`
             url
           }
         }
+        mobileThumbnail {
+          file {
+            url
+          }
+        }
       }
       sectionTwoTitle
       sectionTwoSubtitle {
@@ -42,6 +47,11 @@ export const VehicleBrandingQuery = graphql`
           blogSubtitle
         }
         thumbnailImage {
+          file {
+            url
+          }
+        }
+        mobileThumbnail {
           file {
             url
           }
