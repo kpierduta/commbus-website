@@ -6,8 +6,9 @@ import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import Marketing from '../components/Marketing';
 import Features from '../components/Features';
+import VechicleShowCase from '../components/VehicleShowCase';
 import MessageInfo from '../components/MessageInfo';
-import Branding from '../components/Branding';
+import Projects from '../components/Projects';
 import Testimonials from '../components/Testimonials';
 
 export const EventQuery = graphql`
@@ -61,6 +62,12 @@ export const EventQuery = graphql`
       }
       featureFourTitle
       featureFourSubtitle
+      vechicleShowCase {
+        description
+        file {
+          url
+        }
+      }
       campaignSectionTitle
       campaignFirstIcon {
         title
@@ -106,19 +113,26 @@ export const EventQuery = graphql`
       campaignSecondLink
       campaignThirdLink
       campaignFourthLink
-      sectionTitle
-      sectionSubtitle
-      showCase {
-        image {
+      projectReference {
+        order
+        slug
+        projectSizeIsHalf
+        projectImage {
           title
           file {
             url
           }
         }
+        icon {
+          file {
+            url
+          }
+        }
+        category
         title
-        firstPoint
-        secondPoint
-        thirdPoint
+        shortDiscription {
+          shortDiscription
+        }
       }
     }
   }
@@ -144,16 +158,10 @@ export default class EventSupport extends React.Component {
           text={event.text}
         />
         <Features Feature={event} />
+        <VechicleShowCase data={event.vechicleShowCase} />
         <Marketing data={event} />
         <MessageInfo />
-        <Branding
-          data={event}
-          showcase={event.showCase}
-          fistbutton="CONTACT US"
-          fistlink="/contact"
-          secondbutton="ABOUT"
-          secondlink="/about"
-        />
+        <Projects reference={event.projectReference} />
         <Testimonials />
       </Layout>
     );

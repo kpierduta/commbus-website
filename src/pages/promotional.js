@@ -5,9 +5,10 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import Marketing from '../components/Marketing';
+import VechicleShowCase from '../components/VehicleShowCase';
 import Features from '../components/Features';
 import MessageInfo from '../components/MessageInfo';
-import Branding from '../components/Branding';
+import Projects from '../components/Projects';
 import Testimonials from '../components/Testimonials';
 
 export const parmotion = graphql`
@@ -61,6 +62,12 @@ export const parmotion = graphql`
       }
       featureFourTitle
       featureFourSubtitle
+      vechicleShowCase {
+        description
+        file {
+          url
+        }
+      }
       campaignSectionTitle
       campaignFirstIcon {
         title
@@ -106,19 +113,26 @@ export const parmotion = graphql`
       campaignSecondLink
       campaignThirdLink
       campaignFourthLink
-      sectionTitle
-      sectionSubtitle
-      showCase {
-        image {
+      projectReference {
+        order
+        slug
+        projectSizeIsHalf
+        projectImage {
           title
           file {
             url
           }
         }
+        icon {
+          file {
+            url
+          }
+        }
+        category
         title
-        firstPoint
-        secondPoint
-        thirdPoint
+        shortDiscription {
+          shortDiscription
+        }
       }
     }
   }
@@ -144,16 +158,10 @@ export default class PromotionalBuses extends React.Component {
           text={promotion.text}
         />
         <Features Feature={promotion} />
+        <VechicleShowCase data={promotion.vechicleShowCase} />
         <Marketing data={promotion} />
+        <Projects reference={promotion.projectReference} />
         <MessageInfo />
-        <Branding
-          data={promotion}
-          showcase={promotion.showCase}
-          fistbutton="CONTACT US"
-          fistlink="/contact"
-          secondbutton="ABOUT"
-          secondlink="/team"
-        />
         <Testimonials />
       </Layout>
     );
