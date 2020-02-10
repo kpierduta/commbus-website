@@ -89,10 +89,10 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 
   result.data.allContentfulProject.edges.forEach(({ node }) => {
-    const pagePath = `project/${node.slug}`;
+    const pagePath = `case/${node.slug}`;
     createPage({
       path: pagePath,
-      component: path.resolve(`./src/templates/projectblog.js`),
+      component: path.resolve(`./src/templates/caseblog.js`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.

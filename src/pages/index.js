@@ -32,7 +32,12 @@ export const homeQuery = graphql`
       details {
         details
       }
-      image {
+      heroImage {
+        file {
+          url
+        }
+      }
+      mobileHeroImage {
         file {
           url
         }
@@ -124,7 +129,8 @@ export default class IndexPage extends React.Component {
             title={page.title}
             heading={page.subtitle}
             subtitle={page.details.details}
-            bgImage={page.image.file.url}
+            bgImage={page.heroImage.file.url}
+            mobileImage={page.mobileHeroImage.file.url}
             text={page.text}
           />
           <OurClient logo={page.ourClients} />

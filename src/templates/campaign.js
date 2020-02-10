@@ -7,7 +7,7 @@ import HomeHero from '../components/HomeHero';
 import FeaturesSubPage from '../components/FeaturesSubPage';
 import Branding from '../components/Branding';
 import MessageInfo from '../components/MessageInfo';
-import ClientsData from '../components/ClientsData';
+import VehicleShowCase from '../components/VehicleShowCase';
 import Testimonials from '../components/Testimonials';
 
 export const CampaignQuery = graphql`
@@ -22,7 +22,12 @@ export const CampaignQuery = graphql`
       details {
         details
       }
-      image {
+      heroImage {
+        file {
+          url
+        }
+      }
+      mobileHeroImage {
         file {
           url
         }
@@ -66,59 +71,67 @@ export const CampaignQuery = graphql`
           }
         }
         title
+        points
         firstPoint
         secondPoint
         thirdPoint
         fourthPoint
       }
-      brandingdesignSection {
+      clientExample {
         title
-        subtitle {
-          subtitle
-        }
-        internalImage {
-          title
-          file {
-            url
-          }
-        }
-        internallyDetails {
-          internallyDetails
-        }
-        externalImage {
-          title
-          file {
-            url
-          }
-        }
-        externalDetails {
-          externalDetails
+        description
+        file {
+          url
         }
       }
-      brandingdesignSection {
-        title
-        subtitle {
-          subtitle
-        }
-        internalImage {
-          title
-          file {
-            url
-          }
-        }
-        internallyDetails {
-          internallyDetails
-        }
-        externalImage {
-          title
-          file {
-            url
-          }
-        }
-        externalDetails {
-          externalDetails
-        }
-      }
+      # brandingdesignSection {
+      #   title
+      #   subtitle {
+      #     subtitle
+      #   }
+      #   internalImage {
+      #     title
+      #     file {
+      #       url
+      #     }
+      #   }
+      #   internallyDetails {
+      #     internallyDetails
+      #   }
+      #   externalImage {
+      #     title
+      #     file {
+      #       url
+      #     }
+      #   }
+      #   externalDetails {
+      #     externalDetails
+      #   }
+      # }
+      # brandingdesignSection {
+      #   title
+      #   subtitle {
+      #     subtitle
+      #   }
+      #   internalImage {
+      #     title
+      #     file {
+      #       url
+      #     }
+      #   }
+      #   internallyDetails {
+      #     internallyDetails
+      #   }
+      #   externalImage {
+      #     title
+      #     file {
+      #       url
+      #     }
+      #   }
+      #   externalDetails {
+      #     externalDetails
+      #   }
+      # }
     }
   }
 `;
@@ -139,26 +152,19 @@ export default class CampaignPage extends React.Component {
           title={campaign.title}
           heading={campaign.subtitle}
           subtitle={campaign.details.details}
-          bgImage={campaign.image.file.url}
+          bgImage={campaign.heroImage.file.url}
+          mobileImage={campaign.mobileHeroImage.file.url}
           text="  "
         />
-
         <FeaturesSubPage data={campaign} />
-
-        <Branding
-          data={campaign}
-          showcase={campaign.brandingShowCase}
-          fistbutton="CONTACT US"
-          fistlink="/contact"
-          secondbutton="ABOUT"
-          secondlink="/"
-        />
+        <Branding data={campaign} />
         <MessageInfo />
-        <ClientsData
+        <VehicleShowCase data={campaign.clientExample} />
+        {/* <ClientsData
           title="INTERNAL & EXTERNAL BRANDING AND DESIGN"
           subtitle="CLIENT EXAMPLES"
           data={campaign.brandingdesignSection}
-        />
+        /> */}
         <Testimonials />
       </Layout>
     );

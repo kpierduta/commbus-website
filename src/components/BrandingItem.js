@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import BrandingItemList from './BrandingItemList';
-
 const Wrapper = styled.div`
   .card {
     min-height: 33rem;
@@ -31,9 +29,15 @@ const BrandingItem = ({ item }) => {
           <p className="has-text-weight-semibold all-text has-text-info">
             {item.title}
           </p>
-          <BrandingItemList smalltext={item.firstPoint} />
-          <BrandingItemList smalltext={item.secondPoint} />
-          <BrandingItemList smalltext={item.thirdPoint} />
+          <div className="content">
+            <ul>
+              {item.points.map(data => (
+                <li>
+                  <p className="subtitle is-6 has-text-info">{data}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </Wrapper>

@@ -100,14 +100,12 @@ export default class Header extends React.Component {
             <div className="column is-flex">
               <a
                 href="tel:"
-                className="has-text-info has-text-weight-light is-size-4 is-size-5-touch"
-              >
+                className="has-text-info has-text-weight-light is-size-4 is-size-5-touch">
                 01675 463 555
               </a>
               <a
                 href="mailto:"
-                className="has-text-info has-text-weight-light is-uppercase is-size-4 email is-size-5-touch"
-              >
+                className="has-text-info has-text-weight-light is-uppercase is-size-4 email is-size-5-touch">
                 enquiries@commbus.com
               </a>
             </div>
@@ -115,8 +113,7 @@ export default class Header extends React.Component {
           <nav
             className="navbar"
             role="navigation"
-            aria-label="main navigation"
-          >
+            aria-label="main navigation">
             <div className="navbar-brand">
               <Link className="navbar-item" to="/">
                 <img
@@ -134,8 +131,7 @@ export default class Header extends React.Component {
                 aria-label="menu"
                 aria-expanded="false"
                 data-target="navbarBasicExample"
-                onClick={() => this.handleMobileMenu()}
-              >
+                onClick={() => this.handleMobileMenu()}>
                 <span aria-hidden="true" />
                 <span aria-hidden="true" />
                 <span aria-hidden="true" />
@@ -155,8 +151,8 @@ export default class Header extends React.Component {
                 <Link to="/about" className="navbar-item">
                   About
                 </Link>
-                <Link to="/project" className="navbar-item">
-                  Projects
+                <Link to="/case-study" className="navbar-item">
+                  Case Study
                 </Link>
                 <Link to="/news" className="navbar-item">
                   News

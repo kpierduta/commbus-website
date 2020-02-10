@@ -21,7 +21,7 @@ const Section = styled.section`
     min-height: 19rem;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(/images/photo_2020-01-02_14-58-43.jpg);
+    background-image: url(${props => props.mobileImage});
   }
   .hero-body {
     padding: 3rem 3rem 3rem 0rem !important;
@@ -33,9 +33,9 @@ const Section = styled.section`
 
 class HomeHero extends React.Component {
   render() {
-    const { bgImage, title, heading, subtitle, text } = this.props;
+    const { mobileImage, bgImage, title, heading, subtitle, text } = this.props;
     return (
-      <Section className="section" bgImage={bgImage}>
+      <Section className="section" bgImage={bgImage} mobileImage={mobileImage}>
         <div className="container">
           <div className="columns">
             <div className="mobile is-hidden-widescreen-only" />

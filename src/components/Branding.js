@@ -18,34 +18,17 @@ const ButtonContainer = styled.div`
   }
 `;
 
-const Branding = ({
-  data,
-  showcase,
-  fistlink,
-  fistbutton,
-  secondlink,
-  secondbutton,
-}) => {
+const Branding = ({ data }) => {
   return (
     <Section className="section">
       <div className="container">
         <Heading title={data.sectionTitle} />
         <Heading title={data.sectionSubtitle} size="is-6" />
         <div className="columns is-multiline">
-          {showcase.map(item => (
+          {data.brandingShowCase.map(item => (
             <BrandingItem item={item} />
           ))}
         </div>
-        <ButtonContainer>
-          <div className="buttons">
-            <Button width="15rem" background="transparent" to={fistlink}>
-              {fistbutton}
-            </Button>
-            <Button width="15rem" background="transparent" to={secondlink}>
-              {secondbutton}
-            </Button>
-          </div>
-        </ButtonContainer>
       </div>
     </Section>
   );

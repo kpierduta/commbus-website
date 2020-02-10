@@ -19,7 +19,12 @@ export const teamQuery = graphql`
       details {
         details
       }
-      image {
+      heroImage {
+        file {
+          url
+        }
+      }
+      heroImageMobile {
         file {
           url
         }
@@ -77,7 +82,8 @@ export default class About extends React.Component {
           title={page.title}
           heading={page.subtitle}
           subtitle={page.details.details}
-          bgImage={page.image.file.url}
+          bgImage={page.heroImage.file.url}
+          mobileImage={page.heroImageMobile.file.url}
           text=" "
         />
         <TeamContent team={team.edges} />

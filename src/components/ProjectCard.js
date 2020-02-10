@@ -63,7 +63,7 @@ const ProjectCard = ({ data }) => (
             {data.shortDescription.shortDescription}
           </p>
           <Link
-            to={`/project/${data.slug}`}
+            to={`/case/${data.slug}`}
             className="button is-medium is-inverted has-text-black-bis"
           >
             VIEW PROJECTS
