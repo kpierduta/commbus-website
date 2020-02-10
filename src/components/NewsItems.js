@@ -15,6 +15,9 @@ const Container = styled.div`
   }
   .button.is-medium {
     margin-top: 2rem;
+    :hover {
+      background-color: ${props => props.theme.darkShades};
+    }
   }
 `;
 

@@ -6,13 +6,14 @@ import GlobalStyle, { theme } from '../utils/theme';
 import config from '../utils/config';
 import Header from './Header';
 import Footer from './Footer';
+import Decerdence from './Decerdence';
 import Contact from './Contact';
 
 const Container = styled.div`
   min-height: 70vh;
 `;
 
-const IndexLayout = ({ children, hideHeader }) => (
+const IndexLayout = ({ children, hideHeader, hasSubChild }) => (
   <ThemeProvider theme={theme}>
     <>
       <Helmet>
@@ -25,6 +26,7 @@ const IndexLayout = ({ children, hideHeader }) => (
       {!hideHeader && <Header />}
       <Container>{children}</Container>
       <Contact />
+      {hasSubChild && <Decerdence />}
       <Footer />
     </>
   </ThemeProvider>

@@ -25,7 +25,7 @@ export default class ContactPage extends React.Component {
       data: { contentfulGenericPages: page },
     } = this.props;
     return (
-      <Layout>
+      <Layout hasSubChild>
         <Seo
           title={page.seoTitle}
           description={page.metaDescription}
