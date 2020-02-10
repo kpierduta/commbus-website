@@ -11,16 +11,10 @@ const Section = styled.div`
       height: auto;
     }
   }
-  .section {
-    padding: 0rem 0.5rem;
-  }
-  .card-content {
-    padding: 2rem 1.25rem 1.25rem 1.25rem;
-  }
   .content {
     min-height: 10rem;
   }
-  h2 {
+  .title {
     margin-top: 1.5rem;
   }
 `;
@@ -30,36 +24,34 @@ const LinkStyled = styled(Link)`
   margin-top: 1.5rem;
 `;
 
-const MarketingCard = props => (
+const MarketingCard = ({ img, alt, heading, description, to }) => (
   <Section className="column is-6">
     <div className="card">
-      <Section className="section">
-        <div className="card-content">
-          <div className="columns">
-            <div className="column is-4">
-              <figure className="image">
-                <img src={props.img} alt={props.alt} />
-              </figure>
-            </div>
-            <div className="column">
-              <h2 className="title is-4 has-text-info has-text-weight-medium has-text-centered-mobile">
-                {props.heading}
-              </h2>
-            </div>
+      <div className="card-content">
+        <div className="columns">
+          <div className="column is-4">
+            <figure className="image">
+              <img src={img} alt={alt} />
+            </figure>
           </div>
-          <div className="content has-text-centered">
-            <p className="has-text-info">{props.description}</p>
-          </div>
-          <div className="has-text-centered">
-            <LinkStyled
-              to={props.to}
-              className="title is-4 has-text-info has-text-weight-normal"
-            >
-              FIND OUT MORE
-            </LinkStyled>
+          <div className="column">
+            <h2 className="title is-4 has-text-info has-text-weight-medium has-text-centered-mobile">
+              {heading}
+            </h2>
           </div>
         </div>
-      </Section>
+        <div className="content has-text-centered">
+          <p className="has-text-info">{description}</p>
+        </div>
+        <div className="has-text-centered">
+          <LinkStyled
+            to={to}
+            className="title is-4 has-text-info has-text-weight-normal"
+          >
+            FIND OUT MORE
+          </LinkStyled>
+        </div>
+      </div>
     </div>
   </Section>
 );

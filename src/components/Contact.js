@@ -10,12 +10,12 @@ const Section = styled.div`
   }
 
   input ::placeholder {
-    color: #487c92;
+    color: ${props => props.theme.mainBrandColor};
     font-weight: bolder;
   }
 
   textarea ::placeholder {
-    color: #487c92;
+    color: ${props => props.theme.mainBrandColor};
     font-weight: bolder;
   }
 `;

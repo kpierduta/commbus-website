@@ -1,16 +1,13 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Heading from './elements/Heading';
 import MarketingCard from './MarketingCard';
-
-const Section = styled.section``;
 
 class Marketing extends React.Component {
   render() {
     const { data } = this.props;
     return (
-      <Section className="section">
+      <section className="section">
         <div className="container">
           <Heading title={data.campaignSectionTitle} />
           <div className="columns is-multiline">
@@ -44,7 +41,7 @@ class Marketing extends React.Component {
             />
           </div>
         </div>
-      </Section>
+      </section>
     );
   }
 }

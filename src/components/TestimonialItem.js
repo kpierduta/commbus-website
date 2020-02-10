@@ -4,12 +4,9 @@ import styled from 'styled-components';
 const Container = styled.div`
   .card {
     padding-top: 1rem;
-    min-height: 41.75rem;
+    min-height: 45rem;
     border: 2px solid ${props => props.theme.mainBrandColor};
     margin: 1.5rem 1rem 0rem 1rem;
-  }
-  .card-content {
-    padding: 1rem 4rem;
   }
   .down-arrow {
     border-color: ${props => props.theme.mainBrandColor} transparent;

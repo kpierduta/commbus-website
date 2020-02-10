@@ -8,7 +8,7 @@ const Section = styled.section`
   }
   .heading {
     margin-top: 1.5rem;
-    color: #3c3c3b !important;
+    color: ${props => props.theme.darkbackground} !important;
   }
   .text {
     margin-bottom: 2.75rem !important;

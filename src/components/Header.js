@@ -8,20 +8,13 @@ import Icon from './elements/Icon';
 
 const Section = styled.section`
   padding: 1rem 1.5rem 3rem 1.5rem;
-  font-family: ${props => props.theme.primaryFontFamily};
-  .icon {
-    font-size: 1.25rem !important;
-  }
-  a {
-    color: ${props => props.theme.mainBrandColor};
-  }
   .navbar {
     background-color: transparent;
   }
   .logo {
     max-height: 9.5rem !important;
     height: auto;
-    margin-left: -1rem;
+    margin-left: -0.5rem;
     @media screen and (max-width: 600px) {
       max-height: 4rem !important;
     }
@@ -45,7 +38,7 @@ const Section = styled.section`
     }
   }
   .navbar-burger {
-    background-color: #1c1323;
+    background-color: ${props => props.theme.mainBrandColor};
     color: #fff;
     opacity: 0.6;
     border-radius: 4px;
@@ -55,9 +48,6 @@ const Section = styled.section`
   }
   .email {
     margin: 0 0 0 1.5rem;
-    @media screen and (max-width: 768px) {
-      margin: 0 0 0 1.4rem;
-    }
   }
 `;
 
@@ -110,13 +100,13 @@ export default class Header extends React.Component {
             <div className="column is-flex">
               <a
                 href="tel:"
-                className="has-text-weight-light is-size-4 is-size-5-touch"
+                className="has-text-info has-text-weight-light is-size-4 is-size-5-touch"
               >
                 01675 463 555
               </a>
               <a
                 href="mailto:"
-                className="has-text-weight-light is-uppercase is-size-4 email is-size-5-touch"
+                className="has-text-info has-text-weight-light is-uppercase is-size-4 email is-size-5-touch"
               >
                 enquiries@commbus.com
               </a>

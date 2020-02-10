@@ -16,14 +16,12 @@ const Section = styled.section`
 `;
 
 const Address = () => (
-  <Section>
-    <div className="columns">
-      <div className="column is-6">
-        <Information />
-      </div>
-      <div className="column is-6">
-        <MyMapComponent isMarkerShown className="is-hidden-mobile" />
-      </div>
+  <Section className="columns">
+    <div className="column is-6">
+      <Information />
+    </div>
+    <div className="column is-6">
+      <MyMapComponent isMarkerShown className="is-hidden-mobile" />
     </div>
   </Section>
 );

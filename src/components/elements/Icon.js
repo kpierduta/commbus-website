@@ -8,7 +8,7 @@ const IconContainer = styled.span`
 
 const Icon = ({ icon, link }) => (
   <Link to={link}>
-    <IconContainer className="icon has-text-dark is-size-4">
+    <IconContainer className="icon has-text-dark is-size-5">
       {icon}
     </IconContainer>
   </Link>

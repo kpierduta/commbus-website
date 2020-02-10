@@ -16,7 +16,7 @@ const Information = () => (
       </h1>
       <a
         href="mailto:enquiries@commbus.com"
-        className="subtitle is-5 has-text-link"
+        className="subtitle is-5 has-text-info"
       >
         enquiries@commbus.com
       </a>
@@ -24,7 +24,7 @@ const Information = () => (
         <h1 className="title is-spaced is-4 has-text-weight-medium is-inline-block">
           Phone number:{' '}
         </h1>
-        <a href="tel:01675463555" className="subtitle is-5">
+        <a href="tel:01675463555" className="subtitle is-5 has-text-info">
           01675 463555
         </a>
       </div>

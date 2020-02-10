@@ -5,11 +5,10 @@ const Section = styled.section`
   .container {
     background-color: ${props => props.theme.backgroundInputColor};
   }
+
   button {
-    element.style {
-      padding: 0rem 3rem;
-      height: 6rem;
-    }
+    padding: 0rem 3rem;
+    height: 6rem;
     background: ${props => props.theme.darkShades};
   }
 `;
