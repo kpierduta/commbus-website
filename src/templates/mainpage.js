@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
@@ -138,6 +139,14 @@ export const MainPageQuery = graphql`
   }
 `;
 
+const Container = styled.div`
+  background-color: ${props => props.theme.borderColor};
+  padding: 2.5rem 0rem !important;
+  .title {
+    margin-bottom: 0rem;
+  }
+`;
+
 export default class MainPage extends React.Component {
   render() {
     const {
@@ -160,7 +169,10 @@ export default class MainPage extends React.Component {
         <Features Feature={promotion} />
         <VehicleShowCase data={promotion.vehicleShowCase} />
         <Marketing data={promotion} />
-        <Projects reference={promotion.projectReference} />
+        <Container className="has-text-centered">
+          <h1 className="title is-2">SOME OF OUR RECENT CAMAPAIGNS</h1>
+          <Projects reference={promotion.projectReference} />
+        </Container>
         <MessageInfo />
         <Testimonials />
       </Layout>
