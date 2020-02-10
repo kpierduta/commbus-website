@@ -5,15 +5,15 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import Marketing from '../components/Marketing';
+import VehicleShowCase from '../components/VehicleShowCase';
 import Features from '../components/Features';
-import VechicleShowCase from '../components/VehicleShowCase';
 import MessageInfo from '../components/MessageInfo';
 import Projects from '../components/Projects';
 import Testimonials from '../components/Testimonials';
 
-export const EventQuery = graphql`
-  query event {
-    contentfulMainPages(slug: { eq: "Event Support" }) {
+export const MainPageQuery = graphql`
+  query MainPage($slug: String) {
+    contentfulMainPages(slug: { eq: $slug }) {
       slug
       seoTitle
       metaDescription
@@ -53,7 +53,7 @@ export const EventQuery = graphql`
         }
       }
       featureThirdTitle
-      featureFourSubtitle
+      featureThirdSubtitle
       iconFour {
         title
         file {
@@ -62,7 +62,7 @@ export const EventQuery = graphql`
       }
       featureFourTitle
       featureFourSubtitle
-      vechicleShowCase {
+      vehicleShowCase {
         description
         file {
           url
@@ -138,30 +138,30 @@ export const EventQuery = graphql`
   }
 `;
 
-export default class EventSupport extends React.Component {
+export default class MainPage extends React.Component {
   render() {
     const {
-      data: { contentfulMainPages: event },
+      data: { contentfulMainPages: promotion },
     } = this.props;
     return (
       <Layout>
         <Seo
-          title={event.seoTitle}
-          description={event.metaDescription}
-          keywords={event.keywords}
+          title={promotion.seoTitle}
+          description={promotion.metaDescription}
+          keywords={promotion.keywords}
         />
         <HomeHero
-          title={event.title}
-          heading={event.subtitle}
-          subtitle={event.details.details}
-          bgImage={event.image.file.url}
-          text={event.text}
+          title={promotion.title}
+          heading={promotion.subtitle}
+          subtitle={promotion.details.details}
+          bgImage={promotion.image.file.url}
+          text={promotion.text}
         />
-        <Features Feature={event} />
-        <VechicleShowCase data={event.vechicleShowCase} />
-        <Marketing data={event} />
+        <Features Feature={promotion} />
+        <VehicleShowCase data={promotion.vehicleShowCase} />
+        <Marketing data={promotion} />
+        <Projects reference={promotion.projectReference} />
         <MessageInfo />
-        <Projects reference={event.projectReference} />
         <Testimonials />
       </Layout>
     );

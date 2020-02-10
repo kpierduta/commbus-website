@@ -22,6 +22,13 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allContentfulMainPages {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
       allContentfulCampaignPage {
         edges {
           node {
@@ -65,6 +72,16 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: node.slug,
       component: path.resolve(`./src/templates/graphic.js`),
+      context: {
+        slug: node.slug,
+      },
+    });
+  });
+
+  result.data.allContentfulMainPages.edges.forEach(({ node }) => {
+    createPage({
+      path: node.slug,
+      component: path.resolve(`./src/templates/mainpage.js`),
       context: {
         slug: node.slug,
       },

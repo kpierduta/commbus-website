@@ -7,11 +7,11 @@ const Section = styled.section`
   background: #eef3f6;
 `;
 
-const VechicleShowCase = ({ data }) => {
+const VehicleShowCase = ({ data }) => {
   return (
     <Section className="section">
       <div className="container">
-        <Heading title="OUR FLEET OF VECHICLES" />
+        <Heading title="OUR FLEET OF VEhiCLES" />
         <div className="columns is-multiline">
           {data.map(item => (
             <div className="column is-4">
@@ -35,4 +35,4 @@ const VechicleShowCase = ({ data }) => {
   );
 };
 
-export default VechicleShowCase;
+export default VehicleShowCase;
