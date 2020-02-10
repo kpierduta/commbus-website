@@ -1,7 +1,7 @@
 import React from 'react';
 
 import NewsItems from './NewsItems';
-import Dropdown from './elements/Dropdown';
+import NewsFilter from './NewsFilter';
 
 class NewsSection extends React.Component {
   render() {
@@ -9,14 +9,7 @@ class NewsSection extends React.Component {
     return (
       <div className="section">
         <div className="container has-text-centered-mobile">
-          <div className="columns">
-            <div className="column">
-              <Dropdown title="SECTOR" />
-            </div>
-            <div className="column">
-              <Dropdown title="Date" />
-            </div>
-          </div>
+          <NewsFilter />
           <div className="columns is-multiline">
             {news.map(item => (
               <NewsItems

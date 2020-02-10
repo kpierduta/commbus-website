@@ -23,7 +23,7 @@ const Container = styled.div`
   }
   .dropdown-content {
     width: 22rem;
-    background-color: ${props => props.theme.secondryColor};
+    background-color: ${props => props.theme.mainBrandColor};
     padding-right: 1rem;
     padding-left: 0.5rem;
   }
@@ -31,43 +31,33 @@ const Container = styled.div`
     border-bottom: 2px solid white !important;
     padding-right: 7rem;
     :hover {
-      background-color: ${props => props.theme.secondryColor} !important;
+      background-color: ${props => props.theme.mainBrandColor} !important;
     }
   }
   .text {
-    width: 8rem !important;
+    width: 1rem !important;
   }
 `;
 
-const Dropdown = props => {
+const Dropdown = ({ title, children }) => {
   const [active, changedActive] = useState(false);
   return (
     <Container className={active ? 'dropdown is-active' : 'dropdown'}>
       <div className="dropdown-trigger">
         <button
+          type="button"
           className="button is-large"
-          aria-haspopup="true"
           aria-controls="dropdown-menu"
           onClick={() => changedActive(!active)}
         >
-          <span className="text">{props.title}</span>
+          <span className="text">{title}</span>
           <span className="icon">
             <i className="fas fa-sort-down" />
           </span>
         </button>
       </div>
       <div className="dropdown-menu" id="dropdown-menu" role="menu">
-        <div className="dropdown-content">
-          <a
-            href="#"
-            className="dropdown-item title is-5 has-text-white has-text-weight-medium"
-          >
-            Dropdown item
-          </a>
-          <a className="dropdown-item title is-5 has-text-white has-text-weight-medium">
-            Other dropdown item
-          </a>
-        </div>
+        <div className="dropdown-content">{children}</div>
       </div>
     </Container>
   );

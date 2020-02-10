@@ -22,7 +22,6 @@ export const theme = {
   darkShades,
   dangerColor: '#f44336',
   primaryColor: mainBrandColor,
-  secondryColor: mainBrandColor,
   borderColor: '#e0e6ef',
   backgroundColor: '#eef3f6',
   darkbackground: '#3c3c3a',

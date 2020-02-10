@@ -20,6 +20,8 @@ export const newsDataQuery = graphql`
       edges {
         node {
           order
+          date(formatString: "YYYY")
+          sector
           slug
           title
           thumbnail {
@@ -34,6 +36,16 @@ export const newsDataQuery = graphql`
 `;
 
 export default class NewsPage extends React.Component {
+  // constructor(props) {
+  //   super(props);
+
+  //   this.state = { category: 'all' };
+  // }
+
+  // onCategoryChange = category => {
+  //   this.setState({ category });
+  // };
+
   render() {
     const {
       data: { contentfulGenericPages: page },
