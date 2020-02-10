@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import PageHero from '../components/PageHero';
 import VehicleExternal from '../components/VehicleExternal';
-import VehicleInternal from '../components/VechicleInternal';
+import VehicleInternal from '../components/VehicleInternal';
 
 export const VehicleBrandingQuery = graphql`
   query Branding {
@@ -51,7 +51,7 @@ export const VehicleBrandingQuery = graphql`
   }
 `;
 
-export default class IndexPage extends React.Component {
+export default class VehicleBrandingPage extends React.Component {
   render() {
     const {
       data: { contentfulVehicleBrandingPage: page },

@@ -13,7 +13,7 @@ export const projectQuery = graphql`
     contentfulProject(slug: { eq: $slug }) {
       slug
       seoTitle
-      metaDiscription
+      metaDescription
       keywords
       text
       heroTitle

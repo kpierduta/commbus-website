@@ -16,7 +16,7 @@ const NotFoundPage = () => (
     <section className="section">
       <Container className="container">
         <h1 className="title">NOT FOUND</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+        <p>You just hit a route that does not exist... the sadness.</p>
       </Container>
     </section>
   </Layout>

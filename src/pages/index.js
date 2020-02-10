@@ -89,12 +89,12 @@ export const homeQuery = graphql`
         }
         category
         title
-        shortDiscription {
-          shortDiscription
+        shortDescription {
+          shortDescription
         }
       }
       sectionTitle
-      blogRefernce {
+      blogReference {
         slug
         title
         smallImage {
@@ -128,10 +128,9 @@ export default class IndexPage extends React.Component {
             text={page.text}
           />
           <OurClient logo={page.ourClients} />
-          ``
           <Features Feature={page} />
           <Projects reference={page.projectReference} />
-          <Campaign data={page} blog={page.blogRefernce} />
+          <Campaign data={page} blog={page.blogReference} />
           <Testimonials />
         </Layout>
       </Section>

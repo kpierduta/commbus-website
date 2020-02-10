@@ -1,7 +1,7 @@
 import React from 'react';
 import NewsItems from './NewsItems';
 
-class NewsRefernce extends React.Component {
+class NewsReference extends React.Component {
   render() {
     const { news } = this.props;
     return (
@@ -22,4 +22,4 @@ class NewsRefernce extends React.Component {
     );
   }
 }
-export default NewsRefernce;
+export default NewsReference;

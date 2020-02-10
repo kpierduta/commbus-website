@@ -35,8 +35,8 @@ export const projectQuery = graphql`
           }
           category
           title
-          shortDiscription {
-            shortDiscription
+          shortDescription {
+            shortDescription
           }
         }
       }

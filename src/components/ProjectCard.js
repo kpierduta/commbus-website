@@ -60,7 +60,7 @@ const ProjectCard = ({ data }) => (
             {data.title}
           </h2>
           <p className="has-text-white content">
-            {data.shortDiscription.shortDiscription}
+            {data.shortDescription.shortDescription}
           </p>
           <Link
             to={`/project/${data.slug}`}

@@ -130,8 +130,8 @@ export const parmotion = graphql`
         }
         category
         title
-        shortDiscription {
-          shortDiscription
+        shortDescription {
+          shortDescription
         }
       }
     }

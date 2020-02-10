@@ -10,7 +10,7 @@ import MessageInfo from '../components/MessageInfo';
 export const pageQuery = graphql`
   query graphic($slug: String) {
     contentfulVehicleGraphicBlog(slug: { eq: $slug }) {
-      seoTitlle
+      seoTitle
       metaDescription
       keywords
       slug

@@ -6,7 +6,7 @@ import Seo from '../components/Seo';
 import PageHero from '../components/PageHero';
 import ShopItems from '../components/ShopItems';
 
-export const Hire = graphql`
+export const HireQuery = graphql`
   query Hire {
     contentfulGenericPages(slug: { eq: "Hire Shop" }) {
       slug

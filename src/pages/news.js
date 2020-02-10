@@ -6,8 +6,8 @@ import Seo from '../components/Seo';
 import PageHero from '../components/PageHero';
 import NewsSection from '../components/NewsSection';
 
-export const newsdataQuery = graphql`
-  query newsdata {
+export const newsDataQuery = graphql`
+  query newsData {
     contentfulGenericPages(slug: { eq: "News" }) {
       slug
       seoTitle

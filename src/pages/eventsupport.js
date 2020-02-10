@@ -130,8 +130,8 @@ export const EventQuery = graphql`
         }
         category
         title
-        shortDiscription {
-          shortDiscription
+        shortDescription {
+          shortDescription
         }
       }
     }

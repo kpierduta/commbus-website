@@ -7,7 +7,7 @@ import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import Share from '../components/Share';
 import Content from '../components/Content';
-import NewsRefernce from '../components/NewsRefernce';
+import NewsReference from '../components/NewsReference';
 
 export const newsQuery = graphql`
   query news($slug: String) {
@@ -65,7 +65,7 @@ export default class NewsBlog extends React.Component {
           title={`Checkout ${news.title}`}
         />
         <Content data={news.blogContent.json} />
-        <NewsRefernce news={news.blogReference} />
+        <NewsReference news={news.blogReference} />
       </Layout>
     );
   }

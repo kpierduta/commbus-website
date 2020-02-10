@@ -79,7 +79,7 @@ export const pageQuery = graphql`
   }
 `;
 
-export default class page extends React.Component {
+export default class pages extends React.Component {
   render() {
     const {
       data: { contentfulPages: page },

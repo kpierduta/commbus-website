@@ -123,7 +123,7 @@ export const CampaignQuery = graphql`
   }
 `;
 
-export default class Campaign extends React.Component {
+export default class CampaignPage extends React.Component {
   render() {
     const {
       data: { contentfulCampaignPage: campaign },
