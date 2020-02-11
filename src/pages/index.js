@@ -10,6 +10,7 @@ import Features from '../components/Features';
 import Projects from '../components/Projects';
 import Campaign from '../components/Campaign';
 import Testimonials from '../components/Testimonials';
+import ImageModal from '../components/ImageModal';
 
 const Section = styled.div`
   h1,
@@ -133,6 +134,7 @@ export default class IndexPage extends React.Component {
             mobileImage={page.mobileHeroImage.file.url}
             text={page.text}
           />
+          <ImageModal />
           <OurClient logo={page.ourClients} />
           <Features Feature={page} />
           <Projects reference={page.projectReference} />

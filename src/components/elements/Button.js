@@ -4,16 +4,16 @@ import { Link } from 'gatsby';
 
 const Wrapper = styled(Link)`
   width: ${props => (props.width ? props.width : '')};
-  color: ${props => (props.color ? props.color : props.theme.secondryColor)};
+  color: ${props => (props.color ? props.color : props.theme.mainBrandColor)};
   border: 1px solid
-    ${props => (props.border ? props.border : props.theme.secondryColor)};
+    ${props => (props.border ? props.border : props.theme.mainBrandColor)};
   :hover {
-    color: ${props => (props.color ? props.color : props.theme.secondryColor)};
+    color: ${props => (props.color ? props.color : props.theme.mainBrandColor)};
     border: 1px solid
-      ${props => (props.border ? props.border : props.theme.secondryColor)};
+      ${props => (props.border ? props.border : props.theme.mainBrandColor)};
   }
   background-color: ${props =>
-    props.background ? props.background : props.theme.secondryColor};
+    props.background ? props.background : props.theme.mainBrandColor};
 `;
 
 const Button = ({ className, children, fullWidth, to, ...otherProps }) => (

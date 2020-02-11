@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Heading from './elements/Heading';
+import ImageModal from './ImageModal';
 
 const Banner = ({ data }) => (
   <section className="section">
@@ -9,8 +11,8 @@ const Banner = ({ data }) => (
         {data.bannerImages.map(item => (
           <div className="column is-4">
             <div className="card">
-              <figure className="image is-4by3">
-                <img src={item.file.url} alt={item.title} />
+              <figure>
+                <ImageModal src={item.file.url} alt={item.title} />
               </figure>
             </div>
           </div>

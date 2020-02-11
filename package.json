@@ -47,6 +47,7 @@
     "react-dom": "^16.9.0",
     "react-google-maps": "^9.4.5",
     "react-helmet": "^5.2.1",
+    "react-modal-image": "^2.5.0",
     "react-share": "^4.0.1",
     "styled-components": "^4.3.2",
     "styled-reset-advanced": "^1.0.1",

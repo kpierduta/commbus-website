@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import ImageModal from './ImageModal';
+
 const Wrapper = styled.div`
   .card {
     min-height: 33rem;
@@ -21,8 +23,8 @@ const BrandingItem = ({ item }) => {
     <Wrapper className="column is-4">
       <div className="card">
         <div className="card-image">
-          <figure className="image">
-            <img src={item.image.file.url} alt={item.image.title} />
+          <figure className="">
+            <ImageModal src={item.image.file.url} alt={item.image.title} />
           </figure>
         </div>
         <div className="card-content">
