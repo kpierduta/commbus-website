@@ -10,11 +10,7 @@ class NewsReference extends React.Component {
           <h1 className="title is-4">RELATED ARTICLES</h1>
           <div className="columns is-multiline">
             {news.map(item => (
-              <NewsItems
-                title={item.title}
-                bgImage={item.thumbnail.file.url}
-                link={`/news/${item.slug}`}
-              />
+              <NewsItems item={item} />
             ))}
           </div>
         </div>
