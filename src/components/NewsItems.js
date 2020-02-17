@@ -21,9 +21,9 @@ const Container = styled.div`
   }
 `;
 
-const NewsItems = ({ title, bgImage, link }) => {
+const NewsItems = ({ item }) => {
   return (
-    <Container className="column is-half" bgImage={bgImage}>
+    <Container className="column is-half" bgImage={item.thumbnail.file.url}>
       <div className="background">
         <div className="columns">
           <div className="column is-4" />
@@ -32,9 +32,12 @@ const NewsItems = ({ title, bgImage, link }) => {
               <div className="hero-body">
                 <div className="container has-text-centered-mobile">
                   <h1 className="title has-text-white is-3 has-text-weight-medium ">
-                    {title}
+                    {item.title}
                   </h1>
-                  <Link className="button is-medium is-link" to={link}>
+                  <Link
+                    className="button is-medium is-link"
+                    to={`/news/${item.slug}`}
+                  >
                     READ MORE
                   </Link>
                 </div>

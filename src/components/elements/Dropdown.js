@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -29,7 +29,7 @@ const Container = styled.div`
   }
   .dropdown-item {
     border-bottom: 2px solid white !important;
-    padding-right: 7rem;
+    padding-left: 0.5rem;
     :hover {
       background-color: ${props => props.theme.mainBrandColor} !important;
     }
@@ -39,8 +39,7 @@ const Container = styled.div`
   }
 `;
 
-const Dropdown = ({ title, children }) => {
-  const [active, changedActive] = useState(false);
+const Dropdown = ({ active, children, onClick, title }) => {
   return (
     <Container className={active ? 'dropdown is-active' : 'dropdown'}>
       <div className="dropdown-trigger">
@@ -48,7 +47,7 @@ const Dropdown = ({ title, children }) => {
           type="button"
           className="button is-large"
           aria-controls="dropdown-menu"
-          onClick={() => changedActive(!active)}
+          onClick={onClick}
         >
           <span className="text">{title}</span>
           <span className="icon">

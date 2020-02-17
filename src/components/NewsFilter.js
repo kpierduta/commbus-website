@@ -1,60 +1,68 @@
 import React, { useState } from 'react';
 
 import Dropdown from './elements/Dropdown';
+import DropDownItem from './elements/DropDownItem';
 
-const NewsFilter = () => {
-  const [title, setTitle] = useState('SECTOR');
+const NewsFilter = ({ sector, changeSector, year, changeYear }) => {
+  const [active, setIsActive] = useState(false);
+  const [activeYear, setActiveYear] = useState(false);
 
   return (
     <div className="columns">
       <div className="column">
-        <Dropdown title={title}>
-          <button
-            type="button"
-            className="dropdown-item title is-5 has-text-white has-text-weight-medium"
-            onClick={() => setTitle('Business News')}
-          >
-            Business News
-          </button>
-          <button
-            type="button"
-            className="dropdown-item title is-5 has-text-white has-text-weight-medium"
-            onClick={() => setTitle(' Industry Insights')}
-          >
-            Industry Insights
-          </button>
-          <button
-            type="button"
-            className="dropdown-item title is-5 has-text-white has-text-weight-medium"
-            onClick={() => setTitle('Latest Projects')}
-          >
-            Latest Projects
-          </button>
+        <Dropdown
+          title={sector}
+          active={active}
+          onClick={() => setIsActive(!active)}>
+          <DropDownItem
+            title="Business News"
+            onClick={() => {
+              setIsActive(!active);
+              changeSector('Business News');
+            }}
+          />
+          <DropDownItem
+            title="Industry Insights"
+            onClick={() => {
+              setIsActive(!active);
+              changeSector('Industry Insights');
+            }}
+          />
+          <DropDownItem
+            title="Latest Projects"
+            onClick={() => {
+              setIsActive(!active);
+              changeSector('Latest Projects');
+            }}
+          />
         </Dropdown>
       </div>
       <div className="column">
-        <Dropdown title="Date">
-          <button
-            type="button"
-            className="dropdown-item title is-5 has-text-white has-text-weight-medium"
-            onClick={() => console.log('helloworld')}
-          >
-            2020
-          </button>
-          <button
-            type="button"
-            className="dropdown-item title is-5 has-text-white has-text-weight-medium"
-            onClick={() => console.log('helloworld')}
-          >
-            2019
-          </button>
-          <button
-            type="button"
-            className="dropdown-item title is-5 has-text-white has-text-weight-medium"
-            onClick={() => console.log('helloworld')}
-          >
-            2018
-          </button>
+        <Dropdown
+          title={year}
+          active={activeYear}
+          onClick={() => setActiveYear(!activeYear)}>
+          <DropDownItem
+            title="2020"
+            onClick={() => {
+              setActiveYear(!activeYear);
+              changeYear('2020');
+            }}
+          />
+          <DropDownItem
+            title="2019"
+            onClick={() => {
+              setActiveYear(!activeYear);
+              changeYear('2019');
+            }}
+          />
+          <DropDownItem
+            title="2018"
+            onClick={() => {
+              setActiveYear(!activeYear);
+              changeYear('2018');
+            }}
+          />
         </Dropdown>
       </div>
     </div>
