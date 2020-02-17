@@ -20,6 +20,7 @@ export const projectQuery = graphql`
       edges {
         node {
           order
+          sector
           slug
           projectSizeIsHalf
           projectImage {
