@@ -8,12 +8,12 @@ const Section = styled.section`
   padding: 3rem 0rem;
 `;
 
-const Projects = ({ project, reference }) => {
+const Projects = ({ project, reference, filter }) => {
   const [sector, changeSector] = useState('SECTOR');
 
   return (
     <Section className="section">
-      <ProjectFilter sector={sector} changeSector={changeSector} />
+      {filter && <ProjectFilter sector={sector} changeSector={changeSector} />}
       <div className="columns is-multiline">
         {project &&
           project.map(({ node }) => {

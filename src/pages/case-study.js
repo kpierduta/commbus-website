@@ -59,7 +59,7 @@ export default class Project extends React.Component {
           url={page.keywords}
         />
         <PageHero title={page.heroTitle} heading={page.heroSubtitle} />
-        <Projects project={project.edges} />
+        <Projects project={project.edges} filter />
       </Layout>
     );
   }
