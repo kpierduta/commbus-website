@@ -66,6 +66,9 @@ export const pageQuery = graphql`
           url
         }
       }
+      messageTitle
+      messageSubtitle
+      buttonText
       sectionTitle
       sectionSubtitle
       brandingShowCase {
@@ -104,7 +107,7 @@ export default class pages extends React.Component {
         />
         <FeaturesSubPage data={page} />
         <Banner data={page} />
-        <MessageInfo />
+        <MessageInfo data={page} />
         <Branding data={page} />
         <Testimonials />
       </Layout>

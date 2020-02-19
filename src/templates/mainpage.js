@@ -135,6 +135,9 @@ export const MainPageQuery = graphql`
           shortDescription
         }
       }
+      messageTitle
+      messageSubtitle
+      buttonText
     }
   }
 `;
@@ -171,11 +174,11 @@ export default class MainPage extends React.Component {
         <Marketing data={promotion} />
         <Container>
           <h1 className="title is-2 has-text-centered">
-            SOME OF OUR RECENT CAMAPAIGNS
+            SOME OF OUR RECENT CAMPAIGNS
           </h1>
           <Projects reference={promotion.projectReference} />
         </Container>
-        <MessageInfo />
+        <MessageInfo data={promotion} />
         <Testimonials />
       </Layout>
     );

@@ -40,6 +40,9 @@ export const pageQuery = graphql`
           url
         }
       }
+      messageTitle
+      messageSubtitle
+      buttonText
     }
   }
 `;
@@ -66,7 +69,7 @@ export default class Graphic extends React.Component {
           text="  "
         />
         <Banner data={page} />
-        <MessageInfo />
+        <MessageInfo data={page} />
       </Layout>
     );
   }

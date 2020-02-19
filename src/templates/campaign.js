@@ -77,6 +77,9 @@ export const CampaignQuery = graphql`
         thirdPoint
         fourthPoint
       }
+      messageTitle
+      messageSubtitle
+      buttonText
       clientExample {
         title
         description
@@ -84,54 +87,6 @@ export const CampaignQuery = graphql`
           url
         }
       }
-      # brandingdesignSection {
-      #   title
-      #   subtitle {
-      #     subtitle
-      #   }
-      #   internalImage {
-      #     title
-      #     file {
-      #       url
-      #     }
-      #   }
-      #   internallyDetails {
-      #     internallyDetails
-      #   }
-      #   externalImage {
-      #     title
-      #     file {
-      #       url
-      #     }
-      #   }
-      #   externalDetails {
-      #     externalDetails
-      #   }
-      # }
-      # brandingdesignSection {
-      #   title
-      #   subtitle {
-      #     subtitle
-      #   }
-      #   internalImage {
-      #     title
-      #     file {
-      #       url
-      #     }
-      #   }
-      #   internallyDetails {
-      #     internallyDetails
-      #   }
-      #   externalImage {
-      #     title
-      #     file {
-      #       url
-      #     }
-      #   }
-      #   externalDetails {
-      #     externalDetails
-      #   }
-      # }
     }
   }
 `;
@@ -158,13 +113,8 @@ export default class CampaignPage extends React.Component {
         />
         <FeaturesSubPage data={campaign} />
         <Branding data={campaign} />
-        <MessageInfo />
+        <MessageInfo data={campaign} />
         <VehicleShowCase data={campaign.clientExample} />
-        {/* <ClientsData
-          title="INTERNAL & EXTERNAL BRANDING AND DESIGN"
-          subtitle="CLIENT EXAMPLES"
-          data={campaign.brandingdesignSection}
-        /> */}
         <Testimonials />
       </Layout>
     );

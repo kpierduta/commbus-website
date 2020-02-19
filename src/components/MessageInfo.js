@@ -13,7 +13,7 @@ const Section = styled.section`
   }
 `;
 
-const MessageInfo = () => (
+const MessageInfo = ({ data }) => (
   <Section className="section">
     <div className="container">
       <div className="hero is-small">
@@ -21,13 +21,10 @@ const MessageInfo = () => (
           <div className="columns">
             <div className="column is-8 has-text-centered-mobile">
               <h1 className="title is-4 has-text-weight-normal has-text-white ">
-                Experienced event professional on hand 24/7 for your event
+                {data.messageTitle}
               </h1>
               <p className="subtitle is-6 has-text-white all-text">
-                Commbus are responsive and helpful event experts. Weather you
-                are looking for a vehicle or equipment for your event we focus
-                on exceeding your expectations, being reliable, open, honest and
-                professional.
+                {data.messageSubtitle}
               </p>
             </div>
             <div className="column has-text-centered">
@@ -36,7 +33,7 @@ const MessageInfo = () => (
                   <img src="/images/icon/chaticon.png" alt="" />
                 </span>
                 <span className="subtitle is-4 has-text-white">
-                  Find out more
+                  {data.buttonText}
                 </span>
               </button>
             </div>
