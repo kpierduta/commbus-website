@@ -29,6 +29,7 @@ export default class HTML extends React.Component {
             href="https://fontlibrary.org/face/bebas"
             type="text/css"
           />
+          <script src="//code.jivosite.com/widget/MoNkpQ5D5G" async />
           <script src="/js/scripts.js" />
           {/* Add custom css or scripts here */}
           {this.props.headComponents}
