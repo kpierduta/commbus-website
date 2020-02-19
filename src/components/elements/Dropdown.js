@@ -5,10 +5,11 @@ const Container = styled.div`
   margin-bottom: 1rem;
 
   .button {
-    width: 22rem;
+    width: 20rem;
     border-bottom: 2px solid !important;
     padding-top: 1rem;
-    padding-left: 0.5rem;
+    padding-left: 0rem;
+    justify-content: end !important;
     box-shadow: none;
     border: none;
     :focus {
@@ -19,7 +20,7 @@ const Container = styled.div`
     font-size: 2.5rem !important;
     margin-top: -1.5rem !important;
     padding-right: 1rem;
-    margin-left: 16rem !important;
+    margin-left: 90% !important;
   }
   .dropdown-content {
     width: 22rem;
@@ -45,7 +46,7 @@ const Dropdown = ({ active, children, onClick, title }) => {
       <div className="dropdown-trigger">
         <button
           type="button"
-          className="button is-large"
+          className="button is-large has-text-left"
           aria-controls="dropdown-menu"
           onClick={onClick}
         >

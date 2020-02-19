@@ -169,8 +169,10 @@ export default class MainPage extends React.Component {
         <Features Feature={promotion} />
         <VehicleShowCase data={promotion.vehicleShowCase} />
         <Marketing data={promotion} />
-        <Container className="has-text-centered">
-          <h1 className="title is-2">SOME OF OUR RECENT CAMAPAIGNS</h1>
+        <Container>
+          <h1 className="title is-2 has-text-centered">
+            SOME OF OUR RECENT CAMAPAIGNS
+          </h1>
           <Projects reference={promotion.projectReference} />
         </Container>
         <MessageInfo />

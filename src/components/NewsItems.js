@@ -6,9 +6,8 @@ import { Link } from 'gatsby';
 
 const Container = styled.div`
   padding-right: 0rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
   .background {
-    min-height: 22rem;
     background-image: url(${props => props.bgImage});
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,7 +22,10 @@ const Container = styled.div`
 
 const NewsItems = ({ item }) => {
   return (
-    <Container className="column is-half" bgImage={item.thumbnail.file.url}>
+    <Container
+      className="column is-half is-flex"
+      bgImage={item.thumbnail.file.url}
+    >
       <div className="background">
         <div className="columns">
           <div className="column is-4" />

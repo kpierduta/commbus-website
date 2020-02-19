@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 
 const CardStyled = styled.div`
   margin-top: 2rem;
-  height: 25rem;
   overflow: hidden;
   @media screen and (max-width: 768px) {
     height: auto;
@@ -42,7 +41,9 @@ const CardStyled = styled.div`
 
 const ProjectCard = ({ data }) => (
   <CardStyled
-    className={data.projectSizeIsHalf ? 'column is-6' : 'column is-4'}
+    className={
+      data.projectSizeIsHalf ? 'column is-6 is-flex' : 'column is-4 is-flex'
+    }
     image={data.projectImage.file.url}
   >
     <div className="hero">
