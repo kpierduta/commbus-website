@@ -72,10 +72,6 @@ export const CampaignQuery = graphql`
         }
         title
         points
-        firstPoint
-        secondPoint
-        thirdPoint
-        fourthPoint
       }
       messageTitle
       messageSubtitle
