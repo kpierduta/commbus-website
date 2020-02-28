@@ -45,6 +45,11 @@ const GlobalStyle = createGlobalStyle`
   ${reset};
 
   @font-face {
+    font-family: BebasNeueRegular ;
+    src: url("../fonts/BebasNeue-Regular.otf") format("opentype");
+}
+
+  @font-face {
     font-family: Avenir Next ;
     src: url("../fonts/AvenirNextLTPro-It.otf") format("opentype");
 }

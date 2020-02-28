@@ -173,7 +173,7 @@ export default class MainPage extends React.Component {
         <VehicleShowCase data={promotion.vehicleShowCase} />
         <Marketing data={promotion} />
         <Container>
-          <h1 className="title is-2 has-text-centered">
+          <h1 className="title is-2 has-text-centered has-text-weight-light">
             SOME OF OUR RECENT CAMPAIGNS
           </h1>
           <Projects reference={promotion.projectReference} />

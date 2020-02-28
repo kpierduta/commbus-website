@@ -23,12 +23,6 @@ export default class HTML extends React.Component {
             defer
             src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
           />
-          <link
-            rel="stylesheet"
-            media="screen"
-            href="https://fontlibrary.org/face/bebas"
-            type="text/css"
-          />
           <script src="//code.jivosite.com/widget/MoNkpQ5D5G" async />
           <script src="/js/scripts.js" />
           {/* Add custom css or scripts here */}
