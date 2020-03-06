@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
+import config from '../utils/config';
 
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
@@ -124,7 +125,8 @@ export default class IndexPage extends React.Component {
           <Seo
             title={page.seoTitle}
             description={page.metaDescription}
-            url={page.keywords}
+            keywords={page.keywords}
+            url={`${config.siteUrl}`}
           />
           <HomeHero
             title={page.title}
