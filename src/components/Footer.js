@@ -77,7 +77,7 @@ const Footer = () => (
           query={footerQuery}
           render={data => {
             const {
-              allContentfulCampaignPage: camapaign,
+              allContentfulCampaignPage: campaign,
               allContentfulPages: page,
               allContentfulVehicleGraphicBlog: vehicle,
             } = data;
@@ -87,7 +87,7 @@ const Footer = () => (
                   <h1 className="title is-size-6 has-text-weight-light">
                     Marketing campaigns
                   </h1>
-                  {camapaign.edges.map(item => (
+                  {campaign.edges.map(item => (
                     <Link to={item.node.slug} className="is-size-6 is-block">
                       {item.node.footerTitle}
                     </Link>

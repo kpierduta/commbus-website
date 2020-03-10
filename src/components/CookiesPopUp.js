@@ -5,9 +5,9 @@ import { Link } from 'gatsby';
 const Container = styled.div`
   position: fixed;
   bottom: 0rem;
-  width: 35%;
+  width: 100%;
   left: 0.01rem;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 0.5rem 1rem;
   background-color: black;
   color: white;
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
@@ -31,7 +31,9 @@ const CookiesPopUp = () => {
   }
   return (
     <Container
-      className={display ? 'notification has-text-centered' : 'is-hidden'}
+      className={
+        display ? 'notification has-text-centered-desktop' : 'is-hidden'
+      }
     >
       <p className="has-text-white">
         By using our site, you acknowledge that you have read and understand our

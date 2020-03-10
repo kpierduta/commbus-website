@@ -5,14 +5,18 @@ import ProjectFilter from './ProjectFilter';
 import ProjectCard from './ProjectCard';
 
 const Section = styled.section`
-  padding: 3rem 0rem;
+  padding: 3rem 0rem !important;
+  .coulmns {
+    margin-left: 0rem !important;
+    margin-right: 0rem !important;
+  }
 `;
 
 const Projects = ({ project, reference, filter }) => {
   const [sector, changeSector] = useState('SECTOR');
 
   return (
-    <Section className="section">
+    <Section>
       {filter && <ProjectFilter sector={sector} changeSector={changeSector} />}
       <div className="columns is-multiline">
         {project &&

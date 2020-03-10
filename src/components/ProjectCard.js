@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 
 const CardStyled = styled.div`
   margin-top: 2rem;
-  overflow: hidden;
   @media screen and (max-width: 768px) {
     height: auto;
   }
@@ -26,12 +25,12 @@ const CardStyled = styled.div`
     transition: background-size 2s ease-in;
     background-position: center;
     transition: all 0.5s ease;
-    :hover {
+    /* :hover {
       transform: scale(1.05);
       @media screen and (max-width: 768px) {
         transform: none;
       }
-    }
+    } */
   }
 
   .hero-body {
