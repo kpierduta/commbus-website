@@ -8,6 +8,11 @@ const Logo = styled.div`
   @media screen and (max-width: 768px) {
     background-size: 312px 306px !important;
   }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    margin-left: 25% !important;
+  }
+
   background-repeat: no-repeat !important;
   transition-duration: 2s;
   :hover {

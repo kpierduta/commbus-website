@@ -6,7 +6,7 @@ import ProjectCard from './ProjectCard';
 
 const Section = styled.section`
   padding: 3rem 0rem !important;
-  .coulmns {
+  .columns {
     margin-left: 0rem !important;
     margin-right: 0rem !important;
   }
