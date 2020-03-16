@@ -8,6 +8,7 @@ const Container = styled.div`
   padding-right: 0rem;
   padding-top: 1rem;
   .background {
+    width: 100%;
     background-image: url(${props => props.bgImage});
     background-repeat: no-repeat;
     background-size: cover;
