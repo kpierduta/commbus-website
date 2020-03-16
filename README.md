@@ -26,7 +26,7 @@ yarn install
 
 ## Development
 
-To start development server
+To start Development server
 
 ```
 yarn start
