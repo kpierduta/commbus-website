@@ -39,7 +39,7 @@ const Image = styled.figure`
 `;
 
 const TestimonialItem = ({ item }) => (
-  <Container className="column has-text-centered">
+  <Container className="column is-6 has-text-centered">
     <diV className="card">
       <div className="card-image">
         <Image>

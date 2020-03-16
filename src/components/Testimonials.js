@@ -42,7 +42,7 @@ const Testimonials = () => (
   <Section className="section">
     <div className="container">
       <Heading title="TESTIMONIALS" color="#000" />
-      <div className="columns">
+      <div className="columns is-multiline">
         <StaticQuery
           query={testimonialQuery}
           render={data => {
