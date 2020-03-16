@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import TeamContent from '../components/TeamContent';
-import Testimonials from '../components/Testimonials';
+import AboutSection from '../components/AboutSection';
 import OurClient from '../components/OurClient';
 
 export const teamQuery = graphql`
@@ -28,6 +28,13 @@ export const teamQuery = graphql`
         file {
           url
         }
+      }
+      sectionHeading
+      firstParagraph {
+        firstParagraph
+      }
+      secondParagraph {
+        secondParagraph
       }
     }
     allContentfulTeamMembers(sort: { fields: order }) {
@@ -87,7 +94,7 @@ export default class About extends React.Component {
           text=" "
         />
         <TeamContent team={team.edges} />
-        <Testimonials />
+        <AboutSection data={page} />
         <OurClient logo={client.ourClients} />
       </Layout>
     );

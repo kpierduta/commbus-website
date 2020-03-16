@@ -8,8 +8,8 @@ const Section = styled.section`
   }
   background-image: url(${props => props.bgImage});
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: right;
+  background-size: 100%;
 
   @media only screen and (min-width: 1407px) {
     background-size: contain;
