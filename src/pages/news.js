@@ -16,7 +16,7 @@ export const newsDataQuery = graphql`
       heroTitle
       heroSubtitle
     }
-    allContentfulNews(sort: { fields: order }) {
+    allContentfulNews(sort: { fields: order, order: DESC }) {
       edges {
         node {
           order
