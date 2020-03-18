@@ -12,50 +12,14 @@ const Section = styled.section`
   }
 `;
 
-export const testimonialQuery = graphql`
-  query testimonial {
-    allContentfulTestimonials {
-      edges {
-        node {
-          clientLogo {
-            title
-            file {
-              url
-            }
-          }
-          image {
-            file {
-              url
-            }
-          }
-          description {
-            description
-          }
-          name
-        }
-      }
-    }
-  }
-`;
-
-const Testimonials = () => (
+const Testimonials = ({ data }) => (
   <Section className="section">
     <div className="container">
       <Heading title="TESTIMONIALS" color="#000" />
       <div className="columns is-multiline">
-        <StaticQuery
-          query={testimonialQuery}
-          render={data => {
-            const { allContentfulTestimonials: content } = data;
-            return (
-              <>
-                {content.edges.map(item => (
-                  <TestimonialItem item={item.node} />
-                ))}
-              </>
-            );
-          }}
-        />
+        {data.map(items => (
+          <TestimonialItem item={items} />
+        ))}
       </div>
     </div>
   </Section>

@@ -110,6 +110,23 @@ export const homeQuery = graphql`
           }
         }
       }
+      testimonialsReference {
+        clientLogo {
+          title
+          file {
+            url
+          }
+        }
+        image {
+          file {
+            url
+          }
+        }
+        description {
+          description
+        }
+        name
+      }
     }
   }
 `;
@@ -141,7 +158,7 @@ export default class IndexPage extends React.Component {
           <Features Feature={page} />
           <Projects reference={page.projectReference} />
           <Campaign data={page} blog={page.blogReference} />
-          <Testimonials />
+          <Testimonials data={page.testimonialsReference}/>
         </Layout>
       </Section>
     );

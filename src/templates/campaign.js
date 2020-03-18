@@ -83,6 +83,23 @@ export const CampaignQuery = graphql`
           url
         }
       }
+      testimonialsReference {
+        clientLogo {
+          title
+          file {
+            url
+          }
+        }
+        image {
+          file {
+            url
+          }
+        }
+        description {
+          description
+        }
+        name
+      }
     }
   }
 `;
@@ -111,7 +128,7 @@ export default class CampaignPage extends React.Component {
         <Branding data={campaign} />
         <MessageInfo data={campaign} />
         <VehicleShowCase data={campaign.clientExample} />
-        <Testimonials />
+        <Testimonials data={campaign.testimonialsReference} />
       </Layout>
     );
   }

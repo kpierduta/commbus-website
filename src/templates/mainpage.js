@@ -138,6 +138,23 @@ export const MainPageQuery = graphql`
       messageTitle
       messageSubtitle
       buttonText
+      testimonialsReference {
+        clientLogo {
+          title
+          file {
+            url
+          }
+        }
+        image {
+          file {
+            url
+          }
+        }
+        description {
+          description
+        }
+        name
+      }
     }
   }
 `;
@@ -179,7 +196,7 @@ export default class MainPage extends React.Component {
           <Projects reference={promotion.projectReference} />
         </Container>
         <MessageInfo data={promotion} />
-        <Testimonials />
+        <Testimonials data={promotion.testimonialsReference} />
       </Layout>
     );
   }

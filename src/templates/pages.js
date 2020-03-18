@@ -81,6 +81,23 @@ export const pageQuery = graphql`
         title
         points
       }
+      testimonialsReference {
+        clientLogo {
+          title
+          file {
+            url
+          }
+        }
+        image {
+          file {
+            url
+          }
+        }
+        description {
+          description
+        }
+        name
+      }
     }
   }
 `;
@@ -109,7 +126,7 @@ export default class pages extends React.Component {
         <Banner data={page} />
         <MessageInfo data={page} />
         <Branding data={page} />
-        <Testimonials />
+        <Testimonials data={page.testimonialsReference} />
       </Layout>
     );
   }
