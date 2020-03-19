@@ -103,7 +103,7 @@ class ContactForm extends React.Component {
         <p className="has-text-white is-size-6">
           In submitting this form you are agreeing to our
           <span className="has-text-white has-text-weight-bold">
-            terms and conditions
+            {'   '}terms and conditions
           </span>
         </p>
         <button type="submit" className="button is-medium has-text-info">
