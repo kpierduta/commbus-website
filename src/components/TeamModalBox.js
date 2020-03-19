@@ -41,7 +41,7 @@ const TeamModalBox = ({ active, item, closeModal }) => {
             <div className="container">
               <div className="columns">
                 <div className="column has-text-centered">
-                  <figure className="image is-1by1">
+                  <figure className="image is-4by5">
                     <img
                       className="is-rounded"
                       src={item.image.file.url}
