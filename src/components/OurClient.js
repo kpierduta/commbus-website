@@ -26,7 +26,7 @@ const Logo = styled.div`
 const OurClient = ({ logo }) => (
   <section className="section">
     <div className="container">
-      <h2 className="subtitle is-5 has-text-weight-bold is-uppercase has-text-centered-mobile">
+      <h2 className="title is-5 has-text-weight-bold is-uppercase has-text-centered-mobile">
         Trusted by
       </h2>
       <div className="columns is-multiline">
