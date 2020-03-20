@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 const Container = styled.div`
+  min-height: 23.5rem;
   padding-right: 0rem;
   padding-top: 1rem;
   .background {
