@@ -5,8 +5,17 @@ import Heading from './elements/Heading';
 
 const Section = styled.section`
   h1 {
-    margin: 3rem 0 3rem 0;
-    margin-bottom: 3rem;
+    font-size: ${props => props.theme.fontSizeLarge};
+    font-weight: 600;
+    margin: 1rem 0 3rem 0;
+  }
+  h2 {
+    font-size: ${props => props.theme.fontSizeMedium};
+    font-weight: 600;
+    margin: 3rem 0 1rem 0;
+  }
+  p {
+    margin: 1rem;
   }
   .hero {
     border: 2px solid black;
@@ -23,23 +32,29 @@ const AboutSection = ({ data }) => (
       </div>
       <div className="columns">
         <div className="column is-6 is-flex">
-          <section className="hero is-medium">
+          <section className="hero">
             <div className="hero-body">
               <div className="container">
-                <h2 className="subtitle">
-                  {data.firstParagraph.firstParagraph}
-                </h2>
+                <div
+                  className="subtitle"
+                  dangerouslySetInnerHTML={{
+                    __html: data.firstParagraph.childMarkdownRemark.html,
+                  }}
+                />
               </div>
             </div>
           </section>
         </div>
         <div className="column is-6 is-flex">
-          <section className="hero is-medium">
+          <section className="hero">
             <div className="hero-body">
               <div className="container">
-                <h2 className="subtitle">
-                  {data.secondParagraph.secondParagraph}
-                </h2>
+                <div
+                  className="subtitle"
+                  dangerouslySetInnerHTML={{
+                    __html: data.secondParagraph.childMarkdownRemark.html,
+                  }}
+                />
               </div>
             </div>
           </section>

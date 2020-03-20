@@ -32,9 +32,15 @@ export const teamQuery = graphql`
       sectionHeading
       firstParagraph {
         firstParagraph
+        childMarkdownRemark {
+          html
+        }
       }
       secondParagraph {
         secondParagraph
+        childMarkdownRemark {
+          html
+        }
       }
     }
     allContentfulTeamMembers(sort: { fields: order }) {
