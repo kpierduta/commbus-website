@@ -26,8 +26,9 @@ const AboutSection = ({ data }) => (
   <Section className="section  has-text-centered">
     <div className="container">
       <div className="columns is-centered">
-        <div className="column is-8">
+        <div className="column is-9">
           <Heading title={data.sectionHeading} />
+          <h1 className="subtitle">{data.sectionSubtitle}</h1>
         </div>
       </div>
       <div className="columns">

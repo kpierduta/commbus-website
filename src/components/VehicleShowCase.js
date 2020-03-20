@@ -12,9 +12,12 @@ const VehicleShowCase = ({ data }) => {
   return (
     <Section className="section">
       <div className="container">
-        <Heading title="OUR FLEET OF VEhiCLES" />
+        <Heading title={data.clientSectionTitle} />
+        <h1 className="subtitle has-text-centered">
+          {data.clientSectionSubtitle}
+        </h1>
         <div className="columns is-multiline">
-          {data.map(item => (
+          {data.clientExample.map(item => (
             <div className="column is-4 is-flex">
               <div className="card">
                 <ImageModal src={item.file.url} alt={item.title} />

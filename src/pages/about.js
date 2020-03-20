@@ -30,6 +30,7 @@ export const teamQuery = graphql`
         }
       }
       sectionHeading
+      sectionSubtitle
       firstParagraph {
         firstParagraph
         childMarkdownRemark {

@@ -76,6 +76,8 @@ export const CampaignQuery = graphql`
       messageTitle
       messageSubtitle
       buttonText
+      clientSectionTitle
+      clientSectionSubtitle
       clientExample {
         title
         description
@@ -127,7 +129,7 @@ export default class CampaignPage extends React.Component {
         <FeaturesSubPage data={campaign} />
         <Branding data={campaign} />
         <MessageInfo data={campaign} />
-        <VehicleShowCase data={campaign.clientExample} />
+        <VehicleShowCase data={campaign} />
         <Testimonials data={campaign.testimonialsReference} />
       </Layout>
     );
