@@ -15,10 +15,13 @@ const VehicleShowCase = ({ data }) => {
         <Heading title="OUR FLEET OF VEhiCLES" />
         <div className="columns is-multiline">
           {data.map(item => (
-            <div className="column is-4">
+            <div className="column is-4 is-flex">
               <div className="card">
                 <ImageModal src={item.file.url} alt={item.title} />
                 <div className="card-content has-text-centered">
+                  <p className="title is-6 has-text-weight-semibold has-text-info">
+                    {item.title}
+                  </p>
                   <p className="subtitle is-6 has-text-weight-semibold has-text-info">
                     {item.description}
                   </p>
