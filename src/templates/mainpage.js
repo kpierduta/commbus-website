@@ -63,7 +63,9 @@ export const MainPageQuery = graphql`
       }
       featureFourTitle
       featureFourSubtitle
-      vehicleShowCase {
+      clientSectionTitle
+      clientSectionSubtitle
+      clientExample {
         description
         file {
           url
@@ -187,7 +189,7 @@ export default class MainPage extends React.Component {
           text={promotion.text}
         />
         <Features Feature={promotion} />
-        <VehicleShowCase data={promotion.vehicleShowCase} />
+        <VehicleShowCase data={promotion} />
         <Marketing data={promotion} />
         <Container>
           <h1 className="title is-2 has-text-centered has-text-weight-light">
