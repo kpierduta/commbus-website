@@ -66,6 +66,7 @@ export const MainPageQuery = graphql`
       clientSectionTitle
       clientSectionSubtitle
       clientExample {
+        title
         description
         file {
           url
