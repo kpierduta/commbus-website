@@ -13,9 +13,8 @@ const VehicleShowCase = ({ data }) => {
     <Section className="section">
       <div className="container">
         <Heading title={data.clientSectionTitle} />
-        <h1 className="subtitle has-text-centered">
-          {data.clientSectionSubtitle}
-        </h1>
+        <Heading title={data.clientSectionSubtitle} size="is-6" />
+
         <div className="columns is-multiline">
           {data.clientExample.map(item => (
             <div className="column is-4 is-flex">
@@ -25,7 +24,7 @@ const VehicleShowCase = ({ data }) => {
                   <p className="title is-6 has-text-weight-semibold has-text-info">
                     {item.title}
                   </p>
-                  <p className="subtitle is-6 has-text-weight-semibold has-text-info">
+                  <p className="subtitle is-6 has-text-info">
                     {item.description}
                   </p>
                 </div>
