@@ -12,6 +12,7 @@ const Section = styled.section`
     font-weight: 300;
   }
   p {
+    display: block;
     margin-top: 1rem;
   }
   h2 {
@@ -27,7 +28,6 @@ const Section = styled.section`
   b {
     font-weight: 600;
     margin: 1rem 0;
-    display: block;
   }
 `;
 
