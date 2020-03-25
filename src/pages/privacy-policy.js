@@ -1,10 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import styled from 'styled-components';
 
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import PageHero from '../components/PageHero';
 import Content from '../components/Content';
+
+const ContentWrapper = styled.div``;
 
 export const policyQuery = graphql`
   query policy {
@@ -35,7 +38,9 @@ export default class Privacy extends React.Component {
           url={page.keywords}
         />
         <PageHero title={page.heroTitle} heading={page.heroSubtitle} />
-        <Content data={page.content.json} />
+        <ContentWrapper>
+          <Content data={page.content.json} />
+        </ContentWrapper>
       </Layout>
     );
   }

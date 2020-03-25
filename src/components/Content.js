@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const Section = styled.section`
@@ -24,6 +23,11 @@ const Section = styled.section`
   }
   ul {
     list-style: initial;
+  }
+  b {
+    font-weight: 600;
+    margin: 1rem 0;
+    display: block;
   }
 `;
 
