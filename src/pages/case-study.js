@@ -35,6 +35,7 @@ export const projectQuery = graphql`
             }
           }
           category
+          date(formatString: "YYYY")
           title
           shortDescription {
             shortDescription

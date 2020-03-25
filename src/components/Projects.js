@@ -14,15 +14,25 @@ const Section = styled.section`
 
 const Projects = ({ project, reference, filter }) => {
   const [sector, changeSector] = useState('SECTOR');
+  const [year, changeYear] = useState('DATE');
 
   return (
     <Section>
-      {filter && <ProjectFilter sector={sector} changeSector={changeSector} />}
+      {filter && (
+        <ProjectFilter
+          sector={sector}
+          changeSector={changeSector}
+          year={year}
+          changeYear={changeYear}
+        />
+      )}
       <div className="columns is-multiline">
         {project &&
           project.map(({ node }) => {
             if (node.sector === sector || sector === 'SECTOR') {
-              return <ProjectCard data={node} />;
+              if (node.date === year || year === 'DATE') {
+                return <ProjectCard data={node} />;
+              }
             }
           })}
         {reference &&
