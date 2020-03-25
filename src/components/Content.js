@@ -7,9 +7,13 @@ const Section = styled.section`
   h2,
   h3,
   h4 {
-    margin-top: 1rem;
+    margin-top: 2.5rem;
     font-family: ${props => props.theme.secondaryFontFamily};
     font-weight: 300;
+    :first-child {
+      margin-top: 1rem;
+    }
+}
   }
   p {
     display: block;
