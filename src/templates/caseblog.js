@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import HomeHero from '../components/HomeHero';
 import Share from '../components/Share';
+import CaseGallery from '../components/CaseGallery';
 import Content from '../components/Content';
 
 export const projectQuery = graphql`
@@ -34,8 +35,21 @@ export const projectQuery = graphql`
       blogContent {
         json
       }
+      firstGallery {
+        title
+        file {
+          url
+        }
+      }
+
       blogContentSecond {
         json
+      }
+      secondGallery {
+        title
+        file {
+          url
+        }
       }
     }
   }
@@ -66,7 +80,9 @@ export default class Projectblog extends React.Component {
           title={`Checkout ${project.heroTitle}`}
         />
         <Content data={project.blogContent.json} />
+        <CaseGallery images={project.firstGallery} ImageCover="half" />
         <Content data={project.blogContentSecond.json} />
+        <CaseGallery images={project.secondGallery} />
       </Layout>
     );
   }
