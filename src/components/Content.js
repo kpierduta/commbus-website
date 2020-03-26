@@ -10,6 +10,7 @@ const Section = styled.section`
     margin-top: 2.5rem;
     font-family: ${props => props.theme.secondaryFontFamily};
     font-weight: 300;
+    line-height:36px;
     :first-child {
       margin-top: 1rem;
     }
@@ -22,6 +23,12 @@ const Section = styled.section`
   h2 {
     font-size: 24px;
   }
+  h3{
+    font-size: 20px;
+  }
+  h4{
+    font-size: 17px;
+  }
   a {
     margin-top: 1rem;
     color: ${props => props.theme.mainBrandColor};
@@ -32,6 +39,9 @@ const Section = styled.section`
   b {
     font-weight: 600;
     margin: 1rem 0;
+  }
+  i{
+    font-style: italic;
   }
 `;
 
