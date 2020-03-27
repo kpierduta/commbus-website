@@ -41,6 +41,7 @@
     "gatsby-source-filesystem": "^2.1.21",
     "gatsby-transformer-remark": "^2.6.50",
     "graphql-tag": "^2.10.1",
+    "pngquant-bin": "^5.0.2",
     "polished": "^3.4.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
