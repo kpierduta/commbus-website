@@ -1,14 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 
 import NewsItems from './NewsItems';
 import NewsFilter from './NewsFilter';
 
-const NewsSection = ({ news }) => {
+const StyledButton = styled.div`
+  border-radius: 0.4rem;
+  padding: 0rem 2rem;
+  height: 4.5rem;
+  background: ${props => props.theme.darkShades};
+  .icon {
+    width: 4rem;
+  }
+  img {
+    height: 3rem;
+    margin-right: 1rem;
+  }
+`;
+
+const NewsSection = ({ news, value }) => {
   const [sector, changeSector] = useState('SECTOR');
   const [year, changeYear] = useState('DATE');
-  const [length, setlength] = useState(8);
+  const [length, setLength] = useState(8);
 
   const blog = news.slice(0, length);
+
+  useEffect(() => {
+    if (sector !== 'SECTOR' || year !== 'DATE') {
+      setLength(news.length);
+    }
+  });
 
   return (
     <div className="section">
@@ -30,16 +51,18 @@ const NewsSection = ({ news }) => {
         </div>
         {blog.length !== news.length ? (
           <div className="has-text-centered">
-            <button
-              className="button is-primary is-large"
+            <StyledButton
+              className="button  is-large"
               type="button"
-              onClick={() => setlength(news.length)}
+              onClick={() => setLength(news.length)}
             >
-              <span className="icon is-medium">
+              <span className="icon">
                 <img src="/images/icon/chaticon.png" alt="" />
               </span>
-              <span className="subtitle is-4 has-text-white">Load More</span>
-            </button>
+              <span className="subtitle is-5 has-text-weight-bold has-text-white">
+                FIND OUT MORE
+              </span>
+            </StyledButton>
           </div>
         ) : null}
       </div>
