@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 
 const Section = styled.div`
   background-color: ${props => props.theme.backgroundColor};
+  border-bottom: 20px solid ${props => props.theme.mainBrandColor};
   .has-text-danger {
     color: #8a2324 !important;
   }
