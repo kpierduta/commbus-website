@@ -125,6 +125,10 @@ const GlobalStyle = createGlobalStyle`
   .has-text-right{
     font-weight: 100 !important;
   }
+  .columns {
+    margin-right:0rem !important;
+  }
+
 `;
 
 export default GlobalStyle;
