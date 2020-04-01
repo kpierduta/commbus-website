@@ -3,18 +3,24 @@ import styled from 'styled-components';
 
 import VehicleBranding from './VehicleBranding';
 
-const Container = styled.section`
+const Container = styled.div`
+  .hero-body {
+    padding-bottom: 0rem;
+  }
   p {
     margin: 2rem 0rem 2rem 0rem;
   }
-  /* .hero-body {
-    padding: 3rem 1.25rem 3rem 5rem;
+`;
+
+const Wrapper = styled.div`
+  margin: 5rem 0rem;
+
+  :first-child {
+    margin: 0rem !important;
   }
-  @media only screen and (max-width: 1024px) {
-    .hero-body {
-      padding: 3rem 2rem;
-    }
-  } */
+  :last-child {
+    margin: 0rem 0rem;
+  }
 `;
 
 class VehicleExternal extends React.Component {
@@ -36,7 +42,9 @@ class VehicleExternal extends React.Component {
           </section>
         </section>
         {data.map(item => (
-          <VehicleBranding data={item} />
+          <Wrapper>
+            <VehicleBranding data={item} />
+          </Wrapper>
         ))}
       </Container>
     );

@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import Button from './elements/Button';
 
 const Section = styled.section`
-  margin: 5rem 0rem;
-  /* padding: 1rem 0rem; */
   background-image: url(${props => props.bgImage});
   background-repeat: no-repeat;
   background-position: right;
