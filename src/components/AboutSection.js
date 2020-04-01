@@ -10,12 +10,16 @@ const Section = styled.section`
     margin: 1rem 0 3rem 0;
   }
   h2 {
-    font-size: ${props => props.theme.fontSizeMedium};
+    font-size: 22px;
     font-weight: 600;
     margin: 3rem 0 1rem 0;
   }
   p {
+    font-size: 16px !important;
     margin: 1rem;
+    line-height: 24px;
+    font-weight: 300;
+    color: ${props => props.theme.darkShades};
   }
   .hero {
     border: 2px solid black;
@@ -31,36 +35,19 @@ const AboutSection = ({ data }) => (
           <h1 className="subtitle">{data.sectionSubtitle}</h1>
         </div>
       </div>
-      <div className="columns">
-        <div className="column is-6 is-flex">
-          <section className="hero">
-            <div className="hero-body">
-              <div className="container">
-                <div
-                  className="subtitle"
-                  dangerouslySetInnerHTML={{
-                    __html: data.firstParagraph.childMarkdownRemark.html,
-                  }}
-                />
-              </div>
-            </div>
-          </section>
+
+      <section className="hero">
+        <div className="hero-body">
+          <div className="container">
+            <div
+              className="subtitle"
+              dangerouslySetInnerHTML={{
+                __html: data.firstParagraph.childMarkdownRemark.html,
+              }}
+            />
+          </div>
         </div>
-        <div className="column is-6 is-flex">
-          <section className="hero">
-            <div className="hero-body">
-              <div className="container">
-                <div
-                  className="subtitle"
-                  dangerouslySetInnerHTML={{
-                    __html: data.secondParagraph.childMarkdownRemark.html,
-                  }}
-                />
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
+      </section>
     </div>
   </Section>
 );

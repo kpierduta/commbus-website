@@ -138,7 +138,7 @@ export default class IndexPage extends React.Component {
     } = this.props;
     return (
       <Section>
-        <Layout>
+        <Layout hasSubChild>
           <Seo
             title={page.seoTitle}
             description={page.metaDescription}
@@ -158,7 +158,7 @@ export default class IndexPage extends React.Component {
           <Features Feature={page} />
           <Projects reference={page.projectReference} />
           <Campaign data={page} blog={page.blogReference} />
-          <Testimonials data={page.testimonialsReference}/>
+          <Testimonials data={page.testimonialsReference} />
         </Layout>
       </Section>
     );

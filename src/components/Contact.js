@@ -25,6 +25,9 @@ const Contact = () => (
     <div className="container">
       <div className="columns is-centered">
         <div className="column">
+          <h1 className="title is-2 has-text-weight-light has-text-white is-spaced">
+            Contact Us
+          </h1>
           <p className="subtitle has-text-white is-size-6  has-text-weight-light">
             With a wealth of experience across the events sector we can provide
             you with many services and solutions for your event or campaign.
@@ -39,7 +42,7 @@ const Contact = () => (
         </div>
         <div className="column">
           <h1 className="title is-2 has-text-weight-light has-text-white is-spaced">
-            Contact Us
+            QUICK FORM
           </h1>
 
           <p className="subtitle is-6 has-text-white has-text-weight-light">

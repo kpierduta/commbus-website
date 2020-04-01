@@ -16,8 +16,7 @@ const Information = () => (
       </h1>
       <a
         href="mailto:enquiries@commbus.com"
-        className="subtitle is-5 has-text-info"
-      >
+        className="subtitle is-5 has-text-info">
         enquiries@commbus.com
       </a>
       <div>
@@ -33,7 +32,7 @@ const Information = () => (
       </h1>
       <h2 className="subtitle is-5">
         Commbus
-        <span>Blythe Hall Farm,</span>
+        <span>Blyth Hall Farm,</span>
         <span>Blythe Road,</span>
         <span>Coleshill,</span>
         <span>Birmingham,</span>

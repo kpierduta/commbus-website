@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 
 const Section = styled.div`
   background-color: ${props => props.theme.backgroundColor};
+  border-bottom: 20px solid ${props => props.theme.mainBrandColor};
   .has-text-danger {
     color: #8a2324 !important;
   }
@@ -21,7 +22,7 @@ const Decerdence = () => (
           <img src="/images/deckerdence.png" alt="deckerdence-logo" />
         </div>
         <div className="column is-7">
-          <h1 className="title is-5 has-text-danger">
+          <h1 className="title is-6 has-text-danger">
             Have you seen our sister company Deckerdence?{' '}
           </h1>
           <p className="subtitle is-6">
