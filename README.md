@@ -26,16 +26,16 @@ yarn install
 
 ## Development
 
-To start Development server
+To start Development server.
 
 ```
-yarn start
+yarn start.
 ```
 
 ## Deployment
 
 ```
-yarn run build
-yarn serve
+yarn run build.
+yarn serve.
 
 ```
