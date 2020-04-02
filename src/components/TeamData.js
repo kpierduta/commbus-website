@@ -15,6 +15,15 @@ const Wrapper = styled.div`
     background-color: transparent;
     border-color: transparent;
     box-shadow: none;
+    @media screen and (max-width: 767px) {
+      margin: 4px;
+    }
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1023px) and (orientation: portrait) {
+      margin: 0px 0px 0px 25px;
+    }
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+      margin: 0px 0px 0px 0px;
+    }
   }
 
   .subtitle {
@@ -23,10 +32,21 @@ const Wrapper = styled.div`
 
   .subtitle.is-6 {
     font-size: 0.9rem !important;
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+      font-size: 0.5rem !important;
+    }
+  }
+  .subtitle.is-5 {
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+      font-size: 1rem;
+    }
   }
 
   .image {
     border-radius: 10rem;
+  }
+  .column.is-2 {
+    margin: 0rem -0.8rem 0rem 0rem;
   }
 `;
 
