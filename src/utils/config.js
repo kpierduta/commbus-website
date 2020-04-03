@@ -1,10 +1,10 @@
 module.exports = {
   DEBUG: process.env.NODE_ENV === 'development',
   siteName: 'Commbus',
-  author: 'Parminder Klair',
+  author: 'Zeiq.co',
   description: 'A starting point using ReactJs, bundled with awesome GatsbyJs.',
-  siteUrl: 'https://stagingcommbus.netlify.com',
-  logo: '/images/logo-1024.png',
+  siteUrl: 'https://commbus.netlify.com/',
+  logo: '/images/com-logo.png',
 
   telephone: '+1-123-123-123',
   email: 'john@doe.com',

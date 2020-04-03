@@ -2,16 +2,16 @@
   "name": "commbus",
   "description": "A react starting point using GatsbyJS",
   "version": "2.0.1",
-  "author": "Zeiq",
+  "author": "Zeiq.co",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/perminder-klair/kickoff-gatsbyjs.git"
+    "url": "https://github.com/zeiq-co/commbus"
   },
   "bugs": {
-    "url": "https://github.com/perminder-klair/kickoff-gatsbyjs/issues"
+    "url": "https://github.com/zeiq-co/commbus/issues"
   },
-  "homepage": "https://github.com/perminder-klair/kickoff-gatsbyjs#readme",
+  "homepage": "https://github.com/zeiq-co/commbus/blob/master/README.md",
   "scripts": {
     "start": "npm run develop",
     "develop": "gatsby develop",
