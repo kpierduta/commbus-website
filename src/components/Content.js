@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const Section = styled.section`
+  padding: 1.5rem 1.5rem !important;
   h1,
   h2,
   h3,
@@ -10,11 +11,10 @@ const Section = styled.section`
     margin-top: 2.5rem;
     font-family: ${props => props.theme.secondaryFontFamily};
     font-weight: 300;
-    line-height:36px;
+    line-height: 36px;
     :first-child {
       margin-top: 1rem;
     }
-}
   }
   p {
     display: block;
@@ -23,10 +23,10 @@ const Section = styled.section`
   h2 {
     font-size: 24px;
   }
-  h3{
+  h3 {
     font-size: 20px;
   }
-  h4{
+  h4 {
     font-size: 17px;
   }
   a {
@@ -40,7 +40,7 @@ const Section = styled.section`
     font-weight: 600;
     margin: 1rem 0;
   }
-  i{
+  i {
     font-style: italic;
   }
 `;
