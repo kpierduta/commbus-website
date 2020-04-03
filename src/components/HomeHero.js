@@ -12,8 +12,8 @@ const Section = styled.section`
   background-size: 100%;
 
   @media only screen and (min-width: 1407px) {
-    background-position: center;
-    background-size: 60%;
+    background-position: right;
+    background-size: 80%;
   }
   @media screen and (max-width: 768px) {
     background-image: none;
