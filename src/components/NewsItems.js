@@ -40,7 +40,7 @@ const NewsItems = ({ item }) => {
                   </h1>
                   <Link
                     className="button is-medium is-link"
-                    to={`/news/${item.slug}`}
+                    to={`/${item.slug}`}
                   >
                     READ MORE
                   </Link>

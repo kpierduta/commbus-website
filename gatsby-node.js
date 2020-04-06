@@ -92,7 +92,7 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 
   result.data.allContentfulNews.edges.forEach(({ node }) => {
-    const pagePath = `news/${node.slug}`;
+    const pagePath = `${node.slug}`;
     createPage({
       path: pagePath,
       component: path.resolve(`./src/templates/newsblog.js`),

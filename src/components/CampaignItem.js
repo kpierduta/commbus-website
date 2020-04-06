@@ -22,7 +22,7 @@ const CampaignItem = ({ data }) => (
           {data.title}
         </p>
       </div>
-      <Button fullWidth color="#fff" to={`/news/${data.slug}`}>
+      <Button fullWidth color="#fff" to={`/${data.slug}`}>
         READ ARTICLE
       </Button>
     </div>
