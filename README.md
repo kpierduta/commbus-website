@@ -35,7 +35,9 @@ yarn start.
 ## Deployment
 
 ```
+
 yarn run build.
 yarn serve.
+
 
 ```
