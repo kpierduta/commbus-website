@@ -92,9 +92,8 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 
   result.data.allContentfulNews.edges.forEach(({ node }) => {
-    const pagePath = `${node.slug}`;
     createPage({
-      path: pagePath,
+      path: node.slug,
       component: path.resolve(`./src/templates/newsblog.js`),
       context: {
         // Data passed to context is available

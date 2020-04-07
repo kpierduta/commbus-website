@@ -30,6 +30,11 @@ export const MainPageQuery = graphql`
           url
         }
       }
+      mobileHeroImage {
+        file {
+          url
+        }
+      }
       featureSectionTitle
       iconOne {
         title
@@ -187,6 +192,7 @@ export default class MainPage extends React.Component {
           heading={promotion.subtitle}
           subtitle={promotion.details.details}
           bgImage={promotion.image.file.url}
+          mobileImage={promotion.mobileHeroImage.file.url}
           text={promotion.text}
         />
         <Features Feature={promotion} />
