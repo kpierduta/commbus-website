@@ -66,7 +66,7 @@ const ProjectCard = ({ data }) => (
             to={`/case/${data.slug}`}
             className="button is-medium is-inverted has-text-black-bis"
           >
-            VIEW PROJECTS
+            VIEW CASE STUDY
           </Link>
         </div>
       </div>
