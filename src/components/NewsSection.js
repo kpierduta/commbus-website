@@ -57,10 +57,10 @@ const NewsSection = ({ news, value }) => {
               onClick={() => setLength(news.length)}
             >
               <span className="icon">
-                <img src="/images/icon/chaticon.png" alt="" />
+                <img src="/images/icon/loadMoreIcon.png" alt="" />
               </span>
               <span className="subtitle is-5 has-text-weight-bold has-text-white">
-                FIND OUT MORE
+                LOAD MORE
               </span>
             </StyledButton>
           </div>
