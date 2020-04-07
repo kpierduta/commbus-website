@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 const Section = styled.section`
   padding: 3rem 6.1rem;
+  @media screen and (max-width: 769px) {
+    padding: 3rem 2rem;
+  }
   .note {
     margin-top: 1rem !important;
   }
@@ -16,7 +19,8 @@ const Information = () => (
       </h1>
       <a
         href="mailto:enquiries@commbus.com"
-        className="subtitle is-5 has-text-info">
+        className="subtitle is-5 has-text-info"
+      >
         enquiries@commbus.com
       </a>
       <div>
