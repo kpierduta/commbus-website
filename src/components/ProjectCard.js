@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 const CardStyled = styled.div`
-  margin-top: 2rem;
+  margin-top: 0rem;
   @media screen and (max-width: 768px) {
     height: auto;
   }

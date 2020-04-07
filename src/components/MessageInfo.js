@@ -11,6 +11,12 @@ const Section = styled.section`
     height: 6rem;
     background: ${props => props.theme.darkShades};
   }
+  span {
+    font-family: ${props => props.theme.secondaryFontFamily} !important;
+  }
+  .icon.is-medium {
+    margin-right: 0.4em;
+  }
 `;
 
 const MessageInfo = ({ data }) => (
@@ -31,7 +37,7 @@ const MessageInfo = ({ data }) => (
               <button className="button is-large" type="button">
                 <span className="icon is-medium">
                   <img src="/images/icon/chaticon.png" alt="" />
-                </span>
+                </span>{' '}
                 <span className="subtitle is-4 has-text-white">
                   {data.buttonText}
                 </span>
