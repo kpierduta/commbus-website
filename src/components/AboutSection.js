@@ -7,7 +7,7 @@ const Section = styled.section`
   h1 {
     font-size: ${props => props.theme.fontSizeLarge};
     font-weight: 600;
-    margin: 1rem 0 3rem 0;
+    margin: 3rem 0 1rem 0;
   }
   h2 {
     font-size: 22px;
@@ -16,7 +16,7 @@ const Section = styled.section`
   }
   p {
     font-size: 16px !important;
-    margin: 2.4rem;
+    margin: 1.7rem;
     line-height: 24px;
     font-weight: 300;
     color: ${props => props.theme.darkShades};
