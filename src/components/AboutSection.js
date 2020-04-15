@@ -16,7 +16,7 @@ const Section = styled.section`
   }
   p {
     font-size: 16px !important;
-    margin: 1rem;
+    margin: 2.4rem;
     line-height: 24px;
     font-weight: 300;
     color: ${props => props.theme.darkShades};
