@@ -33,7 +33,7 @@ const Contact = () => (
             you with many services and solutions for your event or campaign.
           </p>
           <p className="subtitle has-text-white  is-size-6">
-            From promotional buses, event support services COMMBUS can tailer
+            From promotional buses, event support services Commbus can tailer
             packages to suit your exact requirements
           </p>
           <p className="subtitle has-text-white  is-size-6">
