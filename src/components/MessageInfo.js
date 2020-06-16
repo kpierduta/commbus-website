@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const Section = styled.section`
@@ -34,14 +35,16 @@ const MessageInfo = ({ data }) => (
               </p>
             </div>
             <div className="column has-text-centered">
-              <button className="button is-large" type="button">
-                <span className="icon is-medium">
-                  <img src="/images/icon/chaticon.png" alt="" />
-                </span>{' '}
-                <span className="subtitle is-4 has-text-white">
-                  {data.buttonText}
-                </span>
-              </button>
+              <Link to="/case-study">
+                <button className="button is-large" type="button">
+                  <span className="icon is-medium">
+                    <img src="/images/icon/chaticon.png" alt="" />
+                  </span>{' '}
+                  <span className="subtitle is-4 has-text-white">
+                    {data.buttonText}
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 import Heading from './elements/Heading';
 import ImageModal from './ImageModal';
@@ -21,12 +22,14 @@ const VehicleShowCase = ({ data }) => {
               <div className="card">
                 <ImageModal src={item.file.url} alt={item.title} />
                 <div className="card-content has-text-centered">
-                  <p className="title is-6 has-text-weight-semibold has-text-info">
-                    {item.title}
-                  </p>
-                  <p className="subtitle is-6 has-text-info">
-                    {item.description}
-                  </p>
+                  <a href="https://deckerdence.netlify.app">
+                    <p className="title is-6 has-text-weight-semibold has-text-info">
+                      {item.title}
+                    </p>
+                    <p className="subtitle is-6 has-text-info">
+                      {item.description}
+                    </p>
+                  </a>
                 </div>
               </div>
             </div>

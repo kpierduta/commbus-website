@@ -21,7 +21,7 @@ const Address = () => (
       <Information />
     </div>
     <div className="column is-6">
-      <MyMapComponent isMarkerShown className="is-hidden-mobile" />
+      <MyMapComponent className="is-hidden-mobile" />
     </div>
   </Section>
 );
