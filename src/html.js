@@ -32,13 +32,8 @@ export default class HTML extends React.Component {
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-119011756-1"
-          />{' '}
-          <script>
-            {' '}
-            window.dataLayer = window.dataLayer || []; function gtag()
-            {dataLayer.push(arguments)} gtag('js', new Date()); gtag('config',
-            'UA-119011756-1');{' '}
-          </script>
+          />
+
           {/* Add custom css or scripts here */}
           {this.props.headComponents}
         </head>
