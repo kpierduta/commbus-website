@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link, StaticQuery, graphql } from 'gatsby';
+import ScrollButton from './ScrollButton';
 
 import Icon from './elements/Icon';
 
@@ -128,9 +129,7 @@ const Footer = () => (
                   </Link>
                 </div>
                 <div className="column is-1">
-                  <Link to="/">
-                    <img src="/images/icon/home.jpg" alt="#" />
-                  </Link>
+                  <ScrollButton scrollStepInPx="50" delayInMs="16.66" />
                 </div>
               </>
             );
