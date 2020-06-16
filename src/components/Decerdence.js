@@ -33,13 +33,13 @@ const Decerdence = () => (
           </p>
         </div>
         <div className="column has-text-centered">
-          <Link
+          <a
+            href="https://www.deckerdence.com/"
             type="button"
             className="button is-large is-fullwidth is-danger"
-            to="/"
           >
             FIND OUT MORE
-          </Link>
+          </a>
         </div>
       </div>
     </div>
