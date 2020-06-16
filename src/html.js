@@ -25,6 +25,20 @@ export default class HTML extends React.Component {
           />
           <script src="//code.jivosite.com/widget/MoNkpQ5D5G" async />
           <script src="/js/scripts.js" />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-119011756-1"
+          />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-119011756-1"
+          />{' '}
+          <script>
+            {' '}
+            window.dataLayer = window.dataLayer || []; function gtag()
+            {dataLayer.push(arguments)} gtag('js', new Date()); gtag('config',
+            'UA-119011756-1');{' '}
+          </script>
           {/* Add custom css or scripts here */}
           {this.props.headComponents}
         </head>
