@@ -36,7 +36,7 @@ export const theme = {
   textColorInverse: mainBrandColor,
   textColorLite: '#3b3b3b',
   menuTintColor: darkAccent,
-  primaryFontFamily: "'Avenir Next',sans-serif",
+  primaryFontFamily: "'BebasNeuePro-Book',sans-serif",
   secondaryFontFamily: "'BebasNeueRegular', sans-serif",
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',
 };
@@ -50,19 +50,17 @@ const GlobalStyle = createGlobalStyle`
 }
 
   @font-face {
-    font-family: Avenir Next ;
-    src: url("../fonts/AvenirNextLTPro-It.otf") format("opentype");
+    font-family: BebasNeuePro-Book ;
+    src: url("../fonts/BebasNeuePro-Book.ttf") format("opentype");
 }
 
-@font-face {
-  font-family: Avenir Next ;
-  src: url("../fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+
+  @font-face {
+  font-family: BebasNeuePro-Book ;
+  src: url("../fonts/BebasNeuePro-Book.eot") format("opentype");
 }
 
-@font-face {
-  font-family: Avenir Next ;
-  src: url("../fonts/AvenirNextLTPro-Regular.otf") format("opentype");
-}
+
 
   body {
     color: ${theme.textColor};
