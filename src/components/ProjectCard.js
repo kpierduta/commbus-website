@@ -25,6 +25,7 @@ const CardStyled = styled.div`
     transition: background-size 2s ease-in;
     background-position: center;
     transition: all 0.5s ease;
+    min-height: 27rem;
     /* :hover {
       transform: scale(1.05);
       @media screen and (max-width: 768px) {
@@ -40,9 +41,7 @@ const CardStyled = styled.div`
 
 const ProjectCard = ({ data }) => (
   <CardStyled
-    className={
-      data.projectSizeIsHalf ? 'column is-6 is-flex' : 'column is-4 is-flex'
-    }
+    className={data.projectSizeIsHalf ? 'column is-6' : 'column is-4 '}
     image={data.projectImage.file.url}
   >
     <div className="hero">
