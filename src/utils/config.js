@@ -14,7 +14,7 @@ module.exports = {
   fbAppID: '@NAME-HERE',
 
   type: 'website',
-  googleAnalytics: 'UA-169811954-1',
+  googleAnalytics: 'UA-119011756-1',
   backgroundColor: '#eef3f6',
   themeColor: '#487C93',
 };
