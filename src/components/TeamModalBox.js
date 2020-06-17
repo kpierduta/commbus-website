@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 
 const Container = styled.div`
   .modal-content {
@@ -15,10 +15,10 @@ const Container = styled.div`
   .text {
     padding: 1rem 0rem 0rem 0rem;
   }
-  .social{
+  .social {
     padding: 0rem 1rem;
   }
-  }
+
   .icon {
     font-size: 2rem;
   }
@@ -58,11 +58,11 @@ const TeamModalBox = ({ active, item, closeModal }) => {
                     <p className="subtitle is-6  is-size-5-mobile">
                       Connect with me on LinkedIn
                     </p>
-                    <Link to={item.linkedInUrl}>
+                    <a href={item.linkedInUrl}>
                       <span className="icon">
                         <i className="fab fa-linkedin" />
                       </span>
-                    </Link>
+                    </a>
                   </div>
                 </div>
                 <div className="column">
