@@ -99,13 +99,13 @@ export default class Header extends React.Component {
           <ContactWrapper className="columns">
             <div className="column is-flex">
               <a
-                href="tel:"
+                href="tel:01675 463 555"
                 className="has-text-info has-text-weight-light is-size-4 is-size-5-touch"
               >
                 01675 463 555
               </a>
               <a
-                href="mailto:"
+                href="mailto:enquiries@commbus.com"
                 className="has-text-info has-text-weight-light is-uppercase is-size-4 email is-size-5-touch"
               >
                 enquiries@commbus.com
