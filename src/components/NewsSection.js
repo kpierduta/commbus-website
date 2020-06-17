@@ -19,8 +19,8 @@ const StyledButton = styled.div`
 `;
 
 const NewsSection = ({ news, value }) => {
-  const [sector, changeSector] = useState('SECTOR');
-  const [year, changeYear] = useState('DATE');
+  const [sector, setSector] = useState('SECTOR');
+  const [year, setYear] = useState('DATE');
   const [length, setLength] = useState(8);
 
   const blog = news.slice(0, length);
@@ -35,15 +35,18 @@ const NewsSection = ({ news, value }) => {
     <div className="section">
       <div className="container has-text-centered-mobile">
         <NewsFilter
-          changeSector={changeSector}
+          changeSector={setSector}
           sector={sector}
           year={year}
-          changeYear={changeYear}
+          changeYear={setYear}
         />
         <div className="columns is-multiline">
           {blog.map(({ node }) => {
             if (node.sector === sector || sector === 'SECTOR') {
-              if (node.date === year || year === 'DATE') {
+              if (node.date === year || year === 'DATE' || year === '< 2016') {
+                if (year === '< 2016' && parseFloat(node.date) <= 2016) {
+                  return <NewsItems key={node.id} item={node} />;
+                }
                 return <NewsItems key={node.id} item={node} />;
               }
             }

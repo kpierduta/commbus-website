@@ -7,6 +7,18 @@ const NewsFilter = ({ sector, changeSector, year, changeYear }) => {
   const [active, setIsActive] = useState(false);
   const [activeYear, setActiveYear] = useState(false);
 
+  const Year = [
+    { title: 'RESET', value: 'DATE' },
+    { title: '2020', value: '2020' },
+    { title: '2019', value: '2019' },
+    { title: '2018', value: '2018' },
+    { title: '2017', value: '2017' },
+    { title: '2016', value: '2016' },
+    { title: '< 2016', value: '< 2016' },
+  ];
+
+  const Sectors = ['Business News', 'Industry Insights', 'Latest Projects'];
+
   return (
     <div className="columns">
       <div className="column">
@@ -15,27 +27,15 @@ const NewsFilter = ({ sector, changeSector, year, changeYear }) => {
           active={active}
           onClick={() => setIsActive(!active)}
         >
-          <DropDownItem
-            title="Business News"
-            onClick={() => {
-              setIsActive(!active);
-              changeSector('Business News');
-            }}
-          />
-          <DropDownItem
-            title="Industry Insights"
-            onClick={() => {
-              setIsActive(!active);
-              changeSector('Industry Insights');
-            }}
-          />
-          <DropDownItem
-            title="Latest Projects"
-            onClick={() => {
-              setIsActive(!active);
-              changeSector('Latest Projects');
-            }}
-          />
+          {Sectors.map(item => (
+            <DropDownItem
+              title={item}
+              onClick={() => {
+                setIsActive(!active);
+                changeSector(item);
+              }}
+            />
+          ))}
         </Dropdown>
       </div>
       <div className="column">
@@ -44,41 +44,15 @@ const NewsFilter = ({ sector, changeSector, year, changeYear }) => {
           active={activeYear}
           onClick={() => setActiveYear(!activeYear)}
         >
-          <DropDownItem
-            title="2020"
-            onClick={() => {
-              setActiveYear(!activeYear);
-              changeYear('2020');
-            }}
-          />
-          <DropDownItem
-            title="2019"
-            onClick={() => {
-              setActiveYear(!activeYear);
-              changeYear('2019');
-            }}
-          />
-          <DropDownItem
-            title="2018"
-            onClick={() => {
-              setActiveYear(!activeYear);
-              changeYear('2018');
-            }}
-          />
-          <DropDownItem
-            title="2017"
-            onClick={() => {
-              setActiveYear(!activeYear);
-              changeYear('2017');
-            }}
-          />
-          <DropDownItem
-            title="2016"
-            onClick={() => {
-              setActiveYear(!activeYear);
-              changeYear('2016');
-            }}
-          />
+          {Year.map(item => (
+            <DropDownItem
+              title={item.title}
+              onClick={() => {
+                setActiveYear(!activeYear);
+                changeYear(item.value);
+              }}
+            />
+          ))}
         </Dropdown>
       </div>
     </div>
