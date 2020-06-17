@@ -6,15 +6,15 @@ module.exports = {
   siteUrl: 'https://commbus.netlify.com/',
   logo: '/images/com-logo.png',
 
-  telephone: '+1-123-123-123',
-  email: 'john@doe.com',
-  location: 'California, USA',
+  telephone: '01675463555',
+  email: 'enquiries@commbus.com',
+  location: 'Blyth Hall Farm,Blythe Road,Coleshill,Birmingham,B46 2AF',
   twitter: '@NAME-HERE',
   fbUserId: '@NAME-HERE',
   fbAppID: '@NAME-HERE',
 
   type: 'website',
   googleAnalytics: 'UA-169811954-1',
-  backgroundColor: '#e0e0e0',
-  themeColor: '#c62828',
+  backgroundColor: '#eef3f6',
+  themeColor: '#487C93',
 };
