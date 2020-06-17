@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link, StaticQuery, graphql } from 'gatsby';
 import ScrollButton from './ScrollButton';
+import config from '../utils/config';
 
 import Icon from './elements/Icon';
 
@@ -68,11 +69,11 @@ const Footer = () => (
           <Link className="logo" to="/">
             <img src="/images/com-logo.png" alt="site logo" />
           </Link>
-          <Icon icon={firstIcon} />
-          <Icon icon={secondIcon} />
-          <Icon icon={thirdIcon} />
-          <Icon icon={fourthIcon} />
-          <Icon icon={fifthIcon} />
+          <Icon icon={firstIcon} link={config.linkedin} />
+          <Icon icon={secondIcon} link={config.fbUserId} />
+          <Icon icon={thirdIcon} link={config.instagram} />
+          <Icon icon={fourthIcon} link={config.pinterest} />
+          <Icon icon={fifthIcon} link={config.twitter} />
         </div>
         <StaticQuery
           query={footerQuery}
