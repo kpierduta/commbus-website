@@ -8,7 +8,7 @@ module.exports = {
 
   telephone: '01675463555',
   email: 'enquiries@commbus.com',
-  location: 'Blyth Hall Farm,Blythe Road,Coleshill,Birmingham,B46 2AF',
+  location: 'Blyth Hall Farm,Blythe Road, Coleshill, Birmingham,B46 2AF',
 
   twitter: 'https://twitter.com/commbus',
   fbUserId: 'https://www.facebook.com/Commbusuk/',
