@@ -31,7 +31,10 @@ const Projects = ({ project, reference, filter }) => {
           project.map(({ node }) => {
             if (node.sector === sector || sector === 'SECTOR') {
               if (node.date === year || year === 'DATE') {
-                return <ProjectCard data={node} />;
+                if (year === '< 2016' && parseFloat(node.date) <= 2016) {
+                  return <ProjectCard key={node.id} data={node} />;
+                }
+                return <ProjectCard key={node.id} data={node} />;
               }
             }
           })}
