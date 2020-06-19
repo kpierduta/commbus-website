@@ -65,7 +65,10 @@ const GlobalStyle = createGlobalStyle`
   body {
     color: ${theme.textColor};
     letter-spacing: 0.03rem !important;
-    font-size: 17px;
+    font-size: 1.125rem;
+  }
+  .subtitle.is-6, p,.is-size-6 {
+    font-size: 1.125rem !important;
   }
   .title {
     font-family: ${theme.secondaryFontFamily};
