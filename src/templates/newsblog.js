@@ -25,6 +25,11 @@ export const newsQuery = graphql`
           url
         }
       }
+      mobileHeroImage {
+        file {
+          url
+        }
+      }
       blogContent {
         json
       }
@@ -59,6 +64,7 @@ export default class NewsBlog extends React.Component {
           subtitle={news.details.details}
           bgImage={news.image.file.url}
           text={news.text}
+          mobileImage={news.mobileHeroImage.file.url}
         />
         <Share
           url={`${config.siteUrl}/news/${news.slug}`}
