@@ -7,6 +7,9 @@ import ImageModal from './ImageModal';
 
 const Section = styled.section`
   background: #eef3f6;
+  a {
+    margin-top: -1.25rem;
+  }
 `;
 
 const VehicleShowCase = ({ data }) => {
@@ -26,9 +29,17 @@ const VehicleShowCase = ({ data }) => {
                     <p className="title is-6 has-text-weight-semibold has-text-info">
                       {item.title}
                     </p>
-                    <p className="subtitle is-6 has-text-info">
-                      {item.description}
-                    </p>
+                    {item.title === 'HOSPITALITY ON SITE' ? (
+                      <p className="subtitle is-6 has-text-info">
+                        <a href="https://www.deckerdence.com" target="_blank">
+                          {item.description}
+                        </a>
+                      </p>
+                    ) : (
+                      <p className="subtitle is-6 has-text-info">
+                        {item.description}
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>
