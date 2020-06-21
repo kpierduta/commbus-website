@@ -10,6 +10,10 @@ const Container = styled.section`
 
 const categories = [
   {
+    title: 'RESET',
+    value: 'SECTOR',
+  },
+  {
     title: 'ROADSHOW-BUSINESS TO BUSINESS',
     value: 'ROADSHOW-BUSINESS TO BUSINESS',
   },
@@ -52,7 +56,8 @@ const ProjectFilter = ({ sector, changeSector, year, changeYear }) => {
             <Dropdown
               title={sector}
               active={active}
-              onClick={() => setIsActive(!active)}>
+              onClick={() => setIsActive(!active)}
+            >
               {categories.map(item => (
                 <DropDownItem
                   title={item.title}
@@ -68,7 +73,8 @@ const ProjectFilter = ({ sector, changeSector, year, changeYear }) => {
             <Dropdown
               title={year}
               active={activeYear}
-              onClick={() => setActiveYear(!activeYear)}>
+              onClick={() => setActiveYear(!activeYear)}
+            >
               {Year.map(item => (
                 <DropDownItem
                   title={item.title}

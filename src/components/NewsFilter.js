@@ -17,7 +17,12 @@ const NewsFilter = ({ sector, changeSector, year, changeYear }) => {
     { title: '< 2016', value: '< 2016' },
   ];
 
-  const Sectors = ['Business News', 'Industry Insights', 'Latest Projects'];
+  const Sectors = [
+    { title: 'RESET', value: 'SECTOR' },
+    { title: 'Business News', value: 'Business News' },
+    { title: 'Industry Insights', value: 'Industry Insights' },
+    { title: 'Latest Projects', value: 'Latest Projects' },
+  ];
 
   return (
     <div className="columns">
@@ -29,10 +34,10 @@ const NewsFilter = ({ sector, changeSector, year, changeYear }) => {
         >
           {Sectors.map(item => (
             <DropDownItem
-              title={item}
+              title={item.title}
               onClick={() => {
                 setIsActive(!active);
-                changeSector(item);
+                changeSector(item.value);
               }}
             />
           ))}
