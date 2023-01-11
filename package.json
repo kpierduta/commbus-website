@@ -39,7 +39,7 @@
     "gatsby-remark-images": "^3.1.20",
     "gatsby-source-contentful": "^2.1.70",
     "gatsby-source-filesystem": "^2.1.21",
-    "gatsby-transformer-remark": "^2.6.50",
+    "gatsby-transformer-remark": "^5.25.1",
     "graphql-tag": "^2.10.1",
     "pngquant-bin": "^5.0.2",
     "polished": "^3.4.1",
